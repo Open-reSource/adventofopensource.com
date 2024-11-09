@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    
+    
+    <!-- Rune symbol -->
+    <g fill="#005580">
+        <!-- Outer octagon -->
+        <path d="M70 40 L130 40 L160 70 L160 130 L130 160 L70 160 L40 130 L40 70 Z" 
+              fill="none" stroke="#005580" stroke-width="8"/>
+        
+        <!-- Inner circle -->
+        <circle cx="100" cy="100" r="40"/>
+        
+        <!-- Outer points -->
+        <circle cx="100" cy="40" r="8"/>
+        <circle cx="100" cy="160" r="8"/>
+        <circle cx="40" cy="100" r="8"/>
+        <circle cx="160" cy="100" r="8"/>
+    </g>
+</svg>

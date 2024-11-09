@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    
+    
+    <!-- Rune symbol -->
+    <g fill="#005580">
+        <!-- Diamond base -->
+        <path d="M100 30 L170 100 L100 170 L30 100 Z" 
+              fill="none" stroke="#005580" stroke-width="8"/>
+        
+        <!-- Inner cross pattern -->
+        <path d="M100 50 L100 150 M50 100 L150 100" 
+              stroke="#005580" stroke-width="8"/>
+        
+        <!-- Corner marks -->
+        <path d="M85 45 L115 45 M85 155 L115 155 M45 85 L45 115 M155 85 L155 115"
+              stroke="#005580" stroke-width="8" stroke-linecap="square"/>
+              
+        <!-- Center diamond -->
+        <path d="M100 70 L130 100 L100 130 L70 100 Z"/>
+    </g>
+</svg>
