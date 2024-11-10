@@ -11,10 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.29.0",
     "astro": "^4.16.10",
+    "astro-og-canvas": "^0.5.4",
+    "canvaskit-wasm": "^0.39.1",
     "sharp": "^0.32.5",
-    "@astrojs/check": "^0.9.4",
     "typescript": "^5.6.3"
   }
 }
