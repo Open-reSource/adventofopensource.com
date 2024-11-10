@@ -11,6 +11,62 @@ export default defineConfig({
       customCss: [
         './src/styles/custom.css',
       ],
+      head: [
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'icon',
+            type: 'image/png',
+            href: '/favicon-96x96.png',
+            size: '96x96',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'icon',
+            type: 'image/svg+xml',
+            href: '/favicon.svg',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'shortcut icon',
+            href: '/favicon.ico',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'apple-touch-icon',
+            href: '/apple-touch-icon.png',
+            size: '180x180',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'manifest',
+            href: '/site.webmanifest',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'mask-icon',
+            href: '/safari-pinned-tab.svg',
+            color: '#4a01fe',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'msapplication-TileColor',
+            content: '#4a01fe',
+          },
+        },
+      ],
       logo: {
         light: './src/assets/logo.svg',
         dark: './src/assets/logo-dark.svg',
