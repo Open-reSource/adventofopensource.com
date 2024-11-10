@@ -81,6 +81,9 @@ export default defineConfig({
         threads: 'https://www.threads.net/@openresource',
         'x.com': 'https://x.com/open_resource',
       },
+      components: {
+        Footer: './src/components/Footer.astro',
+      },
       sidebar: [
         {
           label: 'Advent',

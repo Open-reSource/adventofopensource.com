@@ -18,3 +18,73 @@ hero:
       icon: external
       variant: minimal
 ---
+
+import { Image } from 'astro:assets';
+import beginnerRune from '../../assets/beginner-rune.svg';
+import intermediateRune from '../../assets/intermediate-rune.svg';
+import advancedRune from '../../assets/advanced-rune.svg';
+import Button from '../../components/Button.astro';
+import { Icon } from '@astrojs/starlight/components';
+
+<hr style="margin: 0; padding: 0" />
+
+<section class="homepage-section">
+	<div class="container" style="justify-content: center; display: flex">
+		<div class="content" style="text-align: center">
+			<h2>3 Runes for 3 Tracks</h2>
+			<p>
+				Each day, you'll be able to choose between three levels of tracks, identified by runes. Everyones can participate, from beginner to advanced.
+			</p>
+		</div>
+	</div>
+  <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; margin-bottom: 2rem;">
+    <div style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
+      <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
+        <Image src={beginnerRune} alt="" />
+      </div>
+      <div style="text-align: center">
+        <strong>Snowflake rune</strong><br/>Beginner, you're starting a new project
+      </div>
+    </div>
+    <div style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
+      <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
+        <Image src={intermediateRune} alt="" />
+      </div>
+      <div style="text-align: center">
+        <strong>Snowball rune</strong><br/>Intermediate, you already have a project and wants to enhance it
+      </div>
+    </div>
+    <div style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
+      <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
+        <Image src={advancedRune} alt="" />
+      </div>
+      <div style="text-align: center">
+        <strong>Ice rune</strong><br/>Advanced, you already have a large project and wants to go further
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="margin: 0; padding: 0" />
+
+<section class="homepage-section">
+	<div class="container" style="justify-content: center; display: flex">
+		<div class="content" style="text-align: center">
+			<h2>Support Us</h2>
+			<p>
+				Help us continue to build and maintain this project by becoming a sponsor or dropping a star on our GitHub
+				repository.
+			</p>
+			<div class="actions" style="justify-content: center">
+				<Button href="https://github.com/sponsors/Open-reSource" class="action action-secondary">
+					<Icon name="heart" />
+					<span>Become a sponsor</span>
+				</Button>
+				<Button href="https://github.com/Open-reSource/adventofopensource.com" class="action action-outline">
+					<Icon name="star" />
+					<span>Star on GitHub</span>
+				</Button>
+			</div>
+		</div>
+	</div>
+</section>
