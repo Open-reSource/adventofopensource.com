@@ -1,12 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightLinksValidator from 'starlight-links-validator'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://adventofopensource.com',
   integrations: [
     starlight({
+      plugins: [starlightLinksValidator()],
       title: 'Advent of Open Source',
       customCss: [
         './src/styles/custom.css',
