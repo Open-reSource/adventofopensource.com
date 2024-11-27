@@ -14,6 +14,9 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.29.2
         version: 0.29.2(astro@4.16.15(rollup@4.27.3)(typescript@5.7.2))
+      '@types/konami-code-js':
+        specifier: ^0.8.3
+        version: 0.8.3
       astro:
         specifier: ^4.16.15
         version: 4.16.15(rollup@4.27.3)(typescript@5.7.2)
@@ -671,6 +674,9 @@ packages:
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
+
+  '@types/konami-code-js@0.8.3':
+    resolution: {integrity: sha512-TYwIDZ16MuzqHdgv/zhbbE3p/iXY/FotJkMYx1oOzZKJoINezl91stc/U/i5AknH5lrEpXoims+tsCnAwIJGew==}
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
@@ -3016,6 +3022,8 @@ snapshots:
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.3
+
+  '@types/konami-code-js@0.8.3': {}
 
   '@types/mdast@4.0.4':
     dependencies:
