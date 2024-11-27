@@ -13,9 +13,11 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.29.2",
-    "astro": "^4.16.14",
+    "@types/konami-code-js": "^0.8.3",
+    "astro": "^4.16.15",
     "astro-og-canvas": "^0.5.4",
     "canvaskit-wasm": "^0.39.1",
+    "konami-code-js": "^0.8.1",
     "sharp": "^0.32.5",
     "starlight-links-validator": "^0.13.2",
     "typescript": "^5.7.2"
