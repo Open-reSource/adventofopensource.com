@@ -1,0 +1,247 @@
+---
+// Shhh 🤫
+---
+
+<div class="fixed inset-0 pointer-events-none z-[9999] flex items-center justify-center">
+  <div id="snowball" class="snowball hidden">
+    <div class="snowball-core">
+      <div class="inner-scene">
+        <div class="landscape">
+          <div class="mountain left-mountain"></div>
+          <div class="mountain right-mountain"></div>
+          <div class="pine-tree left-tree"></div>
+          <div class="pine-tree right-tree"></div>
+          <div class="small-cabin"></div>
+        </div>
+      </div>
+      <div class="snow-container">
+        {Array.from({ length: 40 }, (_, i) => (
+          <div 
+            class="snowflake" 
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          ></div>
+        ))}
+      </div>
+      <div class="glass-reflection"></div>
+    </div>
+    <div class="snowball-shadow"></div>
+    <div class="base-stand"></div>
+  </div>
+</div>
+
+<script>
+  import KonamiCode from 'konami-code-js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const snowball = document.getElementById('snowball');
+    
+    if (!snowball) return;
+
+    new KonamiCode(() => {
+      snowball.classList.remove('hidden');
+      
+      setTimeout(() => {
+        snowball.classList.add('hidden');
+      }, 10000);
+    });
+  });
+</script>
+
+<style>
+  .snowball {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+    z-index: 9999;
+  }
+
+  .snowball-core {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(
+      135deg, 
+      rgba(230,240,255,1) 0%, 
+      rgba(240,245,255,0.95) 50%, 
+      rgba(220,235,255,0.9) 100%
+    );
+    border-radius: 50%;
+    box-shadow: 
+      0 20px 50px rgba(100,140,255,0.3),
+      inset 0 10px 30px rgba(255,255,255,0.5),
+      inset 0 -10px 30px rgba(200,220,255,0.3);
+    overflow: hidden;
+    border: 10px solid rgba(255,255,255,0.5);
+    transform: translateY(-20px);
+  }
+
+  .inner-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom, 
+      rgba(200,220,255,0.2) 0%, 
+      rgba(220,230,255,0.5) 100%
+    );
+    overflow: hidden;
+  }
+
+  .landscape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(
+      to bottom, 
+      rgba(230,240,255,0.1) 0%, 
+      rgba(220,230,255,0.3) 100%
+    );
+  }
+
+  .mountain {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(
+      to bottom, 
+      rgba(255,255,255,0.8) 0%, 
+      rgba(200,210,230,0.6) 100%
+    );
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .left-mountain {
+    left: -50px;
+    transform: rotate(-10deg);
+  }
+
+  .right-mountain {
+    right: -50px;
+    transform: rotate(10deg);
+  }
+
+  .pine-tree {
+    position: absolute;
+    bottom: 10px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid rgba(50,120,50,0.5);
+  }
+
+  .left-tree {
+    left: 50px;
+    transform: rotate(-10deg);
+  }
+
+  .right-tree {
+    right: 50px;
+    transform: rotate(10deg);
+  }
+
+  .small-cabin {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 30px;
+    background: rgba(150,75,0,0.5);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    opacity: 0.8;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(320px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .glass-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 30% 30%, 
+      rgba(255,255,255,0.3) 0%, 
+      transparent 20%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .snowball-shadow {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 60px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: shadow 2s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+
+  .base-stand {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 30px;
+    background: linear-gradient(
+      to right, 
+      rgba(200,210,230,0.8) 0%, 
+      rgba(220,230,250,0.9) 50%, 
+      rgba(200,210,230,0.8) 100%
+    );
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
