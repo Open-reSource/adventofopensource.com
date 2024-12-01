@@ -3,8 +3,8 @@ import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Head.astro';
 
 // Remove the `/index` part of the ID to get the correct path to the image.
-// e.g. `guide/creating-your-own-open-source-project/index.mdx` -> `guide/creating-your-own-open-source-project.mdx`
-//    and the image path will be `og/guide/creating-your-own-open-source-project.png`
+// e.g. `dir/page/index.mdx` -> `dir/page.mdx`
+//    and the image path will be `og/dir/page.png`
 const filteredAstroPropsId = Astro.props.id.replace(/\/index./, '.');
 
 // Force the og:image to be the index image for the homepage for these kind of pages:

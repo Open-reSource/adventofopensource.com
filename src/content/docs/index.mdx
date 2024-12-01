@@ -1,6 +1,6 @@
 ---
 title: Advent of Open Source 2024
-description: Traveler, join the Winter Open Source Village to celebrate the season of sharing. Choose amongst the three runes to embark on your journey.
+description: Traveller, join the Winter Open Source Village to celebrate the season of sharing. Choose amongst the three runes to embark on your journey.
 template: splash
 hero:
   tagline: <strong>Advent of Open Source</strong> is a community-driven event that aims to introduce newcomers to Open Source Software development, and to help all participants to create or enhance their repositories.
@@ -13,6 +13,10 @@ hero:
       link: /advent/
       icon: right-arrow
       variant: primary
+    - text: Today's challenge
+      link: /advent/week-1/day-1/
+      icon: right-arrow
+      variant: secondary
     - text: GitHub
       link: https://github.com/Open-reSource/adventofopensource.com
       icon: external
@@ -20,12 +24,13 @@ hero:
 ---
 
 import { Image } from 'astro:assets';
+import { Icon } from '@astrojs/starlight/components';
 import beginnerRune from '../../assets/beginner-rune.svg';
 import intermediateRune from '../../assets/intermediate-rune.svg';
 import advancedRune from '../../assets/advanced-rune.svg';
 import Banner from '../../components/Banner.astro';
 import Button from '../../components/Button.astro';
-import { Icon } from '@astrojs/starlight/components';
+import Runes from '../../components/Runes.astro';
 
 <Banner />
 
@@ -40,32 +45,7 @@ import { Icon } from '@astrojs/starlight/components';
 			</p>
 		</div>
 	</div>
-  <ul style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; margin-bottom: 2rem; padding: 0">
-    <li style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
-      <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
-        <Image src={beginnerRune} alt="" />
-      </div>
-      <div style="text-align: center">
-        <strong>Snowflake rune</strong><br/>Beginner, you're starting a new project
-      </div>
-    </li>
-    <li style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
-      <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
-        <Image src={intermediateRune} alt="" />
-      </div>
-      <div style="text-align: center">
-        <strong>Snowball rune</strong><br/>Intermediate, you already have a project and want to enhance it
-      </div>
-    </li>
-    <li style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
-      <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
-        <Image src={advancedRune} alt="" />
-      </div>
-      <div style="text-align: center">
-        <strong>Ice rune</strong><br/>Advanced, you already have a large project and want to go further
-      </div>
-    </li>
-  </ul>
+  <Runes />
 </section>
 
 <hr style="margin: 0; padding: 0" />

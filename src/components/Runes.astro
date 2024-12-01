@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import beginnerRune from "../assets/beginner-rune.svg";
+import intermediateRune from "../assets/intermediate-rune.svg";
+import advancedRune from "../assets/advanced-rune.svg";
+---
+
+<ul class="runes-container">
+  <li class="rune">
+    <div class="rune-link">
+      <Image src={beginnerRune} alt="" />
+    </div>
+    <div class="rune-description">
+      <strong>Snowflake rune</strong><br />Beginner, you're starting a new
+      project
+    </div>
+  </li>
+  <li class="rune">
+    <div class="rune-link">
+      <Image src={intermediateRune} alt="" />
+    </div>
+    <div class="rune-description">
+      <strong>Snowball rune</strong><br />Intermediate, you already have a project
+      and want to enhance it
+    </div>
+  </diliv>
+  <li class="rune">
+    <div class="rune-link">
+      <Image src={advancedRune} alt="" />
+    </div>
+    <div class="rune-description">
+      <strong>Ice rune</strong><br/>Advanced, you already have a large or several projects and want to go further
+    </div>
+  </li>
+</ul>
+
+<style>
+  .runes-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem;
+    color: var(--sl-color-white);
+    padding: 0;
+  }
+
+  .rune {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin: 0 !important;
+  }
+
+  .rune-link {
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: var(--sl-color-accent-low);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rune-description {
+    margin-top: .5rem !important;
+    text-align: center;
+  }
+</style>

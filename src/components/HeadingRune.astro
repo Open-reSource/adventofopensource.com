@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import beginnerRune from '../assets/beginner-rune.svg';
+import intermediateRune from '../assets/intermediate-rune.svg';
+import advancedRune from '../assets/advanced-rune.svg';
+
+export interface Props {
+  type: string;
+}
+
+const { type } = Astro.props;
+---
+<div class="heading-rune">
+  {
+    type === 'snowflake' &&
+      <div class="heading-rune-container">
+        <Image src={beginnerRune} alt="" width="100" height="100" />
+        <p class="heading-rune-desc">
+          <strong class="heading-rune-header">Snowflake rune</strong><br>
+          Beginner level for folks starting a new artifact
+        </p>
+      </div>
+  }
+  {
+    type === 'snowball' &&
+      <div class="heading-rune-container">
+        <Image src={intermediateRune} alt="" width="100" height="100" />
+        <p class="heading-rune-desc">
+          <strong class="heading-rune-header">Snowball rune</strong><br>
+          Intermediate level for folks wanting to enhance an existing artifact
+        </p>
+      </div>
+  }
+  {
+    type === 'ice' &&
+      <div class="heading-rune-container">
+        <Image src={advancedRune} alt="" width="100" height="100" />
+        <p class="heading-rune-desc">
+          <strong class="heading-rune-header">Ice rune</strong><br>
+          Advanced level for folks wanting to enhance an existing large artifact or several org/personal artifacts
+        </p>
+      </div>
+  }
+</div>
+
+<style>
+  .heading-rune {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .heading-rune-container {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .heading-rune > .heading-rune-container > .heading-rune-desc > .heading-rune-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  :root[data-theme='dark'] {
+    .heading-rune > .heading-rune-container > img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(180deg) brightness(110%) contrast(110%);
+    }
+  }
+
+  .heading-rune > .heading-rune-container > .heading-rune-desc > p {
+    margin: 0;
+    line-height: 1.25;
+  }
+</style>

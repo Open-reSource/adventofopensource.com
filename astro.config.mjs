@@ -95,7 +95,16 @@ export default defineConfig({
             {
               label: 'About',
               slug: 'advent'
-            }
+            },
+            {
+              label: 'Week 1: The Snowglobe Foundations',
+              items: [
+                {
+                  label: 'Day 1: The Winter Open Source Village',
+                  slug: 'advent/week-1/day-1'
+                }
+              ]
+            },
           ],
         },
       ],

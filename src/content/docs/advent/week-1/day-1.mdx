@@ -1,0 +1,357 @@
+---
+title: "Day 1: The Winter Open Source Village"
+description: Traveller, join the Winter Open Source Village, where daily challenges await you. Choose your path and illuminate the world of Open Source this season!
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day01Snowflake01 from '../../../../assets/days/day-01-snowflake-01.png';
+import day01Snowflake02 from '../../../../assets/days/day-01-snowflake-02.png';
+
+<Lore type="logo">
+<h2>The Winter Open Source Village</h2>
+
+Welcome, traveller, to the _Winter Open Source Village_, where the spirit of collaboration shines as bright as the _North Star_. Every year, as the snow blankets the world, _Open Source_ artisans and protectors from all walks of life gather to celebrate the season of sharing.
+
+This year, the wise _Keeper of the Repos_ has summoned you to the village for a special mission. The task? To illuminate the world of _Open Source_ by completing daily challenges, each tailored to your skills and experience.
+
+But this isn't just any mission, other travellers are here too. As you all progress together, your contributions will strengthen the village, preparing it for the _Grand Push_—an event that ensures _Open Source_ projects are ready for a thriving new year.
+
+<h2>The Foundation of Giving</h2>
+
+The _Keeper_ has entrusted you with your first challenge: building the foundation upon which your _Open Source_ journey will stand.
+
+The _Keeper_ gathered a welcoming committee to guide you on your journey who will help you choose the right path. Please [read their instructions](/advent) carefully and choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-create-your-first-repository)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-audit-your-repository)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-audit-your-repositories-ecosystem)
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Create Your First Repository
+
+<hr />
+
+<Lore type="snowflake">
+In the heart of the _Winter Open Source Village_, a blank canvas awaits—a pristine, untouched expanse within the grand hall of the _Village Workshop_. This canvas is no ordinary surface; it holds the power to capture your first mark, your unique contribution to the ever-growing tapestry of _Open Source_. The _Keeper_ hands you a quill, their eyes gleaming with anticipation.
+
+> Your journey begins here.
+
+they say
+
+> Forge your _Basecamp_, a place to anchor your endeavors, and from here, your story will unfold.
+
+They let you choose which faction to join—_The Guild of Hub_, _The Guild of Lab_, or others—each offering its own unique tools and traditions. You select _The Guild of Hub_, the most popular choice among new travellers this year.
+
+They also let you choose a name for your creation, one that will echo through the village and beyond.
+</Lore>
+
+<hr />
+
+**Your first challenge is to create your first Open Source repository.** This repository will be the foundation of your journey, a place to share your work, collaborate with others, and grow your skills.
+
+<Steps>
+
+1. Sign up for a [GitHub](https://github.com/), [GitLab](https://gitlab.com), or other platform if you haven't already.
+
+    Be aware that this Advent of Open Source will be focused on GitHub, but most of the features are available on other platforms as well.
+
+1. Go to your profile, click on the _Repositories_ tab, and then click on the _New_ button.
+
+1. Choose a descriptive name following naming conventions (lowercase, hyphens).
+
+    <Aside type="tip">
+
+    - Choose a clear and memorable name.
+    - Keep it simple, you can always rename it later.
+
+    </Aside>
+
+1. Initialize the repository with the "Add a README file" option checked.
+
+1. Don't add a `.gitignore`.
+
+1. Don't choose a license yet, as we'll cover that topic in a future challenge.
+
+    <ContentImage src={day01Snowflake01} alt="" />
+
+1. Click on the _Create repository_ button.
+
+    <ContentImage src={day01Snowflake02} alt="" />
+
+1. Here you go! Your repository is created and accessible online. You're doing Open Source, you're part of the village now!
+
+    You'll find the URL of your repository in the address bar of your browser. You'll see that the description is available in the README file, but also in the _About_ section of your repository.
+
+1. Share the URL of your repository with the welcoming committee and other travellers. You can also share it on social media to let the world know about your journey with the `#AdventOfOpenSource`.
+
+1. Finally, to gain extra motivation, award yourself with a star by clicking on the star button at the top right of your repository.
+
+</Steps>
+
+<h3>Success Criteria</h3>
+
+- ✓ Your repository is created, public, and accessible.
+- ✓ Your repository contains a README file with a title and a short description.
+- ✓ You shared the URL of your repository.
+- ✓ You awarded yourself with a star.
+
+<hr />
+
+<Lore>
+You decide on a simple yet meaningful name, a reflection of your vision and purpose. With a flourish of the _Keeper_'s quill and a few whispered incantations, your first artifact is born.
+
+The _Keeper_ smiles, their approval evident. The start of your journey under a new banner, a new flag to carry into the world.
+
+A new star seems to twinkle in the sky above the village.
+
+<LoreSeparator />
+
+<h3>The Keeper's Words of Wisdom</h3>
+
+> Every great journey begins with a single step—or the planting of a single seed. Whether you're just starting, refining your craft, or shaping the future of your collective, your work today lays the foundation for _Open Source_ excellence.
+
+Return tomorrow for your next challenge, and remember: the village grows stronger with each contribution you make. Together, we'll spread the _Open Source_ spirit far and wide.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Audit Your Repository
+
+<hr />
+
+<Lore type="snowball">
+
+In the vibrant _Workshop District_ of the _Winter Open Source Village_, lanterns illuminate a sprawling hall filled with scrolls, tools, and artifacts. The _Keeper_ beckons you toward a table where an intricate map is unfurled. Symbols glow faintly upon its surface, revealing areas of your creation that need refinement.
+
+> A creation's story must be clear and inviting,
+
+the _Keeper_ says, tracing a finger along the glowing marks.
+
+> Its purpose, its essence, and its welcoming paths must be unmistakable, so others may understand its importance and join your journey.
+
+The task before you is one of clarity and preparation: to polish the elements that introduce your work to the world and ensure its readiness for collaboration.
+</Lore>
+
+<hr />
+
+<Aside type="caution">
+This track is developed for folks already having a repository. If you don't have one yet, you can rather [go the the beginner track and create your first repository](#beginner-create-your-first-repository).
+</Aside>
+
+**Every repository is unique**, with its own structure, settings, objectives, and constraints.
+**Every repository tells a story**, and the first impression often comes from its _About_ section and foundational files such as the README. These elements introduce your project to the world and guide contributors, whether they're first-timers or seasoned developers.
+
+**Most repositories grow organically without periodic reviews** of their structure and settings. We are often so focused on the code, issues, and pull requests, that we don't take the time to step back and look at the bigger picture.
+
+Take this opportunity to review your repository's settings, structure, and content. Ensure that it aligns with your project's purpose and is welcoming to new contributors.
+
+The following steps are GitHub-oriented, but you can adapt them to other platforms.
+
+<Steps>
+
+1. **Review the _About_ section** of you repository:
+
+    <Steps>
+
+    1. Update the description with a concise, descriptive summary of your project that captures its purpose and value.
+
+        <Aside type="tip">
+        You can duplicate the description in the README file as an introduction, but also in all the social media descriptions, in their own _About_ section.
+        </Aside>
+
+    1. Check that your website URL is up-to-date if you have one.
+
+    1. Use relevant topics (tags) to increase visibility, context, and discoverability.
+
+        <Aside type="tip">
+        You can check other repositories in your domain to see what topics they use.
+        </Aside>
+
+    1. Enable only the sections that are relevant to your project amongst releases, packages, and deployments.
+
+    </Steps>
+
+1. **Check global repository files**:
+
+    <Steps>
+
+    1. Ensure that the README file is up-to-date and provides a clear overview of your project, its purpose, and how to get started.
+
+    1. Review the `.gitignore` file to ensure that it includes all the files and directories that should not be committed to the repository.
+
+    1. Check the presence and content of essential files like `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY.md`, `FUNDING.yml`, and `SUPPORT.md`, based on your project's needs.
+
+        <Aside type="tip">
+        Add the `/community` in your repository's URL to access a checklist of recommended files and settings. It can give you a good starting point to audit your repository.
+        </Aside>
+
+    1. Review issue and PR templates to ensure they are up-to-date and relevant.
+
+    </Steps>
+
+1. **Adjust repository settings**:
+
+    <Steps>
+
+    1. Review the repository visibility settings (public/private) to ensure they align with your project's goals.
+
+    1. Check the default branch name (standard is usually `main`).
+
+    1. Review branch protection rules for the main branch to ensure your main branch remains stable and secure.
+
+    1. Review the list of collaborators and their permission levels.
+
+    1. Check the organization teams access if applicable.
+
+    1. Review outside collaborators and automation bot accounts.
+
+    1. Ensure that the repository features (Issues, PRs, Projects, Wiki, Discussions, Packages) are activated based on your project's needs.
+
+    </Steps>
+
+1. **Celebrate and share**:
+
+    Once you've completed your audit, celebrate your work by sharing your repository with other participants so everyone knows what will be your focus for the this month.
+
+    Share your repository on social media with the `#AdventOfOpenSource` hashtag to let the world know about your journey, or in our [Discord server](https://discord.gg/fpUDwEMGwE).
+
+</Steps>
+
+<Aside title="Resources">
+- [GitHub - Customizing your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository)
+- [Make a README](https://www.makeareadme.com/)
+- [Toptal - Tool to create a `.gitignore`](https://www.toptal.com/developers/gitignore)
+</Aside>
+
+<h3>Success Criteria</h3>
+
+- ✓ The _About_ section is checked and updated.
+- ✓ Essential files are reviewed and up-to-date.
+- ✓ Repository's settings are reviewed and adjusted.
+- ✓ You shared your repository with other participants.
+
+<hr />
+
+<Lore>
+As you complete your task, the faint glow of the symbols on the map intensifies, lighting up the hall with a soft, golden radiance. The _Keeper_ smiles, their expression one of quiet satisfaction.
+
+> Your work is ready to stand among the creations of the great. Those who seek your guidance will find clarity and purpose in the steps you have prepared for them.
+
+Around you, other travellers pause to observe, offering words of encouragement and admiration. You feel a deep sense of accomplishment, knowing your creation is now a welcoming beacon for the journey ahead. A bell rings faintly in the distance, marking the first step of a thriving collaboration.
+
+<LoreSeparator />
+
+<h3>The Keeper's Words of Wisdom</h3>
+
+> Every great journey begins with a single step—or the planting of a single seed. Whether you're just starting, refining your craft, or shaping the future of your collective, your work today lays the foundation for Open Source excellence.
+
+Return tomorrow for your next challenge, and remember: the village grows stronger with each craft you make. Together, we'll spread the _Open Source_ spirit far and wide.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Audit Your Repositories Ecosystem
+
+<hr />
+
+<Lore type="ice">
+
+As the morning sun casts its golden light across the _Winter Open Source Village_, the _Keeper of the Repos_ approaches you with a knowing smile.
+
+> The heart of any great endeavor lies in its foundation,
+
+they say, gesturing toward the paths that wind through the village's bustling marketplace.
+
+> Every stall, every guild, every craftsperson—all thrive because they have order, clarity, and purpose. Your challenge is to bring that same clarity to your domain, for it is here that collaboration truly begins.
+
+With a wave of their hand, the _Keeper_ reveals three distinct paths, each guiding you toward a different facet of the collective. Whether you tend to a solitary workshop, oversee a collection of artifacts, or manage a vast guild of protectors, the task ahead is clear: assess, improve, and prepare for growth.
+</Lore>
+
+<hr />
+
+Managing repositories, whether it's one project or several, requires good structure and organization to make collaboration easier and ensure future growth. This challenge helps you review and improve your repository's setup to align with your goals.
+
+A clear and consistent structure reduces confusion, makes maintenance simpler, and prepares your project for contributors. Good practices also help build trust and make teamwork smoother, especially for larger projects.
+
+**Today's challenge focuses on checking and refining your repository's structure and settings** to make them more effective for collaboration.
+
+<Aside type="tip" title="Before starting">
+- Especially if you're managing multiple repositories, consider using a document to track your audit findings and recommendations. This can help you identify patterns, prioritize improvements, and ensure consistency across your projects.
+</Aside>
+
+<Steps>
+
+1. **Evaluate scalability and organization** by examining your repository (or repositories) structure which must be organized for clarity and growth.
+
+    - **For single repositories**, assess folder structure and documentation to ensure ease of navigation and future scalability.
+
+    - **For multiple repositories**, ensure related repositories share consistent structures, such as naming conventions, README formats, and file organization.
+
+1. **Ensure governance and standards** by reviewing repository-level settings and configurations.
+
+    - Confirm branch protection rules are configured, including requirements for reviews or status checks before merging.
+
+    - Verify the default branch is aligned with your workflows and community needs (e.g., `main` or `develop`).
+
+    - For large repositories or organizations, ensure templates for issues and pull requests are in place to standardize contributions, and are consistent across projects.
+
+1. **Standardize essential files** to ensure consistency and clarity across repositories.
+
+    - Audit the presence of key files for each repository. Common files include `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY.md`, `FUNDING.yml`, and `SUPPORT.md`.
+
+    - For multiple repositories, ensure these files are consistent across projects and aligned with the same standards.
+
+      <Aside type="tip">
+      You can rely on the [Intermediate track of this challenge](#intermediate-audit-your-repository) to identify essential files and settings to standardize across your repositories.
+      </Aside>
+
+1. **Optimize discoverability and navigation**
+
+    - Use topics or tags to group related repositories and improve their overall discoverability for contributors and users.
+
+    - For organizations, explore creating repository-level templates or organization-wide settings.
+
+1. **Celebrate and share**:
+
+    Once you've completed your audit, celebrate your work by sharing your repository, repositories, or organization, with other participants so everyone knows what will be your focus for the this month.
+
+    Share them on social media with the `#AdventOfOpenSource` hashtag to let the world know about your journey, or in our [Discord server](https://discord.gg/fpUDwEMGwE).
+
+</Steps>
+
+<h3>Success Criteria</h3>
+
+- ✓ Repositories are audited and organized for clarity and scalability.
+- ✓ Governance settings are reviewed and aligned with project goals.
+- ✓ Essential files are standardized and consistent across repositories.
+- ✓ Repositories are optimized for discoverability and navigation.
+- ✓ You shared your repository, repositories, or organization with other participants.
+
+<hr />
+
+<Lore>
+The _Keeper_ nods approvingly as you return, the evidence of your work glowing brightly in the air around you.
+
+> You have done well,
+
+they say, their voice warm with pride.
+
+> Your efforts have brought order and clarity, creating a foundation upon which others may build. Remember, the strength of this village lies not just in its people but in the shared wisdom and structure they uphold.
+
+The village hums with activity as other protectors and artisans alike admire your handiwork. Somewhere, a bell rings—a signal of progress, a sound of harmony. Above, the _Northern Lights_ shimmer brightly, a sign that your craft will guide others forward into the new year.
+
+<LoreSeparator />
+
+<h3>The Keeper's Words of Wisdom</h3>
+
+> Every great journey begins with a single step—or the planting of a single seed. Whether you're just starting, refining your craft, or shaping the future of your collective, your work today lays the foundation for Open Source excellence.
+
+Return tomorrow for your next challenge, and remember: the village grows stronger with every craft you create. Together, we'll spread the _Open Source_ spirit far and wide.
+</Lore>

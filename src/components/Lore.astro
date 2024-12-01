@@ -1,0 +1,21 @@
+---
+import ContentImage from './ContentImage.astro';
+import HeadingRune from './HeadingRune.astro';
+
+import logo from '../assets/logo.svg';
+
+const { type } = Astro.props;
+---
+<div class="lore">
+  {
+    type && type !== 'logo' &&
+      <HeadingRune type={type} />
+  }
+  {
+    type === 'logo' && 
+      <div class="lore-logo">
+        <ContentImage src={logo} alt="" />
+      </div>
+  }
+  <slot />
+</div>

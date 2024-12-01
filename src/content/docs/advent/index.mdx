@@ -1,77 +1,121 @@
 ---
 title: About
-description: Advent of Open Source is a community-driven event that aims to introduce newcomers to Open Source Software development, and to help all participants to create or enhance their repositories.
+description: Advent of Open Source is a community-driven event to introduce newcomers to Open Source Software development, and to help all participants to create or enhance their repositories.
 ---
 
-import { Image } from 'astro:assets';
-import beginnerRune from '../../../assets/beginner-rune.svg';
-import intermediateRune from '../../../assets/intermediate-rune.svg';
-import advancedRune from '../../../assets/advanced-rune.svg';
+import { Aside } from '@astrojs/starlight/components';
+import Runes from '../../../components/Runes.astro';
 
 Hi there! I'm **Julien Déramond**. You're on the official website of the **Advent of Open Source** event, first edition in 2024. I hope you'll enjoy this event as much as I did creating it.
 I'm a Design System tech lead, but also deeply involved in the Open Source community. I'm the creator of the [Open \{re\}Source](https://openresource.dev) project, and one of the maintainers of [Bootstrap](https://getbootstrap.com). You can find me on [GitHub](https://github.com/julien-deramond) where you'll find all my projects, contributions, and links to social media.
 
 Each year, tons of developers participate to the famous official [Advent of Code](https://adventofcode.com), but also to special, local, and specific events in that spirit.
 
-**Advent of Open Source** is one of them. It is a community-driven event that aims to introduce newcomers to Open Source Software development, and to help all participants to create or enhance their repositories, small, medium, or large.
+**Advent of Open Source** is one of them. It is a community-driven event to introduce newcomers to Open Source Software development, and to help all participants to create or enhance their repositories, small, medium, or large.
 
-It's a 24-day event that will take place from December 1st to December 24th, 2024.
+**It's a 24-day event that will take place from December 1st to December 24th, 2024.**
 
 Each day, around 06:00 to 08:00 CET, you'll access a new challenge to complete. The challenges are designed to help you learn new skills, improve your existing skills, and to help you create or enhance your repositories.
 
 It's a great opportunity to learn, to share, and to have fun with other participants.
 
-## 3 levels of tracks
+## 3 Levels of Tracks
 
 Each day, you'll be able to choose between three levels of tracks, identified by runes:
 
-<ul style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; margin-bottom: 2rem; padding: 0">
-  <li style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
-    <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
-      <Image src={beginnerRune} alt="" />
-    </div>
-    <div style="text-align: center">
-      <strong>Snowflake rune</strong><br/>Beginner, you're starting a new project
-    </div>
-  </li>
-  <li style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
-    <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
-      <Image src={intermediateRune} alt="" />
-    </div>
-    <div style="text-align: center">
-      <strong>Snowball rune</strong><br/>Intermediate, you already have a project and want to enhance it
-    </div>
-  </li>
-  <li style="max-width: 150px; display: flex; flex-direction: column; gap: 5px; align-items: center; margin: 0">
-    <div style="text-decoration: none; width: 100px; height: 100px; font-size: 60px; border-radius: 50%; border: 1px solid transparent; background-color: var(--sl-color-accent-low); margin: 0; display: flex; align-items: center; justify-content: center; color: var(--sl-color-accent)">
-      <Image src={advancedRune} alt="" />
-    </div>
-    <div style="text-align: center">
-      <strong>Ice rune</strong><br/>Advanced, you already have a large project and want to go further
-    </div>
-  </li>
-</ul>
+<Runes />
 
-## How to participate
+<Aside>
+In the lore of the Winter Open Source Village, the term "artifact" is used to represent a project. For example:
 
-Basically, you just have to follow the instructions of the day. There's no registration, no leaderboard, no pressure. Just have fun and learn.
+> Beginner level for folks starting a new artifact
+
+This translates to:
+
+> Beginner level for folks starting a new project
+
+Keep this in mind as you navigate the challenges!
+
+</Aside>
+
+The **Beginner Level** is for those starting their very first Open Source project. It's a guided, step-by-step approach designed to help you build something from scratch. Every task is crafted to be accessible, even if you're not a developer, with detailed instructions to support your journey into Open Source.
+
+The **Intermediate Level** is for those who already have an Open Source project and know the basics. These challenges focus on enhancing and refining your project. Since every project is unique, the tasks are less prescriptive and more open to interpretation. Adapt the challenges to fit your project—they're meant to inspire, not impose. Just try to stay aligned with the day's topic; it will make discussions with other participants more meaningful.
+
+The **Advanced Level** is tailored for those managing larger projects, potentially with contributors or multiple repositories in their care. These challenges are intentionally open-ended to accommodate complex setups. Adapt the tasks to your projects' needs, using them as a framework for exploration and improvement. Staying on topic will foster richer conversations with the community.
+
+Not everything will apply to your situation—and that's okay. Use this time to reflect, review, and plan.
+
+Some days may call for deep focus, while others offer a chance to pause and enjoy the spirit of Open Source. Take time to celebrate your efforts, rest when needed, and rekindle your passion for creating and sharing.
+
+This event is about more than tasks—it's about embracing the joy of Open Source.
+
+## How to Participate
+
+**It's entirely free.**
+
+**It's very simple.**
+
+You just have to follow the instructions of the day. There's no registration, no leaderboard, no pressure. Just have fun and learn.
 
 You can participate in the way you want: alone, with friends, with your company, with your school, with your community, etc.
 
-## Helping each other
+## How a Day Is Structured
+
+Each page of the event, representing a day, is structured as follows:
+- **Day's title**
+- **Lore introducing the day** at the Winter Open Source Village. Each day is a new chapter of the story.
+  - At the end of the introduction, you'll be asked to choose a track:
+    - **Beginner**, for folks starting a new project
+    - **Intermediate**, for folks who already have a project and want to enhance it
+    - **Advanced**, for folks who already have a large project or several org/personal projects and want to go further
+- **3 dedicated autonomous sections for the beginner**, intermediate, and advanced track
+  - **Lore introducing the challenge of the day**
+  - **The challenge itself**
+  - **The success criteria**
+  - **A closing lore paragraph**
+  - **A message from a character of the Winter Open Source Village**
+
+## Advise for the Participants
+
+**We're not here to judge, criticize, or blame.**
+
+**Everyone comes from a unique place**—with different skills, experiences, and backgrounds. Some days, you might feel like a snowflake, a snowball, or a block of ice. And that's okay.
+
+We're all here for the same reasons: to learn, share, and have fun. **Everybody is welcome!**
+
+**Take it at your own pace.** Pause when you need to. Ask for help when you're stuck. Lend a hand to others. Celebrate your progress. Share your feedback, your ideas, and yes, even your fun!
+
+Some challenges will feel simple. Others might stretch your skills. One might take five minutes; another could take much longer. That's normal. If you're short on time, energy, or motivation, don't stress. Skip the challenge if needed. Return to it later. Or plan it as a future goal.
+
+Some challenges might not fit your interests, your skills, or your projects. That's okay too. **You're free to adapt, remix, or skip any challenge.** You can also use the challenges as inspiration for your own projects.
+
+**The website isn't going anywhere**, and the challenges will remain available whenever you're ready.
+
+**Focus on quality over speed.** These challenges are about sparking ideas and starting something meaningful—you can refine or finalize your contributions later. Submit draft pull requests, log issues, or simply reflect on the topic for future improvements.
+
+## Helping Each Other
 
 Open Source is community, is sharing, is helping each other.
 
-That's why we have a [Discord server](https://discord.gg/fpUDwEMGwE) where you can ask for help, share your progress, and help others. It's a great place to meet other participants and to have fun. We have a dedicated category, and a dedicated channel for each day of the event.
+That's why we have a [Discord server](https://discord.gg/fpUDwEMGwE) where you can:
+- Ask for help when you're stuck.
+- Share your progress and learn from others.
+- Help fellow participants.
+- Connect with people who share your passion for Open Source.
 
-We'll also be present on social media, so don't hesitate to share your progress with the hashtag `#AdventOfOpenSource`:
+The server has a dedicated category for this event, with specific channels for each day's challenge.
+
+We'll also be active on social media, so don't hesitate to share your progress using the hashtag `#AdventOfOpenSource`:
 - [Bluesky](https://bsky.app/profile/openresource.dev)
 - [LinkedIn](https://linkedin.com/company/open-re-source/)
 - [Mastodon](https://fosstodon.org/@openresource)
 - [Threads](https://www.threads.net/@openresource)
 - [X](https://x.com/open_resource)
 
-## How to support
+## How to Support
+
+The more we are, the more we learn, the more we share, the more we have fun.
 
 * You can **share this event** with your friends, your company, your school, your community, etc.
 * You can **contribute to the source code** of this website on [GitHub](https://github.com/Open-reSource/adventofopensource.com). Time is incredibly valuable.
