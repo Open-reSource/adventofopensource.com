@@ -1,0 +1,296 @@
+---
+title: "Day 2: Guarding the Gift of Code"
+description: "Defend the harmony of the Winter Open Source Village! Join the Keeper of the Repos to protect shared creations from the Clausebreakers' chaos and ensure every artifact honors its creator's wishes."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day02Snowflake01 from '../../../../assets/days/day-02-snowflake-01.png';
+import day02Snowflake02 from '../../../../assets/days/day-02-snowflake-02.png';
+import day02Snowflake03 from '../../../../assets/days/day-02-snowflake-03.png';
+import day02Snowflake04 from '../../../../assets/days/day-02-snowflake-04.png';
+import day02Snowflake05 from '../../../../assets/days/day-02-snowflake-05.png';
+import day02Snowflake06 from '../../../../assets/days/day-02-snowflake-06.png';
+
+<Lore type="logo">
+<h2>Trouble Brews in the Winter Open Source Village</h2>
+
+The snow sparkles under the pale winter sun, but all is not as peaceful as it seems. Rumors swirl of a mischievous force lurking in the shadows: the _Clausebreakers_. These troublemakers seek to disrupt the harmony of the village by spreading confusion and chaos over one of the most important pillars of _Open Source_—protection of shared creations.
+
+These protective scrolls ensure every artifact can be shared, used, and improved upon while honoring the creator's wishes. Today, the _Keeper of the Repos_ calls upon you to fortify your artifacts against the _Clausebreakers_' schemes. Whether you're new to this magic or a seasoned defender, your task is to safeguard these creations and the community they support.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-choose-and-add-your-first-license)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-review-license-compliance)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-implement-license-checking-automation)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Choose and Add Your First License
+
+<hr />
+
+<Lore type="snowflake">
+In the _Village_'s central library, where towering shelves brim with ancient scrolls and the air hums with quiet enchantment, the wisdom of generations lies preserved. These scrolls are more than mere relics—they are the keys to sharing your craft responsibly, allowing it to flourish in harmony with the values you hold dear. As you wander through the hallowed aisles, the _Keeper of the Repos_ approaches, their voice calm yet resolute.
+
+> Each artifact you create holds the potential to inspire others, but without the right protective scroll, its future may be left to chance.
+
+Your task is to choose the scroll that best reflects your intentions, ensuring your artifact can be used and built upon while honoring the spirit in which it was crafted. Let the whispers of the library guide you as you take this first step into safeguarding your creation's journey.
+</Lore>
+
+<hr />
+
+Today's challenge is to choose a license for your project and add it to your repository.
+
+A license is essential because it legally defines how others can use, share, and modify your project. By adding a license, you set clear guidelines for how contributors and users can interact with your project, and you protect your work from misuse. Without a license, your project may not be legally usable by others, and potential contributors may hesitate to get involved.
+
+**Why is this important?** Licensing is a core element of Open Source—without it, your project's legal standing can be unclear. A proper license helps others understand the scope of what they can do with your work and ensures that everyone is on the same page about contributions and usage rights.
+
+<Steps>
+
+1. **Explore popular Open Source licences** like MIT, Apache 2.0, and GPL by visiting [choosealicense.com](https://choosealicense.com/).
+
+1. **Choose the license that best suits your project's needs.**
+
+    For this Advent of Open Source, and for beginners in general, we recommend starting with the MIT License for its simplicity and permissiveness, allowing others to use, modify, and distribute your work with minimal restrictions, which makes it easy for others to contribute.
+
+1. **Create the license file.**
+
+    From your project repository, click on _Add file_ and select _Create new file_.
+
+    <ContentImage src={day02Snowflake01} alt="" />
+
+1. **Name the new file `LICENSE`.**
+
+    A _Choose a license template_ button will magically appear.
+
+    Click on this button to proceed.
+
+    <ContentImage src={day02Snowflake02} alt="" />
+
+1. **Select your license.**
+
+    On the left side of the screen, you will see a list of available licenses. Choose the one that you decided on earlier.
+
+1. **Fill in your information.**
+
+    On the right side, enter your name (or the name of your organization) and the current year.
+
+    <Aside type="tip">
+    You can use `2024-present` so you won't have to manually update the year each time.
+    </Aside>
+
+    <ContentImage src={day02Snowflake03} alt="" />
+
+1. **Review your license.**
+
+    Click on _Review and submit_. The license text will appear on the screen.
+
+    <ContentImage src={day02Snowflake04} alt="" />
+
+1. **Commit the license.**
+
+    Click _Commit changes..._ to add the license file to your repository. A popup will prompt you to add a commit message. You can write `docs: create LICENSE file`.
+
+    <ContentImage src={day02Snowflake05} alt="" />
+
+1. **Final step.**
+
+    Click _Commit changes_ again. This action will create the new `LICENSE` in the root directory of your project, right alongside your `README.md`.
+
+    <ContentImage src={day02Snowflake06} alt="" />
+
+</Steps>
+
+**Congratulations!**
+
+Your project is now properly licensed and protected, making it clear how others can use, modify, and contribute to it.
+
+<h3>Success Criteria</h3>
+
+- ✓ Your repository contains a `LICENSE` file.
+
+<hr />
+
+<Lore>
+Amongst the magical scrolls of the library, you chose to apply the _May It Transmit_ scroll, called _MIT_ by the villagers since it was so commonly used.
+
+May it guard your artifact and guide its contributors on the path of _Open Source_.
+
+<h3>The Keeper's Warning</h3>
+
+> These protective scrolls are shields for shared creations that protect _Open Source_. Neglect them, and your work becomes vulnerable to misuse. Strengthen them, and your artifacts will thrive within a community that honors your wishes.
+
+Be vigilant, traveller, for the _Clausebreakers_ feed on negligence. Together, we'll ensure that the _Winter Open Source Village_ remains a place where every contribution is safeguarded and celebrated. Return tomorrow for your next challenge, and remember: with every step, you grow stronger.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Review License Compliance
+
+<Lore type="snowball">
+The sunlight filters through frost-laden trees, casting intricate patterns on the snowy ground. The _Keeper of the Repos_ approaches with a satchel brimming with peculiar scrolls and enchanted trinkets.
+
+> These artifacts hold untold power, shaping the foundation of our shared creations. Yet their origins and true nature remain shrouded in mystery. To safeguard the harmony of the village, you must uncover their secrets and ensure their magic aligns with our purpose.
+
+The task before you is clear: delve into the mystical workings of the scrolls, chart their lineage, and ensure their magic strengthens the community rather than threatens its balance.
+</Lore>
+
+<hr />
+
+Today's challenge is to investigate and document the licenses of your project's dependencies and ensure they are compatible with your own license.
+
+Dependencies—external components, libraries, or tools that your project relies on—carry licenses that outline how they can be used, shared, or modified.
+
+Auditing these licenses helps ensure your project remains compliant, avoids legal or ethical issues, and fosters transparency with collaborators, contributors, and users.
+
+By understanding the terms of your dependencies, you safeguard your project from potential conflicts, build trust within your community, and set a strong foundation for responsible Open Source development.
+
+<Steps>
+
+1. **Document dependency licenses** to gain visibility into the origins and terms of the tools your project relies on. This creates a foundation for assessing license compatibility.
+
+    - Use tools like [license-checker](https://github.com/davglass/license-checker), [FOSSA CLI](https://github.com/fossas/fossa-cli), or some specific tools for your language (e.g. [`pip-licenses`](https://pypi.org/project/pip-licenses/)) to generate a list of licenses for all your dependencies.
+    - You can record these findings in a clear, accessible format in a temporary document or spreadsheet during the audit.
+
+1. **Check license compatibility** to ensure that your dependencies' licenses align with your own license to avoid conflicts or restrictions.
+
+    - Compare your project's license with those of its dependencies, paying attention to:
+      - Permissiveness: Does the dependency's license allow you to use it in your project?
+      - Restrictions: Are there obligations, such as attribution or source code sharing?
+    - Use compatibility guides like [choosealicense.com](https://choosealicense.com/), the [OSI Approved Licenses List](https://opensource.org/licenses), or the [SPDX License List](https://spdx.org/licenses/) to identify and understand potential issues.
+    - Document findings, highlighting any unresolved conflicts or areas that need further research.
+
+1. **Improve license transparency.**
+
+    It's not mandatory, but sharing your license audit results in your project's documentation could help contributors and users navigate the licensing landscape with confidence.
+    - Summarize your license audit findings in your `README` (if not too many dependencies) or `CONTRIBUTING` file to provide quick visibility into compliance efforts.
+    - Include a dedicated section in your project's documentation explaining your project's license terms and how they interact with dependency licenses.
+    - Add a `THIRD-PARTY` or `DEPENDENCIES` file to your repository, listing all dependencies and their respective licenses for detailed transparency.
+
+    If your project is a library, consider clarifying whether the terms of its dependencies also apply transitively to its users. This builds trust and ensures that downstream users can understand their obligations.
+
+</Steps>
+
+From this audit, you now have a better understanding of your project's licenses and any potential risks. This will help you make better decisions and stay compliant in the future.
+
+<h3>Success Criteria</h3>
+
+- ✓ Started a license audit document
+- ✓ Checked for license compatibility issues
+- ✓ (Optional) Shared license compatibility findings in project documentation
+
+<hr />
+
+<Lore>
+The _Keeper of the Repos_ examines your scroll, now marked with meticulous notes and glowing softly with a protective charm.
+
+> Your diligence is a gift to the village,
+
+they proclaim.
+
+> These artifacts, once enigmatic, are now beacons of clarity. The _Clausebreakers_ will find no foothold here.
+
+As you return to the warmth of the archives, you leave behind a legacy of harmony and understanding, etched into the fabric of the village.
+
+<h3>The Keeper's Warning</h3>
+
+> These protective scrolls are shields for shared creations that protect _Open Source_. Neglect them, and your work becomes vulnerable to misuse. Strengthen them, and your artifacts will thrive within a community that honors your wishes.
+
+Be vigilant, traveller, for the _Clausebreakers_ feed on negligence. Together, we'll ensure that the _Winter Open Source Village_ remains a place where every contribution is safeguarded and celebrated. Return tomorrow for your next challenge, and remember: with every step, you grow stronger.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Implement License Checking Automation
+
+<Lore type="ice" >
+The _Village Council_ gathers in the grand hall, where icy winds whisper through the rafters. The _Keeper of the Repos_ speaks gravely:
+
+> Safeguarding the present is not enough. To secure the village for generations, we must ensure every scroll and artifact introduced to our troves aligns with our values. Only through vigilance and governance can we repel the _Clausebreakers_ and protect what we hold dear.
+
+The council hands you the sacred quill, its tip shimmering with untold potential. Your task is to create a pact—a strategy to oversee the future of the village's scrolls.
+</Lore>
+
+<hr />
+
+In larger projects or organizations, consistent licensing and dependency practices are essential. Poor management can lead to legal complications, confusion, or a loss of trust among collaborators and users.
+
+Today's challenge is to develop a strategy for governing the introduction and maintenance of licenses and dependencies in your project or organization.
+
+A well-defined governance framework minimizes risks, ensures consistency, and builds confidence in your contributions.
+
+<Steps>
+
+1. **Establish guidelines for adding new dependencies.**
+
+    Clear rules help maintain consistency and prevent conflicts as the project grows.
+
+    - Define criteria for introducing new dependencies, such as ensuring their licenses are compatible with your project's or organization's license and policies.
+    - Document these guidelines in a `CONTRIBUTING` file for a single repository or a governance document for multiple repositories, especially for organizations.
+
+1. **Automate compliance checks.**
+
+    Automation reduces the burden on maintainers and ensures continuous compliance.
+
+    - Check out and try to integrate license scanning tools like [FOSSA](https://fossa.com/), [Trivy](https://github.com/aquasecurity/trivy) or other tools into your CI/CD pipelines to identify license issues automatically.
+    - Set up notifications or alerts for violations or potential risks to act quickly when issues arise.
+
+1. **Generate and maintain a Software Bill of Materials (SBOM)** to improve transparency and ensure thorough tracking of your dependencies.
+
+    - Use tools like [CycloneDX](https://cyclonedx.org/), [Syft](https://github.com/anchore/syft), or [FOSSA](https://fossa.com/) to create an SBOM for your project or organization.
+
+      <Aside type="tip">
+      [GitHub allows to export an SBOM for your repository](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository) via the GitHub UI (from the _Insights_ tab) or by using the REST API.
+      </Aside>
+
+    - Keep your SBOM up-to-date as dependencies evolve over time.
+    - Share your SBOM with stakeholders or within your project's documentation to build trust and improve risk assessments.
+
+1. **Standardize licensing practices across repositories.**
+
+    Consistency simplifies collaboration, reduces maintenance overhead, and enhances transparency.
+
+    - Make sure that all repositories include a `LICENSE` file, clearly outline the licensing terms in the `README`, and follow a standard structure for documenting licenses.
+    - Create a central policy document that outlines best practices for licensing and dependency management, making it easily accessible to all contributors.
+
+</Steps>
+
+By establishing clear guidelines, automating compliance checks, and standardizing practices, you create a strong foundation for managing licenses and dependencies. This strategy not only minimizes risks but also fosters a culture of responsibility and transparency within your project or organization. With these steps in place, your contributions remain legally sound and trustworthy as your project grows.
+
+<h3>Success Criteria</h3>
+
+- ✓ Defined guidelines for adding dependencies
+- ✓ Tested and started to integrate automated license scanning in CI/CD pipelines
+- ✓ Generated a Software Bill of Materials (SBOM) for your project or organization
+- ✓ Shared governance documentation with contributors
+
+<hr />
+
+<Lore>
+As your quill finishes its last flourish, the governance pact radiates with an inner glow, a testament to your foresight and care. The _Keeper of the Repos_ steps forward, sealing the pact with the village sigil.
+
+> You have laid the foundation for lasting peace,
+
+they declare.
+
+> With these rules, we can face any storm the _Clausebreakers_ may conjure.
+
+The council disperses, leaving you to gaze at your creation—an enduring promise to the future of the village.
+
+<LoreSeparator />
+
+<h3>The Keeper's Warning</h3>
+
+> These protective scrolls are shields for shared creations that protect _Open Source_. Neglect them, and your work becomes vulnerable to misuse. Strengthen them, and your artifacts will thrive within a community that honors your wishes.
+
+Be vigilant, traveller, for the _Clausebreakers_ feed on negligence. Together, we'll ensure that the _Winter Open Source Village_ remains a place where every contribution is safeguarded and celebrated. Return tomorrow for your next challenge, and remember: with every step, you grow stronger.
+</Lore>

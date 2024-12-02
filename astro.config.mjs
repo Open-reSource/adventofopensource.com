@@ -102,7 +102,11 @@ export default defineConfig({
                 {
                   label: 'Day 1: The Winter Open Source Village',
                   slug: 'advent/week-1/day-1'
-                }
+                },
+                {
+                  label: 'Day 2: Guarding the Gift of Code',
+                  slug: 'advent/week-1/day-2'
+                },
               ]
             },
           ],
