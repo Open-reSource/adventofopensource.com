@@ -107,6 +107,10 @@ export default defineConfig({
                   label: 'Day 2: Guarding the Gift of Code',
                   slug: 'advent/week-1/day-2'
                 },
+                {
+                  label: 'Day 3: Illuminating the Path',
+                  slug: 'advent/week-1/day-3'
+                },
               ]
             },
           ],

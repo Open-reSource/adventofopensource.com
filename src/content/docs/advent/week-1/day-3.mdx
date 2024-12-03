@@ -1,0 +1,444 @@
+---
+title: "Day 3: Illuminating the Path"
+description: "Step into the Winter Open Source Village, where the Mist of Misunderstanding clouds the path. Craft guiding scrolls to illuminate the way, empower artisans, and dispel the fog of confusion."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day03Snowflake01 from '../../../../assets/days/day-03-snowflake-01.png';
+import day03Snowflake02 from '../../../../assets/days/day-03-snowflake-02.png';
+import day03Snowflake03 from '../../../../assets/days/day-03-snowflake-03.png';
+import day03Ice01 from '../../../../assets/days/day-03-ice-01.png';
+
+<Lore type="logo">
+<h2>The Fog of Confusion Descends</h2>
+
+As dawn breaks over the _Winter Open Source Village_, a dense fog rolls in, shrouding the landscape in uncertainty. The _Keeper of the Repos_ gathers the villagers, his voice steady but filled with concern.
+
+> The _Mist of Misunderstanding_ has come upon us,
+
+they warn, pointing toward the thick haze enveloping the path.
+
+> This fog clouds the minds of artisans, making it difficult to navigate the tools we've forged and understand their purpose.
+
+The villagers murmur in fear, unsure of how to proceed. The _Keeper_ raises his hand to silence them.
+
+> But there is hope,
+
+they continue, a glimmer of determination in their eyes.
+
+> In the archives of the village lies an ancient remedy—a guide. These scrolls, when crafted with care, will cut through the mist and reveal the way forward.
+
+They gesture toward the nearby scrolls, worn but still vibrant with potential.
+
+> By creating these parchments, you'll guide the artisans through the complexities of our work, ensuring none are lost to the fog.
+
+With a firm nod, the _Keeper_ looks at you, as if seeing you for the first time.
+
+> Your journey begins now. Lay the foundation for these parchments. Start small, but ensure that, over time, they grow into the guiding scrolls that will lead others clearly and confidently through our village.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-create-your-first-readme)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-audit-and-enhance-your-readme)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-create-a-readme-ecosystem-mapping)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Create Your First README
+
+<hr />
+
+<Lore type="snowflake">
+The _Keeper of the Repos_ hands you a blank scroll, its edges crisp and untouched. Their eyes meet yours with an encouraging gleam.
+
+> This is your canvas,
+
+they say, their voice calm but firm.
+
+> Every great artifact begins with understanding, and that understanding starts with you. Your task is to capture the essence of your work—the heart of your creation—on this very scroll.
+
+They gesture toward the scroll with a reverence that suggests its importance.
+
+> A well-crafted _Scroll of Beginning_ acts as a beacon,
+
+the Keeper continues,
+
+> welcoming those who approach and illuminating the path forward. It is the first thing that many will see, the first glimpse into the spirit of your artifact. It serves not just as an introduction, but as a guide, gently leading others through the purpose, the steps, and the tools of your endeavor.
+
+The _Keeper_ pauses, allowing the weight of their words to sink in.
+
+> This scroll is more than just instructions—it's a warm invitation, a first handshake with your community. Make it clear, make it inviting, and make it a map that points to the future.
+
+They hand you a quill, its nib shimmering with possibility.
+
+> Now, the work begins,
+
+they say with a knowing smile.
+
+> This scroll will be the foundation, the starting point for those who will walk with you.
+
+</Lore>
+
+<hr />
+
+README files are the first thing visitors see when they land on your project's repository. They provide an overview of your project, its purpose, and how to get started. A well-crafted README can attract contributors, users, and collaborators to your project, setting the tone for a vibrant community.
+
+<Steps>
+
+1. **Edit your README**.
+
+    From your project repository, click on the `README.md` file, then click the pencil icon to edit it.
+
+    <ContentImage src={day03Snowflake01} alt="" />
+
+1. **It is time to start writing your README**.
+
+    From here, you can start writing the content of your README using Markdown syntax. You can refer to this [Markdown Guide](https://www.markdownguide.org/basic-syntax/) that will help you format your text. Don't worry, you'll master it in no time!
+
+    <Aside type="tip">
+    Click on the `Preview` tab to see how your README will look once it's published.
+    </Aside>
+
+1. **Structure your README**.
+
+    There is an infinite number of ways to structure your README. Let's start with common sections, and this README will be updated along the Advent of Open Source:
+
+    - **A main title** with the project name
+    - **A more complete description** of your project compared to the repository description which is character-limited
+    - **A dedicated section to remind the license** under which your project is distributed
+
+    In the following template, elements between `<!-- -->` are comments and won't be displayed in the final README.
+
+    Please copy and paste the following template into the interface, and replace the placeholders with your project's information:
+
+    ```md title="README.md"
+    # Project Name
+
+    Description of you project goes here.
+
+    ## License
+
+    This project is licensed under the <!-- Insert your licensing type (e.g. 'MIT') --> License - see the [LICENSE](LICENSE) file for details.
+
+    ```
+
+    There is no standard format for a README. Feel free to adapt, add, modify, or remove these sections based on your project's needs.
+
+1. **Check and preview your README**.
+
+    Verify that your content is correct. Here's an adapted version based on our template for the Avalanche fake project:
+
+    <Tabs>
+      <TabItem label="Markdown Code">
+      ```md title="README.md"
+      # Avalanche
+
+      Avalanche is a community-driven initiative designed to help The Winter Open Source Village rediscover its spirit of collaboration. As Open Source projects grow, they can sometimes lose the sense of unity that makes them thrive. Avalanche seeks to bring contributors back together, fostering a culture of teamwork and shared purpose. Whether you're a first-time participant or a seasoned contributor, Avalanche provides the tools and guidance to help everyone work in harmony.
+
+      Through interactive challenges, mentorship, and open discussions, Avalanche creates an environment where contributors can connect, collaborate, and build exciting projects. It's not just about writing code; it's about building relationships and strengthening the bonds that make Open Source vibrant. Join Avalanche to help The Winter Open Source Village flourish as a beacon of collaboration and creativity.
+
+      ## License
+
+      This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+      ```
+      </TabItem>
+      <TabItem label="Preview">
+        <ContentImage src={day03Snowflake02} alt="" />
+      </TabItem>
+    </Tabs>
+
+1. Click on the _Commit changes_ button to save your README.
+
+1. Change the commit message to `docs: update README.md`.
+
+1. Click on the _Commit changes_ button to finalize the update.
+
+1. **Your README is now updated**.
+
+    Go back to your repository's main page and check that your README is displayed correctly. The link to the license should be clickable.
+
+    <ContentImage src={day03Snowflake03} alt="" />
+
+</Steps>
+
+Your README is now way better than a blank page! It's the first step in creating a welcoming environment for your project, and it will help others understand its purpose and how they can contribute.
+
+<h3>Success Criteria</h3>
+
+- ✓ You maybe learned how to write in Markdown.
+- ✓ Your README is clear, readable, and explains the purpose of your project.
+- ✓ The license information is included and linked to the actual license file.
+
+<hr />
+
+<Lore>
+Your _Scroll of Beginning_ is no longer blank, though it is not yet complete. It is the symbol of a new beginning, a foundation upon which the journey will be built. The essence of your artifact now dances across the parchment in words, capturing its spirit and purpose. This is the first step in creating a guide for those who will follow, a lantern that will lead travellers through the many paths that your work will take them on. It's not just a parchment of guide—it is a living, breathing part of your artifact's heart, ready to be discovered and understood.
+
+The _Keeper of the Repos_ looks upon your work with a nod of approval.
+
+> The journey begins with clarity,
+
+they say.
+
+> This scroll is the first of many that will help others find their way in your world. Let it be a guiding star that will illuminate the path for those who come after.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> A guide filled with insight is like a lantern that cuts through the darkest fog. It offers a way for others to see clearly, to understand what has been created, and to know how they can be part of it.
+
+Take up your quill and dispel the _Mist of Misunderstanding_. As you continue, remember that the light you cast will guide others toward the heart of your creation. Tomorrow brings a new task, and with each step, the way will become clearer.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Audit and Enhance your README
+
+<hr />
+
+<Lore type="snowball">
+The _Keeper of the Repos_ leads you to a glowing tome on a pedestal. Its light flickers weakly, struggling against the encroaching _Mist of Misunderstanding_.
+
+> This is the _Pathfinder's Tome_,
+
+the _Keeper_ explains,
+
+> It is meant to guide those who delve deeper into the craft, but its clarity has faded. Without it, even seasoned travellers may lose their way.
+
+They place a hand on the tome.
+
+> Bring order to its pages. Strengthen its words so they shine like a lantern, cutting through the haze and guiding all who seek to contribute.
+
+The _Keeper_ steps back, leaving the tome in your care.
+</Lore>
+
+<hr />
+
+**Your repository already has a README—that's great!** It means you understand the importance of documentation. But just like code, documentation benefits from refactoring and enhancement.
+
+Today, we'll transform your README from a basic introduction into a comprehensive resource that welcomes contributors, guides users, and showcases your project professionally.
+
+A well-crafted README acts as your project's landing page, documentation, and community hub. It's often the first thing potential users and contributors see, so it needs to make a strong impression while providing clear, actionable information. Projects with clear, comprehensive documentation tend to attract more contributors and users, as they lower the barrier to entry and demonstrate project maintainability.
+
+<Steps>
+
+1. **Audit your current README**
+
+    <Steps>
+
+        1. **Check the existence of these essential sections**
+
+            - Project description and purpose
+            - Installation instructions
+            - Usage examples or code snippets
+            - Contributing guidelines or links to `CONTRIBUTING.md`
+            - License information and link to the actual license file
+
+            <Aside type="tip">
+            There are no standardization, but some tools like [readme.so](https://readme.so/) or [Make a README](https://www.makeareadme.com/) can help you structure your README.
+            </Aside>
+
+        2. **Think about other sections that would be relevant** to your project and add them as needed. For instance:
+
+            - A table of contents for easier navigation
+            - Some screenshots or GIFs to showcase your project or its features
+            - A "Quick Start" section for new users
+            - Add a troubleshooting section or FAQ if you have common issues
+
+        3. **Link everything from your README**. For example, consider adding links to:
+
+            - your Code of Conduct
+            - your contributing guidelines
+            - your documentation
+            - issues creation page
+            - the GitHub discussions, or any other community platform
+            - the social media accounts of your project
+            - similar projects or inspirations
+
+            <Aside type="tip" title="Remember">
+            Your README isn't just a document - it's a central hub, a bridge between your project and its community. Take time to put yourself in your users' shoes:
+            - What would they need to know first?
+            - What might confuse them?
+            - What would make them excited to contribute?
+            </Aside>
+    
+    </Steps>
+
+1. **Add badges** to your README to enhance its visual appeal and functionality. Badges are small images that provide quick information about your project, such as build status, code coverage, version, license, and more. They can be added to your README using Markdown or HTML.
+
+    The ideas of badges are endless, but here are some common ones:
+    - **Build status**: Shows whether your project's build is passing or failing.
+    - **Code coverage**: Indicates how much of your code is covered by tests.
+    - **Version**: Displays the current version of your project.
+    - **License**: Shows the type of license your project is distributed under.
+    - **Contributors**: Displays the number of contributors to your project.
+    - **Last commit**: Shows when the last commit was made to your project.
+    - **GitHub issues**: Displays the number of open issues in your repository.
+
+    You can generate badges using services like [Shields.io](https://shields.io/), [Badgen](https://badgen.net/), or other badge generators.
+
+    <Aside type="tip">
+    Check other repositories to see what badges they use and consider which ones would be most useful for your project.
+
+    [Awesome README](https://github.com/matiassingers/awesome-readme) is a curated list of awesome READMEs that you can use for inspiration. It's a little bit meta, but the list of the best READMEs is itself README!
+    </Aside>
+
+</Steps>
+
+**Your README is way better now, isn't it?** But there is still room for improvement. Keep iterating on it, and remember that it's a living document that should evolve with your project.
+
+<h3>Success Criteria</h3>
+
+- ✓ Your README includes essential sections like project description, installation instructions, and usage examples.
+- ✓ Your README has links to contributing guidelines, Code of Conduct, and other relevant resources.
+- ✓ Your README includes badges that provide quick information about your project.
+
+<hr />
+
+<Lore>
+The _Pathfinder's Tome_ now glows steadily, its pages vibrant with clarity. The _Mist of Misunderstanding_ withdraws, unable to obscure the light you've restored.
+
+> You have strengthened this guide,
+
+the _Keeper_ says, their voice filled with approval.
+
+> Now it will lead travellers forward with confidence, scattering confusion and doubt.
+
+Villagers gather to explore the tome, their expressions bright with newfound understanding. The _Keeper_ smiles.
+
+> A clear guide inspires action. You have ensured this path will welcome all who follow.
+
+With the _Mist_ retreating, the _Pathfinder's Tome_ stands as a beacon of purpose.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> A guide filled with insight is like a lantern that cuts through the darkest fog. It offers a way for others to see clearly, to understand what has been created, and to know how they can be part of it.
+
+Take up your quill and dispel the _Mist of Misunderstanding_. As you continue, remember that the light you cast will guide others toward the heart of your creation. Tomorrow brings a new task, and with each step, the way will become clearer.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Create a README Ecosystem Mapping
+
+<hr />
+
+<Lore type="ice">
+The _Keeper of the Repos_ guides you to the heart of the archives, where the _Great Mechanized Atlas_ lies dormant. Its intricate gears are still, its pages scattered and incomplete.
+
+> This is the _Atlas_,
+
+the _Keeper_ begins.
+
+> It has the power to connect every piece of knowledge, creating a map that shows how all parts of the craft come together. But the _Mist of Misunderstanding_ has disrupted its harmony, leaving travellers lost.
+
+They turn to you with a steady gaze.
+
+> Your task is to restore the _Atlas_. Bring clarity to its connections, ensure its design reveals the whole picture, and let it guide even the most complex journeys.
+
+The _Atlas_ hums faintly, waiting for your touch.
+</Lore>
+
+<hr />
+
+For maintainers managing multiple repositories or complex Open Source projects, your README is more than documentation—it's a strategic communication tool that bridges projects and attracts contributors.
+
+<Steps>
+
+1. **Create a cross-repository README strategy** by transforming your documentation from fragmented to interconnected.
+
+    **The first option is to create a dedicated repository with its own README** that would be a central repository that acts as a hub for your project ecosystem. This repository would contain a README that links to all your other repositories, providing a high-level overview of your projects and their relationships.
+    - Visualizes relationships between your repositories
+    - Explains the purpose and interaction of different projects
+    - Provides a clear architectural overview of your ecosystem
+    - Links to detailed documentation for each sub-project
+    - Prevents documentation fragmentation and simplifies navigation for contributors across multiple projects
+
+    <Aside type="tip" title="Why this is important">
+    When maintaining multiple repositories, scattered documentation can confuse contributors and make it hard to see how projects are interconnected. A centralized README acts as a hub, reducing confusion and providing a clear map of your ecosystem.
+
+    An example of visualization using Mermaid:
+
+    ```mermaid title="README.md"
+    graph TD
+        A[Main Project] --> B[Frontend]
+        A --> C[Backend]
+        A --> D[Utilities]
+        B --> E[Component Library]
+    ```
+
+    <ContentImage src={day03Ice01} alt="" />
+
+    </Aside>
+
+    **The second option is to rely on profile or organization profile README.**
+
+    - [GitHub allows to create a profile README that will be displayed on your profile page](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme). This can be a great place to showcase your projects, your contributions, and your skills.
+      - Use your profile README to highlight your most significant projects
+      - Include dynamic sections showing recent contributions
+      - Link to key repositories and documentation
+    - [GitHub allows to create an organization profile README that will be displayed on your organization's profile page](https://docs.github.com/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile). This can be a great place to showcase your organization's projects, its members, and its mission.
+      - Create a README that introduces the organization's mission
+      - Showcase key projects and their interconnections
+      - Provide a clear entry point for potential contributors
+      - Makes it easier for contributors to understand your project ecosystem at a glance, and guides them to the right repository to contribute to
+
+1. **Explore dynamic documentation automation** could be implemented via GitHub Actions to render some parts of your READMEs dynamically.
+
+    - **Auto-generated dependency graphs** with tools like [Dependency cruiser](https://github.com/sverweij/dependency-cruiser).
+    - **Auto-generated contributor lists** by using tools like [All Contributors](https://allcontributors.org/), [Contributors-Readme-Action](https://github.com/akhilmhdh/contributors-readme-action), or other similar tools.
+    - **Auto-generated sponsors lists** by using directly [SponsorKit](https://github.com/antfu-collective/sponsorkit) or our [SponsorKit Starter Template](https://github.com/Open-reSource/sponsorkit-starter) if it can help.
+    - **Auto-generated project metrics** with tools like [lowlighter/metrics](https://github.com/lowlighter/metrics).
+    - **Auto-validation of links** to ensure they are up-to-date with tools like [lycheeverse/lychee-action](https://github.com/lycheeverse/lychee-action).
+
+    These automation tools reduce manual work and keep your README accurate and up-to-date with minimal effort.
+
+    With complex projects, it's easy for documentation to fall out of date. Automating parts of your README, like the contributor list or dependency graph, ensures that the documentation remains fresh and accurate without relying on manual updates.
+
+</Steps>
+
+<h3>Success Criteria</h3>
+
+- ✓ Central hub repository or profile README that links to all your projects.
+- ✓ (Optional) Dynamic visualization of your project ecosystem (e.g., with Mermaid diagrams).
+- ✓ Explored dynamic documentation automation using GitHub Actions.
+- ✓ Clear and concise architectural overview that connects multiple repositories and guides potential contributors through the ecosystem.
+- ✓ Dynamic content (e.g., contributor list, dependency graphs) that automatically updates with each change.
+
+<hr />
+
+<Lore>
+The _Great Mechanized Atlas_ awakens, its gears turning smoothly as its pages align into a cohesive map. The _Mist of Misunderstanding_ shrinks back, powerless against the clarity you've restored.
+
+> You have repaired what few could,
+
+the _Keeper_ says with admiration.
+
+> The _Atlas_ now reveals the full scope of the craft, offering a complete guide to those who seek to understand it.
+
+Villagers marvel at the _Atlas_, its intricate design connecting every detail into a unified vision. The _Keeper_ smiles.
+
+> With this, no part of the craft will go unseen. You've created a tool that will inspire and empower all who follow.
+
+The _Atlas_ glows brightly, a symbol of understanding and connection.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> A guide filled with insight is like a lantern that cuts through the darkest fog. It offers a way for others to see clearly, to understand what has been created, and to know how they can be part of it.
+
+Take up your quill and dispel the _Mist of Misunderstanding_. As you continue, remember that the light you cast will guide others toward the heart of your creation. Tomorrow brings a new task, and with each step, the way will become clearer.
+</Lore>
