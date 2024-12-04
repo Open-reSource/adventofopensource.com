@@ -111,6 +111,10 @@ export default defineConfig({
                   label: 'Day 3: Illuminating the Path',
                   slug: 'advent/week-1/day-3'
                 },
+                {
+                  label: 'Day 4: Building the Spirit of Community',
+                  slug: 'advent/week-1/day-4'
+                },
               ]
             },
           ],

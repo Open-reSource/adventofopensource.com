@@ -1,0 +1,391 @@
+---
+title: "Day 4: Building the Spirit of Community"
+description: "Build harmony in the Winter Open Source Village by creating a welcoming, collaborative community where every artisan feels valued and inspired."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day04Snowflake01 from '../../../../assets/days/day-04-snowflake-01.png';
+import day04Snowflake02 from '../../../../assets/days/day-04-snowflake-02.png';
+import day04Snowflake03 from '../../../../assets/days/day-04-snowflake-03.png';
+
+<Lore type="logo">
+<h2>A Call for Harmony</h2>
+
+The _Winter Open Source Village_ thrives on collaboration, but whispers have reached the _Keeper of the Repos_—_Discordlings_ are lurking, sowing seeds of conflict and misunderstanding. These cunning creatures feed on unresolved disputes and unclear expectations, threatening the unity of the village.
+
+To protect the harmony of _Open Source_, the _Keeper_ tasks you with laying the foundations for a welcoming and collaborative community. With shared understanding, mutual respect, and harmonious leadership, we can craft a space where every artisan feels seen, valued, and inspired to contribute their gifts.
+
+Choose the rune that best suits your skills and experience:
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-add-a-basic-code-of-conduct)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-monitoring-adherence-to-the-code-of-conduct)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-building-a-proactive-community-culture)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Add a Basic Code of Conduct
+
+<hr />
+
+<Lore type="snowflake">
+The _Keeper of the Repos_ stands before the village, the air heavy with unease. There are murmurs of conflict, subtle but persistent, creeping through the village like a cold wind. The _Keeper_'s gaze sharpens as they speak.
+
+> The _Discordlings_ thrive on division,
+
+they warn,
+
+> feeding on misunderstandings and resentment. If we are to maintain the strength of our community, we must stand united, bound by respect and shared values.
+
+They hand you a scroll.
+
+> Today, you will lay the foundation for that unity. A set of guiding principles, simple yet firm, will offer the structure we need to navigate disagreements and misunderstandings. Let it be a reminder that every voice here is valued, and every interaction must be rooted in respect.
+
+The _Keeper_ steps aside, the task clear before you: to create a shield against discord, ensuring all artisans feel welcome and empowered to contribute.
+</Lore>
+
+<hr />
+
+A Code of Conduct is a vital document for any Open Source project. It sets expectations for behavior and ensures that all contributors feel welcomed and respected in your community.
+
+By completing this challenge, you'll learn how to add a Code of Conduct to your project and make it easily discoverable for contributors.
+
+<Steps>
+
+1. **Learn about the importance of a Code of Conduct.**
+
+    Visit the [How to Create a Code of Conduct for an Open Source Project](https://openresource.dev/articles/how-to-create-a-code-of-conduct-for-an-open-source-project) article. It provides insights into what a Code of Conduct is and why it matters.
+
+    **TL;DR:** It's a set of rules and guidelines that outline the expectations for behavior in a community. It helps to create a safe and welcoming environment for all contributors.
+
+    So it's a good idea to have one in your Open Source project!
+
+1. **Creating the file.**
+
+    From your project repository, click on _Add file_ and select _Create new file_.
+
+1. **Name the file `CODE_OF_CONDUCT`.**
+
+    Once named, a _Choose a code of conduct template_ button will magically appear. Click it to proceed.
+
+    <ContentImage src={day04Snowflake01} alt="" />
+
+1. **Choose a template.**
+
+    Select a pre-built template from the options on the left. For this challenge, we recommend the [`Contributor Covenant`](https://www.contributor-covenant.org/) due to its widespread adoption in Open Source projects. If you have a preference for another template, feel free to choose it.
+
+1. **Enter a contact method** on the right side.
+
+    It provides a way for contributors to report any concerns.
+
+    <Aside type="caution" title="Be careful">
+    If you include an email address, use a dedicated or team-specific email instead of a personal one. This email will be publicly accessible.
+    </Aside>
+
+    <ContentImage src={day04Snowflake02} alt="" />
+
+1. **Review and submit the template.**
+
+    Click _Review and submit_ to finalize your choice.
+
+1. **Commit your changes.**
+
+    When prompted, use the commit message: `docs: create CODE_OF_CONDUCT.md`, then click _Commit changes_.
+    
+    Congratulations—your Code of Conduct is now live!
+
+1. **Make the Code of Conduct easy to find.**
+
+    Update your README to highlight the new Code of Conduct. Open the `README.md` file in your repository and click the pencil icon to edit it. Add the following snippet before the _License_ section:
+
+    ```diff lang="md" title="README.md"
+    +## Community
+    +
+    +Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before participating in the community.
+
+    ## License
+    ```
+
+1. **Commit the README update.**
+
+    Use the commit message: `docs(README): mention Code of Conduct` and lick _Commit changes_.
+
+    <ContentImage src={day04Snowflake03} alt="" />
+
+    <Aside title="Have you noticed?">
+    On the right side of your repository page, you can see that several files are now listed:
+    - _Readme_
+    - _MIT license_
+    - _Code of conduct_
+    </Aside>
+
+</Steps>
+
+Adding a Code of Conduct is an essential step in fostering a welcoming and respectful Open Source community. By completing this challenge, you've not only equipped your project with an important document but also made it accessible to contributors by referencing it in the README. This ensures your community's values are clear to everyone.
+
+<h3>Success Criteria</h3>
+
+- ✓ Your repository contains a `CODE_OF_CONDUCT.md` file.
+- ✓ Your `README.md` file mentions the Code of Conduct.
+
+<hr />
+
+<Lore>
+The wind shifts, and the tension in the village begins to ease. The scroll you've crafted now rests in the hands of every villager, its words a promise of fairness, respect, and shared understanding. The _Discordlings_, unable to find purchase, retreat into the shadows.
+
+> You have strengthened the fabric of our community,
+
+the _Keeper_ says, a note of approval in their voice.
+
+> With these guiding principles, we now have a clear foundation to guide our interactions, ensuring that all who wish to contribute can do so with confidence and respect.
+
+The villagers gather, reading the principles together, nodding in agreement. The village feels more connected, a sense of harmony restored.
+
+> A united community is an unstoppable force. You have given us the clarity we need to thrive.
+
+The _Keeper_ gestures to the horizon, where the village stands stronger, ready to face any challenge with respect and collaboration at its core.
+
+<LoreSeparator />
+
+<h3>The Keeper's Guidance</h3>
+
+> A strong community is the cornerstone of any successful _Open Source_ artifact. By setting clear expectations and providing guidance, you create a safe and welcoming space where artisans can thrive. Together, we stand united against the _Discordlings_.
+
+Rise to the challenge, traveller, and strengthen the bonds of your artifact's community. Return tomorrow for your next task, as the journey toward _Open Source_ excellence continues.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Monitoring Adherence to the Code of Conduct
+
+<hr />
+
+<Lore type="snowball">
+The _Keeper of the Repos_ stands before a gathering of villagers, their faces filled with the quiet determination of those who have pledged to uphold the values of the community. Yet, in the distance, a whisper of unrest stirs. The _Discordlings_ are known to return, testing the limits of unity.
+
+> The guiding principles you've crafted are strong,
+
+the _Keeper_ begins,
+
+> but they are nothing without vigilance. Just as a guard must patrol the walls to protect the village, we must ensure that these values are honored by all who call this place home.
+
+They gesture to a set of enchanted symbols glowing faintly in the air.
+
+> You are tasked with creating the watchful eye—methods to ensure that these principles are upheld. Let your work bring clarity to every interaction and accountability to every artisan. The strength of our community depends on it.
+
+The _Keeper_ steps aside, the weight of responsibility resting on your shoulders: to safeguard the values and ensure they guide every action within the village.
+</Lore>
+
+<hr />
+
+A Code of Conduct (CoC) is more than a document; it's a cornerstone of a respectful and inclusive Open Source community. While having a CoC is a strong start, maintaining adherence is just as important. Proactively monitoring compliance allows you to prevent potential conflicts, resolve issues effectively, and uphold the core values of your project. This effort helps foster trust and collaboration within the community.
+
+Today's challenge will be to implement and refine processes for upholding your repository's Code of Conduct to ensure a welcoming and constructive environment. Note that this challenge focuses solely on your repository and does not cover external tools or platforms, such as Discord, Slack, or other communication channels.
+
+<Steps>
+
+1. **Understand the importance of adherence.**
+
+    - **Review your Code of Conduct** to ensure it's clear, actionable, and suited to your community. If you project doesn't have one yet, consider adopting a well-established template like the [Contributor Covenant](https://www.contributor-covenant.org/). This widely-used template includes specific clauses for behavior, reporting, and enforcement, making it a trusted starting point for most projects.
+
+      <Aside type="tip">
+      You can check out [today's snowflake challenge](#beginner-add-a-basic-code-of-conduct) for a step-by-step guide on adding a Code of Conduct to your repository. There's even a magical template ready for you to use!
+      </Aside>
+
+    - **Reflect on why adherence is vital**: it prevents toxicity, encourages collaboration, and signals to potential contributors that your project is safe and respectful.
+      
+      For example, the Django community adopted a strong CoC (see [Dango CoC](https://github.com/django/code-of-conduct)) early, which they credit with fostering one of the most welcoming Open Source environments.
+
+1. **Document reporting and handling processes.**
+
+    - Ensure the reporting process described in your Code of Conduct is accessible and detailed. For example:
+      - **Include a clear contact point** (e.g., email, private message, etc.) for reporting issues, and ensure this information is easy to locate within your repository.
+      - **Define how reports will be processed and responded to.** Will there be a timeline for initial responses? Who will review the reports?
+      
+        [Kubernetes, for instance, uses a community committee](https://github.com/kubernetes/community/tree/master/committee-code-of-conduct) to review and resolve issues, ensuring accountability and fairness.
+
+1. **Integrate awareness into repository workflows.**
+
+    - **Make contributors aware of the Code of Conduct** at key moments in their interactions with your project:
+      - Add a CoC reminder in your repository's pull request or issue templates, encouraging contributors to review it.
+      - Link to the Code of Conduct in your README and/or `CONTRIBUTING.md` to increase visibility.
+    - **Set up workflows**, if your project uses GitHub Actions, that display a reminder about the CoC whenever contributors open issues or pull requests, especially for first-time contributors.
+
+1. **Monitor repository activity proactively.**
+
+    - **Regularly review interactions** in issues, pull requests, and discussions to identify any patterns of harmful behavior. Being proactive allows you to catch and address potential issues early.
+    - **Set up GitHub notifications or keyword alerts** for terms that might indicate conflict, such as “unprofessional” or “abuse,” to help you catch potential problems early.
+    - **Document any incidents** (anonymously, if necessary) to track recurring challenges or community dynamics. This data can guide improvements to your enforcement strategies over time.
+
+1. **Review and Evolve Your Processes.**
+
+    - **Schedule periodic review** of your CoC and its enforcement mechanisms to ensure they remain relevant and effective.
+    - **Gather anonymous feedback** from contributors about their experiences with the CoC and any enforcement processes.
+    - **Refine your processes** based on this feedback, such as updating CoC language for clarity or adjusting response protocols for better efficiency.
+
+</Steps>
+
+An inclusive and respectful repository starts with a strong Code of Conduct but thrives on continuous monitoring and improvement. By refining reporting processes, raising awareness, and actively enforcing expectations, you can create a community where contributors feel safe, valued, and empowered to collaborate.
+
+Remember, even small projects benefit from a CoC, as it sets the tone for future growth and collaboration.
+
+<h3>Success Criteria</h3>
+
+- ✓ Code of Conduct is clear, actionable, and prominently displayed in your repository.
+- ✓ Reporting and handling processes are documented and accessible.
+- ✓ (Optional) Contributors are reminded of the Code of Conduct at key moments.
+- ✓ Repository activity is monitored proactively for adherence.
+- ✓ Processes are reviewed and refined based on feedback.
+- ✓ Contributors feel safe and respected in your repository.
+
+<hr />
+
+<Lore>
+The once quiet murmurs of doubt are replaced by a growing confidence. The watchful methods you've established now hum with purpose, ensuring that the principles are followed and respected. The _Discordlings_ attempt to creep back, but they are quickly pushed back by the vigilance of your efforts.
+
+> You have fortified the foundations of our community,
+
+the _Keeper_ says with pride,
+
+> ensuring that these guiding principles are more than words—they are actions, visible and true.
+
+The villagers walk the paths with renewed resolve, knowing that their contributions are bound by respect, and that there is always support to uphold the collective strength.
+
+> The harmony you've nurtured will not falter,
+
+The _Keeper_ adds.
+
+> Through your watch, our community remains united, clear in its purpose and respectful in its actions.
+
+The village, once again, stands strong—its values upheld, its future secure.
+
+<LoreSeparator />
+
+<h3>The Keeper's Guidance</h3>
+
+> A strong community is the cornerstone of any successful _Open Source_ artifact. By setting clear expectations and providing guidance, you create a safe and welcoming space where artisans can thrive. Together, we stand united against the _Discordlings_.
+
+Rise to the challenge, traveller, and strengthen the bonds of your artifact's community. Return tomorrow for your next task, as the journey toward _Open Source_ excellence continues.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Building a Proactive Community Culture
+
+<hr />
+
+<Lore type="ice">
+The _Keeper of the Repos_ gazes over the village, where the sun shines brightly, yet an air of caution lingers. Though the guiding principles are strong and vigilance ensures they are followed, something more is needed. The _Keeper_'s voice carries, filled with insight.
+
+> A community bound by rules alone cannot thrive,
+
+they begin,
+
+> for true strength comes from shared purpose and proactive care. To keep the _Discordlings_ at bay and ensure lasting unity, we must cultivate a culture where collaboration, respect, and support flow freely—not just as a response to conflict, but as the heart of everything we do.
+
+They hand you a golden seed.
+
+> Today, you will plant the seeds of a culture that flourishes on its own. Guide the villagers to embrace generosity, mentorship, and forward-thinking engagement. Foster an environment where every voice is not only heard but encouraged to speak and grow.
+
+With this charge, the _Keeper_ steps aside, leaving you with the task of transforming the village into a place where collaboration isn't just maintained—it's celebrated.
+</Lore>
+
+<hr />
+
+Creating an inclusive and thriving community requires more than a strong Code of Conduct—it demands proactive measures to sustain a respectful environment, especially for large repositories or organizations managing multiple projects. By establishing governance, standardizing processes across repositories, and engaging your community in meaningful ways, you can foster a culture of inclusion and collaboration that scales with your projects.
+
+Today's challenge is to develop and implement scalable strategies to promote and enforce community values consistently across repositories.
+
+<Steps>
+
+1. **Standardize across repositories** if you have several repositories sharing the same community.
+
+    - **Create a centralized, reusable Code of Conduct template** that all your repositories can adopt. GitHub allows you to create a `.github` repository with shared files like `CODE_OF_CONDUCT.md` that will be automatically used by new repositories. If you prefer, you could have a private repository with shared files that you can copy to new repositories as a template.
+      
+      <Aside type="tip">
+      Today's [snowball challenge](#intermediate-monitoring-adherence-to-the-code-of-conduct) can help you with the content of this Code of Conduct. Please be aware that the content, in this case, must be generic enough to be used in all your repositories.
+      </Aside>
+
+    - Use GitHub Actions or scripts to ensure all repositories include the latest version of your Code of Conduct for consistency, and easier maintenance.
+
+      For example, you could create a CI/CD pipeline using a script that checks and updates files across repositories automatically.
+
+1. **Establish a governance framework** if you're part of an organization or if you project gathers a sufficient amount of maintainers.
+
+    - **Define roles and responsabilities** for maintaining community standards. For example:
+      - Appoint community moderators or maintainers to oversee adherence to the Code of Conduct.
+      - Create a governance document detailing how decisions are made, how conflicts are resolved, and how responsibilities are shared. This document is not necesarily public, but it's important to have it.
+
+        <Aside type="tip" title="Looking for inspiration?">
+        [Kubernetes Governance](https://github.com/kubernetes/community/blob/master/governance.md) can give you an idea of how a governance document looks like (even if this one is a work in progress).
+        </Aside>
+    
+    - Provide training sessions or guidelines for moderators on how to handle common challenges, like de-escalating conflicts or addressing harassment.
+    - Collaborate with other Open Source projects that have established governance to learn from their experiences. For instance, projects like Mozilla or Apache often share insights through their communities.
+
+1. **Expand beyond the repository** if there are multiple places where your community interacts such as forums, chat rooms, or social media. Everything is not happening in the repository!
+
+    - **Develop strategies to extend the enforcement** of your community values to external tools and platforms connected to your projects:
+      - If your community uses forums, chat tools, or social media, ensure the Code of Conduct applies there.
+
+        [Mozilla Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/) extend to both online and offline spaces, setting a clear precedent.
+      - Use bots or moderation tools to monitor behavior in these spaces. For example, GitHub Discussions can enforce moderation policies through its built-in features. Slack, Discord, and Matrix also offer moderation bots that can automate enforcement and flag issues for review.
+    - Establish clear boundaries for what behaviors are acceptable across these spaces, and make the policies visible to all participants. Consider creating "pinned posts" or "community guidelines" sections in forums or chat platforms to increase visibility.
+
+1. **Engage your community proactively** to foster a culture of collaboration and respect. Mostly if you have a large community or if you're part of an organization.
+
+    - Organize workshops or events focusing on inclusion and respectful collaboration. For example:
+      - Host a session for contributors on handling conflicts and fostering teamwork.
+      - Use open Q&A sessions to discuss how the Code of Conduct is enforced and gather feedback.
+    - Actively solicit input from contributors on ways to improve your governance or enforcement processes. Anonymous surveys can be an effective way to achieve this.
+
+1. **Scalability for large repositories** if you're part of a large organization.
+
+    - For large repositories or organizations, designate regional or functional moderators to handle reports and ensure consistency.
+    - Create playbooks that outline specific scenarios (e.g., harassment reports, disputes between contributors) and provide step-by-step resolution guidelines.
+    - Use metrics to monitor community health, such as the number of incidents reported and resolved, and adjust policies as needed.
+
+</Steps>
+
+Building a proactive community culture isn't just about addressing issues—it's about creating a scalable, inclusive framework that supports growth across repositories and platforms. By standardizing your Code of Conduct, establishing governance, and engaging contributors, you lay the foundation for a respectful and thriving community.
+
+<h3>Success Criteria</h3>
+
+- ✓ Reflected Code of Conduct across repositories or projects.
+- ✓ Took time to think about one (or several) of the enhancement ideas provided during the challenge. If applicable or relevant, created a draft or a plan to implement it.
+
+<hr />
+
+<Lore>
+The village now hums with a renewed energy, its pathways full of bustling villagers working together, sharing ideas, and helping one another grow. The golden seed you planted has sprouted into a flourishing tree, its branches wide and welcoming, filled with opportunities for collaboration and mentorship.
+
+> You have done what few could,
+
+the _Keeper_ says, their voice filled with admiration.
+
+> What once was a community held together by principles alone is now a vibrant, thriving place, where every member contributes not out of obligation, but from a shared belief in the value of what they create together.
+
+Villagers greet one another with warmth, offering help and guidance, lifting each other up as they move forward. The _Discordlings_, now powerless, retreat further into the shadows.
+
+> This is how a community flourishes,
+
+the _Keeper_ declares.
+
+> Through the care and intent you've fostered, this village will remain a beacon of collaboration and respect for all who come.
+
+The village stands strong, its future brighter than ever, a true testament to the power of a proactive, supportive culture.
+
+<LoreSeparator />
+
+<h3>The Keeper's Guidance</h3>
+
+> A strong community is the cornerstone of any successful _Open Source_ artifact. By setting clear expectations and providing guidance, you create a safe and welcoming space where artisans can thrive. Together, we stand united against the _Discordlings_.
+
+Rise to the challenge, traveller, and strengthen the bonds of your artifact's community. Return tomorrow for your next task, as the journey toward _Open Source_ excellence continues.
+</Lore>
