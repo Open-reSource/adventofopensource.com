@@ -1,0 +1,469 @@
+---
+title: "Day 5: Building the Foundations of Excellence"
+description: "Navigate the Labyrinth of Lost Artifacts in the Winter Open Source Village, transforming chaos into a clear, lasting framework for collaboration."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day05Snowflake01 from '../../../../assets/days/day-05-snowflake-01.gif';
+import day05Snowflake02 from '../../../../assets/days/day-05-snowflake-02.png';
+
+<Lore type="logo">
+<h2>The Labyrinth of Lost Artifacts</h2>
+
+Deep within the _Winter Open Source Village_ sprawls the tangled _Labyrinth of Lost Artifacts_, a confounding maze where scattered creations and jumbled designs have led many artisans astray. The _Keeper of the Repos_ stands at the entrance, their expression grave yet hopeful.
+
+> The labyrinth feeds on disorder,
+
+they explain, their voice echoing through the twisting corridors.
+
+> Even the most brilliant ideas are vulnerable here if they lack strong roots and a clear path forward.
+
+As the artisans exchange nervous glances, the _Village Cartographer_ steps forward, holding a map that seems unfinished, its lines fading into uncertainty.
+
+> A map is only as good as its clarity,
+
+they add,
+
+> and a well-laid foundation can serve as the guide to any who follow.
+
+The challenge before you is clear: to create a structure that is intuitive and enduring, one that will guide others through the maze with confidence. Whether your artifact is small or sprawling, a strong framework will ensure its treasures remain accessible, and its purpose shines through the fog of confusion.
+
+With determination, you take the first steps into the labyrinth, ready to tame its chaos and turn its winding paths into an enduring legacy.
+
+Choose the rune that best suits your skills and experience:
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-set-up-a-basic-folder-structure)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-optimize-project-architecture)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-design-scalable-repository-structures)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+## Beginner: Set Up a Basic Folder Structure
+
+<hr />
+
+<Lore type="snowflake">
+The _Keeper of the Repos_ leads you to the edge of the _Labyrinth of Lost Artifacts_. Its twisting passages seem endless, filled with whispers of confusion and the faint echo of forgotten efforts. The _Keeper_ turns to you, their expression grave.
+
+> Many a promising idea has been lost here,
+
+they say,
+
+> buried under the weight of chaos and disarray. An artifact, no matter how small, must have structure—a map to guide those who seek to contribute. Without it, the labyrinth claims them.
+
+They hand you a blank parchment, the potential of order waiting to be inscribed.
+
+> Begin with the essentials. Define the paths clearly, so that all who enter can navigate with confidence. Even the smallest steps today will pave the way for future growth.
+
+With these words, the _Keeper_ gestures for you to step forward, the first traces of a clear path waiting to be drawn.
+</Lore>
+
+<hr />
+
+Organizing your project with clear and purposeful directories lays the groundwork for maintainability and scalability. While conventions may vary depending on the project type or programming language, adopting a structured approach can improve collaboration and ease of navigation.
+
+Today's challenge is to set up a basic folder structure for your project, defining essential directories that will guide contributors and maintainers through the repository with clarity.
+
+<Steps>
+
+1. **Define the main directories** your project will need.
+
+    Each type of project or language used may have different conventions, so choose conventions that fit your project's nature and team preferences.
+
+    Common top-level folders include:
+    - `/src` or `/app` for source code
+    - `/docs` for documentation
+    - `/tests` for testing
+    - `/config` for configuration files
+    - `/assets` for static files as images or stylesheets
+    - `/build` or `/dist` for compiled or built files (if applicable)
+
+2. **Create the directories** in your repository.
+
+    GitHub doesn't allow the creation of empty directories. Instead of adding placeholder files, the convention is to use `.gitkeep` files, which ensure directories are included in version control.
+
+    Let's define and create the following structure in your project:
+    
+    <FileTree>
+
+    - assets
+      - .gitkeep
+    - config
+      - .gitkeep
+    - dist
+      - .gitkeep
+    - docs
+      - .gitkeep
+    - src
+      - .gitkeep
+    - tests
+      - .gitkeep
+    - CODE_OF_CONDUCT.md
+    - LICENSE
+    - README.md
+
+    </FileTree>
+
+    If your project needs specialized directories, adapt this structure to include additional folders, or remove those that are not relevant.
+
+    <Aside type="tip" title="Explore other repositories">
+    Look at other projects in your programming language or domain to see how they structure their repositories. This can give you ideas for your own project.
+    </Aside>
+
+    To create these directories on GitHub:
+    
+    <Steps>
+    
+    1. **Create a new file for each directory.**
+    
+        - Click the _Add file_ button.
+        - Select _Create new file_.
+        - Enter the directory name followed by `/` and `.gitkeep`. For example, for the assets directory, type `assets/.gitkeep`.
+
+        <ContentImage src={day05Snowflake01} alt="" />
+
+    1. **Commit your changes.**
+    
+        - Click on the _Commit changes..._ button
+        - Enter ``chore: add `assets` directory`` as a commit message.
+        - Click on the _Commit changes_ button.
+
+    1. **Verify your directory structure.**
+
+        Navigate back to your repository's main page to confirm the new folders are visible.
+
+        You'll see your structure neatly organized and ready for further development.
+
+        <ContentImage src={day05Snowflake02} alt="" />
+
+    </Steps>
+
+</Steps>
+
+The folder structure you created today will serve as the foundation for your project, making it easier for contributors and maintainers to navigate. Establishing these directories early helps ensure your repository stays organized and accessible.
+
+<h3>Success Criteria</h3>
+
+- ✓ All specified directories are created in your project.
+- ✓ Each directory is visible in the GitHub repository, thanks to `.gitkeep` files.
+
+<hr />
+
+<Lore>
+The labyrinth begins to shift, its tangled corridors unraveling as a newfound clarity takes hold. The paths you've marked are now visible and inviting, guiding artisans with ease. The whispers of confusion fade into silence, replaced by a growing sense of purpose.
+
+> You have begun the work of untangling the maze,
+
+the _Keeper_ says, their voice carrying hope.
+
+> What was once a space of uncertainty is now a foundation of order. Even the simplest structure provides a guiding light for those who wish to join.
+
+The parchment now glows faintly, a testament to the solid groundwork you've laid. The _Keeper_ nods in approval.
+
+> With this clarity, your artifact is no longer at the mercy of the labyrinth. It is a beacon, drawing artisans forward with confidence and purpose.
+
+The labyrinth retreats further into the distance, its power weakened as your efforts transform confusion into clarity.
+
+<LoreSeparator />
+
+<h3>The Keeper's Blueprint</h3>
+
+> A well-structured artifact is like a sturdy home—it provides shelter for ideas, clarity for artisans, and room to grow. Lay your foundations with care, and you'll build something that stands the test of time.
+
+Take up the challenge, traveller, and banish the chaos of the _Labyrinth of Lost Artifacts_. Return tomorrow, as your journey through the _Advent of Open Source_ continues to unfold.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Optimize Project Architecture
+
+<hr />
+
+<Lore type="snowball">
+The _Keeper of the Repos_ leads you deeper into the _Labyrinth of Lost Artifacts_, where the air grows heavy and the paths twist in ever more complex patterns. Here, even the most experienced wanderers falter, unable to see the way forward. The _Keeper_'s voice breaks the silence.
+
+> The labyrinth resists not through chaos alone but through inefficiency,
+
+they explain.
+
+> It clings to artifacts that grow without thought, their structures bending under their own weight. To overcome this place, you must look beyond the surface. Create a design that supports growth, balance, and adaptability, no matter how intricate the work becomes.
+
+They present you with a golden compass, its needle spinning before finally pointing forward.
+
+> This tool will guide your vision. Reimagine the pathways, align them with purpose, and let the architecture of your artifact become a map of efficiency and clarity. Only then can you master the labyrinth.
+
+With the compass in hand, you step into the depths, ready to transform complexity into harmony.
+</Lore>
+
+<hr />
+
+A well-structured repository is the backbone of any successful project, ensuring that contributors can navigate, understand, and build upon your work with ease. As your project grows, maintaining a clear and modular organization becomes crucial for scalability, collaboration, and long-term maintainability. This challenge guides you through refactoring your repository to achieve a structure that reflects the logical flow of your project, whether it's software, documentation, or other assets.
+
+Today's challenge is to refactor and optimize your repository structure, grouping related items, enhancing clarity, and setting the stage for seamless collaboration.
+
+Refactoring might seem like a small step, but it can have a huge impact on your project's long-term success and contributor engagement. Take the time to refine your repository today—it's an investment in clarity, scalability, and collaboration.
+
+<Steps>
+
+1. **Assess the current structure.**
+
+    Start by reviewing your current repository structure. Identify areas where files are scattered or where the structure lacks logical groupings.
+
+    - **For software projects**: Check if components, services, or utilities are organized logically or if related files are scattered across multiple folders.
+    - **For documentation projects**: Evaluate whether different types of content (e.g., tutorials, guides, reference material) are mixed in ways that make navigation cumbersome.
+    - **For design or other creative repositories**: Look for opportunities to organize assets like icons, layouts, or typography into clear categories.
+
+1. **Define core areas and logical divisions.** 
+
+    Identify the main features, domains, or content** areas of your project. This could be functionalities (in a software project), sections or topics (in documentation), or other logical divisions of your content.
+
+    In a code repository, this might involve grouping related components, services, utilities, or modules together, or separating the documentation from the codebase.
+    
+      Here's an example of how you might structure a code repository:
+
+      <FileTree>
+
+      - project
+        - config/
+        - dist/
+        - docs/
+        - src/
+        - scripts/
+        - tests/
+
+      </FileTree>
+
+1. **Group files per function or domain.**
+
+    Once you have a clear idea of the core areas, reorganize your files into dedicated folders or modules based on their purpose. This keeps related files together, making it easier to locate items and understand their role in the project.
+
+    For code repositories:
+
+    <FileTree>
+
+    - src
+      - components/
+      - utils/
+      - services/
+      - styles/
+
+    </FileTree>
+
+    For non-code projects such as documentation:
+
+    <FileTree>
+
+    - docs
+      - about/
+      - getting-started/
+      - examples/
+      - reference/
+      - tutorials/
+
+    </FileTree>
+      
+1. **Simplify deeply nested structures.**
+
+    Avoid over-complicating your repository with excessive nesting, which can confuse contributors. Aim for a flatter structure that balances organization with accessibility.
+
+1. **Consolidate configuration and script files.**
+
+    Place all configuration files (e.g., `.eslintrc`, `webpack.config.js`) in a dedicated config/ directory, or keep them at the root level for accessibility. Similarly, move script files to a `scripts/` directory to separate them from the main source code.
+
+1. **Update documentation.**
+
+    Reflect the changes in your project's README or other documentation. Provide an overview of the new structure, explaining the purpose of each folder and how contributors should use them.
+
+    - Update your `CONTRIBUTING` guide if applicable, to include instructions on navigating the new structure.
+    - Consider creating a dedicated section or file that maps out the repository.
+
+1. **Test and iterate.**
+
+    Put you in the shoes of a new contributor navigating the repository. Ensure the new structure is intuitive, everything is functional, and no files are misplaced. Gather feedback from peers or contributors to identify areas for improvement.
+
+    <Aside type="tip">
+    Ask a colleague or friend unfamiliar with your project to test the structure and share their impressions.
+    </Aside>
+
+</Steps>
+
+By refactoring your repository, you ensured that your project remains scalable, accessible, and welcoming to contributors. A well-organized structure not only saves time but also promotes clarity and collaboration, laying the groundwork for future growth.
+
+<h3>Success Criteria</h3>
+
+- ✓ Repository structure is optimized for modularity and clarity.
+- ✓ Related files are grouped together in dedicated folders.
+- ✓ Configuration and script files are organized in dedicated folders.
+- ✓ Documentation is updated to reflect the new structure.
+- ✓ Repository is tested and reviewed for usability and clarity.
+
+<hr />
+
+<Lore>
+The labyrinth quakes as the tangled corridors reshape themselves under your careful design. Paths once blocked are now open and seamless, their flow intuitive and precise. The golden compass glows steadily, its needle no longer spinning but resting on a clear direction.
+
+> You have achieved what few can,
+
+the _Keeper_ says with deep reverence.
+
+> By optimizing the very framework of your work, you have not only escaped the labyrinth but rendered it powerless against your artifact's growth.
+
+The villagers gather, their steps confident as they navigate the new design, each pathway leading to a purpose. The _Keeper_ smiles, pride in their eyes.
+
+> This architecture is more than structure—it is a foundation for greatness. What you have created here will endure, guiding artisans and inspiring others to follow your example.
+
+The labyrinth fades, its shadows retreating. In its place stands a vision of progress, your work a shining testament to the strength of thoughtful design.
+
+<LoreSeparator />
+
+<h3>The Keeper's Blueprint</h3>
+
+> A well-structured artifact is like a sturdy home—it provides shelter for ideas, clarity for artisans, and room to grow. Lay your foundations with care, and you'll build something that stands the test of time.
+
+Take up the challenge, traveller, and banish the chaos of the _Labyrinth of Lost Artifacts_. Return tomorrow, as your journey through the _Advent of Open Source_ continues to unfold.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Design scalable repository structures
+
+<hr />
+
+<Lore type="ice">
+In the heart of the _Labyrinth of Lost Artifacts_, the _Keeper of the Repos_ halts before a vast, chaotic expanse. Here, pathways overlap, fork endlessly, and collapse into dead ends. The _Keeper_'s gaze is steady as they address you.
+
+> This place ensnares those who think only of the present,
+
+they say.
+
+> An artifact that cannot grow, that cannot adapt, will crumble beneath its own ambition. The labyrinth thrives on such neglect. To master it, you must craft structures that endure—paths that expand without losing clarity, that guide not just today but far into the future.
+
+From their cloak, the _Keeper_ produces a crystalline key, glowing faintly in the dim light.
+
+> This is the key to the scalable, the sustainable. With it, design a framework that grows with purpose. Let every layer, every corridor, be crafted to welcome expansion, ensuring that your work remains a beacon even as it evolves.
+
+With the crystalline key in hand, you take your first step into this challenging domain, ready to unlock the labyrinth's secrets.
+</Lore>
+
+<hr />
+
+As Open Source projects expand, maintaining clarity across multiple repositories or a large mono-repo becomes critical. A scalable structure supports efficient collaboration, simplifies maintenance, and allows contributors to quickly locate and work on specific areas. This challenge focuses on organizing repositories for scalability, whether you're managing a large mono-repo or multiple interconnected repositories.
+
+Today's challenge is to create or enhance a scalable structure for your repository (or repositories) by implementing tools, defining clear relationships, and promoting maintainability.
+
+<Steps>
+
+1. **Evaluate your project's scope and structure.**
+
+    Start by analyzing the current state of your repository or repositories.
+
+    Ask yourself:
+    - Is it a mono-repo (one repository housing all modules or components)?
+    - Is it a multi-repo (separate repositories for related projects)?
+    - Does the structure accommodate future growth (e.g., new features, components, or projects)?
+
+    <Aside type="tip" title="Mono-repos?">
+    If you're unfamiliar with mono-repos or unsure if they suit your project, [monorepo.tools](https://monorepo.tools/) contains elements to understand mono-repos, and the tools to build them.
+    </Aside>
+
+    By the end of this step, you should be able to answer questions like:
+    - Is my current structure scalable and maintainable?
+    - Am I using the right organizational approach for my project?
+
+1. **Set up or optimize a scalable mono-repo.**
+
+    If you use (or want to try) a mono-repo structure, consider the following:
+
+    - **Adopt tools** like [Nx](https://nx.dev/) or [Lerna](https://lerna.js.org/) to manage dependencies, builds, and module interactions.
+    - **Define clear folder hierarchies** to separate domains or features (e.g. `apps/`, `libs/`).
+    - **Leverage automation** to streamline tests, builds, and updates across modules. Tools like GitHub Actions or a dedicated CI/CD pipeline can help.
+
+1. **Streamline multi-repo projects.**
+
+    If you manage multiple repositories, ensure clarity and cohesion across them:
+
+    - **Document relationships** between repositories. Use a shared resource like a README, wiki, or a dedicated repository to map dependencies and workflows.
+    - **Centralize shared resources** in a dedicated repository. This might include shared libraries, templates, or APIs.
+    - **Synchronize changes across repositories** using automation tools like GitHub Actions, GitLab CI/CD, or specialized scripts.
+
+1. **Introduce ownership and responsibility**
+
+    For repositories with multiple maintainers or overlapping domains, clearly defined ownership is important:
+
+    - **Create teams** or groups in your Git hosting platform to assign maintainers to specific repositories or modules. This enables efficient issue triaging, pull request reviews, and direct collaboration.
+    - **Use a `CODEOWNERS` file** to designate responsibility for specific areas of the repository, specific folders or files.
+
+      A `CODEOWNERS` file to assign ownership for different parts of the repository to some teams could look like this:
+
+      ```plaintext title="CODEOWNERS"
+      /frontend/ @frontend-team
+      /backend/ @backend-team
+      /libs/shared-components/ @shared-library-team
+      ```
+
+      Read more [about code owners and its `CODEOWNERS` file](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+
+    - **Clarify responsibilities** for reviewers and maintainers, especially in repositories with overlapping domains.
+
+1. **Document your repository structure.**
+
+    Documentation is vital for contributors and maintainers to understand the repository's structure, relationships, and rules.
+
+    - For single repositories, the `CONTRIBUTING.md` file can outline folder purposes, tools, and workflows.
+    - For complex environments, you can use a centralized resource like a wiki or a dedicated repository to document the relationships between repositories, the tools, people, and workflows.
+
+    Refer back to [Day 3's challenge](/advent/week-1/day-3#advanced-create-a-readme-ecosystem-mapping) if you've already built an ecosystem mapping.
+
+1. **Evaluate and iterate regularly.**
+
+    A scalable structure is not static; it should evolve with your project's growth and community needs. Regularly review and refine:
+    - Folder hierarchies
+    - Automation tools
+    - Shared libraries or resources
+    - Roles and responsibilities
+
+    Gather feedback from contributors and maintainers to address pain points or inefficiencies. For smaller projects, GitHub's Insights can provide engagement data. For larger or more complex projects, consider adopting an internal governance model to coordinate resources and workflows.
+
+</Steps>
+
+Through this challenge, you have analyzed your repository's scalability, streamlined its structure for maintainability, and implemented tools and practices to enhance collaboration. Whether by organizing a mono-repo, clarifying relationships in multi-repos, or defining roles and documentation, your efforts have laid a solid foundation for your project's long-term growth and adaptability.
+
+<h3>Success Criteria</h3>
+
+- ✓ Repository structure is optimized for scalability and maintainability.
+- ✓ Mono-repo or multi-repo setup is streamlined and documented.
+- ✓ Ownership and responsibility are clearly defined for maintainers and contributors.
+- ✓ Documentation is updated to reflect the new structure and relationships.
+- ✓ Repository structure is reviewed and refined based on feedback and project growth.
+
+<hr />
+
+<Lore>
+The labyrinth trembles as its chaotic sprawl gives way to elegant corridors, each one connected and purposeful. The crystalline key hums in your grasp, its glow now radiant, a reflection of the balance you've achieved.
+
+> You have unlocked the true potential of structure,
+
+the _Keeper_ declares, their tone filled with admiration.
+
+> What was once a web of confusion is now a blueprint for growth—a framework that can adapt and thrive no matter how vast it becomes.
+
+The villagers approach with awe, their steps guided effortlessly through the paths you've forged. The _Keeper_ nods approvingly.
+
+> This is more than a design; it is a legacy. A scalable structure ensures that as others contribute and as needs evolve, your artifact will remain a model of clarity and strength.
+
+The labyrinth recedes, its hold broken by your foresight and care. In its place stands a system that inspires trust and invites collaboration, ready to flourish as the future unfolds.
+
+<LoreSeparator />
+
+<h3>The Keeper's Blueprint</h3>
+
+> A well-structured artifact is like a sturdy home—it provides shelter for ideas, clarity for artisans, and room to grow. Lay your foundations with care, and you'll build something that stands the test of time.
+
+Take up the challenge, traveller, and banish the chaos of the _Labyrinth of Lost Artifacts_. Return tomorrow, as your journey through the _Advent of Open Source_ continues to unfold.
+</Lore>
