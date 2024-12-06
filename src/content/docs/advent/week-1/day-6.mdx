@@ -430,7 +430,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
     
     Pre-commit hooks complement `.gitignore` by addressing these gaps, providing an additional safety net against human error and enhancing repository security.
 
-2. **Set-up pre-commit hooks for sensitive file detection.**
+1. **Set-up pre-commit hooks for sensitive file detection.**
 
     <Steps>
 
@@ -438,7 +438,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
     
         Choose a tool like [pre-commit](https://pre-commit.com/) or create your own custom scripts.
 
-    2. **Define sensitive patterns.**
+    1. **Define sensitive patterns.**
     
         Identify risky file types to block. Examples include:
 
@@ -446,7 +446,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
         - Private keys (`*.key`, `*.p12`, etc.)
         - Configuration backup files (`*.bak`, `*.old`, etc.)
 
-    3. **Create a pre-commit configuration.**
+    1. **Create a pre-commit configuration.**
     
         If using a tool like `pre-commit`, configure the hooks in a `.pre-commit-config.yaml` file:
 
@@ -459,7 +459,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
               - id: check-added-large-files
         ```
 
-    4. **Build custom script for specific needs.**
+    1. **Build custom script for specific needs.**
 
         Here's a basic example of a custom pre-commit script to block sensitive file types:
 
@@ -474,7 +474,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
 
     </Steps>
 
-3. **Ensure team-wide usage.**
+1. **Ensure team-wide usage.**
 
     Pre-commit hooks are client-side by nature, meaning contributors need to install them manually.
     
@@ -505,7 +505,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
               run: trufflehog filesystem --directory .
       ```
 
-4. **Explore advanced practices**
+1. **Explore advanced practices**
 
     For organization-wide improvements:
 
@@ -514,7 +514,7 @@ Today's challenge will guide you through setting up pre-commit hooks for detecti
     - **Educate contributors**: train team members on secure coding practices and the importance of avoiding sensitive files in version control.
     - **Audit and iterate**: periodically review and update your pre-commit hooks to adapt to new risks and patterns, but also your repositories for sensitive data leaks using code like [Gitleaks](https://github.com/gitleaks/gitleaks).
 
-5. **Take your time to explore the tools and practices** that best fit your project's needs, because this is a vast topic.
+1. **Take your time to explore the tools and practices** that best fit your project's needs, because this is a vast topic.
 
 </Steps>
 
