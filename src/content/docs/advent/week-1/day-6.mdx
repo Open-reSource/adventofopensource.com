@@ -1,0 +1,561 @@
+---
+title: "Day 6: Forging the Tools of Creation"
+description: "Enter the Forge of Productivity, where order defeats chaos, empowering the artisans of the Winter Open Source Village to create with clarity and purpose."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>The Forge of Productivity</h2>
+
+The _Winter Open Source Village_ bustles with energy, its artisans united in building creations that will shape the future. Yet in the shadows, the _Gremlins of Frustration_ lurk, sowing disorder with misplaced tools, forgotten instructions, and tangled workflows. Their mischief threatens to disrupt the harmony of progress, leaving even the most determined villagers discouraged.
+
+The _Keeper of the Repos_ beckons you to the _Forge of Productivity_, a place where order and consistency are forged. Within its glowing hearths, tools are refined to ensure that every artisan in the village can work efficiently, free from interruptions.
+
+To banish the gremlins and safeguard the village's efforts, you must craft systems that bring clarity and reliability, enabling all to create without fear of chaos.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-finalize-the-development-environment)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-enhance-your-gitignore-and-editorconfig)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-prevent-sensitive-files-with-pre-commit-hooks)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Finalize the Development Environment
+
+<hr />
+
+<Lore type="snowflake">
+The _Forge of Productivity_ flickers with warm light as the _Keeper of the Repos_ gestures for you to approach. The tools before you are sturdy but incomplete, scattered across the workbench without rhyme or reason.
+
+> A craftsperson's tools must be ready, reliable, and within reach,
+
+the _Keeper_ begins, their voice steady.
+
+> Without preparation, frustration will creep in, slowing progress and sowing doubt. The gremlins thrive on such disorder.
+
+They hand you a small hammer, its surface etched with the words _Intent and Care_.
+
+> Begin here, by ensuring your space is ready. Finalize what you have started, so that your work can flow without interruption. This preparation may seem small, but it lays the foundation for every great endeavor.
+
+You take the hammer in hand, determined to bring order to the _Forge_ and strengthen your craft.
+</Lore>
+
+<hr />
+
+In Open Source projects, maintaining a clean, well-organized repository is crucial for collaboration and readability. Files that are irrelevant to the project's functionality—like temporary files, environment-specific configurations, or build outputs—can clutter your repository if not properly excluded. Similarly, consistent coding styles make it easier for contributors to read and work with your code, regardless of their preferred text editor. Two foundational tools can help with these goals: `.gitignore` files for excluding unnecessary files and `.editorconfig` files for enforcing consistent coding styles.
+
+Today's challenge will guide you through setting up a `.gitignore` file to keep your repository clean and an `.editorconfig` file to standardize coding styles across editors. These steps ensure that your project is tidy and accessible, fostering a better environment for collaboration.
+
+<Steps>
+
+1. **Add a `.gitignore` file.**
+
+    A `.gitignore` file tells Git which files or directories to ignore, preventing them from being tracked. This keeps your repository clean and focused on the essential code and assets.
+
+    **Why is this important?** Including unnecessary files in your repository can lead to bloated version histories, potential leaks of sensitive information (like API keys), and confusion for other contributors. A `.gitignore` file solves this by excluding such files automatically.
+
+    <Aside title="New to Git?">
+    If you're unfamiliar with Git, don't worry! We'll explain Git basics in a future challenge. For now, just follow the instructions below. 
+    </Aside>
+
+    <Steps>
+
+    1. Navigate to your project repository on GitHub.
+
+    1. Click _Add file_ and select _Create new file_.
+
+    1. Name the file `.gitignore`.
+
+    1. Open a new tab and visit [gitignore.io](https://www.gitignore.io/).
+
+    1. Search for your project's language or framework, for instance "C++". The website will provide a list of common patterns to include in your `.gitignore` file such as:
+
+        ```text title=".gitignore"
+        ### C++ ###
+        # Prerequisites
+        *.d
+
+        # Compiled Object files
+        *.slo
+        *.lo
+        *.o
+        *.obj
+
+        # Precompiled Headers
+        *.gch
+        *.pch
+
+        # Compiled Dynamic libraries
+        *.so
+        *.dylib
+        *.dll
+
+        # Fortran module files
+        *.mod
+        *.smod
+
+        # Compiled Static libraries
+        *.lai
+        *.la
+        *.a
+        *.lib
+
+        # Executables
+        *.exe
+        *.out
+        *.app
+        ```
+
+    1. Copy the suggested patterns and paste them into your `.gitignore` file. If you don't know yet which language or framework you'll be using, you can add the patterns later. Just create an empty `.gitignore` file for now.
+
+    1. Optionnally, add patterns for editor-specific files like:
+
+        ```text title=".gitignore"
+        # Editor files
+        .vscode/
+        .idea/
+        ```
+
+    1. Click _Commit changes..._, then enter `chore: add .gitignore` as a commit message.
+
+    1. Click _Commit changes_, the `.gitignore` file is now added to your repository.
+
+    </Steps>
+
+1. **Add an `.editorconfig` file.**
+
+    An `.editorconfig` file ensures consistent coding styles across various editors and IDEs. This prevents conflicts caused by differing default settings and makes the project more accessible to contributors.
+
+    **Why is this important?** When multiple contributors work on the same project, inconsistencies in indentation, line endings, or file encodings can cause unnecessary frustration and errors, especially during the code reviews. The `.editorconfig` file acts as a universal style guide for code editors.
+
+    <Steps>
+
+    1. Navigate to your project repository on GitHub.
+
+    1. Click _Add file_ and select _Create new file_.
+
+    1. Name the file `.editorconfig`.
+
+    1. You can start with this basic configuration, or deep dive into the [EditorConfig documentation](https://editorconfig.org/):
+
+        ```text title=".editorconfig"
+        root = true
+
+        [*]
+        charset = utf-8
+        end_of_line = lf
+        indent_size = 2
+        indent_style = space
+        insert_final_newline = true
+        trim_trailing_whitespace = true
+        ```
+    1. Click _Commit changes..._, then enter `chore: add .editorconfig` as a commit message.
+
+    1. Click _Commit changes_, the `.editorconfig` file is now added to your repository.
+
+    </Steps>
+
+</Steps>
+
+**Congratulations!** You've taken an essential step toward creating a professional and collaborative repository. Adding a `.gitignore` file keeps your project clean and focused, while an `.editorconfig` file ensures that contributors work with consistent coding styles. These practices reduce confusion and prevent common issues caused by differing development environments.
+
+**Keep up the excellent work!** With each challenge, you're building strong habits that will serve you and your collaborators well in Open Source projects.
+
+<h3>Success Criteria</h3>
+
+- ✓ A `.gitignore` file is present in your repository and excludes unnecessary files.
+- ✓ An `.editorconfig` file is present in your repository with basic coding standards.
+
+<hr />
+
+<Lore>
+The forge glows brighter, the tools now arranged in perfect harmony. Their edges gleam, ready for the tasks ahead, and the air feels lighter, free from the weight of confusion.
+
+> You have done well,
+
+the _Keeper_ says, their tone filled with quiet pride.
+
+> By finalizing your preparations, you have banished the gremlins from your workspace. With every tool in place, your efforts will flow without obstruction, and others will find inspiration in the clarity you've created.
+
+The _Keeper_ nods, placing a steady hand on your shoulder.
+
+> Remember this moment, for it is the simple acts of preparation that shield us from chaos. Go forth, and let your craft shine.
+
+The _Forge of Productivity_ hums with renewed energy, its purpose strengthened by your care and attention.
+
+<LoreSeparator />
+
+<h3>The Keeper's Warning</h3>
+
+> An efficient forge produces powerful tools, but a chaotic forge breeds only frustration. Equip yourself and your fellow protectors with the right setup, and you'll banish the _Gremlins of Frustration_ from your artifacts.
+
+Step forward, traveller, and embrace the craft of creating a harmonious workspace. Return tomorrow for your next challenge, as the _Advent of Open Source_ continues to unfold.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Enhance Your `.gitignore` and `.editorconfig`
+
+<hr />
+
+<Lore type="snowball">
+As you journey deeper into the _Forge of Productivity_, a faint melody catches your ear—a rhythmic hum that seems to pulse with the heartbeat of the village. The _Keeper of the Repos_ stands by a workstation adorned with two ancient scrolls, their surfaces etched with arcane patterns of guidance and alignment.
+
+> These are the _Scrolls of Harmony_,
+
+the _Keeper_ explains, their voice resonant with purpose.
+
+> They protect us from the chaos of forgotten clutter and mismatched creations. When their wisdom is honored, the work of many hands flows as one, unhindered by the disarray the gremlins crave.
+
+The _Keeper_ carefully unfurls the scrolls, revealing spaces for your input.
+
+> Take these tools, traveller, and refine their wisdom. Adapt them to your needs so that they may guide your endeavors with precision and ensure all who contribute find a path free from discord.
+
+The forge grows silent, as if awaiting your touch, and you step forward to weave your own care into the scrolls' ancient fabric.
+</Lore>
+
+<hr />
+
+In collaborative software development, small configuration files can have an outsized impact on the effectiveness and cleanliness of a project. Files like `.gitignore` prevent unnecessary or sensitive files from being tracked, protecting your repository from clutter and potential security risks. Meanwhile, `.editorconfig` ensures consistent coding styles across editors and contributors, eliminating formatting headaches that often arise in team settings.
+
+Today's challenge is to refine and optimize your repository's `.gitignore`, `.editorconfig`, or equivalent configuration files, ensuring they serve as robust tools for clarity, consistency, and security. You'll also explore how to involve your team in making these files effective and collaborative.
+
+<Steps>
+
+1. **Review and enhance your `.gitignore`.**
+
+    An incomplete or overly permissive `.gitignore` can lead to unnecessary files being tracked, such as local environment configurations or sensitive information. Reviewing and improving this file ensures your repository remains professional, secure, and focused.
+
+    <Steps>
+
+    1. **Audit your `.gitignore` file.**
+
+        - If no `.gitignore` file is present, create one to exclude common files and directories.
+        - Look for any gaps where unnecessary files might still be tracked.
+        - Identify files that should be excluded, such as OS-generated files (`.DS_Store`, `Thumbs.db`), editor configurations (`.vscode/`, `.idea/`), and build artifacts (`dist/`, `*.log`).
+
+        Example additions for a Node.js project:
+
+        ```text title=".gitignore"
+        # Logs
+        *.log
+        npm-debug.log*
+        yarn-debug.log*
+        yarn-error.log*
+
+        # Dependency directories
+        node_modules/
+        ```
+
+    1. **Generate or refine patterns.**
+
+        Use tools like [gitignore.io](https://www.gitignore.io/) or browse [GitHub's `.gitignore` templates](https://github.com/github/gitignore) to ensure coverage for your language or framework.
+
+    </Steps>
+
+1. **Review and enhance your `.editorconfig`.**
+
+    A properly configured `.editorconfig` ensures all contributors follow consistent code formatting rules, reducing friction during code reviews and preventing unnecessary diffs caused by formatting differences.
+
+    <Steps>
+
+    1. **Audit your `.editorconfig` file.**
+
+        - If no `.editorconfig` file is present, create one to unify formatting standards using [EditorConfig documentation](https://editorconfig.org/).
+
+          Use this example as a starting point:
+
+          ```text title=".editorconfig"
+          root = true
+
+          [*]
+          indent_style = space
+          indent_size = 4
+          end_of_line = lf
+          charset = utf-8
+          trim_trailing_whitespace = true
+          insert_final_newline = true
+          ```
+    
+          <Aside type="danger">
+          **Spaces or tabs?** 🍿
+          </Aside>
+
+    1. **Add language-specific rules.**
+
+        Override general rules where necessary. Example for Python:
+
+        ```text title=".editorconfig"
+        [*.py]
+        indent_size = 4
+        ```
+
+        <Aside type="tip" title="Tip of the iceberg">
+        Check out other projects' `.editorconfig` files on GitHub for inspiration.
+        </Aside>
+
+    1. **Mention `.editorconfig` in `CONTRIBUTING.md`.**
+
+        Encourage contributors to install EditorConfig plugins for their editors to automatically apply the rules defined in the `.editorconfig` file.
+
+        <Aside type="tip" title="Tip of the iceberg">
+        You can find [EditorConfig plugins for various editors and IDEs](https://editorconfig.org/#download).
+        </Aside>
+
+        Encourage feedback from them to identify edge cases or missed exclusions.
+
+    </Steps>
+
+1. **Review and enhance your other configuration files.**
+
+    If applicable such as `.prettierrc`, `.eslintrc`, or `.stylelintrc`. Ensure they align with your `.editorconfig` and `.gitignore` files.
+
+    <Aside type="tip" title="Tip of the iceberg">
+    Consistency across configuration files ensures a unified development experience for all contributors.
+    </Aside>
+
+1. **Clean up your repository.**
+
+    Files that should have been ignored by `.gitignore` might already exist in your repository. Cleaning up ensures a tidy history and aligns with your improved `.gitignore`.
+
+    <Aside type="tip" title="Tip of the iceberg">
+    You can use tools like [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) to remove large or sensitive files from your repository history.
+    
+    **Be careful as this can rewrite your repository history.**
+    </Aside>
+
+    <Aside type="danger">
+    **If sensitive files are found, treat them compromised.**
+    They're already out there and public, so this is more about cleaning up your repository than protecting sensitive data. And be prepared to re-create new API keys or secrets, to rotate keys or credentials and update any affected services.
+    </Aside>
+
+</Steps>
+
+**Fantastic job!** By enhancing your `.gitignore` and `.editorconfig` files, you've ensured your repository is cleaner, safer, and easier to collaborate on. These improvements reduce clutter, prevent common pitfalls, and create a smoother experience for everyone contributing to your project.
+
+Your efforts today also pave the way for long-term consistency, especially if you work within a team. Keep it up—you're building excellent habits as an Open Source maintainer!
+
+<h3>Success Criteria</h3>
+
+- ✓ `.gitignore` has been reviewed and updated.
+- ✓ `.editorconfig` has been refined or created.
+- ✓ (Optional) `.gitignore` and `.editorconfig` are standardized across repositories.
+- ✓ `CONTRIBUTING.md` mentions EditorConfig plugins.
+- ✓ Repository cleaned of ignored files.
+
+<hr />
+
+<Lore>
+The scrolls now glow softly, their patterns realigned to reflect the clarity you've brought. The hum of the forge strengthens, resonating with the harmony you've restored to your workspace.
+
+> You have woven precision into these tools,
+
+the _Keeper of the Repos_ declares, their eyes gleaming with approval.
+
+> The gremlins will find no foothold here. What was once chaotic is now deliberate, each element working in unison to uphold the spirit of collaboration.
+
+They lift one scroll, its light spilling across the forge.
+
+> This harmony will ripple outward, guiding others to create without friction or frustration. You have ensured that your work—and theirs—remains focused on the creation, not the distractions.
+
+The forge seems to breathe, its fires steady and bright. With the scrolls restored, you step away, their guidance ready to serve you and all who follow in your path.
+
+<LoreSeparator />
+
+<h3>The Keeper's Warning</h3>
+
+> An efficient forge produces powerful tools, but a chaotic forge breeds only frustration. Equip yourself and your fellow protectors with the right setup, and you'll banish the _Gremlins of Frustration_ from your artifacts.
+
+Step forward, traveller, and embrace the craft of creating a harmonious workspace. Return tomorrow for your next challenge, as the _Advent of Open Source_ continues to unfold.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Prevent Sensitive Files with Pre-Commit Hooks
+
+<hr />
+
+<Lore type="ice">
+In the corner of the _Forge of Productivity_, a faint chill lingers, where the fires do not reach. The _Keeper of the Repos_ stands watch over a weathered chest bound with silver chains, their expression solemn.
+
+> Within every great creation lies vulnerability,
+
+the _Keeper_ begins, their voice tinged with caution.
+
+The gremlins prey not only on disorder but on the careless release of secrets, slipping shadows into the open where harm may take root.
+
+They gesture toward the chest, its chains shimmering faintly as though alive.
+
+> These _Bindings of Vigilance_ ensure that only what is meant to be shared sees the light of day. But they require a careful guardian—one who can stand firm against missteps and oversights.
+
+The _Keeper_ places a key in your hand, its weight a reminder of the trust bestowed upon you.
+
+> Lock away the shadows and let only clarity pass beyond these gates. Prepare your safeguards, traveller, so that your craft remains protected and your collaborators safe from harm.
+
+The chest seems to hum with anticipation, its bindings ready to seal away the lurking dangers.
+</Lore>
+
+<hr />
+
+Repositories can sometimes act as unintentional vaults for sensitive information—private keys, environment configurations, and API credentials are just a few examples of files that should never make their way into version control. While `.gitignore` is a great first defense, it cannot prevent accidental overrides or the addition of new sensitive files. This is where pre-commit hooks shine, serving as a safety net by proactively blocking sensitive files before they can be committed.
+
+Today's challenge will guide you through setting up pre-commit hooks for detecting and preventing sensitive files in your repository. This challenge will ensure secure repository management, reduce risks of data leaks, and reinforce good practices for both individual contributors and teams.
+
+<Steps>
+
+1. **Understand pre-commit hooks and their benefits.**.
+
+    Pre-commit hooks are scripts that run automatically before a commit is finalized. They act as proactive measures to:
+
+    - Block commits of files that match predefined patterns.
+    - Warn contributors about potentially sensitive files.
+    - Enforce rules like formatting or linting alongside sensitive file prevention.
+
+    Refer to the [Git Hooks documentation](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) for more information, or explore tools like [Husky](https://typicode.github.io/husky/) and [pre-commit](https://pre-commit.com/) for managing hooks effectively.
+
+    Although `.gitignore` prevents Git from tracking ignored files, it doesn't protect against:
+
+    - Files that bypass `.gitignore` via `git add -f` or similar commands.
+    - New sensitive files that haven't been included to `.gitignore` yet.
+    - Accidental inclusion of sensitive data within tracked files (e.g., adding credentials to a `.config` file already under version control).
+    
+    Pre-commit hooks complement `.gitignore` by addressing these gaps, providing an additional safety net against human error and enhancing repository security.
+
+2. **Set-up pre-commit hooks for sensitive file detection.**
+
+    <Steps>
+
+    1. **Install a hook framework.**
+    
+        Choose a tool like [pre-commit](https://pre-commit.com/) or create your own custom scripts.
+
+    2. **Define sensitive patterns.**
+    
+        Identify risky file types to block. Examples include:
+
+        - Secrets and credentials (`*.env`, `*.pem`, `.aws/credentials`, etc.)
+        - Private keys (`*.key`, `*.p12`, etc.)
+        - Configuration backup files (`*.bak`, `*.old`, etc.)
+
+    3. **Create a pre-commit configuration.**
+    
+        If using a tool like `pre-commit`, configure the hooks in a `.pre-commit-config.yaml` file:
+
+        ```yaml title=".pre-commit-config.yaml"
+        repos:
+          - repo: https://github.com/pre-commit/pre-commit-hooks
+            rev: v4.4.0
+            hooks:
+              - id: detect-aws-credentials
+              - id: check-added-large-files
+        ```
+
+    4. **Build custom script for specific needs.**
+
+        Here's a basic example of a custom pre-commit script to block sensitive file types:
+
+        ```bash title="pre-commit.sh"
+        #!/bin/bash
+        files=$(git diff --cached --name-only | grep -E '\.pem$|\.env$|\.key$')
+        if [ -n "$files" ]; then
+            echo "Error: Sensitive files detected in commit: $files"
+            exit 1
+        fi
+        ```
+
+    </Steps>
+
+3. **Ensure team-wide usage.**
+
+    Pre-commit hooks are client-side by nature, meaning contributors need to install them manually.
+    
+    To streamline adoption:
+
+    - **Automate setup**: add a script to install hooks upon cloning the repository.
+    - **Document usage**: include setup and usage instructions in your contributing guidelines.
+    - **Address limitations**: inform contributors about bypass methods (e.g., `--no-verify`) and the importance of adhering to policies.
+    - **Leverage CI/CD**: use CI tools to scan for sensitive files in pull requests, ensuring an additional layer of security.
+    
+      <Aside type="caution">
+      **If a sensitive file is committed, it's already too late.**
+
+      At least, you can catch it before it gets merged, and take action.
+      </Aside>
+
+      Example with [trufflehog](https://github.com/trufflesecurity/trufflehog):
+
+      ```yaml title=".github/workflows/security.yml"
+      name: Detect Sensitive Files
+      on: [pull_request]
+      jobs:
+        scan:
+          runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v3
+            - name: Run TruffleHog
+              run: trufflehog filesystem --directory .
+      ```
+
+4. **Explore advanced practices**
+
+    For organization-wide improvements:
+
+    - **Centralize configurations**: share reusable hook setups across multiple repositories. for team-wide reuse.
+    - **Integrate code ownership**: use tools like `CODEOWNERS` to assign responsibility for reviewing sensitive files.
+    - **Educate contributors**: train team members on secure coding practices and the importance of avoiding sensitive files in version control.
+    - **Audit and iterate**: periodically review and update your pre-commit hooks to adapt to new risks and patterns, but also your repositories for sensitive data leaks using code like [Gitleaks](https://github.com/gitleaks/gitleaks).
+
+5. **Take your time to explore the tools and practices** that best fit your project's needs, because this is a vast topic.
+
+</Steps>
+
+By implementing pre-commit hooks, you take an important step toward safeguarding your repositories from the unintended inclusion of sensitive files. This proactive measure complements `.gitignore`, reduces human error, and strengthens overall repository security. For larger teams or organizations, combining hooks with CI/CD checks and centralized practices creates a robust, scalable solution.
+
+**Congratulations on completing this challenge!** Your repository or set of repositories is now cleaner, safer, and better equipped to handle collaborative development securely. Keep refining your workflows, and always prioritize security in version control practices.
+
+<h3>Success Criteria</h3>
+
+- ✓ Tried pre-commit hooks for sensitive file detection.
+- ✓ Defined sensitive patterns to block.
+- ✓ (Optional) Documented usage and setup steps, if set up.
+- ✓ (Optional) Integrated CI/CD checks for sensitive files.
+- ✓ (Optional) Explored advanced practices for organization-wide repositories.
+
+<hr />
+
+<Lore>
+The chains around the chest shimmer with a warm, golden light, their purpose fulfilled. The chill in the forge dissipates, replaced by a comforting warmth as the shadows retreat to where they can no longer cause harm.
+
+> You have done what many overlook,
+
+the _Keeper of the Repos_ says with a nod of approval.
+
+> By placing vigilance at the heart of your work, you have protected not only your craft but the trust of all who will join you.
+
+They turn toward the fire, which burns brighter, as though reflecting your accomplishment.
+
+> The gremlins cannot breach what you have secured. These bindings will ensure that secrets remain where they belong, and that no shadow disrupts the harmony of creation.
+
+The chest glows faintly, a beacon of care and diligence. As you step back, the _Keeper_ places a hand on your shoulder.
+
+> Your work strengthens not just this forge but the village itself. Go forth, knowing that you have built a foundation of trust and protection.
+
+The forge hums with renewed life, its tools ready for the challenges ahead.
+
+<LoreSeparator />
+
+<h3>The Keeper's Warning</h3>
+
+> An efficient forge produces powerful tools, but a chaotic forge breeds only frustration. Equip yourself and your fellow protectors with the right setup, and you'll banish the _Gremlins of Frustration_ from your artifacts.
+
+Step forward, traveller, and embrace the craft of creating a harmonious workspace. Return tomorrow for your next challenge, as the _Advent of Open Source_ continues to unfold.
+</Lore>

@@ -119,6 +119,10 @@ export default defineConfig({
                   label: 'Day 5: Building the Foundations of Excellence',
                   slug: 'advent/week-1/day-5'
                 },
+                {
+                  label: 'Day 6: Forging the Tools of Creation',
+                  slug: 'advent/week-1/day-6'
+                },
               ]
             },
           ],
