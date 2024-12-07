@@ -1,0 +1,560 @@
+---
+title: "Day 7: The Rhythm of Progress"
+description: "Enter the Clocktower of Continuity to protect the rhythm of collaboration and guard against chaos in the Winter Open Source Village."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import Runes from '../../../../components/Runes.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day07Snowflake01 from '../../../../assets/days/day-07-snowflake-01.png';
+
+<Lore type="logo">
+<h2>Enter the Clocktower of Continuity</h2>
+
+As the first week of the _Advent_ draws to a close, the _Keeper of the Repos_ summons the villagers to the towering _Clocktower of Continuity_. Its great gears and pendulums move in perfect harmony, marking the steady rhythm of collaboration. Yet the _Specters of Chaos_ loom nearby, whispering discord into the workings of the tower, threatening to stall its progress.
+
+The _Keeper_ steps forward, their voice resolute:
+
+> The strength of any creation lies in its rhythm. Without clear guidance and thoughtful action, even the most promising efforts falter.
+
+The _Keeper_ gestures to the clocktower's gears, each turning in precise unison.
+
+> To guard against the specters, we must weave discipline into our work. Let each action be intentional, each step secure, and each movement aligned with the whole. Only then can the rhythm endure, unbroken and true.
+
+With determination, the villagers prepare to restore order, ensuring the clocktower's harmony continues undisturbed.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-learn-the-basic-git-usage)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-create-and-use-advanced-git-aliases)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-optimize-branching-strategies)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Learn the Basic Git Usage
+
+<hr />
+
+<Lore type="snowflake">
+In the shadow of the _Clocktower of Continuity_, the _Keeper of the Repos_ guides you to a small alcove where a golden pendulum swings with calm precision. Its motion is mesmerizing, each beat steady and assured.
+
+> This pendulum represents the rhythm of creation,
+
+the _Keeper_ explains, their voice carrying both wisdom and weight.
+
+> But rhythm cannot arise from chaos. Without learning the steps, you risk stumbling, and the harmony will falter.
+
+The _Keeper_ places a hand on the pendulum, its motion slowing until it is still.
+
+> Your journey begins with understanding this foundation. Master the flow of the pendulum, and you will find the path to ensure your work aligns with the greater harmony.
+
+The _Keeper_ steps back, allowing you to take your place before the pendulum. It is time to learn the steps that will guide your journey forward.
+</Lore>
+
+<hr />
+
+**As you've seen in the past few days, we've been using the GitHub interface to create files. Today, however, we're taking things a step further by introducing Git.**
+
+Git is a **version control system** that allows you to track changes in your project, collaborate with others, and keep everything organized. It's the engine behind repositories on platforms like GitHub, GitLab, and others.
+
+Today's goal is simple: we'll guide you through the basic Git workflow so you can clone your repository, make changes locally, and push them back to your GitHub repository.
+
+<Aside title="What if I know Git already?">
+If you're already comfortable with Git, feel free to clone your repository now, skip these steps, and [jump to the final section of today's challenge](#final-paragraph).
+</Aside>
+
+<Steps>
+
+1. **Getting started with Git.**
+
+    If you haven't installed Git on your machine yet, don't worry—it's a quick process.
+
+    Download it from the [official website](https://git-scm.com/), or use any package manager available on your system.
+
+    Then, verify your installation by opening a terminal or command prompt and running:
+
+    ```sh
+    git --version
+    ```
+
+    If a version number appears, you're all set!
+
+1. **Cloning your GitHub repository locally.**
+
+    <Steps>
+
+    1. Navigate to your repository on GitHub, and click the _Code_ button, and copy the provided URL.
+
+        <ContentImage src={day07Snowflake01} alt="" />
+
+    1. In your terminal, navigate to the folder where you'd like to clone the repository, then run:
+
+        ```sh
+        git clone <URL>
+        ```
+
+        Replace `<URL>` with the URL you copied from GitHub. For instance:
+
+        ```sh
+        git clone git@github.com:Open-reSource/avalanche.git
+        ```
+
+    1. Once cloned, move into the repository's folder with:
+
+        ```sh
+        cd avalanche
+        ```
+
+    1. Check the repository's status with:
+
+        ```sh
+        git status
+        ```
+
+        You should see something like this:
+
+        ```sh
+        On branch main
+        Your branch is up to date with 'origin/main'.
+
+        nothing to commit, working tree clean
+        ```
+
+    </Steps>
+
+1. **Exploring your repository.**
+
+    In previous days, we created files and directories using GitHub's interface. Let's look at the history of these actions:
+
+    ```sh
+    git log
+    ```
+
+    You'll see a list of commits, showing details like author, date, and commit messages.
+
+1. **Adding files.**
+
+    <Steps>
+
+    1. Create a file named `hello-world.txt` using any text editor and write anything you like inside it.
+
+    1. In your terminal, tell Git to track this file:
+
+        ```sh
+        git add hello-world.txt
+        ```
+
+    1. Commit your changes with a message. Remember when we created files on GitHub, we added a message? It's the same here:
+
+        ```sh
+        git commit -m "docs: add hello-world.txt"
+        ```
+
+    1. Push your changes from your local environment to your repository on GitHub:
+
+        ```sh
+        git push
+        ```
+
+        If this is your first push, Git may ask you to authenticate or set up your credentials. Follow the prompts to complete the process.
+
+    1. Refresh your repository on GitHub—you should see the new file!
+
+        You can do the same process for any file you want to add or modify. Just remember to always add, commit, and push your changes.
+
+    </Steps>
+
+1. **Removing files.**
+
+    Let's say you don't need `hello-world.txt` anymore.
+
+    <Steps>
+
+    1. In your terminal, remove the file with:
+
+        ```sh
+        git rm hello-world.txt
+        ```
+
+    1. Commit and push the removal:
+
+        ```sh
+        git commit -m "docs: remove hello-world.txt"
+        git push
+        ```
+
+    1. Your repository is now clean again!
+
+    </Steps>
+
+</Steps>
+
+Congratulations! You've learned the first steps of Git.
+
+What we've covered is just the beginning. Git is an incredibly powerful tool with features like branching, merging, and rebasing. These concepts will become essential as your projects grow in complexity.
+
+We recommend starting with the [Git Tutorial from W3Schools](https://www.w3schools.com/git/) and exploring topics like pull requests and collaborative workflows via GitHub.
+
+<Aside type="tip" title="Keep learning">
+Remember, this introduction only scratches the surface of Git. Keep learning to unlock its full potential and streamline your workflow.
+</Aside>
+
+<p id="final-paragraph">
+From now on, you can start developing your project and filling in the directories we created earlier.
+
+While the Advent of Open Source won't cover the specifics of project development, we encourage you to spend a bit of time each day polishing it, if possible.
+
+By the end of Day 12, halfway through the Advent, we'll aim to release an alpha version of your project—even if it only includes one small feature.
+</p>
+
+<h3>Success Criteria</h3>
+
+- ✓ Git is installed on your machine.
+- ✓ Your GitHub repository is cloned locally.
+- ✓ You've added, committed, and pushed a file... and removed it!
+- ✓ (Optional) You've read more about Git's features.
+- ✓ (Optional) You've started developing your project and added new files to your repository.
+
+<hr />
+
+<Lore>
+The pendulum swings once more, its motion steady and assured. The golden light of the clocktower reflects in its surface, a testament to the balance you've achieved.
+
+The _Keeper of the Repos_ watches with approval, their expression warm.
+
+> You have taken the first steps in understanding the rhythm,
+
+they say, their tone a blend of pride and encouragement.
+
+> With this knowledge, you can move with purpose and ensure that your work contributes to the harmony we all strive for.
+
+They gesture toward the great gears of the clocktower, now turning with renewed vigor.
+
+> Remember, this is but the beginning. Each step builds upon the last, forming a cadence that strengthens all who walk alongside you.
+
+The clocktower chimes, a deep, resonant sound that seems to echo your achievement. As you leave the alcove, the pendulum continues its steady rhythm, guiding others to follow in your path.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> The heartbeat of your artifact lies in its foundation. When its rhythm falters, chaos reigns. But with mastery of workflows, protection of branches, and the automation of tasks, you will ensure that progress marches steadily forward.
+
+Prepare yourself, traveller, as the week of _The Gears of Perfection_. Return tomorrow to face new challenges and continue your ascent toward _Open Source_ mastery.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Create and Use Advanced Git Aliases
+
+<hr />
+
+<Lore type="snowball">
+At the base of the _Clocktower of Continuity_, a shadowy figure waits—cloaked in a shimmering mantle of starlight, they are known only as the _Architect of Efficiency_. They turn as you approach, revealing a collection of intricate runes carved into smooth, ancient stones.
+
+These are the _Glyphs of Flow_,
+
+the _Architect_ explains, their voice low and compelling.
+
+They hold the power to transform tedious steps into swift, graceful movements. Yet, they are not tools to wield carelessly. To unlock their true potential, you must understand the rhythm of your work and bind the glyphs to your will.
+
+They hand you a stone, its surface cool to the touch, marked with a single rune that pulses faintly.
+
+> Begin by crafting your own glyphs, refining them to fit the unique rhythm of your journey. Only then will you wield the speed and precision needed to outpace the _Specters of Chaos_.
+
+The _Architect_ nods solemnly, their gaze steady.
+
+Go now. The rhythm of creation awaits your mastery.
+</Lore>
+
+<hr />
+
+Efficient use of Git is crucial for working effectively on complex, multi-contributor projects. While basic commands like `git status` or `git commit` are commonly used by every developer, mastering Git aliases can supercharge your workflow. Aliases let you customize and shorten commands, saving time and minimizing errors. Pairing this with tools like the GitHub CLI further enhances your ability to interact seamlessly with GitHub repositories.
+
+Today's challenge is all about creating and using advanced Git aliases, both for Git and the GitHub CLI, to optimize your development process.
+
+Let's dive into how these aliases can streamline your Git workflow and collaboration efforts on large projects.
+
+<Steps>
+
+1. **Understand Git aliases and their advantages.**
+
+    Git aliases allow you to define shortcuts for frequently used commands, reducing repetitive typing and increasing productivity. For instance, instead of typing `git checkout <branch>` repeatedly, you can set up a shorter alias like `git co <branch>`.
+
+    Aliases are stored in the `~/.gitconfig` file under the `[alias]` section. They can represent single commands, chained commands, or even custom scripts. Learn more in the [official Git documentation]([official Git documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)) or explore creative ideas from the [git-tips/tips GitHub repository](https://github.com/git-tips/tips).
+
+1. **Set up custom Git aliases for common tasks.**
+
+    Create aliases to simplify routine Git commands by running the following commands in your terminal. Once configured, these shortcuts are available in any repository:
+
+    - `git co` for `git checkout`:
+
+      ```sh
+      git config --global alias.co checkout
+      ```
+
+    - `git br` for `git branch`:
+
+      ```sh
+      git config --global alias.br branch
+      ```
+
+    - `git st` for `git status`:
+
+      ```sh
+      git config --global alias.st status
+      ```
+
+    - `git lg` for a simplified, graphical representation of your commit history:
+
+      ```sh
+      git config --global alias.lg "log --oneline --graph --all --decorate"
+      ```
+
+    - `git amend` for amending your last commit without modifying the message:
+
+      ```sh
+      git config --global alias.amend "commit --amend --no-edit"
+      ```
+
+1. **Create advanced aliases to optimize workflows.**
+
+    Take your efficiency to the next level by chaining multiple commands into single aliases. These compound aliases can handle common sequences of actions:
+
+    - `git sync` for fetching, rebasing, and pushing changes in one step:
+
+      ```sh
+      git config --global alias.sync "!git fetch && git pull --rebase && git push"
+      ```
+
+    - `git delete-branch` for deleting the current branch after merging:
+
+      ```sh
+      git config --global alias.delete-branch "!git branch -d $(git branch --show-current)"
+      ```
+
+    - `git current` to display the active branch:
+
+      ```sh
+      git config --global alias.current "rev-parse --abbrev-ref HEAD"
+      ```
+
+1. **Integrate GitHub CLI for GitHub repository interactions.**
+
+    The [GitHub CLI](https://cli.github.com/) integrates GitHub features directly into your terminal, making tasks like creating issues, managing pull requests, and more faster and easier.
+
+    - Install the CLI by following the instructions on the [GitHub CLI website](https://cli.github.com/).
+
+    - Use the CLI to create Git aliases for GitHub actions:
+
+      - Create an issue:
+
+        ```sh
+        git config --global alias.create-issue "!gh issue create --title 'Bug Fix' --body 'Description of the issue'"
+        ```
+
+      - Checkout a pull request from a forked repository:
+
+        ```sh
+        git config --global alias.pr-checkout "!gh pr checkout"
+        ```
+
+1. **Share your aliases for team-wide benefits.**
+
+    Sharing aliases can improve team efficiency, especially for project-specific workflows. You can document aliases in your project's README or contributing guidelines, a team wiki, or maintain them in a shared repository.
+
+    **Got a favorite alias? Share it with us!** We'd love to see how you're enhancing your workflow.
+
+</Steps>
+
+By using Git aliases, you'll dramatically improve your Git proficiency, save time, and reduce manual errors. Combining this with GitHub CLI makes managing GitHub tasks effortless. Sharing these productivity boosters with collaborators ensures your entire team benefits, fostering a smoother and more efficient development process.
+
+<h3>Success Criteria</h3>
+
+- ✓ You've created custom Git aliases for common commands.
+- ✓ You've configured advanced Git aliases to simplify workflows.
+- ✓ You've installed and utilized GitHub CLI for GitHub interactions.
+- ✓ (Optional) You've shared your aliases with us or your collaborators!
+
+<hr />
+
+<Lore>
+The rune-stone hums softly in your hand, its glow steady and bright. You feel the rhythm of its energy align with your own, as if a thousand scattered tasks now move in unison. The _Architect of Efficiency_ steps forward, studying your work with a satisfied smile.
+
+> You have crafted the _Glyphs of Flow_,
+
+they declare, their tone full of approval.
+
+> With each step you take, the path ahead will clear. Tedious motions will no longer hinder you, and the _Specters of Chaos_ will struggle to keep pace.
+
+They gesture toward the clocktower, where its gears now turn with a newfound ease.
+
+> The harmony of your work has strengthened the rhythm of the tower itself. Remember this power, and wield it wisely.
+
+The _Architect_ steps back into the shadows, their form fading into the starlight. As the glyphs hum faintly in your hands, you feel a sense of purpose. The rhythm of creation is yours to command.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> The heartbeat of your artifact lies in its foundation. When its rhythm falters, chaos reigns. But with mastery of workflows, protection of branches, and the automation of tasks, you will ensure that progress marches steadily forward.
+
+Prepare yourself, traveller, as the week of _The Gears of Perfection_. Return tomorrow to face new challenges and continue your ascent toward _Open Source_ mastery.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Optimize Branching Strategies
+
+<hr />
+
+<Lore type="ice">
+In the shadow of the _Clocktower of Continuity_, a figure clad in flowing robes waits by a shimmering river. The waters twist and divide into countless streams, each weaving its own path before reuniting further downstream. The traveller is _Twych, The Guardian of Streams_, a keeper of order amidst the ever-shifting currents.
+
+> These waters represent the flow of creation,
+
+the _Guardian_ says, their voice calm and steady.
+
+> Each stream must be guided with care, for chaotic currents can lead to discord and stagnation. But when the streams are harmonized, they carve a path to progress that is both steady and strong.
+
+They hand you a silver staff, its surface engraved with intricate patterns.
+
+> Take this. Learn to divide the currents wisely, ensuring each one flows with purpose. Align them to your vision, and you will tame the chaos, transforming it into harmony.
+
+With a solemn nod, the _Guardian_ steps aside, leaving you to begin your work.
+</Lore>
+
+<hr />
+
+**Branching strategies** form the backbone of efficient collaboration in Git, especially when managing large projects or working within teams. While foundational models like **Git Flow** or **Trunk-Based Development** provide a starting point, refining these strategies can help you scale workflows, maintain high-quality code, and minimize friction. Effective branching isn't just about choosing a model; it's about aligning it with tools like CI/CD pipelines and equipping contributors with advanced Git techniques.
+
+Today's challenge invites you to evaluate and optimize your project's branching strategy to better match its size, complexity, and team structure.
+
+<Steps>
+
+1. **Evaluate your current branching strategy.**
+
+    Understanding your starting point is key to making improvements. Reflect on these questions:
+    - How many branches does your project currently use, and what is their purpose?
+    - Are there long-lived branches, and why do they exist?
+    - How are feature branches created and merged into the main branch?
+    - Do you use release or hotfix branches?
+    - What challenges or bottlenecks have arisen, such as frequent merge conflicts or slow reviews?
+    - Is the branching model in use (e.g., Git Flow, Feature Branching, Trunk-Based Development) clearly documented and consistently followed?
+
+    This evaluation will clarify your team's needs and uncover areas for improvement.
+
+1. **Select or refine a branching model.**
+
+    Based on your evaluation, decide whether to adopt a new model or optimize your current one.
+
+    Three common branching models can be considered.
+
+    - **Git Flow.**
+
+      Ideal for projects with scheduled releases and clear versioning. Git Flow uses long-lived branches like `develop` and `main`, and organizes feature development, releases, and hotfixes into distinct workflows.
+
+      Steps to implement Git Flow:
+
+      - Use `develop` as the central branch for active development.
+      - Create feature branches (e.g., `feature/my-feature`) from `develop`.
+      - Prepare releases using dedicated release branches, merged back into both `main` and `develop`.
+      - Address critical bugs using hotfix branches created directly from `main`.
+
+      Explore more in Vincent Driessen's article: [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/).
+
+    - **Feature branching.**
+
+      Best for teams working on independent features. Contributors create separate branches for each feature, keeping `main` or `develop` clean.
+    
+      Steps to implement Feature Branching:
+
+      - Create branches named after the feature (e.g., `feature/new-login`).
+      - Rebase regularly to avoid conflicts when merging.
+      - Merge branches into `main` or `develop` using Pull Requests (PRs) after review.
+
+    - **Trunk-Based Development.**
+
+      Ideal for fast-moving projects, this approach emphasizes direct commits to `main` with frequent integrations. Use feature flags to avoid exposing incomplete work.
+
+      Steps to implement Trunk-Based Development:
+
+      - Ensure contributors commit small, incremental changes to `main`.
+      - Use feature flags to safely deploy unfinished features.
+      - Employ robust CI/CD pipelines for automated testing and deployment.
+
+1. **Integrate CI/CD to enforce branching rules.**
+
+    Automation can ensure consistency and streamline your workflow. Examples include:
+
+    - **Branch protection rules** to restrict direct commits to critical branches. On GitHub, you can read more about [Branch protection rule](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule).
+    - **Automated testing** to run unit tests, integration tests, and other checks on each pull request before merging.
+    - **Code quality checks** to ensure that code quality standards are met before merging using tools like [Codecov](https://about.codecov.io/), [Code Climate](https://codeclimate.com/), or [SonarQube](https://www.sonarsource.com/products/sonarqube/).
+    - **Deployment pipelines** to deploy changes to staging or production environments automatically.
+    - ... and any other CI/CD practices that can help optimize your branching strategy such as linting, code formatting, or security checks.
+
+    Tailor these practices to suit your team's workflow and technical requirements.
+
+1. **Train your team in advanced Git techniques.**
+
+    Not all contributors may be familiar with advanced Git commands, which are essential for efficient collaboration. Provide resources or training sessions on:
+
+    - **Rebase** to keep commit histories clean and avoid unnecessary merge commits.
+    - **Cherry-pick** to selectively apply changes from one branch to another.
+    - **Squash commits** to maintain a linear and readable history.
+
+    Establishing team-wide agreements on rebase vs. merge strategies ensures consistency. These decisions can be enforced in the GitHub repository settings.
+
+1. **Continuously monitor and adjust.**
+
+    A branching strategy is not static; it evolves with your project. Regularly review your workflow to ensure it still meets the project's needs and make adjustments based on team feedback or technical challenges.
+
+</Steps>
+
+An optimized branching strategy ensures smooth collaboration, reduces conflicts, and accelerates development cycles. Coupled with automation through CI/CD and advanced Git techniques, your team can achieve a scalable and efficient workflow.
+
+By refining your strategy and aligning it with your team's needs, you build a strong foundation for consistent, high-quality contributions—critical for both large teams and Open Source projects.
+
+<h3>Success Criteria</h3>
+
+- ✓ You've evaluated your current branching strategy.
+- ✓ (Optional) You've refined a branching model (e.g., Git Flow, Feature Branching, or Trunk-Based Development).
+- ✓ You've integrated CI/CD practices to automate and enforce branching rules.
+- ✓ (Optinal) You've planned training sessions to upskill team members in advanced Git techniques or to create resources for self-learning.
+
+<hr />
+
+<Lore>
+The river flows smoothly now, its currents gliding along defined channels, each one purposeful and clear. _Twych, The Guardian of Streams_ watches with quiet satisfaction, their gaze following the water's graceful path.
+
+> You have tamed the branching currents,
+
+they say, their tone filled with reverence.
+
+> No longer do they clash or stray into disarray. Instead, they converge with clarity and intent, guiding all who navigate them toward a shared destination.
+
+They tap the silver staff against the ground, and its patterns shimmer in response.
+
+> Remember this balance,
+
+the _Guardian_ advises.
+
+> In the unity of these streams lies the strength to overcome any obstacle. When the waters flow freely, so too does the spirit of creation.
+
+With a final nod, the _Guardian_ steps into the mist that gathers near the river's edge, vanishing as the sound of harmonious currents fills the air.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> The heartbeat of your artifact lies in its foundation. When its rhythm falters, chaos reigns. But with mastery of workflows, protection of branches, and the automation of tasks, you will ensure that progress marches steadily forward.
+
+Prepare yourself, traveller, as the week of _The Gears of Perfection_. Return tomorrow to face new challenges and continue your ascent toward _Open Source_ mastery.
+</Lore>

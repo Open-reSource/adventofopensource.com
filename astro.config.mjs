@@ -123,6 +123,10 @@ export default defineConfig({
                   label: 'Day 6: Forging the Tools of Creation',
                   slug: 'advent/week-1/day-6'
                 },
+                {
+                  label: 'Day 7: The Rhythm of Progress',
+                  slug: 'advent/week-1/day-7'
+                },
               ]
             },
           ],
