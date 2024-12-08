@@ -1,0 +1,481 @@
+---
+title: "Day 8: The Mirror of Perfection"
+description: "Step into the Reflecting Hall, where enchanted mirrors reveal the hidden truths of your work. Uncover pathways to refinement, ensuring your creations shine with purpose while banishing the Shadows of Sloppiness."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>The Reflecting Hall</h2>
+
+On the ninth day, the _Keeper of the Repos_ leads you to the _Reflecting Hall_, a vast chamber where walls of enchanted mirrors stretch endlessly. These mirrors shimmer with a magical glow, revealing not just the surface of your work but its hidden truths—the clarity of its design, the harmony of its flow, and the shadows of overlooked imperfections.
+
+The _Keeper_ gestures to the mirrors, their voice solemn yet encouraging.
+
+> Here lies the power to see what is often missed, to uncover the pathways to refinement and strength. With care and diligence, you can ensure that every piece of your craft shines with purpose and excellence.
+
+But beware! The _Shadows of Sloppiness_ linger in these reflections, feeding on neglect and disorder. Only with vigilance and the wisdom of the mirrors can their influence be cast away.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-add-a-code-formatter-and-a-linter)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-automate-code-formatting-and-linting-with-ci)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-standardize-code-formatting-and-linting-across-projects)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Add a Code Formatter and a Linter
+
+<hr />
+
+<Lore type="snowflake">
+The _Keeper of the Repos_ stands beside one of the mirrors, its surface shifting like a restless pool of silver. With a wave of their hand, they summon a faint outline—a fractured image, scattered and uneven.
+
+> See how the mirror reveals what lies beneath?
+
+The _Keeper_ steps aside, allowing you a closer look.
+
+> To bring harmony to this reflection, you must first embrace the tools of order. These ancient instruments, passed through generations of artisans, align even the smallest details with precision.
+
+The _Keeper_ places a small, glowing token in your hand, its surface etched with intricate patterns.
+
+> Use this token to guide your craft, smoothing the edges and unifying the form. Each stroke of improvement brings you closer to perfection, a reflection unmarred by chaos.
+
+</Lore>
+
+<hr />
+
+Code formatters and linters are **indispensable tools** for ensuring code quality and maintaining a consistent style across your projects. However, while they may seem similar, they serve **distinct purposes**: a code formatter ensures consistent style (e.g., indentation and line breaks), while a linter catches potential bugs and enforces coding standards (e.g., naming conventions and best practices).
+
+Today's challenge involves two steps:
+1. Adding a code formatter.
+2. Adding a linter.
+
+From this point onward, the Advent won't provide step-by-step instructions for every task since tools and configurations vary widely depending on your project's needs. Instead, we'll outline general steps to help you get started, but feel free to adapt them and explore further.
+
+<Steps>
+
+1. **Add a code formatter.**
+
+    Code formatters ensure **consistent code style** by automatically applying predefined formatting rules. Follow these steps to add one to your project:
+
+    <Steps>
+
+    1. **Choose a code formatter.**
+
+        Popular choices include [Prettier](https://prettier.io/), which supports multiple languages and has flexible configuration options.
+    
+    1. **Install the formatter.**
+
+        Follow its installation instructions to add it as a development dependency. For example, with Prettier, use a package manager to install it. Refer to the [Prettier installation guide](https://prettier.io/docs/en/install).
+
+    1. **Configure the formatter.**
+
+        Create a configuration file (e.g., `.prettierrc` for Prettier) to define the rules for your project. Tailor these rules to match your coding standards.
+
+    1. **Run the formatter.**
+
+        Most tools provide commands for checking and fixing formatting issues. For Prettier:
+
+        - `npx prettier --check .` checks for formatting issues.
+        - `npx prettier --write .` automatically formats the code.
+
+        Run the `write` command to ensure your codebase is formatted correctly.
+
+    1. **Install an editor extension.**
+
+        For example, install the [Prettier editor extension](https://prettier.io/docs/en/editors.html) to format your code on save.
+
+    </Steps>
+
+1. **Add a linter.**
+
+    Linters focus on **catching bugs** and enforcing coding standards. The steps are similar to setting up a formatter:
+
+    <Steps>
+
+    1. **Choose a linter.**
+
+        Tools like [ESLint](https://eslint.org/) are popular for JavaScript projects. Choose one that fits your project's needs based on the stack you're using.
+
+    1. **Install the linter.**
+
+        Add it as a development dependency and follow its installation instructions.
+
+    1. **Configure the linter.**
+
+        Create a configuration file (e.g., `.eslintrc` for ESLint) to define the rules. Customize them to meet your project's requirements.
+
+    1. **Run the linter.**
+
+        Use the linter's <abbr title="Command-Line Interface">CLI</abbr> to check your codebase for errors and warnings.
+
+    1. **Install an editor extension.**
+
+        For ESLint, you can install the [ESLint editor extension](https://eslint.org/docs/user-guide/integrations) to display linting issues directly in your editor.
+
+    </Steps>
+
+</Steps>
+
+With your formatter and linter configured, you've taken a huge step toward maintaining a clean and professional codebase. These tools will help you **enforce best practices** and ensure that your project remains consistent and error-free, even as it grows and evolves. Great job on completing this essential challenge!
+
+<h3>Success Criteria</h3>
+
+- ✓ A code formatter is set up in your project. It can be run locally.
+- ✓ A linter is set up in your project. It can be run locally.
+- ✓ Both extensions are installed in your code editor.
+
+<Aside title="Remember">
+You can keep developing your project and spend a bit of time each day polishing it, if possible.
+
+By the end of Day 12, halfway through the Advent, we'll aim to release an alpha version of your project—even if it only includes one small feature.
+</Aside>
+
+<hr />
+
+<Lore>
+The mirror now gleams with an unbroken image, its surface smooth and harmonious. The fractured outline has transformed into a vision of balance and clarity, radiating with a gentle light.
+
+The _Keeper of the Repos_ studies the mirror, their expression a mixture of pride and satisfaction.
+
+> You have brought unity to your reflection, wielding the tools of order with skill and care. The _Shadows of Sloppiness_ have no place here, for your work now stands as a testament to diligence and mastery.
+
+They gesture toward the hall, where the other mirrors shimmer in approval.
+
+> Remember this: the art of refinement is not a single act, but a practice. Return to the mirrors often, and let their wisdom guide you. With each visit, your work will grow stronger, clearer, and ever more enduring.
+
+The hall brightens, the mirrors casting their light into the corners of the chamber. The _Keeper_ bows slightly, their voice filled with quiet encouragement.
+
+> Your path is illuminated. Walk it with confidence and grace.
+
+<LoreSeparator />
+
+<h3>The Keeper's Insight</h3>
+
+> Creations that simply function are not enough. In the Reflecting Hall, you will learn to polish your work, refining it to a state of excellence. Only through vigilance and discipline can you banish the Shadows of Sloppiness.
+
+Proceed, traveller, and perfect your craft. Return tomorrow for the next challenge in your journey through the _Advent of Open Source_.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Automate Code Formatting and Linting With CI
+
+<hr />
+
+<Lore type="snowball">
+In the dim light of the _Reflecting Hall_, another mirror draws your attention. Unlike the others, its surface is in constant motion, shimmering as if alive. The _Keeper of the Repos_ approaches with a knowing smile, gesturing toward the restless glass.
+
+> This mirror shows a reflection not bound to a single moment. It reveals the ongoing flow of your efforts, capturing each step of progress and every potential stumble.
+
+From their satchel, the _Keeper_ retrieves a delicate hourglass filled with sparkling grains of light.
+
+> This is the _Hourglass of Flow_, a gift from the artisans of the _Forge of Productivity_. With its magic, your efforts will no longer rely on memory or chance. Every improvement will be checked as it is born, ensuring consistency without hesitation.
+
+They place the hourglass on the edge of the mirror, its glow syncing with the movement of the glass.
+
+> Use its power wisely. When the flow is aligned, you will find even the most unruly shadows swept away before they can take root.
+
+The _Keeper_ steps back, nodding for you to begin.
+</Lore>
+
+<hr />
+
+**Integrating code formatting and linting into your CI pipeline ensures that every change follows the same formatting and linting rules**, reducing the need for manual reviews and improving code quality. This is a crucial step for projects that involve multiple contributors, helping to maintain consistency and catch issues early in the development process.
+
+**Today's challenge will guide you through setting up the automation for both code formatting and linting in your CI pipeline**, ensuring that every pull request is thoroughly checked for formatting issues and code quality before it is merged.
+
+<Steps>
+
+1. **Set up code formatting and linting.**
+
+    Before diving into CI automation, ensure that you have both a code formatter and a linter set up in your project.
+
+    For this challenge, we'll use [Prettier](https://prettier.io/) (code formatting) and [ESLint](https://eslint.org/) (linting and code quality checks) as examples. If you're using different tools, please adapt the steps accordingly.
+
+    <Aside>
+    Check out the [Beginner challenge: Add a Code Formatter and a Linter](#beginner-add-a-code-formatter-and-a-linter) for detailed instructions on setting up Prettier and ESLint in your project.
+    </Aside>
+
+    At this point, you should have something like:
+
+    - **A configuration file for your code formatter** (e.g., `.prettierrc` for Prettier).
+    - **A configuration file for you linter** (e.g., `.eslintrc` for ESLint).
+    - **Scripts for code formatting and linting issues to check and fix locally your files.**
+
+      For example, you can have in a `package.json` file the following scripts to run Prettier and ESLint for checking and fixing issues:
+      - `format`: Runs Prettier to format the code.
+      - `format:check`: Checks the code for code formatting issues.
+      - `lint`: Runs ESLint to check and fix linting issues.
+      - `lint:check`: Checks the code for linting issues.
+
+      ```json title="package.json"
+      {
+        "scripts": {
+          "format": "prettier --write .",
+          "format:check": "prettier --check .",
+          "lint": "eslint . --fix",
+          "lint:check": "eslint . --max-warnings=0"
+        }
+      }
+      ```
+
+1. **Set up GitHub Actions for code formatting and linting.**
+
+    Now, let's automate the process in your GitHub Actions workflow. We will create a CI pipeline that runs your code formatter and linter on every pull request.
+
+    <Steps>
+
+    1. **Create or edit the GitHub Actions workflow.**
+
+        - In your project, navigate to `.github/workflows/`.
+        - Create a new file called `lint.yml` or edit an existing workflow file.
+
+    1. **Define the workflow.**
+
+        Here's a sample configuration for a GitHub Actions workflow that checks for code formatting and linting on pull requests with Prettier and ESLint:
+
+        ```yaml title=".github/workflows/lint.yml"
+        name: Code Quality Check
+        on: [pull_request]
+
+        jobs:
+          check:
+            runs-on: ubuntu-latest
+            steps:
+              - name: Checkout Code
+                uses: actions/checkout@v3
+
+              - name: Set up Node.js
+                uses: actions/setup-node@v4
+                with:
+                  cache: npm
+                  node-version: 20
+
+              - name: Install Dependencies
+                run: npm install
+
+              - name: Run Prettier Check
+                run: npm run format:check
+
+              - name: Run ESLint Check
+                run: npm run lint:check
+        ```
+
+        The workflow does the following:
+
+        1. Checks out the code for each pull request.
+        1. Sets up the environment (e.g., Node.js).
+        1. Installs project dependencies.
+        1. Runs the code formatter to check for code formatting issues.
+        1. Runs the linter to check for linting issues.
+
+        If any issues are found, the workflow will fail, indicating that the pull request needs further attention.
+
+    </Steps>
+
+1. **Test the CI pipeline.**
+
+    After pushing your changes to GitHub:
+
+    1. Open a pull request to your repository containing code formatting or linting issues.
+    1. The GitHub Actions workflow should run automatically.
+    1. Check the _Actions_ tab in your repository to see the workflow status.
+    1. It should fail. Review the logs to identify the issues.
+    1. Fix the issues locally and push the changes to the pull request branch.
+    1. The workflow should run again and pass this time.
+
+1. **Encourage contributors to use code formatting and linting locally.**
+
+    While the CI pipeline ensures that pull requests are checked automatically, encourage your contributors to run the code formatting and linting check and fix commands locally before pushing their changes. This will help them fix any issues beforehand, speeding up the review process.
+
+    You can add this recommendation to your project's `CONTRIBUTING` file or documentation to help developers adhere to the code quality standards.
+
+</Steps>
+
+By automating code formatting and linting with CI, you've streamlined the process of maintaining consistent, high-quality code across your project. This automation ensures that every contributor's code adheres to the same standards, reducing errors and the need for manual reviews. It's a great practice for any team or Open Source project to incorporate these tools into the development workflow.
+
+**Congratulations on completing this challenge!** By implementing code formatting and linting checks in your CI pipeline, you've taken a significant step toward improving your project's code quality and developer productivity. Keep up the great work!
+
+<h3>Success Criteria</h3>
+
+- ✓ Code formatting and linting scripts can be used locally.
+- ✓ A GitHub Actions workflow is set up to check code formatting and linting on pull requests.
+- ✓ The CI pipeline runs and successfully checks for code formatting and linting issues.
+- ✓ The workflow fails if formatting or linting issues are detected.
+
+<hr />
+
+<Lore>
+The mirror still ripples, but now with a steady, calming rhythm. Each movement reflects a sequence of harmony, where every step forward is met with a reassuring light. The _Hourglass of Flow_ shines brightly, its grains of light moving in perfect synchrony with the mirror's dance.
+
+The _Keeper of the Repos_ observes the transformation, their expression one of deep satisfaction.
+
+> You have woven the flow into your craft, ensuring that each moment builds upon the last without falter. The _Shadows of Sloppiness_ have no foothold here, for your vigilance now reaches every corner of your efforts.
+
+They retrieve the hourglass, its light dimming slightly as it returns to their satchel.
+
+> This tool will serve you well, but it is the habits you've built that will endure. With each reflection kept clear, your work will not only remain strong but inspire those who follow to uphold the same discipline.
+
+The _Keeper_ gazes at the mirror one last time, its glow casting warm light across the hall.
+
+> Go forth with the confidence of one who masters not only the present but safeguards the path ahead. The _Reflecting Hall_ will always await your return.
+
+<LoreSeparator />
+
+<h3>The Keeper's Insight</h3>
+
+> Creations that simply function are not enough. In the Reflecting Hall, you will learn to polish your work, refining it to a state of excellence. Only through vigilance and discipline can you banish the Shadows of Sloppiness.
+
+Proceed, traveller, and perfect your craft. Return tomorrow for the next challenge in your journey through the _Advent of Open Source_.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Standardize Code Formatting and Linting Across Projects
+
+<hr />
+
+<Lore type="ice">
+Near the far end of the _Reflecting Hall_, you notice a series of mirrors arranged in a precise, repeating pattern. Unlike the others, these mirrors do not focus on a single image but instead echo one another endlessly, their reflections creating a seamless, unified vision. The _Keeper of the Repos_ stands beside them, their gaze steady and contemplative.
+
+> These mirrors belong to the _Concordant Array_,
+
+they explain, their voice calm yet purposeful.
+
+> They reveal the power of harmony: when every effort aligns, even across vast distances, the result is something greater than its parts.
+
+The _Keeper_ produces a small, intricately carved scale, its surface inscribed with patterns that shimmer faintly in the light.
+
+> This is the _Godo, Balancer of Unity_. With it, you can ensure that every piece of your craft, no matter where it lies, follows the same guiding principles. In doing so, you eliminate discord and create a foundation that others can trust and build upon.
+
+They place the scale before you, its glow pulsing softly as it awaits your touch.
+
+> Step into the _Concordant Array_, and bring order to what was once scattered.
+
+</Lore>
+
+<hr />
+
+In any Open Source or collaborative project, ensuring consistency in code formatting and linting is critical. **When multiple contributors work on different parts of a project, different repositories linked together, it's essential that everyone follows the same guidelines.** Without a uniform approach, the codebase can quickly become hard to navigate, leading to errors and inefficiencies. By standardizing code formatting and linting across your projects, you ensure that your team follows the same practices, making the code easier to maintain and improving the overall quality of contributions.
+
+**Today's challenge will guide you through creating custom code formatting and linting configurations that can be reused across multiple repositories.** This will help you establish consistent coding standards across all your projects. We'll also explore how to enforce these standards by sharing your configurations and auditing them periodically to ensure that they continue to meet your team's goals and project needs.
+
+<Steps>
+
+1. **Create a custom code formatter configuration.**
+
+    The first step is to set up a code formatter configuration that you can reuse to ensure a consistent style across your projects.
+
+    <Aside type="tip" title="Share a Prettier configuration">
+    For a detailed Prettier step-by-step guide, refer to the [Prettier documentation on Sharing Configurations](https://prettier.io/docs/en/sharing-configurations).
+    </Aside>
+
+    Here's how to create and share your configuration.
+
+    <Steps>
+
+    1. **Create a new repository for the formatter configuration.**
+
+        Set up a new repository dedicated to your custom code formatter configuration.
+
+    1. **Inside the repository, create the configuration file.** (e.g., `.prettierrc` for Prettier).
+
+        Define the formatting rules that align with your team's coding standards. Customize the rules to match your project's requirements.
+
+    1. **Configure the formatter.**
+
+        Customize the rules according to your team's preferences.
+
+    1. **Publish the configuration.**
+
+        Initialize your project with the init command of your package manager (e.g., `npm init` for npm).
+
+        Then, publish the configuration to a package registry (e.g., `npm publish --access public` for npm).
+
+    </Steps>
+
+1. **Create a custom linter configuration.**
+
+    Just like with code formatting, linters can be configured to enforce coding standards across your projects.  linter ensures that your code adheres to certain best practices, such as avoiding unused variables, preventing common mistakes, or enforcing consistent naming conventions.
+
+    The steps to create and share a custom linter configuration are similar to those for a code formatter.
+
+    <Aside type="tip" title="Share an ESLint configuration">
+    For detailed ESLint-specific guide, refer to the [ESLint documentation on Sharing Configurations](https://eslint.org/docs/latest/extend/shareable-configs).
+    </Aside>
+
+1. **Use the shared configurations across repositories.**
+
+    Once your configuration packages are published, the next step is to share them across your repositories to ensure consistent formatting and linting.
+
+    For each repository that you want to apply the shared configurations to:
+
+    <Steps>
+
+    1. **Set up the code formatter and linter.**
+    1. **Install the code formatter and linter configuration packages** that you published earlier.
+    1. **Provide instructions on how to run the code formatter and linter scripts locally** in the repository's contributing guide.
+    1. **Enforce the use of the code formatter and linter in your CI pipeline.**
+    
+        See the [Intermediate challenge](#intermediate-automate-code-formatting-and-linting-with-ci) for guidance on setting up CI checks.
+
+    </Steps>
+
+1. **Periodically audit and update the configurations.**
+
+    As your projects evolve, you may need to update your code formatting and linting rules. Over time, your team's coding standards may change, or new best practices may emerge. Periodically reviewing and updating your configurations ensures that your codebase remains consistent with the team's goals.
+
+    <Steps>
+
+    1. **Run an audit**: Periodically check your repositories to make sure the formatting and linting configurations are still being followed. This can be done manually or through automated checks in your CI pipeline.
+    1. **Update the configurations**: If needed, modify your configuration files and republish the updated versions. Inform your contributors about the updates, and encourage them to install the latest versions of the configuration packages in their projects.
+
+    </Steps>
+
+</Steps>
+
+**By creating custom, shareable configurations for both code formatting and linting, you've established a standardized approach to managing code quality across multiple repositories**. This consistency not only improves collaboration but also reduces errors and makes it easier for new contributors to get involved. Periodically reviewing and updating these configurations ensures that your standards evolve with your project's needs, keeping your codebase clean and maintainable.
+
+**Congratulations on completing this challenge!** By standardizing your code formatting and linting, you've taken a critical step toward building a high-quality, maintainable codebase across all your projects.
+
+<h3>Success Criteria</h3>
+
+- ✓ Custom code formatter and linter configuration packages are created and published.
+- ✓ Configuration packages are shared and installed across multiple repositories.
+- ✓ Code formatter and linter configurations are enforced through CI pipeline.
+- ✓ Periodic audits and updates of code formatting and linting rules are scheduled.
+
+<hr />
+
+<Lore>
+As you step back from the _Concordant Array_, the mirrors shimmer in unison, their reflections now perfectly aligned. The carved scale glows steadily in your hand, its once-shifting patterns now forming a cohesive and harmonious design.
+
+The _Keeper_ of the Repos approaches, their expression filled with quiet pride.
+
+> You have achieved what many overlook: the harmony of effort across all realms. With _Godo, Balancer of Unity_, you've ensured that no matter where your work leads, its foundation remains constant, clear, and strong.
+
+They take the scale, its light dimming slightly as they stow it safely within their satchel.
+
+> This alignment will ripple outward, inspiring all who contribute to join in the same unified effort. You have not merely brought order to your own craft but created a guide for countless others to follow.
+
+The _Keeper_ gestures toward the mirrors, now glowing with a gentle, reassuring light.
+
+> Return to your journey with the knowledge that your path is not just your own. It is a path that others will walk beside you, strengthened by the unity you have forged.
+
+<LoreSeparator />
+
+<h3>The Keeper's Insight</h3>
+
+> Creations that simply function are not enough. In the Reflecting Hall, you will learn to polish your work, refining it to a state of excellence. Only through vigilance and discipline can you banish the Shadows of Sloppiness.
+
+Proceed, traveller, and perfect your craft. Return tomorrow for the next challenge in your journey through the _Advent of Open Source_.
+</Lore>

@@ -129,6 +129,15 @@ export default defineConfig({
                 },
               ]
             },
+            {
+              label: 'Week 2: The Gears of Perfection',
+              items: [
+                {
+                  label: 'Day 8: The Mirror of Perfection',
+                  slug: 'advent/week-2/day-8'
+                },
+              ]
+            },
           ],
         },
       ],
