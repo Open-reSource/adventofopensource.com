@@ -136,6 +136,10 @@ export default defineConfig({
                   label: 'Day 8: The Mirror of Perfection',
                   slug: 'advent/week-2/day-8'
                 },
+                {
+                  label: 'Day 9: The Flow of Unbroken Progress',
+                  slug: 'advent/week-2/day-9'
+                },
               ]
             },
           ],
