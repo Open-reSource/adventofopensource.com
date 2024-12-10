@@ -140,6 +140,10 @@ export default defineConfig({
                   label: 'Day 9: The Flow of Unbroken Progress',
                   slug: 'advent/week-2/day-9'
                 },
+                {
+                  label: 'Day 10: The Sentinel\'s Vigil',
+                  slug: 'advent/week-2/day-10'
+                },
               ]
             },
           ],

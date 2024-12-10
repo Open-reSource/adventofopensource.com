@@ -1,0 +1,568 @@
+---
+title: "Day 10: The Sentinel's Vigil"
+description: "The Bastion of Safeguards is a fortress protecting your creations. With the Sentinel's guidance, vigilance and teamwork shield your work from hidden threats."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Badge } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>The Bastion of Safeguards</h2>
+
+The _Keeper of the Repos_ leads you to the _Bastion of Safeguards_, a towering citadel surrounded by an unyielding stone wall. The air feels charged, as if the fortress itself stands ready to defend against unseen foes lurking in the shadows. Within the _Bastion_, the _Sentinel_ awaits—a vigilant protector whose unwavering gaze speaks of countless battles fought and won against threats that seek to unravel all that has been built.
+
+> This stronghold was forged to shield the fruits of our labor,
+
+the _Sentinel_ begins, their voice firm and resolute.
+
+> Every craft, no matter how strong, is vulnerable to hidden weaknesses. Without careful watch, even the smallest flaw can undo a lifetime of effort.
+
+The _Sentinel_ gestures toward the fortress walls, where faint runes glow softly in intricate patterns.
+
+> But vigilance is not a solitary act. There are allies to call upon—faithful guardians who watch tirelessly, protecting our creations against the chaos that lies beyond these walls.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-enable-automated-dependency-management)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-configure-automated-dependency-management)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-automate-dependency-updates-across-repositories)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Enable Automated Dependency Management
+
+<hr />
+
+<Lore type="snowflake">
+As you step deeper into the _Bastion of Safeguards_, the _Sentinel_ introduces you to a small, glowing figure hovering near the gates.
+
+> Meet _Dependa_,
+
+the _Sentinel_ says with a rare smile.
+
+> Though small in form, _Dependa_ carries immense strength. Their watchful eyes scan tirelessly, spotting threats before they can breach the walls.
+
+_Dependa_ gives a cheery hum, circling around you with a sense of eager determination.
+
+> This guardian will ensure that nothing overlooked can slip through,
+
+the _Sentinel_ explains, their tone light but purposeful.
+
+> Trust in _Dependa_, and they will help you safeguard your work against unseen perils. Together, you will build a foundation of vigilance that will stand the test of time.
+
+With a final nod, the _Sentinel_ steps aside, leaving you in _Dependa_'s capable hands.
+
+> Begin now, and let the watchful eye of _Dependa_ guide your steps.
+
+</Lore>
+
+<hr />
+
+Managing dependencies is a crucial part of maintaining a healthy and secure project. As your project evolves, its dependencies may become outdated or even vulnerable to security issues, which can introduce risks to your codebase. Automated dependency management tools like [Dependabot](https://dependabot.com/) or [Renovate](https://docs.renovatebot.com) simplify this process by regularly scanning your project for outdated or insecure dependencies and suggesting updates through pull requests.
+
+Other tools like  are also available. Choose the one that best fits your needs and integrate it into your project.
+
+<Aside title="Dependabot or Renovate?">
+If you're considering using Renovate instead of Dependabot, you can follow a similar process. Check out Renovate's setup documentation for platform-specific instructions. 
+
+[Renovate has a bot comparison page](https://docs.renovatebot.com/bot-comparison/) that can help you decide which tool is best for your project.
+</Aside>
+
+Today's challenge focuses on enabling Dependabot, an integrated GitHub tool, to handle automated dependency management for your project. You'll learn how to configure Dependabot to identify and update outdated dependencies, ensuring your project stays secure and up-to-date. By the end of this challenge, you'll have a workflow in place that saves you time while improving your project's security and stability.
+
+<Steps>
+
+1. **Access the settings.**
+
+    1. Navigate to your project's repository on GitHub.
+    1. Click on the _Settings_ tab.
+
+1. **Enable Dependabot.**
+
+    <Steps>
+
+    1. In the left-hand sidebar, find an click _Code security_.
+
+    1. Locate the "Dependabot" section on the page which contains several sub-sections.
+
+    1. For each of the following sub-sections, click the _Enable_ button to activate Dependabot's features:
+      
+        - "Dependabot alerts" will notify you of any vulnerabilities detected in your dependencies
+        - "Dependabot security updates" will automatically suggest fixes for vulnerable dependencies
+        - "Dependabot version updates" will track outdated dependencies and suggest updates based on your configuration
+
+    </Steps>
+
+1. **Configure Dependabot.**
+
+    <Steps>
+
+    1. After enabling "Dependabot version updates", GitHub will prompt you to create or edit a `.github/dependabot.yml` file in your repository. This file defines how Dependabot handles dependency updates.
+
+    1. To specify the package manager (e.g., npm, Maven, Python pip) and the update schedule, use the following example for an **npm project with weekly updates**:
+
+        ```yaml
+        version: 2
+        updates:
+          - package-ecosystem: "npm"
+            directory: "/"
+            schedule:
+              interval: "weekly"
+        ```
+
+        **What this configuration does:**
+
+        - `package-ecosystem` specifies the dependency type (npm in this case).
+        - `directory` defines the path where the package manager is located (use `/` for the root directory).
+        - `schedule` determines how often Dependabot checks for updates (e.g., weekly).
+
+        For other package managers, refer to [GitHub's Dependabot configuration guide](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file).
+
+    </Steps>
+
+1. **Commit the configuration.**
+
+    After editing the `.github/dependabot.yml` file, click on the _Commit changes_ button to save the configuration file with a `chore: create dependabot.yml` commit message.
+
+1. **Verify Dependabot is active.**
+
+    Navigate back to your repository home page.
+
+    Dependabot will now scan your dependencies based on the configuration. Within a short time, you should begin to see pull requests for updates or alerts for vulnerabilities, depending on your setup.
+
+</Steps>
+
+Automating your dependency management with tools like Dependabot helps you stay ahead of potential issues by ensuring your project dependencies remain secure and up-to-date. By completing today's challenge, you've taken a critical step toward better project maintenance.
+
+**With Dependabot handling the tedious task of tracking updates, you can focus on building features and solving problems that matter most.**
+
+Congratulations on enabling automated dependency management! Your project is now more secure, organized, and future-proof. Keep exploring advanced configurations and other tools like Renovate to further enhance your workflow!
+
+<h3>Success Criteria</h3>
+
+- ✓ Dependabot is enabled for your project.
+- ✓ Dependabot is configured to check for updates on a regular schedule.
+
+<Aside title="Remember">
+You can keep developing your project and spend a bit of time each day polishing it, if possible.
+
+By the end of Day 12, halfway through the Advent, we'll aim to release an alpha version of your project—even if it only includes one small feature.
+</Aside>
+
+<hr />
+
+<Lore>
+With _Dependa_ at your side, you've fortified your craft against the creeping threats that once lingered unseen. The glowing figure hums quietly, their light now brighter, a reflection of the protection you've secured.
+
+The _Sentinel_ approaches, their stance relaxed but their expression still sharp.
+
+> You've taken the first step toward building a fortress that cannot be breached,
+
+they say, their voice filled with quiet approval.
+
+> With _Dependa_ watching over your work, you've gained an ally that never tires, never wavers.
+
+The glowing runes on the _Bastion_'s walls seem to pulse faintly, as if acknowledging the strength you've added to its defenses.
+
+> But remember,
+
+the _Sentinel_ adds, their gaze steady.
+
+> Vigilance is a journey, not a destination. With each step, you fortify not only your craft but also the trust of those who join you in your endeavor.
+
+Dependa gives a small, cheerful chime, as if to say they're ready for whatever comes next. The _Sentinel_ nods, a faint smile playing at the corner of their lips.
+
+> Carry on, and let this be the beginning of a watchful and secure legacy.
+
+<LoreSeparator />
+
+<h3>The Sentinel's Oath</h3>
+
+> In this realm , vigilance is eternal. By adopting these safeguards, you ensure that your artifact stands strong against the _Vulnerabilities of the Void_. Trust is hard-earned but easily lost—let your security practices be a beacon of reliability.
+
+Take up your role as a guardian of your artifact, traveller. Return tomorrow as the _Advent of Open Source_ continues to fortify your skills.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Configure Automated Dependency Management
+
+<hr />
+
+<Lore type="snowball">
+As the _Sentinel_ ushers you further into the _Bastion of Safeguards_, they stop before a luminous console etched with intricate patterns that shift and pulse like a heartbeat. Standing beside it is _Dependa_, the glowing guardian introduced to others before you, their light now radiant and steady.
+
+> Your journey requires not only vigilance but preparation,
+
+the _Sentinel_ begins, gesturing to the console.
+
+> Within these halls lies the power to not only watch for dangers but to anticipate them—to set mechanisms in place that respond swiftly and ensure your craft remains untouched by the perils of neglect.
+
+_Dependa_ chimes in agreement, their glow intensifying as if eager to demonstrate their next role.
+
+> This console will let Dependa extend their reach, tirelessly reviewing what enters your work and keeping it in harmony.
+
+The _Sentinel_ steps back, letting Dependa hover closer to you, their light warm and steady.
+
+> Together, you will create safeguards that do not wait for danger but move to prevent it entirely. It is the mark of true endurance,
+
+the _Sentinel_ finishes.
+</Lore>
+
+<hr />
+
+Managing dependencies is a critical part of maintaining a healthy, secure, and stable project. With the rise of automated dependency management tools like [Dependabot](https://github.com/dependabot), it's easier than ever to keep your project up to date and secure. **These tools allow you to automate the process of checking for outdated or insecure dependencies and creating pull requests for updates**, but there's more you can do to fine-tune this process. Customizing your dependency update schedules, setting up rules for which updates should be ignored, and implementing a review process for dependency pull requests can improve the efficiency of your workflow and increase the security and reliability of your project.
+
+**Today's challenge will guide you through the process of configuring automated dependency management** in a way that suits your project's specific needs. You will learn how to customize your update schedules, set up rules to ignore certain dependencies, and create a review process to ensure that all dependency updates are reviewed before merging. Additionally, we'll touch on creating a security policy to help manage updates and vulnerabilities in your dependencies, ensuring that your project stays secure while maintaining high-quality standards.
+
+<Steps>
+
+1. **Customize dependency update schedules and ignore rules.**
+
+    Automating dependency updates with tools like Dependabot allows you to keep your project up-to-date without manual intervention. However, you can customize how often updates are made, and even configure certain dependencies to be ignored, depending on your project's needs.
+
+    <Steps>
+
+    1. **Review the configuration of your dependency management tool.**
+
+        The first step is to review the configuration of your dependency management tool (e.g., `.github/dependabot.yml` for Dependabot) to customize the update schedule. For example, you can set the frequency of updates to be daily, weekly, or monthly. This can be beneficial if you want to reduce the frequency of minor updates but ensure critical patches are applied quickly.
+
+        Example of a `dependabot.yml` configuration with a weekly update schedule:
+
+        ```yaml
+        version: 2
+        updates:
+          - package-ecosystem: "npm"
+            directory: "/"
+            schedule:
+              interval: "weekly"
+        ```
+
+    1. **Set up ignore rules.**
+
+        Add specific dependencies to the ignore list if they are stable and do not need regular updates, or in case they are known to cause issues or need extra testing before being updated.
+
+        You can also ignore specific version ranges or types of updates (e.g., major, minor, patch) to avoid breaking changes or compatibility issues.
+
+        Example of ignoring a specific dependency in the Dependabot configuration:
+
+        ```yaml
+        version: 2
+        updates:
+          - package-ecosystem: "npm"
+            directory: "/"
+            schedule:
+              interval: "weekly"
+            ignore:
+              - dependency-name: "lodash"
+                versions: ["4.x"]
+        ```
+
+    </Steps>
+
+    For more information, refer to the [Dependabot configuration options](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file).
+
+1. **Set up a review process for dependency pull requests.**
+
+    Once your automated updates are set, it's important to ensure that all dependency updates are properly reviewed before merging them. This helps maintain the stability of the project and reduces the risk of introducing breaking changes.
+
+    <Steps>
+
+    1. **Enable review for dependency updates.**
+
+        Dependabot automatically creates pull requests for dependencies and labels them with <Badge text="dependencies" />. This makes it easy to identify dependency updates in your pull request list. However, it is crucial to implement a review process to ensure all updates are properly checked before merging.
+
+        For other tools, you can set up similar labels or notifications to identify dependency updates that require review.
+
+    1. **Set up approval rules.**
+
+        GitHub allows you to define rules that require approval for pull requests with a specific branch name pattern. Since dependency management tools can create pull requests with a specific naming convention, you can set up a branch protection rule that requires approval for any pull request with this naming convention.
+
+        To enable this, got to your repository's settings and under _Branches_, set up a branch protection rule for the branch pattern that your dependency management tool uses for its pull requests (e.g., `dependabot/npm-and-yarn/*` for Dependabot with npm).
+
+        For more information on branch protection rules, refer to [GitHub's documentation on branch protection](https://docs.github.com/github/administering-a-repository/about-branch-restrictions).
+
+    </Steps>
+
+1. **Implement a security policy for dependencies.**
+
+    A key part of managing dependencies is ensuring that the libraries you use are secure and up-to-date. Establishing a security policy for dependencies helps your project stay protected against vulnerabilities.
+
+    <Steps>
+
+    1. **Enable security advisories and alerts.**
+
+        GitHub allows you to configure security advisories for your project and get notifications about vulnerabilities in your dependencies.
+
+        Enable [security alerts](https://docs.github.com/code-security/dependabot/dependabot-alerts/about-dependabot-alerts) to stay informed when vulnerabilities are detected in your dependencies.
+
+    1. **Update a `SECURITY.md` file.**
+
+        If you have a `SECURITY.md` file in your repository, you can update it to include specific information about how you handle security vulnerabilities in your dependencies. This file can outline your security policy, reporting process for vulnerabilities, and severity levels for different issues.
+
+        Example structure for `SECURITY.md` when having a dedicated section for dependencies security:
+
+        ```diff title="SECURITY.md"
+        # Security Policy
+
+        <!-- Content of your general security policy -->
+
+        + ## Dependencies Security
+        + 
+        + ### Supported Versions
+        + 
+        + <!-- List the versions of dependencies that are actively supported. -->
+        + 
+        + ### Reporting a Dependency Vulnerability
+        + 
+        + If you discover a vulnerability, don't open an issue, please send a direct email to the security team (security@example.com).
+        + 
+        + ### Update Policy
+        + 
+        + Our policy is to patch security vulnerabilities within 72 hours of discovery, and we update dependencies regularly.
+        + 
+        + ### Severity Levels
+        + 
+        + Security issues will be prioritized according to the following severity levels:
+        + - Critical: 24 hours
+        + - High: 48 hours
+        + - Medium: 72 hours
+        + - Low: We will address it in the next release cycle.
+        ```
+
+    </Steps>
+
+</Steps>
+
+Configuring automated dependency management helps you keep your project up-to-date with minimal manual intervention while ensuring dependencies are reviewed for security and stability. By customizing your update schedules, implementing a review process, and creating a clear security policy, you ensure your dependencies remain secure and your project stays healthy over time. This streamlined process will save time and effort while protecting your project from potential vulnerabilities.
+
+**Congratulations on completing this challenge! You've taken important steps to automate and optimize your dependency management**, ensuring your project is well-maintained and secure.
+
+<h3>Success Criteria</h3>
+
+- ✓ Dependency updates are configured with customized schedules and ignore rules.
+- ✓ A review process is set up for dependency updates requiring approval before merging.
+- ✓ Security alerts are enabled, and your project is properly configured to handle dependency vulnerabilities. 
+- ✓ (Optional) The `SECURITY.md` file has been updated to include supported versions, reporting process, update policy, and severity levels.
+
+<hr />
+
+<Lore>
+With _Dependa_ guiding your hand, the console now hums with the same steady glow as its guardian. Runes etched into its surface flicker faintly, an indication of the watchful systems now in place.
+
+The _Sentinel_ approaches, their sharp gaze softening slightly.
+
+> You've taken an important step today,
+
+they say, gesturing to the console now alive with energy.
+
+> Your preparations are no longer reactive—they're proactive, keeping your craft ahead of threats that once loomed unseen.
+
+_Dependa_ floats beside you, their glow vibrant and proud, the hum of the console resonating in tandem.
+
+> This is the strength of anticipation,
+
+the _Sentinel_ continues.
+
+It ensures that those who walk with you in your endeavors can do so with trust and confidence, knowing they are safe from the dangers of the unknown.
+
+They gesture toward the glowing console, its light illuminating the walls of the _Bastion_.
+
+> Remember this,
+
+they add, their tone resolute but encouraging.
+
+> A prepared path is one that inspires not just protection but progress. Keep building these foundations, and the road ahead will remain steadfast.
+
+_Dependa_ gives a bright, cheerful chime as if to echo the _Sentinel_'s words. Together, you step from the console, its work now silently ensuring the strength of what you create.
+
+<LoreSeparator />
+
+<h3>The Sentinel's Oath</h3>
+
+> In this realm , vigilance is eternal. By adopting these safeguards, you ensure that your artifact stands strong against the _Vulnerabilities of the Void_. Trust is hard-earned but easily lost—let your security practices be a beacon of reliability.
+
+Take up your role as a guardian of your artifact, traveller. Return tomorrow as the _Advent of Open Source_ continues to fortify your skills.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Automate Dependency Updates Across Repositories
+
+<hr />
+
+<Lore type="ice">
+Within the _Bastion of Safeguards_, the _Sentinel_ leads you to an expansive wall covered in shimmering glyphs. Each glyph pulses softly, connected by faint, glowing threads that crisscross in an intricate web. Standing near the wall is _Dependa_, their presence even more luminous, as if energized by this sacred space.
+
+The _Sentinel_ speaks, their voice echoing in the chamber:
+
+> This is the _Web of Vigilance_, where your craft's many branches are linked and observed. It is not enough to safeguard a single creation. True mastery requires unity across all your works, ensuring that every piece moves in harmony, fortified against the shadows that seek to disrupt.
+
+_Dependa_ approaches you, their light flickering as if in excitement.
+
+> With my help, we can extend protection across the web,
+
+they chime, their tone bright and determined.
+
+> Together, we will ensure that every corner of your craft receives the care it deserves, sparing no thread from watchful preparation.
+
+The _Sentinel_ steps aside, gesturing for you to step closer.
+
+> You must guide _Dependa_ to weave this vigilance into every thread,
+
+they explain.
+
+> Only then will the entirety of your creations be safeguarded from the unseen dangers that linger beyond these walls.
+
+</Lore>
+
+<hr />
+
+**Maintaining up-to-date dependencies across multiple repositories can be a time-consuming task**, especially when working with several contributors and projects. Keeping dependencies current is essential for security, performance, and compatibility, but manually managing this process can slow down development. Tools like [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) and other dependency management tools help automate this process, ensuring that your repositories always stay up to date with minimal manual intervention.
+
+**Today's challenge focuses on automating dependency updates across multiple repositories.** You will learn how to configure tools that can automatically group and update dependencies. By the end of the challenge, your repositories will be more secure, consistent, and maintainable, with less overhead for contributors and maintainers.
+
+<Steps>
+
+1. **Customize dependency update configuration.**
+
+    You already have a dependency management tool like Dependabot, or Renovate, set up in your repositories. The next step is to fine-tune its configuration to better suit your needs. Customizing the update schedule and setting specific rules for dependencies ensures that the updates happen at the right frequency and according to your preferences.
+
+    <Steps>
+
+    1. **Adjust the update schedule.**
+
+        Most tools allow you to set a frequency for dependency updates. Consider how often you want to update dependencies. For example, setting updates to run weekly might be ideal for most projects, but for security-related dependencies, you may want to occur more frequently.
+
+        If you're using Dependabot, modify the `.github/dependabot.yml` file **of each repository** to customize the schedule.
+
+        ```yaml title=".github/dependabot.yml"
+        # Set a time for checks
+        version: 2
+        updates:
+          - package-ecosystem: "npm"
+            directory: "/"
+            schedule:
+              interval: "weekly"
+              # Check for npm updates at 9am UTC
+              time: "09:00"
+        ```
+
+        If you have several repositories, ensure that each one has a similar configuration to maintain consistency. It would allow you to manage dependencies the same dedicated day and time across all your projects. If you have an issue with one dependency, or a specific manipulation to do to fix something, there's high probablity that you'll have to do the same in all your repositories.
+
+    1. **Set up dependency rules.**
+
+        You can also set up specific rules for which dependencies should or should not be updated automatically. For example, you might want to ignore certain dependencies from updates, or only allow minor and patch updates, not major version updates.
+
+        If you're using Dependabot:
+
+        ```yaml title=".github/dependabot.yml"
+        # Example configuration for customizing the manifest version strategy
+        version: 2
+        updates:
+          - package-ecosystem: "composer"
+            directory: "/"
+            schedule:
+              interval: "weekly"
+            # Increase the version requirements for Composer only when required
+            versioning-strategy: increase-if-necessary
+        ```
+
+        If some dependencies are stable, and you don't need the new features often, you could set up a rule to update them only for major releases to avoid having extra-maintenance work.
+
+    </Steps>
+
+    By customizing these settings, you ensure that dependency updates occur at the right frequency, helping you maintain the balance between keeping your dependencies up to date and avoiding unnecessary disruptions in your development cycle. This approach prevents you from being overwhelmed with constant updates and lets you focus on more critical tasks.
+
+    When configuring dependency updates, consider the bigger picture across all your repositories. Look for patterns and apply a consistent configuration to all of them. This will save you time and create uniformity, ensuring your projects are updated in the same way. To avoid unnecessary interruptions, it's a good idea to concentrate dependency management tasks into a specific day or time each week. This way, you can handle updates efficiently, without receiving notifications daily and feeling overwhelmed.
+
+1. **Group dependencies for efficient updates.**
+
+    Dependency management tools often provide the ability to group dependencies together to minimize the number of pull requests created for each update, and to ensure that related dependencies are updated together, reducing the risk of compatibility issues.
+
+    For example, all Storybook or Angular dependencies must be grouped together, otherwise, you might end up with a broken build or a non-functional application. Here's how you would group Storybook dependencies in a Dependabot configuration:
+
+    ```yaml title=".github/dependabot.yml"
+    version: 2
+    updates:
+      - package-ecosystem: npm
+        directory: "/"
+        groups:
+          storybook-deps:
+            patterns:
+              - "storybook"
+              - "@storybook/*"
+        schedule:
+          interval: weekly
+        versioning-strategy: increase
+    ```
+
+1. **Monitor and track dependency health.**
+
+    To keep track of the health of your dependencies across all repositories, consider creating a dashboard or log system. This will allow you to monitor which dependencies are out of date, whether there are any security vulnerabilities, and which ones need attention. Having a clear view of your dependency status across all repositories helps you maintain a secure and stable project environment.
+
+    Some tools provide built-in dashboards that offer a centralized view of all your repository updates. If you want more customization, you can create a simple dashboard using GitHub's API or third-party services like [snyk.io](https://snyk.io/) to track the security health of your dependencies.
+
+</Steps>
+
+By automating your dependency management, you reduce the manual overhead, ensure your dependencies are kept up to date, and minimize the risk of security vulnerabilities. This challenge will help you set up efficient workflows for managing dependencies in a consistent way across all your repositories, saving you time and effort in the long run.
+
+Congratulations on taking this step toward smoother, more efficient dependency management!
+
+<h3>Success Criteria</h3>
+
+- ✓ Successfully customized the dependency update schedule for all your repositories.
+- ✓ Configured rules to manage which dependencies are updated automatically.
+- ✓ Grouped related dependency updates into fewer, more manageable PRs.
+- ✓ A system is in place to monitor and track dependency health across your repositories.
+
+<hr />
+
+<Lore>
+As you complete your work, the glyphs across the wall blaze brighter, their connections growing stronger and more intricate. The entire _Web of Vigilance_ hums with a newfound energy, each thread resonating with the strength of your efforts.
+
+_Dependa_ hovers beside you, their glow steady and proud.
+
+> You've ensured that every piece of your work moves as one,
+
+they say warmly.
+
+The _Sentinel_ approaches, nodding in approval.
+
+> This is no small feat,
+
+they acknowledge.
+
+> To extend protection across such breadth requires foresight and commitment. Yet, through this unity, you have ensured that your efforts are not isolated but connected, resilient to the trials ahead.
+
+They gesture to the glowing web behind you, its intricate threads now shining with steadfast purpose.
+
+> Remember,
+
+they add, their voice carrying a note of encouragement.
+
+> A strong foundation is valuable, but true strength lies in weaving those foundations together, creating a network that stands firm against any storm.
+
+_Dependa_ floats closer, their light warm and reassuring.
+
+> We've done well,
+
+they chime, their tone light and optimistic.
+
+Together, you leave the _Web of Vigilance_, its glow now a quiet testament to your efforts, ensuring that all of your creations remain protected and united as one.
+
+<LoreSeparator />
+
+<h3>The Sentinel's Oath</h3>
+
+> In this realm , vigilance is eternal. By adopting these safeguards, you ensure that your artifact stands strong against the _Vulnerabilities of the Void_. Trust is hard-earned but easily lost—let your security practices be a beacon of reliability.
+
+Take up your role as a guardian of your artifact, traveller. Return tomorrow as the _Advent of Open Source_ continues to fortify your skills.
+</Lore>
