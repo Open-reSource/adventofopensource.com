@@ -1,0 +1,566 @@
+---
+title: "Day 11: The Crucible of Validation"
+description: "Discover the Chamber of Trials, where creations are forged and proven. Uncover strengths, banish assumptions, and ensure your craft stands resilient and true."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>The Chamber of Trials</h2>
+
+The _Keeper of the Repos_ leads you to the _Chamber of Trials_, where the flames of the _Crucible of Validation_ blaze with unyielding intensity. This sacred forge is where creations are shaped and proven, tempered against the rigors they might face beyond the safety of the village.
+
+In this chamber dwell the _Trialmasters_, skilled artisans who meticulously examine every detail of a craft. Their purpose is to uncover weaknesses and reinforce strengths, ensuring that each creation emerges resilient and dependable.
+
+But the _Keeper_ cautions against the _Phantoms of Assumption_—insidious entities born from overlooked details. These specters thrive in the absence of preparation, threatening to unravel even the finest work. To safeguard the integrity of your craft, it must be honed and tested, its limits explored and its purpose affirmed.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-write-your-first-test)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-create-a-test-suite)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-scale-testing-practices)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Write Your First Test
+
+<hr />
+
+<Lore type="snowflake">
+Within the glowing warmth of the _Crucible of Validation_, a young _Trialmaster_ approaches, their hands steady and their gaze thoughtful. They hold a delicate, crystalline shard that shimmers with an inner light.
+
+> This,
+
+they explain, holding the shard to the flames,
+
+> is the _Shard of Proof_. A single spark of insight can illuminate the strongest foundation—or reveal cracks hidden within. To wield it is to begin a journey of understanding, seeing not only what is but what could go awry.
+
+The _Keeper of the Repos_ nods in approval, stepping forward to address you.
+
+> All great works begin with small steps. Today, you will learn the simplest of trials, a single test to affirm the strength of your creation.
+
+The _Trialmaster_ places the shard in your hands, its light shifting to reflect your touch.
+
+> Treat it with care,
+
+they advise,
+
+> for even the first step toward mastery carries weight. As you learn to test, you will gain the confidence to face greater challenges.
+
+</Lore>
+
+<hr />
+
+Testing is a foundational practice for maintaining software quality and ensuring your code works as expected. **Writing tests allows you to catch bugs early**, verify that new features don't break existing functionality, and confidently refactor your code when needed. Additionally, automated tests provide a safety net for both you and other contributors, making collaboration easier and reducing the risk of introducing errors.
+
+**Today's challenge is to write and run your first unit test**—a test that verifies the behavior of a single, isolated unit of code (such as a function or class). **You'll also take it a step further by automating your tests using GitHub Actions**, ensuring that your code is continuously tested whenever changes are made. By completing this challenge, you'll build a strong foundation for a robust and maintainable codebase.
+
+<Steps>
+
+1. **Choose a testing framework.**
+
+    Identify the testing framework that best fits your tech stack. Common options include:
+    - [Jest](https://jestjs.io), [Mocha](https://mochajs.org/) or [Jasmine](https://jasmine.github.io/) (JavaScript)
+    - [PHPUnit](https://phpunit.de) (PHP)
+    - [Pytest](https://docs.pytest.org) (Python)
+    - [JUnit](https://junit.org/) (Java)
+
+    If you're not sure which framework to choose, consult your stack's documentation or look for recommendations in your community. Most frameworks provide detailed setup instructions.
+
+1. **Install the framework.**
+
+    Follow the official documentation for your chosen framework to install it in your project. For example, to install Jest in a Node.js project, run:
+
+    ```sh
+    npm install --save-dev jest
+    ```
+
+    If your framework requires configuration (e.g., setting up a test folder or creating a config file), complete those steps as well.
+
+1. **Write your first unit test.**
+
+    Create a new file for your test, such as `tests/unit/example.test.js` (or similar name depending on your framework).
+
+    Write a simple test for a function or class in your project, just to get started. For example, using Jest:
+
+    ```javascript title="tests/unit/example.test.js"
+    // Function to test
+    function add(a, b) {
+      return a + b;
+    }
+
+    // Unit test
+    test('adds 1 + 2 to equal 3', () => {
+      expect(add(1, 2)).toBe(3);
+    });
+    ```
+
+    <Aside type="tip" title="Tip of the iceberg">
+    Start with something small and specific to get the hang of writing tests.
+    </Aside>
+
+1. **Run your test locally.**
+
+    Run the test suite using the command specified in your framework's documentation. For Jest, you'd run:
+
+    ```sh
+    npx jest
+    ```
+
+    Verify that the test passes. If it doesn't, review the error message to identify the issue and adjust your test accordingly.
+
+    **Congrats, you've written your first test! But let's go further!**
+
+1. **Automate your tests with GitHub Actions.**
+
+    <Steps>
+
+    1. Create a new file called `.github/workflows/test.yml` in your project and set up a basic <abbr title="Continuous Integration">CI</abbr> workflow to automatically run your tests on every push.
+
+    1. Dependending on your tech stack, the workflow will be different. But for inspiration, here's an example of a basic CI workflow:
+
+        ```yaml title=".github/workflows/test.yml"
+        name: 'Test'
+        on:
+          push:
+
+        jobs:
+          test:
+            name: Test
+            runs-on: ubuntu-latest
+            steps:
+              - name: Checkout
+                uses: actions/checkout@v4
+
+              - name: Set up Node.js
+                uses: actions/setup-node@v4
+                with:
+                  cache: npm
+                  node-version: 20
+
+              - name: Install dependencies
+                run: npm ci
+
+              - name: Run tests
+                run: npm run test
+        ```
+
+        Where `npm run test` would be the command to run your tests defined in your `package.json` as a script that runs your test suite.
+
+        Adjust the workflow based on your tech stack. For example, if you're using Python, replace "Set up Node.js" with steps to set up Python and run tests using `pytest`.
+
+    1. Commit the workflow file to your repository. On your next push, GitHub Actions will automatically run your tests.
+    
+    </Steps>
+
+</Steps>
+
+This is just the beginning of your testing journey! Over time, you can:
+
+- Write additional unit tests to cover more of your codebase.
+- Add **integration tests** to verify how different parts of your application interact.
+- Implement **end-to-end tests** for user flows using tools like [Selenium](https://www.selenium.dev/) or [Cypress](https://www.cypress.io/).
+
+Testing isn't just about finding bugs; it's about building confidence in your code and ensuring a smoother development process.
+
+By completing today's challenge, you've taken an important step toward writing reliable, maintainable code. Your first test ensures that a key part of your code behaves as expected, and automating your tests guarantees consistent validation for every code change. These practices will save time and headaches down the road while improving collaboration on your project.
+
+**Congratulations on adding this critical skill to your toolbox!** Keep building on your testing knowledge, and soon you'll have a robust test suite that protects your project from regressions and unexpected bugs.
+
+<h3>Success Criteria</h3>
+
+- ✓ A working test suite runs locally.
+- ✓ A basic CI workflow runs your tests on every push.
+
+<Aside title="Remember">
+You can keep developing your project and spend a bit of time each day polishing it, if possible.
+
+Tomorrow, halfway through the Advent, we'll release an alpha version of your project—even if it only includes one small feature.
+</Aside>
+
+<hr />
+
+<Lore>
+The shard in your hands glows steadily now, its light unwavering as if it has found clarity. The _Trialmaster_ watches you with a knowing smile.
+
+> You've taken the first step toward mastering the trials,
+
+they remark, their tone proud but encouraging.
+
+> This shard is not merely a tool but a symbol of your commitment to ensuring your craft endures.
+
+The _Keeper of the Repos_ speaks solemnly, their voice resonating through the chamber:
+
+> Remember, even the smallest test is a step toward perfection. Each time you wield this shard, you shine a light into the unknown, strengthening not only your work but your confidence in it.
+
+You place the shard on a pedestal, its glow becoming one with the flames of the _Crucible of Validation_. The _Trialmaster_ nods approvingly.
+
+> Keep this lesson close,
+
+they say,
+
+> for the road ahead will demand even more from you. But with each trial, your creations will grow stronger, and so will your resolve.
+
+With the shard's light reflecting in your eyes, you leave the chamber, carrying with you the knowledge that even the first step in testing holds the power to shape greatness.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> Assumptions are the enemies of progress. In the _Chamber of Trials_, you will forge certainty from uncertainty, ensuring that your artifact not only works but thrives under any conditions. Refining is not just a tool; it is a shield against the unknown.
+
+Prepare yourself, traveller, for each trial you inscribe strengthens the foundation of your artifact. Return tomorrow as the _Advent of Open Source_ continues, and the journey toward mastery unfolds.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Create a Test Suite
+
+<hr />
+
+<Lore type="snowball">
+A flicker of light dances across the walls of the _Chamber of Trials_ as you step forward to meet the _Trialmaster_. Clad in robes adorned with intricate symbols, you carry an air of quiet determination. The _Trialmaster_ greets you with a deep bow and gestures toward a massive mosaic on the wall.
+
+> Each piece of this mosaic represents a trial—small and singular on its own, yet together, they tell a complete story of resilience,
+
+they explain, their hand tracing the patterns.
+
+Turning to you, the _Trialmaster_ continues:
+
+> To truly fortify your craft, you must not stop at a single trial. Instead, weave together a tapestry of challenges, each one examining a different facet of your creation. Together, they form a _Trial Mosaic_, a safeguard as expansive as the mosaic before you.
+
+You step closer, observing the mosaic's complexity. Pieces interlock with precision, each contributing to the whole.
+
+> A mosaic is not a mere collection of parts,
+
+the _Trialmaster_ emphasizes,
+
+> but a strategy, a way to ensure that every element of your craft supports and strengthens the others. Begin with care, and you will see how each trial builds upon the last, creating a fortress of trust and reliability.
+
+With that, the _Trialmaster_ hands you a small tool, a quill-like instrument glowing faintly.
+
+> Use this to inscribe the trials. Let your mosaic grow, one piece at a time, until it tells the full story of your creation's strength.
+
+</Lore>
+
+<hr />
+
+**Testing is an essential aspect of maintaining and scaling any Open Source project.** It ensures that your code behaves as expected, even as new features are added or contributors make changes. Without a proper test suite, bugs can remain unnoticed, potentially causing disruptions for users and other contributors. Creating a robust test suite not only improves the stability of your project but also boosts its credibility and appeal to potential contributors by fostering confidence in the codebase.
+
+**Today's challenge is to create a complete test suite for your project**, covering critical functionality and ensuring that contributors can make changes with peace of mind. You will implement and organize different types of tests, create reusable test helpers, document your testing strategy, and set up a system for monitoring test performance and results. By the end of this challenge, your project will be more resilient, with a stronger foundation for growth and collaboration.
+
+<Steps>
+
+1. **Identify key areas to test.**
+
+    Start by evaluating your project to identify its most critical features and functionality. These are the areas that users and contributors interact with most frequently and where failures would have the greatest impact. Key areas might include APIs, core business logic, or user interfaces.
+
+    - **Critical path testing**: Focus on testing workflows or features that form the backbone of your application. For instance, if you're working on an e-commerce project, this could be the checkout process.
+    - **Edge cases**: Think about less-common scenarios where things could go wrong, such as handling empty inputs, large files, or unexpected API responses.
+
+    There's no need to test every single line of code, but you should aim to cover the most important parts of your project.
+
+    There is a lot of litterature on the subject. Start at your own pace and level of comfort.
+
+    You can start by reading [The Practical Test Pyramid by Ham Vocke](https://martinfowler.com/articles/practical-test-pyramid.html).
+
+1. **Implement different types of tests.**
+
+    A well-rounded test suite includes multiples test types, each serving a different purpose:
+
+    - **Unit tests**: Validate individual components or functions. Use a testing library relevant to your stack, such as [Jest](https://jestjs.io/) for JavaScript or [Pytest](https://docs.pytest.org) for Python.
+
+        Example in JavaScript with Jest:
+
+        ```javascript title="tests/unit/example.test.js"
+        test('adds numbers correctly', () => {  
+          expect(add(2, 3)).toBe(5);  
+        });
+        ```
+
+    - **Integration tests**: Test how different parts of your application work together. Ensure API endpoints return expected results or database queries function correctly. Tools like [SuperTest](https://github.com/ladjs/supertest) for Node.js or [Postman](https://www.postman.com/) collections can be helpful here.
+    - **End-to-End (E2E) tests**: Simulate real user behavior. Tools like [Cypress](https://www.cypress.io/) or [Playwright](https://playwright.dev/) allow you to automate interactions across the entire application.
+    - **Performance tests**: Identify bottlenecks in your code. Libraries like Lighthouse for web apps or [Apache JMeter](https://jmeter.apache.org/) for APIs can be valuable.
+    - **Non-regression visual tests**: Ensure that the UI remains consistent across changes. Tools like [Percy](https://percy.io/) or [Applitools](https://applitools.com/) can help you catch visual regressions.
+    - **Accessibility tests**: Verify that your application is accessible to all users. Tools like [axe](https://www.deque.com/axe/) or [Pa11y](https://pa11y.org/) can help you identify accessibility issues.
+    - and more...
+
+    <Steps>
+
+    1. Evaluate the test types that best suit your project's needs and complexity.
+
+    1. Install the environment and tools required for each test type.
+
+    1. Create a least one test of each type to get started.
+
+    1. Create scripts to run tests of each type separately or all together locally.
+
+    1. Do the same thing for your CI pipeline.
+
+    </Steps>
+
+    You can always expand your test suite over time.
+
+
+1. **Create reusable test helpers.**
+
+    If you already have tests in your project, you might take some time to refactor them and extract common logic into reusable test helpers. This can help reduce duplication, improve maintainability, and make your tests more readable.
+
+    For example, generating mock user data in JavaScript:
+
+    ```javascript title="tests/helpers/user.js"
+    function createMockUser(overrides = {}) {  
+      return {  
+        id: Math.random().toString(36).substr(2, 9),  
+        name: 'Test User',  
+        email: 'test@example.com',  
+        ...overrides,  
+      };  
+    } 
+    ```
+
+    These helpers save time and improve consistency across your test suite.
+
+1. **Document your testing strategy.**
+
+    Documentation helps contributors understand your testing approach and how they can add their own tests.
+
+    <Steps>
+
+    1. Create a section in your contributing guidelines to explain:
+        - The types of tests your project uses.
+        - How to run tests locally and in the CI pipeline.
+        - Guidelines for writing new tests, including preferred libraries or patterns.
+        - Explain when to write new tests (e.g., for new features, bug fixes, or refactors).
+
+    1. Update your pull request template to remind contributors to include tests with new features or bug fixes.
+
+    </Steps>
+
+1. **Set up test reporting and coverage analysis.**
+
+    To track the effectiveness of your test suite, integrate tools that provide reports on test results and coverage.
+
+    - **Test reporting**: many CI platforms like GitHub Actions or GitLab CI include built-in support for test reporting. You can also use services like [Codecov](https://about.codecov.io/) or [Coveralls](https://coveralls.io/) for detailed insights.
+    - **Coverage analysis**: Coverage tools like [Istanbul](https://istanbul.js.org/) (JavaScript) or [Coverage.py](https://coverage.readthedocs.io) (Python) can show how much of your code is being tested and highlight gaps.
+
+</Steps>
+
+By creating a complete test suite, you've taken a major step toward making your project more robust, secure, and welcoming to contributors. Testing ensures that your application behaves as expected and minimizes the risk of bugs slipping through. Documenting your approach and automating reporting also makes it easier for others to maintain the project alongside you.
+
+**Congratulations on completing this challenge!** With a solid testing foundation in place, your project is ready to handle new features and contributions with confidence.
+
+<h3>Success Criteria</h3>
+
+- ✓ Your project has a variety of tests covering unit, integration, and <abbr title="End-to-End">E2E</abbr> scenarios.
+- ✓ Critical functionality and edge cases are well-tested.
+- ✓ (Optional) Reusable test helpers are implemented to streamline the addition of new tests.
+- ✓ Testing documentation is available and clear.
+- ✓ Test reporting and coverage tools are set up to monitor the health of the test suite.
+
+<hr />
+
+<Lore>
+You return, the glow of the quill now brighter, its light pulsing steadily. You present your work to the _Trialmaster_, who examines it with a critical but approving eye.
+
+> Your mosaic begins to take shape,
+
+the _Trialmaster_ declares, their voice warm with encouragement.
+
+> Each trial is like a note in a melody, and together, they form an harmony that reflects the integrity of your work.
+
+You look back at the mosaic, seeing its intricate patterns mirrored in your efforts. The _Keeper of the Repos_ steps forward, their expression thoughtful.
+
+> Remember this moment,
+
+they advise,
+
+> for a strong mosaic is not static. As your creation evolves, so too must your trials. They must adapt, grow, and rise to meet new challenges.
+
+You nod, your grip on the glowing quill firm with resolve.
+
+> Go now, and continue to refine your mosaic. Each trial you add strengthens not just your craft but the foundation upon which all great works are built,
+
+the _Trialmaster_ says, a hint of pride in their voice.
+
+You depart, your steps purposeful, the quill's light guiding your way forward into the unknown, where more challenges and greater triumphs await.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> Assumptions are the enemies of progress. In the _Chamber of Trials_, you will forge certainty from uncertainty, ensuring that your artifact not only works but thrives under any conditions. Refining is not just a tool; it is a shield against the unknown.
+
+Prepare yourself, traveller, for each trial you inscribe strengthens the foundation of your artifact. Return tomorrow as the _Advent of Open Source_ continues, and the journey toward mastery unfolds.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Scale Testing Practices
+
+<hr />
+
+<Lore type="ice">
+The _Trialmaster_ steps aside as you approach, their eyes filled with quiet determination. The grand hall of the _Chamber of Trials_ feels larger now, as though the space itself is stretching to accommodate your growing ambition. The _Trialmaster_ gestures toward the wide expanse ahead.
+
+> As your trials progress,
+
+the _Trialmaster_ begins, their voice calm but insistent,
+
+> so too must your approach. For a single trial is but a spark—it is the mastery of many that will truly prove your resolve.
+
+You look toward the horizon of the chamber, where shimmering patterns of light spread outward, representing a vast network of interconnected trials.
+
+> To face the future,
+
+the _Trialmaster_ continues,
+
+> you must learn to expand your trials, reaching further to match the growing complexity of your craft.
+
+Turning to face you, the _Trialmaster_ lowers their voice.
+
+> This is no simple feat. The trials you've faced thus far have been singular in scope, but soon you will need to explore across an entire landscape, ensuring that no facet of your craft is left unchecked.
+
+With a slow wave of their hand, the chamber shifts, revealing vast, interconnected threads of light, each representing a different aspect of your work. These threads stretch far beyond the walls of the chamber, forming an intricate web of challenges.
+
+> Your task is not just to scale these trials,
+
+the _Trialmaster_ warns,
+
+> but to ensure each piece connects harmoniously with the rest. Without such balance, even the most rigorous trials can falter.
+
+You step forward, understanding the weight of the task ahead.
+
+> Are you ready to scale?
+
+the _Trialmaster_ asks, their eyes gleaming with respect.
+</Lore>
+
+<hr />
+
+**Managing testing practices across multiple repositories can quickly become complex**, especially when working in a larger organization or maintaining several interdependent projects. Scaling your testing infrastructure ensures that your codebase remains robust as it grows, and that critical issues are identified early, even when changes span multiple repositories. A well-designed testing pipeline will allow for more consistent, efficient, and scalable quality checks, which ultimately improves collaboration and minimizes risks during development.
+
+**Today's challenge focuses on scaling your testing practices across repositories.** You'll learn how to set up centralized test orchestration, enforce advanced quality gates, and automate testing workflows that span multiple repositories. By the end of this challenge, you'll have a testing strategy in place that can handle large-scale projects and ensure the stability and security of your entire codebase.
+
+<Steps>
+
+1. **Review and unify test types, coverage, and frameworks.**
+
+    Before scaling your testing practices, it's important to ensure consistency in the types of tests, the level of coverage, and the testing frameworks used across repositories. Unifying the tools and practices will bring a common philosophy to your testing strategy and make the contributors and maitnainers more comfortable and efficient.
+
+    Inconsistent testing practices can lead to redundant tests, missed edge cases, or failures due to incompatibilities between different testing libraries. This step will help you align your testing strategies across repositories to make scaling easier and more effective.
+
+    - **Test types**: Ensure that all repositories use similar types of tests (unit, integration, E2E, etc.) to cover critical functionality when needed.
+    - **Coverage levels**: Ensure that you have a clear coverage strategy for each repository. Decide what level of coverage is appropriate for each type of test (e.g., higher coverage for unit tests, lower coverage for end-to-end tests). Aim for a balance between thoroughness and maintainability, as 100% coverage can be excessive in some cases.
+    - **Test frameworks**: Standardize on testing frameworks across repositories to simplify maintenance and tooling, and allow contributors to share knowledge and resources. Choose frameworks that are widely used and well-supported in your stack.
+    
+1. **Set up cross-repository test orchestration.**
+
+    It is not mandatory for all projects and use cases, but if you have multiple repositories that depend on each other, you might want to set up a centralized test orchestration system. This system will allow you to run tests across repositories from a central location, ensuring that changes in one repository don't break functionality in another, and that all interdependent codebases are verified at once.
+
+    You can use tools like [GitHub Actions](https://github.com/features/actions) to trigger workflows in other repositories by creating a centralized orchestration workflow in a central repo. Here's an example of how to trigger workflows across multiple repositories:
+
+    ```yaml title="Centralized orchestration workflow"
+    name: Cross-Repo Test Orchestration
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      orchestrate-tests:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Trigger Repository A Tests
+            run: gh workflow run repo-a/test-suite
+          - name: Trigger Repository B Tests
+            run: gh workflow run repo-b/test-suite
+    ```
+
+    Alternatively, [Jenkins](https://www.jenkins.io/), [GitLab CI](https://docs.gitlab.com/ee/ci/), or [CircleCI](https://circleci.com/) also support cross-repository orchestration via multi-project pipelines. Explore these tools for more advanced use cases.
+
+1. **Adopt shared testing utilities.**
+
+    After having unified your testing tools and frameworks, consider creating shared testing utilities gathered in a shared testing library that can be used across repositories. These utilities can include common test helpers, fixtures, or mocks that simplify writing tests and ensure consistency across projects.
+
+    **Create a shared test suite** by developing a common set of utility functions or base classes for common test scenarios, such as mocking network requests or validating certain business logic. Publish this as a package that can be included as a dependency in each repository.
+
+    For example, if you're working with JavaScript, you could create a shared utility package containing functions like `mockApi()` or `createMockState()` and publish it to npm or GitHub Packages. This way, every repository can easily include the latest versions of the utilities.
+
+1. **Establish advanced quality gates.**
+
+    Get beyond basic test coverage thresholds by implementing more advanced quality gates that evaluate broader code health metrics. These gates help ensure that your code is not just functionally correct but also performing well and secure.
+
+    - **Performance testing**: Use performance benchmarks to catch regressions early. Integrate tools such as [Lighthouse](https://github.com/GoogleChrome/lighthouse) for web applications or custom performance scripts to monitor key metrics. These can be run automatically as part of your test suite.
+    - **Flaky test detection**: Flaky tests are those that intermittently pass or fail, making them unreliable indicators of code quality. Use tools or develop custom scripts that monitor your test results and flag any flaky tests. By doing so, you can ensure that tests are consistently reliable.
+    - **Security checks**: Integrate security testing as part of your pipeline. Use tools like [ZAP](https://www.zaproxy.org/) to scan for vulnerabilities in your application during testing or use a dependency scanning tool to catch known vulnerabilities in your dependencies.
+    - **Accessibility checks**: Ensure your application is accessible to all users by integrating accessibility checks into your testing pipeline. Tools like [axe](https://www.deque.com/axe/) or [Pa11y](https://pa11y.org/) can help you identify and fix accessibility issues early in development.
+    - **Code complexity analysis**: Monitor code complexity metrics like cyclomatic complexity or maintainability index to identify areas of your codebase that may be hard to maintain or refactor. Use tools like [ESLint](https://eslint.org/) or [SonarQube](https://www.sonarqube.org/) to automate this analysis.
+
+1. **Automate test impact analysis.**
+
+    In large codebases, **it's inefficient to run all tests after every change**, especially if the change only affects a small portion of the code.
+    
+    Test impact analysis helps automate this process by running tests that are affected by recent changes, rather than all tests, speeding up your CI/CD pipelines.
+
+    Consider using test impact analysis tools such as [diff-Cover](https://github.com/Bachmann1234/diff_cover) for Python or [Bazel](https://bazel.build/) for Java, which can intelligently determine which tests should run based on changes in the codebase.
+
+</Steps>
+
+By centralizing your testing practices and using advanced quality gates, you are ensuring a robust and scalable testing pipeline that can keep up with a growing project. This not only saves time but also improves the quality, security, and performance of your code across repositories. Automating these practices makes maintaining high code quality across multiple repositories more efficient and sustainable in the long run.
+
+**Congratulations on taking this step to scale your testing practices!** By implementing these advanced techniques, you are setting your project up for better maintainability, fewer bugs, and a more streamlined development process across all repositories.
+
+<h3>Success Criteria</h3>
+
+- ✓ Reviewed and unified the types of tests, coverage levels, and frameworks used across repositories.
+- ✓ (Optional) Set up cross-repository test orchestration to run tests across multiple repositories.
+- ✓ (Optional) Created shared testing utilities or a shared test suite to ensure consistency across projects.
+- ✓ Established advanced quality gates for performance, security, accessibility, and code complexity.
+- ✓ (Optional) Automated test impact analysis to optimize test runs based on code changes.
+
+<hr />
+
+<Lore>
+You return, your steps sure and confident as you enter the chamber. The _Trialmaster_ observes you with a mixture of pride and curiosity, watching as you present your work. Before you, the shimmering threads of light now pulse with vitality, each test seamlessly woven into the next.
+
+> You have done it,
+
+the _Trialmaster_ states, their voice a note of approval,
+
+> your trials have expanded beyond the confines of the immediate. You have woven your tests into the larger fabric of your craft.
+
+The _Keeper of the Repos_ steps forward, their gaze sweeping over the interwoven threads of light, now visible in every corner of the chamber.
+
+> This is a great achievement,
+
+they acknowledge, their voice soft but filled with reverence.
+
+> You have learned to scale, to ensure that every part of your creation remains intact, regardless of how vast it may grow.
+
+You nod, a sense of calm understanding settling over you. The task is far from over, but you have proven that your trials can extend as your craft does.
+
+> Remember,
+
+the _Trialmaster_ advises,
+
+> this is but the beginning. As your craft expands, so too must your trials evolve. Scale with care, for only with true mastery can the larger system remain whole.
+
+With that, you leave the chamber, your next step clear. The web of trials before you is vast, but you are now prepared to face its complexity. The journey ahead may be long, but you walk it with a steady, confident stride.
+
+<LoreSeparator />
+
+<h3>The Keeper's Wisdom</h3>
+
+> Assumptions are the enemies of progress. In the _Chamber of Trials_, you will forge certainty from uncertainty, ensuring that your artifact not only works but thrives under any conditions. Refining is not just a tool; it is a shield against the unknown.
+
+Prepare yourself, traveller, for each trial you inscribe strengthens the foundation of your artifact. Return tomorrow as the _Advent of Open Source_ continues, and the journey toward mastery unfolds.
+</Lore>

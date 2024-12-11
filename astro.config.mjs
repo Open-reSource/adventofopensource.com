@@ -144,6 +144,10 @@ export default defineConfig({
                   label: 'Day 10: The Sentinel\'s Vigil',
                   slug: 'advent/week-2/day-10'
                 },
+                {
+                  label: 'Day 11: The Crucible of Validation',
+                  slug: 'advent/week-2/day-11'
+                },
               ]
             },
           ],
