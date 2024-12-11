@@ -12,8 +12,8 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.7.2)
       '@astrojs/starlight':
-        specifier: ^0.29.2
-        version: 0.29.2(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
+        specifier: ^0.29.3
+        version: 0.29.3(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
       '@types/konami-code-js':
         specifier: ^0.8.3
         version: 0.8.3
@@ -34,7 +34,7 @@ importers:
         version: 0.32.6
       starlight-links-validator:
         specifier: ^0.13.4
-        version: 0.13.4(@astrojs/starlight@0.29.2(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2)))(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
+        version: 0.13.4(@astrojs/starlight@0.29.3(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2)))(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -85,8 +85,8 @@ packages:
   '@astrojs/sitemap@3.2.1':
     resolution: {integrity: sha512-uxMfO8f7pALq0ADL6Lk68UV6dNYjJ2xGUzyjjVj60JLBs5a6smtlkBYv3tQ0DzoqwS7c9n4FUx5lgv0yPo/fgA==}
 
-  '@astrojs/starlight@0.29.2':
-    resolution: {integrity: sha512-xv9AhWkP3fxCB6EF6MlT4yEbxzye3aMSbuVbFEGbQh8G/w1MPhdNCnQakIHpmIwwyxwG9cW3mQdAZum4oOO39w==}
+  '@astrojs/starlight@0.29.3':
+    resolution: {integrity: sha512-dzKuGBA7sodGV2dCzpby6UKMx/4b7WrhcYDYlhfX5Ntxh8DCdGU1hIu8jHso/LeFv/jNAfi7m6C7+w/PNSYRgA==}
     peerDependencies:
       astro: ^4.14.0
 
@@ -674,6 +674,9 @@ packages:
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
+
+  '@types/js-yaml@4.0.9':
+    resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
   '@types/konami-code-js@0.8.3':
     resolution: {integrity: sha512-TYwIDZ16MuzqHdgv/zhbbE3p/iXY/FotJkMYx1oOzZKJoINezl91stc/U/i5AknH5lrEpXoims+tsCnAwIJGew==}
@@ -2447,12 +2450,13 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/starlight@0.29.2(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))':
+  '@astrojs/starlight@0.29.3(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))':
     dependencies:
       '@astrojs/mdx': 3.1.9(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
       '@astrojs/sitemap': 3.2.1
       '@pagefind/default-ui': 1.2.0
       '@types/hast': 3.0.4
+      '@types/js-yaml': 4.0.9
       '@types/mdast': 4.0.4
       astro: 4.16.17(rollup@4.28.0)(typescript@5.7.2)
       astro-expressive-code: 0.38.3(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
@@ -3022,6 +3026,8 @@ snapshots:
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.3
+
+  '@types/js-yaml@4.0.9': {}
 
   '@types/konami-code-js@0.8.3': {}
 
@@ -4909,9 +4915,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-links-validator@0.13.4(@astrojs/starlight@0.29.2(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2)))(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2)):
+  starlight-links-validator@0.13.4(@astrojs/starlight@0.29.3(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2)))(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2)):
     dependencies:
-      '@astrojs/starlight': 0.29.2(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
+      '@astrojs/starlight': 0.29.3(astro@4.16.17(rollup@4.28.0)(typescript@5.7.2))
       '@types/picomatch': 2.3.3
       astro: 4.16.17(rollup@4.28.0)(typescript@5.7.2)
       github-slugger: 2.0.0
