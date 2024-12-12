@@ -148,6 +148,10 @@ export default defineConfig({
                   label: 'Day 11: The Crucible of Validation',
                   slug: 'advent/week-2/day-11'
                 },
+                {
+                  label: 'Day 12: The Nexus of Continuity',
+                  slug: 'advent/week-2/day-12'
+                },
               ]
             },
           ],
