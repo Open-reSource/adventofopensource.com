@@ -152,6 +152,10 @@ export default defineConfig({
                   label: 'Day 12: The Nexus of Continuity',
                   slug: 'advent/week-2/day-12'
                 },
+                {
+                  label: 'Day 13: The Symphony of Collaboration',
+                  slug: 'advent/week-2/day-13'
+                },
               ]
             },
           ],
