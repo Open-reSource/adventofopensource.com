@@ -156,6 +156,10 @@ export default defineConfig({
                   label: 'Day 13: The Symphony of Collaboration',
                   slug: 'advent/week-2/day-13'
                 },
+                {
+                  label: 'Day 14: The Cadence of Contributions',
+                  slug: 'advent/week-2/day-14'
+                },
               ]
             },
           ],

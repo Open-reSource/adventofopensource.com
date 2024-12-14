@@ -1,0 +1,544 @@
+---
+title: "Day 14: The Cadence of Contributions"
+description: "In the Hall of Accord, the Conductor of Cadence ensures harmony, warning against misalignment and the Tide of Chaos."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day14Snowflake01 from '../../../../assets/days/day-14-snowflake-01.png';
+
+<Lore type="logo">
+<h2>The Hall of Accord</h2>
+
+The _Keeper_ leads you into the resonant depths of The _Chorus of Contribution_, where the hum of harmonious efforts fills the air. Within the _Hall of Accord_, the _Conductor of Cadence_ stands at the center, orchestrating the flow of efforts so that each act seamlessly intertwines with the whole.
+
+> This is where alignment is born,
+
+the _Conductor_ begins, their voice steady yet melodic.
+
+> Every note, no matter how small, must fit the symphony's rhythm. Without it, discord threatens to rise.
+
+They gesture toward the far end of the hall, where a tide roils ominously, its dark waters lapping at the edges.
+
+> Beware the _Tide of Chaos_,
+
+the _Conductor_ warns.
+
+> It grows when paths are unclear, and intentions become lost. Structure and clarity are your strongest allies here. Shape your efforts with care, and the harmony will hold firm.
+
+As the _Conductor_ raises their baton, the tide recedes, and the hall becomes calm once more. You feel the weight of the hall's purpose settle on you, a call to bring order and alignment to your craft.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-add-a-pull-request-template)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-best-practices-with-detailed-pr-templates)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-automate-checks-on-prs)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Add a Pull Request Template
+
+<hr />
+
+<Lore type="snowflake">
+The _Conductor of Cadence_ beckons you to the heart of the _Hall of Accord_, where a golden pedestal gleams under the light of hanging lanterns. Resting atop it is a scroll, its surface blank yet glowing faintly.
+
+> This is the _Scroll of Harmony_,
+
+the _Conductor_ explains.
+
+> It provides a guide to ensure that all efforts align with the greater rhythm. Without it, even the smallest misstep can cause the symphony to falter.
+
+They pick up a quill and offer it to you.
+
+> With this, inscribe the guidance that will shape actions to come. Think carefully—clarity and intention will preserve the balance, and the _Tide of Chaos_ will be held at bay.
+
+The scroll waits patiently, its surface inviting you to begin your careful work.
+</Lore>
+
+<hr />
+
+As said in yesterday's challenge, your project is ready to receive contributions. Issues creation are supported by a Markdown template. We're introducing a new concept today: the Pull Request (PR), or Merge Request (MR) in GitLab.
+
+**A pull request is** a method of submitting contributions to a Git repository. It acts as a formal request to merge one branch (typically a feature or bug fix) into another (often the main branch). Pull requests provide a space for discussion, review, and feedback, ensuring that all changes are properly vetted before integration.
+
+**A branch in Git** is a lightweight, movable pointer to a particular commit. It allows developers to work on different features, bug fixes, or experiments in isolation without affecting the main codebase. By switching between branches, you can maintain parallel development streams and merge changes back when they are ready.
+
+To streamline the process of creating (contributors) and reviewing pull requests (maintainers), **a pull request template** can be used. It offers a predefined structure for contributors, outlining essential information like the purpose of the PR, the changes introduced, any relevant issue numbers, and testing instructions. This ensures consistency and clarity across all contributions.
+
+**Today's challenge is to create a pull request template for your repository.**
+
+<Steps>
+
+1. **Create the template file.**
+
+    - Add a new file named `.github/PULL_REQUEST_TEMPLATE.md` at the root of your repository.
+
+1. **Write the template.**
+
+    Start with this basic pull request template in Markdown. You can customize it as your project evolves:
+
+    ```md title=".github/PULL_REQUEST_TEMPLATE.md"
+    ## Description
+
+    Provide a brief summary of the changes and the purpose of this PR.
+
+    ## Related Issues
+
+    Link any issues that are addressed by this PR (e.g., "Closes #42").
+
+    ## Testing
+
+    Describe how the changes were tested. Provide step-by-step instructions for reviewers to replicate the tests.
+
+    ## Checklist
+
+    - [ ] Code follows the project's coding standards.
+    - [ ] Documentation has been updated, if applicable.
+    - [ ] Tests have been added or updated, if applicable.
+    - [ ] All checks (e.g., CI/CD) pass successfully.
+    ```
+
+    <Aside>
+    For more information about the templates, you can refer to [Using templates to encourage useful issues and pull requests in GitHub documentation](https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests).
+    </Aside>
+
+1. **Commit and push.**
+
+    Save your changes and commit them with the message: `chore: create pull request template`.
+
+    Then, push the changes to your repository.
+
+1. **Automatic usage.**
+
+    Whenever you or a contributor create a new branch and then submit a pull request, the template content will automatically populate the description.
+    
+    You or the contributors can then fill in the sections as needed.
+
+    <ContentImage src={day14Snowflake01} alt="" />
+
+</Steps>
+
+**Great work! You've now set up a pull request template for your project**, making it easier for contributors to submit well-structured changes and for maintainers to review them efficiently. As your project evolves, you can tweak this template to better reflect your workflows and community needs. Remember, thoughtful templates contribute to a positive experience for everyone involved, helping your project grow sustainably.
+
+<h3>Success Criteria</h3>
+
+- ✓ A pull request template is added to your repository.
+- ✓ You or contributors see the template automatically when creating a pull request.
+
+<hr />
+
+<Lore>
+Returning to the golden pedestal, you place the completed _Scroll of Harmony_ upon it. The light of the hanging lanterns brightens, reflecting the order you have brought. The _Conductor of Cadence_ steps forward, their eyes scanning your work with approval.
+
+> Your guidance resonates clearly,
+
+they declare.
+
+> Each step you've outlined strengthens the alignment of all who enter the _Hall of Accord_. The symphony is safer now from discord.
+
+The tide at the edge of the hall remains still, its ominous pull now subdued. The _Conductor_ lowers their baton slightly, a gesture of acknowledgment.
+
+> Remember, harmony thrives on intention. Keep refining the path, and you will ensure the melody endures.
+
+With the scroll shining brightly behind you, you step away from the pedestal, a newfound assurance in your steps. The rhythm of the _Hall of Accord_ flows more seamlessly, a testament to your thoughtful actions.
+
+<LoreSeparator />
+
+<h3>The Conductor's Insight</h3>
+
+> Every contribution is a note in the grand composition of your artifact. With careful guidance and streamlined steps, you can ensure that each note blends seamlessly into the whole. Remember, the cadence of contributions defines the rhythm of progress. 
+
+Prepare to receive contributions, traveller, and continue your journey through _The Chorus of Contribution_. The _Advent of Open Source_ awaits your next step in fostering a harmonious community.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Best Practices With Detailed PR Templates
+
+<hr />
+
+<Lore type="snowball">
+The _Conductor of Cadence_ waves their baton, and a new section of the _Hall of Accord_ opens before you, revealing a space filled with illuminated scrolls and instruments. The walls are adorned with intricate carvings, each depicting a perfect orchestration of sound, rhythm, and movement.
+
+> In this place, precision is everything,
+
+the _Conductor_ explains, their voice reverberating off the walls.
+
+> Each detail matters. When contributing to the whole, every note must not only blend but also resonate clearly with the vision. In the world of collaboration, it is not enough to simply show the melody; one must describe the flow, the harmony, and the intentions behind each sound.
+
+They walk toward a large stone tablet, inscribed with a beautifully detailed score, carefully outlining each note and its purpose in the grand symphony.
+
+> This is the _Score of Precision_,
+
+the _Conductor_ says.
+
+> It guides every contribution, ensuring it fits seamlessly with the rest. The more detailed your intentions, the stronger the harmony. Without detail, the melody is lost, and the song fades into confusion.
+
+The _Conductor_ hands you a quill, its tip glowing faintly.
+
+> Take this, and use it to weave your own detailed score, guiding your contributions with the clarity of vision.
+
+</Lore>
+
+<hr />
+
+**Open Source projects thrive when contributors collaborate effectively, and pull requests (PRs) are the cornerstone of this process.** A well-structured PR template ensures that contributors provide all the necessary context, reducing review times and helping maintainers focus on code quality rather than chasing information. Thoughtful templates also create a welcoming experience for newcomers by providing guidance on what's expected.
+
+**Today's challenge focuses on enhancing your project's PR templates** to streamline the review process and improve contribution quality. By adding clear sections and automating validation with GitHub Actions, you'll build a robust workflow that benefits both contributors and maintainers.
+
+<Steps>
+
+1. **Create a basic PR template.**
+
+    Start by defining the structure of your PR template. This template will act as a guide for contributors, ensuring they provide essential details.
+
+    <Steps>
+
+    1. In your repository, create a new file named `.github/PULL_REQUEST_TEMPLATE.md` if not already present.
+
+    1. Take some time to define the sections you want to include in the template, what information you need from contributors, and any specific guidance as pre-requisites to save you some time during the review process.
+
+        For example, add or adapt the following sections to your template:
+
+        - **Summary**: A brief description of the changes introduced by the PR.
+        - **Related Issues**: A reference to any related issues (e.g. "Closes #123").
+        - **Test Results**: Information about tests performed and their outcomes.
+        - **Checklist**: A list of items contributors must complete before submitting (e.g., "I've tested the changes locally").
+       
+        ```md title=".github/PULL_REQUEST_TEMPLATE.md"
+        ## Summary
+        <!-- Provide a concise explanation of the changes made in this PR. -->
+
+        ## Related Issues
+        <!-- Link any relevant issues (e.g., "Closes #123"). -->
+
+        ## Test Results
+        <!-- Detail how you tested the changes and their results. -->
+
+        ## Checklist
+        - [ ] I have tested the changes locally.
+        - [ ] I have read and followed the contributing guidelines.
+        ```
+
+        <Aside type="tip" title="Keep it simple">
+        Make sure the template is clear and concise, guiding contributors without overwhelming them with unnecessary details.
+
+        Don't add too many sections or requirements; focus on the essentials to streamline the review process. Otherwise, contributors might be discouraged from submitting PRs.
+        </Aside>
+
+    1. Commit the file to your repository. Contributors will now see this template whenever they create a PR.
+
+    </Steps>
+
+1. **Add links.**
+
+    Help contributors navigate your project by including links to important resources. First contributors might not be familiar with your project's structure, so providing easy access to documentation, contributing guidelines, and other relevant information can make their experience smoother, and yours as well. First contributors, highly motivated, might jump in without reading the contributing guidelines, so it's important to make them easily accessible.
+
+    <Steps>
+
+    1. Update the checklist in your template to include items like "I have read the contributing guidelines".
+
+    1. Add a link to your documentation, contributing guidelines, or other relevant resources in the template.
+
+        ```md title=".github/PULL_REQUEST_TEMPLATE.md"
+        ## Checklist
+        - [ ] I have tested the changes locally.
+        - [ ] I have read and followed the [contributing guidelines](#).
+        ```
+
+    </Steps>
+
+    This step ensures contributors have easy access to key materials, improving the quality of their submissions.
+
+1. **Customize for your project.**
+
+    Each project has its own unique requirements and workflows. Customize your PR template to reflect these specifics.
+
+    Some examples:
+
+    - Add project-specific sections, such as performance metrics for optimization PRs or deployment instructions for backend projects.
+    - Use examples to clarify expectations. For instance:
+
+      ```md title=".github/PULL_REQUEST_TEMPLATE.md"
+      ## Test Results
+      - Browser Compatibility: Tested on Chrome, Firefox, and Safari.
+      - Unit Tests: 98% coverage with no new failing tests.
+      ```
+
+      Encourage contributors to provide details that matter most to your team to smooth the review process.
+
+1. **Custom comment for first time contributors.**
+
+    To welcome first-time contributors and guide them through the PR process, you can add a custom comment to your PR template. This comment can include a brief message thanking them for their contribution, links to resources, and any specific instructions for new contributors.
+
+    GitHub Actions can help automate this process by posting the comment automatically when a PR is created by a first-time contributor:
+
+    ```yaml title=".github/workflows/pr-comment.yml"
+    name: Welcome First-Time Contributors
+    on:
+      pull_request_target:
+        branches: [main]
+        types: [opened]
+
+    permissions:
+      pull-requests: write
+
+    jobs:
+      welcome:
+        name: Welcome First-Time Contributors
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - uses: zephyrproject-rtos/action-first-interaction@v1
+            with:
+              repo-token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+              pr-opened-message: |
+                Hello! Thank you for opening your **first PR**!
+
+                Here's what will happen next:
+
+                1. Our GitHub bots will run to check your changes.
+                  If they spot any issues you will see some error messages on this PR.
+                  Don't hesitate to ask any questions if you're not sure what these mean!
+
+                2. In a few minutes, you'll be able to see a preview of your changes on Netlify.
+
+                3. One or more of our maintainers will take a look and may ask you to make changes.
+                  We try to be responsive, but don't worry if this takes a few days.
+    ```
+
+    <Aside>
+    This example is from the great Starlight repository. You can check out the [original `welcome-bot.yml` file](https://raw.githubusercontent.com/withastro/starlight/refs/heads/main/.github/workflows/welcome-bot.yml)
+    </Aside>
+
+    Based on this idea, you could also send a message to contributors after their first PR is merged, thanking them for their contribution and encouraging further participation.
+
+1. **Automate PR description checks.**
+
+    You could enforce the use of the PR template by setting up a GitHub Action to validate the PR description format with a custom script and reject PRs that don't meet the criteria. This ensures that contributors provide the necessary information before submitting the PR.
+    
+    <Aside type="caution">
+    Be mindful of the balance between automation and flexibility. While automating checks can improve consistency and quality, overly strict rules might discourage contributions. Consider the needs of your community and adjust the checks accordingly.
+    </Aside>
+
+    <Aside type="tip" title="Check out GitHub Marketplace">
+    Check out the [GitHub Marketplace for actions](https://github.com/marketplace?type=actions) that can help you automate various aspects of your workflow, including PR checks and notifications.
+    </Aside>
+
+</Steps>
+
+**By completing this challenge, you've equipped your repository with detailed, actionable PR templates** and powerful automation to maintain quality and consistency. These improvements reduce friction during reviews, save time for maintainers, and provide clarity for contributors—whether seasoned or new to the project.
+
+**Congratulations!** Your repository is now better prepared to handle contributions smoothly and effectively.
+
+<h3>Success Criteria</h3>
+
+- ✓ A detailed PR template is added to your repository.
+- ✓ The template includes essential sections and links to key resources.
+- ✓ (Optional) Automated checks are set up to validate PR descriptions.
+- ✓ (Optional) Custom comments are added to welcome first-time contributors.
+- ✓ (Optional) Custom comments are added to thank contributors after their first PR is merged.
+
+<hr />
+
+<Lore>
+The quill's light dims as you place your completed work upon the stone tablet. The _Conductor of Cadence_ steps forward to examine it, nodding with approval as they trace the carefully crafted instructions you've inscribed.
+
+> Your score is clear and deliberate,
+
+they comment, their voice filled with satisfaction.
+
+> Every note, every intention is now perfectly in tune with the broader symphony. This is the foundation of harmonious collaboration—where every contributor is aligned with the shared vision.
+
+As they step back, the light from the walls grows brighter, the harmony within the _Hall of Accord_ growing more pronounced. The _Conductor_ looks toward you, a smile crossing their face.
+
+> You've ensured that the path forward is clear and intentional. Continue to refine this guidance, and the symphony will play without hesitation.
+
+With the _Score of Precision_ now embedded in the hall's archives, you take a moment to admire the brilliance of your work, knowing it will guide many artisans in the future.
+
+<LoreSeparator />
+
+<h3>The Conductor's Insight</h3>
+
+> Every contribution is a note in the grand composition of your artifact. With careful guidance and streamlined steps, you can ensure that each note blends seamlessly into the whole. Remember, the cadence of contributions defines the rhythm of progress. 
+
+Prepare to receive contributions, traveller, and continue your journey through _The Chorus of Contribution_. The _Advent of Open Source_ awaits your next step in fostering a harmonious community.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Automate Checks on PRs
+
+<hr />
+
+<Lore type="ice">
+The _Conductor of Cadence_ walks alongside you, a vast machine of gears and pulleys unfolding ahead. Each movement is precise, rhythmic, as if it too is part of the orchestra.
+
+> This is the _Mechanism of Order_,
+
+the _Conductor_ explains, their hand gesturing to the intricate system at work.
+
+> It ensures that every movement in the symphony is in tune before it ever reaches the audience. Without it, the smallest misstep might go unnoticed until it disrupts the flow.
+
+They point toward a set of automated levers that trigger checks on each action, ensuring everything is aligned with the rhythm of the larger piece.
+
+> In collaboration, careful steps can prevent errors from slipping through unnoticed.
+
+the _Conductor_ continues.
+
+> It provides a safeguard, ensuring that every contribution adheres to the standards set by the symphony, and that no notes are out of tune when they enter the ensemble.
+
+They hand you a set of delicate tools.
+
+> Use these to set the mechanism in motion, ensuring every contribution is tested for harmony before it joins the greater flow.
+
+</Lore>
+
+<hr />
+
+**Managing pull requests effectively** is vital for maintaining high-quality contributions and an efficient workflow in Open Source projects. With contributions coming from various collaborators, automation can help ensure consistency, reduce repetitive tasks, and improve contributor and maintainer experiences. By automating checks, you can validate PR content, streamline review assignments, and enforce pre-merge conditions to focus your team's energy on meaningful tasks.
+
+**Today's challenge is about elevating your repository management to the next level by implementing advanced automation workflows for PRs.** Whether it's ensuring contributors provide meaningful information, assigning the right reviewers automatically, or maintaining a stable merge queue, these steps will enhance your project's scalability and efficiency.
+
+<Steps>
+
+1. **Review your current PR workflow.**
+
+    Before diving into automation, take a moment to evaluate how PRs are currently handled.
+
+    - Do you have PR templates in place?
+    - What kinds of information are contributors typically missing in their PRs?
+    - Are there any repetitive tasks maintainers perform when reviewing PRs?
+    - Are there PR templates that are common to all your repositories?
+
+    Go through the following steps for each repository:
+
+    - Check if your `.github/PULL_REQUEST_TEMPLATE.md` file exists and assess whether it provides clear guidance to contributors.
+    - Review recent pull requests to identify common patterns of incomplete or unclear submissions.
+    - Align templates and workflows across repositories to provide a consistent experience.
+
+    <Aside type="tip" title="Tip of the iceberg">
+    You can check out [today's advanced challenge](#advanced-automate-checks-on-prs) for more ideas on how to improve your PR templates and workflows.
+    </Aside>
+
+1. **Automate PR description checks.**
+
+    You could enforce the use of the PR template by setting up a GitHub Action to validate the PR description format with a custom script and reject PRs that don't meet the criteria. This ensures that contributors provide the necessary information before submitting the PR.
+    
+    <Aside type="caution">
+    Be mindful of the balance between automation and flexibility. While automating checks can improve consistency and quality, overly strict rules might discourage contributions. Consider the needs of your community and adjust the checks accordingly.
+    </Aside>
+
+    <Aside type="tip" title="Check out GitHub Marketplace">
+    Check out the [GitHub Marketplace for actions](https://github.com/marketplace?type=actions) that can help you automate various aspects of your workflow, including PR checks and notifications.
+    </Aside>
+
+1. **Automate reviewer assignments.**
+
+    Assigning reviewers manually can slow down the review process. Automating this task ensures PRs are reviewed promptly by the right people.
+
+    You can also check out the [GitHub Marketplace for actions](https://github.com/marketplace?type=actions) depending on how you want to assign reviewers, but also rely on the `CODEOWNERS` file we configured in a previous challenge for more targeted assignments to route PRs to specific teams based on the files modified.
+
+1. **Enforce a merge queue.**
+
+    To prevent conflicts and ensure a stable branch, implement a merge queue that automates the merging process based on predefined conditions.
+
+    Use tools like [Mergify](https://mergify.io/) or [Dependabot](https://dependabot.com/) to manage your merge queue and automate the merging of PRs based on your project's rules.
+
+1. **Enhance the workflow with labels.**
+
+    For complex projects, certain PRs may require additional steps before merging, such as legal, design, or accessibility reviews, product approvals, or other specific checks. Automate these reminders.
+
+    You can rely on labels to add some context to your PRs, and then attach actions to these labels to automate some tasks, or to notify the right people.
+
+    For instance, you could create a label `needs-legal-review` and then set up an action that notifies your legal team when a PR is labeled as such.
+
+    Or you could use shortcuts for review comments by creating a label `needs-tests` and then set up an action that posts a comment with the necessary information when a PR is labeled as such.
+
+    It's for its issues not having reproducible examples, but it would work for PR too; here's an example on how Bootstrap does it with its `needs-example` label:
+
+    ```yaml title=".github/workflows/issue-labeled.yml"
+    # Source: https://github.com/twbs/bootstrap/blob/main/.github/workflows/issue-labeled.yml
+    name: Issue Labeled
+    on:
+      issues:
+        types: [labeled]
+
+    permissions:
+      contents: read
+
+    jobs:
+      issue-labeled:
+        permissions:
+          # allow actions-cool/issues-helper to update issues and PRs
+          issues: write
+          pull-requests: write
+        if: github.repository == 'twbs/bootstrap'
+        runs-on: ubuntu-latest
+        steps:
+          - name: awaiting reply
+            if: github.event.label.name == 'needs-example'
+            uses: actions-cool/issues-helper@v3
+            with:
+              actions: "create-comment"
+              token: ${{ secrets.GITHUB_TOKEN }}
+              body: |
+                Hello @${{ github.event.issue.user.login }}. Bug reports must include a **live demo** of the issue. Per our [contributing guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md), please create a reduced test case on [CodePen](https://codepen.io/) or [StackBlitz](https://stackblitz.com/) and report back with your link, Bootstrap version, and specific browser and Operating System details.
+    ```
+
+1. **Propagate the changes.**
+
+    Once you've set up the automation workflows, test them thoroughly to ensure they work as expected. Make sure to communicate these changes to your team and contributors, so they are aware of the new processes.
+
+    You can also consider update the contributing guidelines by including the PR workflow, automation checks, and reviewer assignments. This document serves as a central reference for contributors and maintainers.
+
+    Don't forget to align the changes across your repositories to provide a consistent experience for everyone involved.
+
+</Steps>
+
+By completing this challenge, **you've implemented advanced automation to streamline PR workflows across your repositories**. From structured PR descriptions and automated reviewer assignments to stable merge queues, these enhancements save time, reduce errors, and create a more professional contribution process.
+
+**Congratulations!** You've taken a significant step toward optimizing your Open Source workflow and empowering contributors to deliver high-quality work efficiently.
+
+<h3>Success Criteria</h3>
+
+- ✓ Reviewed your current PR workflow and identified areas for improvement.
+- ✓ Explored automated PR description checks to validate PR content.
+- ✓ Implemented reviewer assignment automation to streamline the review process.
+- ✓ (Optional) Set up a merge queue to automate the merging process based on predefined conditions.
+- ✓ (Optional) Enhanced the workflow with labels to automate reminders or notifications.
+- ✓ Tested the automation workflows and communicated the changes to your team and contributors.
+
+<hr />
+
+<Lore>
+As you activate the mechanism, the gears turn with smooth precision, each check running in perfect rhythm. The _Conductor of Cadence_ watches with a satisfied expression as the system hums, ensuring every note, every movement is aligned.
+
+> The mechanism now works in tandem with the symphony,
+
+they observe.
+
+> Every action is carefully checked before it joins the collective. The flow is uninterrupted, and the harmony remains intact.
+
+The lights of the _Hall of Accord_ glow brighter, reflecting the newfound order within the space. The _Conductor_ turns to you, pride in their voice.
+
+> With this mechanism in place, you've ensured that every contribution is not only precise but also aligned with the larger vision. The symphony will play without hesitation, every note resonating in perfect harmony.
+
+With the mechanism now fully in motion, you step back, confident that the collaborative efforts ahead will proceed smoothly, each artisan guided by the rhythm of the greater whole.
+
+<LoreSeparator />
+
+<h3>The Conductor's Insight</h3>
+
+> Every contribution is a note in the grand composition of your artifact. With careful guidance and streamlined steps, you can ensure that each note blends seamlessly into the whole. Remember, the cadence of contributions defines the rhythm of progress. 
+
+Prepare to receive contributions, traveller, and continue your journey through _The Chorus of Contribution_. The _Advent of Open Source_ awaits your next step in fostering a harmonious community.
+</Lore>
