@@ -162,6 +162,15 @@ export default defineConfig({
                 },
               ]
             },
+            {
+              label: 'Week 3: The Chorus of Contribution',
+              items: [
+                {
+                  label: 'Day 15: The Pulse of the Community',
+                  slug: 'advent/week-3/day-15'
+                },
+              ]
+            },
           ],
         },
       ],
