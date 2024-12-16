@@ -1,0 +1,561 @@
+---
+title: "Day 16: The Tome of Knowledge"
+description: "Discover the Tome of Knowledge, where clarity and order guide seekers through the Maze of Obscurity with well-preserved wisdom."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>The Scrolls of Enlightenment</h2>
+
+The _Keeper_ guides you into the towering halls of the _Tome of Knowledge_, a sprawling library whose shelves stretch endlessly into the sky. Here, the wisdom of countless journeys is meticulously recorded, preserved for those who seek to follow the paths of others. At the heart of this grand sanctuary stands the _Archivist of Clarity_, a serene figure whose every movement seems to bring order to the labyrinthine rows of tomes.
+
+> Within these walls, all who seek understanding must find a guiding light,
+
+the _Archivist_ explains, gesturing toward the shelves.
+
+> Yet, beware the _Maze of Obscurity_, where confusion reigns and clarity fades. It is a place where seekers wander in circles, unable to find the answers they need.
+
+Their gaze sharpens, filled with purpose.
+
+> To prevent this, we must tend to the records, ensuring that each volume holds not only knowledge but also guidance—a beacon for those who come after.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-add-an-installation-guide)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-installation-guide-for-multiple-environments)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-automate-installation-and-setup)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Add an Installation Guide
+
+<hr />
+
+<Lore type="snowflake">
+The _Archivist of Clarity_ leads you to a quiet alcove within the library, where a single empty pedestal stands beneath a ray of light.
+
+> This pedestal awaits its first entry,
+
+they say, their voice calm yet purposeful.
+
+> A map for the first steps. Without it, many will approach the Tome, only to turn away, unsure where to begin their journey.
+
+They hand you a blank scroll and a quill that glimmers faintly in your grasp.
+
+> Craft the map that will guide those who seek the library's wisdom. A simple beginning, but one of profound importance.
+
+Their gaze lingers on you for a moment, filled with quiet encouragement.
+
+> Remember, every journey starts with a single step. Make it one of clarity and welcome.
+
+</Lore>
+
+<hr />
+
+**When someone discovers your Open Source project, their first experience often depends on how easily they can install and start using it.** A clear installation guide not only makes your project approachable but also signals that you care about your users' journey. A well-structured installation guide reduces confusion, minimizes questions, and improves adoption rates, especially for non-technical users.
+
+**Today's challenge is to create an installation guide** tailored for your end users—those who will be consuming your software or content. This differs from contributor guidelines, which focus on the technical setup contributors might need. Today's challenge ensures that anyone, regardless of technical expertise, can use your project without hassle.
+
+The installation guide should reside in the `README.md` file of your project for now, as it's the first place users will look for guidance while you don't have any website or documentation platform set up.
+
+<Aside type="tip" title="Tip of the iceberg">
+If your project is complex to use or targets a diverse use base, you may later move this guide to a dedicated `INSTALL.md` or documentation website to keep things more organized. In this case, you'll still want to have a quick start guide in your `README.md` pointing to the full installation guide.
+</Aside>
+
+<Steps>
+
+1. **Open your `README.md` file.**
+
+    Start by editing your project's `README.md` file. This is the go-to document for most users seeking guidance.
+
+1. **Add a section titled "Installation", "Quick start", or "Getting Started".**
+
+    Include a dedicated section for installation instructions. Choose a clear and inviting title like "Getting Started", "Quick Start", or simply "Installation".
+
+1. **(Optional) List prerequisites.**
+
+    Clearly outline any software, hardware, or environment requirements that users need before installing your project. This helps prevent confusion or failed installations.
+
+    ```md title="README.md"
+    ## Quick Start
+
+    ### Prerequisites
+
+    - A modern web browser (e.g., Chrome, Firefox, Safari)
+    - [Docker](https://www.docker.com/) (optional, for running a pre-configured environment)
+    - Or a platform-specific runtime:
+      - Node.js v16.0 or higher (for manual installation)
+    ```
+
+1. **Explain installation methods.**
+
+    Provide clear instructions for how users can install your project. These could include one or more methods based on your project type. Each method should be described concisely.
+
+    - **Option 1: Download and run.**
+    
+      If you provide binaries, a pre-built package, or an installer.
+
+      ```md title="README.md"
+      ## Quick Start
+
+      1. Download the latest release from the [Releases Page](https://github.com/Open-reSource/avalanche/releases).
+      2. Extract the files or run the installer. 
+      3. Follow the on-screen instructions to complete the setup.
+      ```
+
+    - **Option 2: Install via package manager.**:
+    
+      If your project is distributed via npm, pip, or any other package manager.
+
+      ````md title="README.md"
+      ## Quick Start
+
+      Run the following command in your terminal:
+      
+      ```sh
+      npm install -g your-package-name
+      ```
+      ````
+
+    - **Option 3: Run with Docker.**
+    
+      For users who prefer containerized setup.
+
+      ````md title="README.md"
+      ### Run with Docker
+
+      1. Pull the latest Docker image:
+
+        ```sh
+        docker pull your-username/your-project
+        ```
+
+      2. Start the container:
+
+        ```sh
+        docker run -p 8080:8080 your-username/your-project
+        ```
+      ````
+
+1. **Provide usage instructions.**
+
+    Guide users on how to start using your project right after installation. This can be a simple command to run, a link to open in the browser, or any other action they need to take such as creating accounts, configuration files, setting up databases, and so on.
+
+    ````md title="README.md"
+    ## Quick Start
+
+    <!-- Your content here... -->
+
+    ### Usage
+
+    1. Run the following comment to start the application:
+
+      ```sh
+      your-app-command
+      ```
+
+    2. Open your browser and go to [http://localhost:3000](http://localhost:3000).
+
+      Follow the setup wizard to create your account and configure the app.
+
+      From there, you can explore the main features:
+      - Create new documents
+      - Collaborate with other users
+    ````
+      
+1. **(Optional) Add troubleshooting and FAQs.**
+
+    Include a dedicated troubleshooting and FAQs section outside of the _Quick start_ section to address common issues and provide solutions in simple language. This reduces frustration for new users.
+
+    ````md title="README.md"
+    ## Quick Start
+
+    <!-- Content from previous parts. -->
+
+    ## Troubleshooting
+
+    - **App doesn't start:** Ensure you are using the correct version of Node.js. Run `node -v` to check.
+    - **Port already in use:** If you see an error about port 3000, try running:
+
+      ```sh
+      your-app-command --port 3001
+      ```
+
+    ## FAQs
+    
+    - **Q: Can I install this on Windows?**  
+      A: Yes! The app works on Windows, macOS, and Linux.
+    ````
+
+</Steps>
+
+Your installation guide doesn't have to be perfect from the start—it will evolve as your project grows and user feedback rolls in. However, having a clear and user-friendly guide early on demonstrates that you value accessibility and usability.
+
+Remember to keep it simple and to the point—your users will thank you!
+
+**Congratulations on improving the user experience of your project!**
+
+<h3>Success Criteria</h3>
+
+- ✓ A _Quick Start_ or _Installation_ section is added to the `README.md` file.
+- ✓ The guide includes clear installation methods tailored to your project.
+- ✓ (Optional) Prerequisites are clearly outlined.
+- ✓ (Optional) A Troubleshooting and FAQs section is included.
+
+<hr />
+
+<Lore>
+The scroll now rests upon the pedestal, its ink gleaming as if alive, the first rays of light illuminating its words. The alcove seems brighter, its warmth spreading through the surrounding shelves.
+
+The _Archivist of Clarity_ nods, a serene smile softening their features.
+
+> You have placed the first stone in the path,
+
+they say, their tone filled with quiet pride.
+
+> Now, the seekers will find their way, no longer turned away by uncertainty. This is but the beginning, yet it holds the promise of countless journeys to come.
+
+They turn back to the endless rows of tomes, their confidence in you evident.
+
+> Let this serve as a reminder: even the smallest guidance can light the way through the vast unknown.
+
+You leave the alcove, the _Tome_'s halls seeming to hum with new energy, their knowledge more alive than ever.
+
+<LoreSeparator />
+
+<h3>The Archivist's Guidance</h3>
+
+> The written wisdom of your artifact is the bridge between knowledge and action. By expanding and refining it, you ensure that every artisan and villager can navigate your artifact's complexities with confidence. Remember, a well-maintained tome is your artifact's most enduring legacy.
+
+Continue to fill the pages of your artifact's story, traveller, and strengthen the foundation of your community. The _Chorus of Contribution_ grows louder with each step.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Installation Guide for Multiple Environments
+
+<hr />
+
+<Lore type="snowball">
+The _Archivist of Clarity_ beckons you to a secluded chamber in the _Tome of Knowledge_, where several pedestals stand in a circle. Each pedestal holds a glowing crystal, its light shifting between colors and patterns.
+
+> These crystals represent the diversity of paths seekers may walk,
+
+the _Archivist_ explains, their hands gesturing to the swirling hues.
+
+> No two journeys are the same; some tread through forests, others over mountains, and yet others across deserts. To guide them all, we must ensure our maps adapt to their unique terrain.
+
+The _Archivist_ places a crystal in your hand, its light changing to reflect your touch.
+
+> Your task is to ensure that every seeker, regardless of their path, can find their way with clarity and ease.
+
+With that, they step aside, leaving you to decipher the shifting brilliance of the crystals, their meaning becoming clearer as you focus.
+</Lore>
+
+<hr />
+
+When contributors or users approach your project, a comprehensive and accessible installation process is often their first impression. **A well-documented installation guide that supports multiple environments—such as Windows, macOS, and Linux—can significantly enhance your project's usability and attract a broader audience.** By addressing platform-specific nuances and offering clear guidance, you reduce friction for potential contributors and users, empowering them to start quickly and with confidence.
+
+**Today's challenge is to review and expand your project's installation guide to ensure it supports multiple environments and dependency managers.** You'll create platform-specific instructions, provide troubleshooting tips, and even automate the installation process to make it seamless. This effort not only improves the user experience but also strengthens the foundation for future contributors who rely on a clear and straightforward setup.
+
+<Steps>
+
+1. **Audit your installation guide.**
+
+    Start by evaluating the current state of your installation guide to identify areas for improvement.
+
+    <Steps>
+
+    1. **Locate your installation guide.**
+
+        - Check if your installation guide is part of the `README.md`, a dedicated `INSTALL.md` file, or within your project's documentation.
+        - Ensure the guide includes a basic overview of requirements (e.g., language runtimes, libraries, tools).
+
+    1. **Evaluate coverage.**
+
+        - Does your guide currently address all major platforms (Windows, macOS, Linux)?
+        - Are dependency managers (e.g., npm, pip, Homebrew, apt) supported for easier installation?
+
+    1. **Identify missing steps.**
+
+        - Test the installation process on at least two different environments.
+        - Note any missing details, ambiguous steps, or platform-specific challenges that need clarification.
+
+    </Steps>
+
+1. **Expand platform-specific instructions.**
+
+    Providing targeted instructions for each platform ensures users have a smooth installation experience.
+
+    <Steps>
+
+    1. **Add detailed steps for each platform.**
+
+        If your project has platform-specific requirements or installation steps, include them in your guide such as:
+
+        - **Windows**: Include details about environment variables, PowerShell commands, or installer options. If needed, suggest tools like [Chocolatey](https://chocolatey.org/) for package management.
+        - **macOS**: Highlight compatibility with macOS versions, and consider Homebrew for dependencies.
+        - **Linux**: Provide instructions for common distributions (e.g., Ubuntu, Fedora, Arch) and commands for package managers like `apt`, `yum`, or `pacman`.
+
+        Adapt this example to specificities of your project. It could be package managers (e.g., npm, pnpm, Yarn, pip), APIs compatibility, deployment platforms, etc.
+
+    1. **Create tables or separate sections.**:
+
+        Use a clear structure, like tables or collapsible sections, to organize platform-specific instructions.
+
+    </Steps>
+
+1. **Automate the installation process.**
+
+    Automation simplifies the setup and minimizes user error, especially for complex environments.
+
+    <Steps>
+
+    1. **Create setup scripts.**
+
+        - Write a `setup.sh` script for Unix-based systems that installs dependencies, sets environment variables, and performs basic configuration checks.
+
+            ```sh title="setup.sh"
+            #!/bin/bash  
+            echo "Installing dependencies..."  
+            sudo apt update && sudo apt install -y required-package  
+            echo "Setup complete!"  
+            ```
+
+        - Use `batch` files or PowerShell scripts for Windows systems to achieve similar automation.
+        - Use `brew` or `choco` commands for macOS and Windows respectively to install dependencies.
+        
+        <Aside type="tip" title="Add some nice colors">
+        You can use color codes to make your scripts more visually appealing and easier to read. For example, you can use `echo -e "\e[32mInstalling dependencies...\e[0m"` to print a green message, or use a library like [chalk](https://github.com/chalk/chalk) in Node.js.
+        </Aside>
+
+    1. **Use cross-platform tools.**
+
+        Explore tools like [Ansible](https://www.ansible.com/), [Puppet](https://puppet.com/), or [Chef](https://www.chef.io/) for more complex setups that require configuration management.
+
+    1. **Add instructions for running scripts.**
+
+        Clearly explain how to execute these scripts in the installation guide (e.g., “Run bash `setup.sh` in your terminal”).
+
+    </Steps>
+
+1. **Provide troubleshooting tips.**
+
+    Anticipating common issues saves users time and frustration.
+
+    <Steps>
+
+    1. **List common errors and fixes.**
+
+        - If an installation step fails, describe likely causes (e.g., missing dependencies, incorrect permissions).
+        - Offer practical solutions or links to resources.
+
+    1. **Platform-Specific Troubleshooting.**
+
+        For example:
+
+        - **Windows**: Address common PowerShell errors or file permissions issues.
+        - **macOS**: Mention potential problems with Gatekeeper blocking scripts and how to bypass them.
+        - **Linux**: Include fixes for dependency conflicts or missing libraries.
+
+    </Steps>
+
+    <Aside type="tip" title="Check the beginner challenge">
+    If you're looking for more guidance on creating a troubleshooting section, refer to [today's beginner challenge](#beginner-add-an-installation-guide) for tips on structuring and writing troubleshooting content.
+    </Aside>
+
+</Steps>
+
+**By completing this challenge, you've significantly improved the onboarding experience for your project, making it more inclusive and accessible across multiple environments.** Supporting diverse platforms ensures that contributors and users alike can start quickly without frustration. The automation scripts you've created further simplify the process, adding an extra layer of professionalism to your project.
+
+**Congratulations on tackling this challenge!** Your efforts will leave a lasting impression on contributors and users, strengthening your project's reputation and community.
+
+<h3>Success Criteria</h3>
+
+- ✓ Platform-specific instructions are added to the installation guide.
+- ✓ (Optional) Automation scripts (e.g., `setup.sh`, `install.bat`) are created to streamline the installation process.
+- ✓ Troubleshooting tips are included to address common issues and errors.
+
+<hr />
+
+<Lore>
+The chamber glows brighter now, each crystal responding to your adjustments with a steady, harmonious light. The pedestals seem to hum with contentment, as though the paths they represent have aligned into a shared understanding.
+
+The _Archivist_ observes your work, their expression calm but deeply approving.
+
+> You have woven a guide that bends with the wind and climbs with the mountain,
+
+they say, their voice soft but resonant.
+
+> Each seeker will now find their own unique reflection in the guidance you have crafted.
+
+They place the crystal back upon its pedestal, and the room resonates with a quiet, reassuring hum.
+
+> Remember, flexibility is the cornerstone of understanding. The stronger the guide, the more journeys it can support.
+
+You leave the chamber, your thoughts filled with the infinite possibilities illuminated by your work.
+
+<LoreSeparator />
+
+<h3>The Archivist's Guidance</h3>
+
+> The written wisdom of your artifact is the bridge between knowledge and action. By expanding and refining it, you ensure that every artisan and villager can navigate your artifact's complexities with confidence. Remember, a well-maintained tome is your artifact's most enduring legacy.
+
+Continue to fill the pages of your artifact's story, traveller, and strengthen the foundation of your community. The _Chorus of Contribution_ grows louder with each step.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Automate Installation and Setup
+
+<hr />
+
+<Lore type="ice">
+Deep within the _Tome_'s labyrinthine corridors, the _Archivist of Clarity_ reveals a small, intricate contraption. Its gears turn slowly, emitting a faint, rhythmic ticking.
+
+> This device represents the effort required to begin a journey,
+
+the _Archivist_ explains, running their fingers along its delicate mechanisms.
+
+> For some, the work of preparation is a daunting climb before the journey has even begun. To ease their burden, we must create a mechanism that sets their feet upon the path with minimal resistance.
+
+They hand you a key carved with precise, intricate patterns.
+
+> The key lies in simplicity,
+
+they continue, their voice calm yet resolute.
+
+> Build a way for the journey to begin with a single turn. The seekers will thank you, though they may never know the work behind the ease you provide.
+
+</Lore>
+
+<hr />
+
+**For projects with multiple repositories or complex environments, streamlining the installation process is critical to creating a smooth experience for users.** By reducing the steps required to get started, you minimize potential frustrations, improve the accessibility of your projects, and ensure that users can focus on using your product rather than troubleshooting installation issues. Automation also helps ensure consistency, making it easier to maintain and scale as your projects grow.
+
+**Today's challenge focuses on automating the installation process for your repositories.** You'll review your existing workflows, introduce scripts or tools for automating multi-repository setups, and centralize your efforts to ensure consistency across your projects.
+
+<Steps>
+
+1. **Review your current installation workflows.**
+
+    To begin, audit the installation processes for your repository, or set of repositories.
+
+    <Steps>
+
+    1. **Assess existing instructions.**
+
+        - Go through the current installation documentation for each repository.
+        - Confirm that the steps provided are clear, up-to-date, and cover all necessary dependencies and configurations.
+
+    1. **Identify gaps and complexities.**
+
+        - Check for missing details, such as platform-specific requirements (e.g., differences between Windows, macOS, and Linux), package managers, or any other specificities.
+        - Identify any repetitive steps or manual tasks that could be automated.
+
+    1. **Test across platforms.**
+
+        - Run through the installation process on different operating systems, package managers, or environments to ensure consistency and compatibility.
+
+    </Steps>
+
+    <Aside type="tip" title="Check out today's intermediate challenge">
+    If you're looking for guidance on creating platform-specific instructions, refer to [today's intermediate challenge](#intermediate-installation-guide-for-multiple-environments) for tips on expanding your installation guide.
+    </Aside>
+
+1. **Introduce automation for single repositories.**
+
+    Automation scripts are essential for simplifying installation. If you haven't already created them, refer to [today's intermediate challenge](#intermediate-installation-guide-for-multiple-environments) for detailed guidance on scripting installation workflows for individual repositories.
+
+    Ensure scripts handle tasks like dependency installation, environment setup, and any additional configuration steps.
+
+    Validate these scripts to confirm they work seamlessly on multiple platforms.
+
+1. **Automate multi-repository setups.**
+
+    For projects with interconnected repositories, create a unified process to streamline installation across all of them.
+
+    <Steps>
+
+    1. **Map out dependencies.**
+
+        - Document how the repositories are related, noting any specific order for cloning or installing.
+        - Identify shared dependencies or configuration files that apply across repositories.
+
+    1. **Create a master automation tool.**
+
+        - Develop a script or use an existing tool to automate the cloning, installation, and configuration of multiple repositories in one step.
+        - Tools like `make`, package managers (e.g., [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces)), or custom scripts are great for this purpose.
+
+    1. **Provide platform-specific instructions.**
+
+        - Include platform-specific steps where necessary, ensuring the automation process handles common differences between operating systems.
+
+    </Steps>
+
+1. **Centralize installation resources.**
+
+    Make it easy for users to find and use your installation instructions by centralizing your efforts. They must be able to install your entire project from a single source, with clear guidance on how to proceed, and possibily with a single command.
+
+    <Steps>
+
+    1. **Create a unified installation guide.**
+
+        - Develop a top-level guide that explains how to install and set up your projects, especially if they require multiple repositories.
+        - Link to individual repository instructions when necessary for additional details.
+
+    1. **Host the installation resources.**
+
+        - Publish the unified guide on a dedicated section of your project's website or README file.
+        - Consider using a simple table of contents or quick-start guide to help users navigate the installation process.
+
+    </Steps>
+
+</Steps>
+
+**Automating your installation workflows ensures that users can start using your project quickly and easily, regardless of their platform or technical expertise.** By addressing common bottlenecks and providing clear, centralized resources, you've made a significant improvement to your project's usability and accessibility. These steps not only demonstrate your commitment to high-quality user experiences but also make your project more appealing to a broader audience.
+
+**Congratulations on completing this advanced challenge!** Your efforts will leave a lasting impression on your users and pave the way for seamless adoption of your project.
+
+<h3>Success Criteria</h3>
+
+- ✓ Reviewed and updated installation workflows for individual repositories.
+- ✓ Created automation scripts for single repositories to streamline installation.
+- ✓ Developed a master automation tool for multi-repository setups.
+- ✓ Centralized installation resources in a unified guide or documentation section.
+
+<hr />
+
+<Lore>
+The contraption now hums with life, its gears spinning smoothly in a perfect, synchronized dance. What once felt cumbersome now flows effortlessly, like water over polished stones.
+
+The _Archivist of Clarity_ studies your work, their eyes alight with quiet admiration.
+
+> You have transformed the path into an open door,
+
+they say, their words carrying the weight of deep appreciation.
+
+> Where once there was hesitation, there is now momentum. Each turn of the key will spark a journey made easier by your foresight.
+
+They lock the key into the device and step back, the soft whirring filling the room like a comforting melody.
+
+> Let this be your lesson: simplicity is the most generous form of guidance. In making the path effortless, you allow the seeker to focus on the journey itself.
+
+You leave the corridor with the sound of the ticking gears following you, a gentle reminder of the enduring power of thoughtful preparation.
+
+<LoreSeparator />
+
+<h3>The Archivist's Guidance</h3>
+
+> The written wisdom of your artifact is the bridge between knowledge and action. By expanding and refining it, you ensure that every artisan and villager can navigate your artifact's complexities with confidence. Remember, a well-maintained tome is your artifact's most enduring legacy.
+
+Continue to fill the pages of your artifact's story, traveller, and strengthen the foundation of your community. The _Chorus of Contribution_ grows louder with each step.
+</Lore>

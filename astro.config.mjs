@@ -169,6 +169,10 @@ export default defineConfig({
                   label: 'Day 15: The Pulse of the Community',
                   slug: 'advent/week-3/day-15'
                 },
+                {
+                  label: 'Day 16: The Tome of Knowledge',
+                  slug: 'advent/week-3/day-16'
+                },
               ]
             },
           ],
