@@ -173,6 +173,10 @@ export default defineConfig({
                   label: 'Day 16: The Tome of Knowledge',
                   slug: 'advent/week-3/day-16'
                 },
+                {
+                  label: 'Day 17: The Voices of the Commons',
+                  slug: 'advent/week-3/day-17'
+                },
               ]
             },
           ],

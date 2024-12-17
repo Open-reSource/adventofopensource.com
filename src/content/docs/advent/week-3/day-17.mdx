@@ -1,0 +1,485 @@
+---
+title: "Day 17: The Voices of the Commons"
+description: "The Pavilion of Echoes encourages connection and shared ideas, guided by the Herald of Dialogue, to create harmony and avoid isolation."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import Runes from '../../../../components/Runes.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day17Snowflake01 from '../../../../assets/days/day-17-snowflake-01.png';
+import day17Snowflake02 from '../../../../assets/days/day-17-snowflake-02.png';
+import day17Snowflake03 from '../../../../assets/days/day-17-snowflake-03.png';
+import day17Snowflake04 from '../../../../assets/days/day-17-snowflake-04.png';
+import day17Snowflake05 from '../../../../assets/days/day-17-snowflake-05.png';
+
+<Lore type="logo">
+<h2>The Pavilion of Echoes</h2>
+
+The _Keeper_ guides you into the _Pavilion of Echoes_, a shimmering space where every sound lingers just long enough to be heard clearly before joining the symphony of voices within. The air is alive with the resonance of ideas shared and stories exchanged, each weaving into a harmonious dialogue.
+
+At the center stands the _Herald of Dialogue_, a figure poised and attentive, ensuring that every note contributes to the greater melody of understanding.
+
+> This is a place of connection,
+
+the _Herald_ explains, their voice carrying a warm yet commanding tone.
+
+> Here, voices come together to build bridges, to offer and receive guidance, to create something greater than any one alone could achieve.
+
+But shadows dance at the edges of the _Pavilion_, where the _Silence of Isolation_ threatens to creep in, muting the harmony and leaving only dissonance behind.
+
+> The _Pavilion_'s strength lies in the openness of its space and the clarity of its echoes,
+
+the _Herald_ continues.
+
+> It must be nurtured, kept vibrant, and ready to welcome all who seek its solace.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-set-up-discussions)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-build-engagement-in-discussions)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-foster-community-collaboration)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Set Up Discussions
+
+<hr />
+
+<Lore type="snowflake">
+In a quiet corner of the _Pavilion_, the _Herald of Dialogue_ beckons you toward a modest yet inviting alcove. The space feels expectant, as though it yearns to be filled with energy and exchange.
+
+> Every great gathering begins with a single call,
+
+the _Herald_ begins, gesturing to the blank walls of the alcove.
+
+> To invite others into the fold, there must first be a place for their voices to gather—a hearth where they feel welcome to speak and be heard.
+
+The _Herald_ places a small, glowing sphere in your hands. It pulses faintly, as if awaiting your touch to awaken fully.
+
+> Build this space. Let its light call out to others, offering them a place to share, to listen, and to connect. From this simple beginning, a profound dialogue can grow.
+
+</Lore>
+
+<hr />
+
+**Building a thriving community around your Open Source project requires tools that enable users and contributors to communicate effectively.** [GitHub Discussions](https://docs.github.com/discussions) is a powerful GitHub built-in feature that provides a dedicated space for community interaction within your repository. By using Discussions, you can streamline communication, foster collaboration, and encourage idea-sharing without needing external platforms that may demand extra management overhead. This feature seamlessly integrates into your repository and is especially useful for separating technical discussions from casual conversations, helping you manage your project's communication more effectively.
+
+**Today's challenge is to set up GitHub Discussions and configure it to meet the needs of your community.** Enabling Discussions can help reduce issue clutter by moving non-technical conversations, feature ideas, and Q&A into their own space. Over time, it also becomes a repository of user-generated content that makes it easier for newcomers to onboard, find answers, and feel welcomed. You'll also ensure that your Discussions space has a welcoming post that aligns with your project's values and provides clear guidance for participants.
+
+<Steps>
+
+1. **Navigate to the repository settings.**
+
+    Go to your repository on GitHub and click the _Settings_ tab. Scroll down to the _Features_ section, where you can enable _Discussions_.
+
+1. **Enable Discussions.**
+
+    In the _Features_ section, toggle the _Discussions_ option to enable it for your repository. You'll see a button labeled _Set up discussions_. Click on it to proceed.
+
+    <ContentImage src={day17Snowflake01} alt="" />
+
+1. **Set up the first discussion post.**
+
+    After enabling Discussions, GitHub will redirect you to the new _Discussions_ tab. It will prompt you to create a welcome discussion post in Markdown format. Use this post to introduce Discussions to your community, welcome new users, and outline the purpose of the space.
+
+    <ContentImage src={day17Snowflake02} alt="" />
+
+1. **Add guidelines to your welcome post.**
+
+    Modify the content to fit your project's needs, and make sure to include a warm welcome to new users and contributors, and validate the post.
+
+    <Aside type="tip" title="Tip of the iceberg">
+    To ensure smooth interactions, your first discussion post should highlight key rules or reminders:
+    
+    - **Include your project's Code of Conduct**: Provide a direct link to your Code of Conduct and remind users to adhere to it.
+    - **Add extra guidelines if necessary**: If you have specific expectations for this space (e.g., no self-promotion or off-topic posts), mention them here.
+    </Aside>
+
+1. **Celebrate your first post!**
+
+    Once you publish the welcome post, GitHub will trigger a confetti animation to celebrate! 
+
+    <ContentImage src={day17Snowflake03} alt="" />
+
+    Your first discussion will also be pinned to the _Announcements_ category by default, ensuring that all visitors see it.
+
+    This category cohabits with other default categories:
+    - _General_
+    - _Ideas_
+    - _Polls_
+    - _Q&A_
+    - _Show and tell_
+
+    <ContentImage src={day17Snowflake04} alt="" />
+
+    You can customize these to fit your community's needs. Navigate to the _Categories_ section on the left menu to create, edit, or delete categories.
+
+    <ContentImage src={day17Snowflake05} alt="" />
+
+1. **Encourage participation.**
+
+    Invite contributors and users to start interacting in Discussions by asking a question, sharing feedback, or introducing themselves. Engage actively in the space to set the tone for the community.
+
+    For example, you could create a "Getting to know each other" thread where users can introduce themselves and share how they use your project.
+
+</Steps>
+
+**Enabling and configuring GitHub Discussions cultivates an engaged community around your Open Source project.** It provides a space for collaboration, mentorship, and shared learning, fostering a sense of belonging among users and contributors. By setting clear guidelines and encouraging participation, you ensure that this space remains welcoming and productive.
+
+Remember, a successful Discussions page isn't just about enabling the feature—it's about actively engaging with your community, celebrating their contributions, and adapting the space as your project grows. Take this opportunity to strengthen connections and build trust within your community.
+
+<h3>Success Criteria</h3>
+
+- ✓ GitHub Discussions enabled and configured.
+- ✓ Welcome post created with a warm introduction and clear guidelines.
+- ✓ Categories customized to fit your community's needs.
+- ✓ Community members invited to participate.
+
+<hr />
+
+<Lore>
+The alcove now glows with a gentle, inviting light, the once-blank walls adorned with faint etchings of countless voices joining together. The energy of connection hums softly, a testament to the space you've created.
+
+The _Herald of Dialogue_ approaches, a satisfied smile gracing their face.
+
+> You have given this place its first breath of life,
+
+they say, their voice resonating with pride.
+
+> What begins as a small hearth will grow into a roaring fire, warming all who gather here.
+
+They nod toward the space, their expression calm but purposeful.
+
+> Remember, every great dialogue begins with a single voice, but its true power lies in its ability to embrace many. Let this be a space where all are welcomed and heard.
+
+With the alcove now thriving, you leave it behind, assured that its light will guide others to its welcoming embrace.
+
+<LoreSeparator />
+
+<h3>The Herald's Message</h3>
+
+> Every thriving community is built upon the strength of its connection. By opening and refining your paths, you create spaces where ideas flourish, problems are solved, and relationships are forged. Remember, the more voices that join, the stronger your project becomes.
+
+Open the lines, traveller, and let the voices guide your project to new heights.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Build Engagement in Discussions
+
+<hr />
+
+<Lore type="snowball">
+The _Herald of Dialogue_ leads you to a vibrant hall within the _Pavilion of Echoes_, where whispers and murmurs swirl in a lively dance. This space brims with potential, yet there's a stillness beneath the surface—a quiet yearning for more voices to join the melody.
+
+> A conversation is like a flame,
+
+the _Herald_ says, lighting a single candle with a flick of their hand.
+
+> It begins with a spark, but it needs care to grow and warmth to draw others near.
+
+They gesture toward the hall, its walls adorned with empty lanterns, waiting to be lit.
+
+> Encourage those who enter to speak their truths, to listen with intention, and to weave their stories into the greater harmony. When you nurture engagement, this hall will not just echo—it will sing.
+
+The _Herald_ places a small, gilded bell in your hands.
+
+> Use this to amplify the voices within these walls. Ring it to signal that all who wish to join are welcome.
+
+</Lore>
+
+<hr />
+
+**Creating a thriving discussion space for your Open Source project is essential for fostering a collaborative and engaging community.** [GitHub Discussions](https://docs.github.com/discussions) (or similar platforms) provide a venue for users, contributors, and maintainers to exchange ideas, seek help, and collaborate on new features. When organized and maintained effectively, these spaces can drive participation, improve user satisfaction, and even attract new contributors to your project. By actively managing discussions, you also reduce the communication overhead and keep project-related queries consolidated in one place.
+
+**Today's challenge is to structure and grow engagement in your project's discussion forum.** You'll focus on organizing categories to streamline conversations, seeding meaningful discussions, and responding to posts to foster an active, inclusive environment.
+
+<Steps>
+
+1. **Enable GitHub Discussions.**
+
+    If you haven't already, follow the steps outlined in the [Beginner challenge](#beginner-set-up-discussions) to enable Discussions for your GitHub repository, or use your platform's equivalent feature.
+
+1. **Organize categories.**
+
+    The first step to building an engaging space is ensuring that topics are organized and easy to navigate.
+
+    <Steps>
+
+    1. **Define key categories.**
+
+        Identify the types of conversations that typically occur in your community (e.g., _Support_, _Feature Requests_, _Ideas_, _General Discussions_, _Showcase_).
+
+        Use GitHub Discussions' category feature (or your platform's equivalent) to create these buckets.
+
+    1. **Add clear descriptions.**
+
+        For each category, add a short, descriptive text explaining what belongs there. For example:
+        - _Support_: "Ask questions about using the project or troubleshooting issues."
+        - _Ideas_: "Share suggestions for new features or improvements."
+
+        Use pinned posts if necessary to provide more detailed guidelines.
+
+    1. **Encourage use of categories.**
+
+        - When responding to posts, gently guide users to the appropriate category if they've posted in the wrong place. This helps keep discussions organized and relevant.
+        - Highlight categories in your welcome post and encourage users to explore them, and in your repository's README or project website to encourage users to post in the right sections.
+
+    </Steps>
+
+1. **Seed conversations.**
+
+    Communities need a spark to get conversations flowing. Seed discussions to encourage others to engage.
+
+    <Steps>
+
+    1. **Create starter topics**: Post initial discussions in each category to model the type of content you want users to share.
+
+        - For _Ideas_, you could post: "What integrations or features would make this project even more useful to you?"
+        - For _Showcase_, you invite users: "Share how you're using this project in your work or personal projects!"
+
+    </Steps>
+
+    From time to time, **ask open-ended questions** to invite participation. For example:
+
+        > "What challenges have you faced with [specific functionality], and how did you address them?"
+
+        > "Are there any tools or workflows you'd recommend for working with this project?"
+
+    You can also **use polls (if available)** which are a great way to engage users and gather feedback. For example:
+
+        > "Which feature would you like to see prioritized in the next release?"
+
+        > "How satisfied are you with the project's documentation?"
+
+1. **Actively participate in discussions.**
+
+    Active participation signals to users that their input is valued, creating a welcoming and responsive community.
+
+    - **Respond promptly to posts**: Monitor discussions regularly and reply to questions or ideas. Even simple acknowledgments like “Great suggestion! Let's see what others think!” help foster engagement.
+
+    - **Encourage further discussion**: When responding, ask follow-up questions to keep the conversation going. For example:
+        > "That's an interesting idea—how do you think it could be implemented?"
+
+        > "Could you elaborate on the issue you're facing? Let's see if we can troubleshoot it together."
+
+    - **Recognize contributors**: Highlight particularly thoughtful posts or contributions to encourage positive behavior. For instance, thank users who answer questions or share detailed ideas.
+
+    - **Moderate constructively**: If discussions veer off-topic or become contentious, gently guide them back on track. Use your platform's moderation tools to maintain a positive environment.
+
+</Steps>
+
+**By organizing categories, seeding discussions, and actively participating, you've taken important steps to foster an active and engaging community around your project.** A well-maintained discussion space encourages collaboration, drives innovation, and strengthens the relationship between maintainers and users. Keep the momentum going by regularly revisiting and improving your discussion space as your community grows.
+
+**Congratulations on completing this challenge!** Your efforts will not only make your project more approachable but also help build a supportive community that thrives on collaboration.
+
+<h3>Success Criteria</h3>
+
+- ✓ Categories organized and descriptions added.
+- ✓ Starter discussions seeded in each category.
+- ✓ (Optional) In existing discussions, active participation, including prompt responses and follow-up questions.
+- ✓ (Optional) In existing discussions, contributors recognized and positive behavior encouraged.
+
+<hr />
+
+<Lore>
+The hall now glows with the light of countless lanterns, their flickering flames casting a warm, inviting glow. The once-muted murmurs have transformed into a lively chorus, voices overlapping in a symphony of shared thoughts and ideas.
+
+The _Herald of Dialogue_ stands beside you, observing the transformation with quiet pride.
+
+> You have brought life to this place,
+
+they say softly, their eyes reflecting the light.
+
+> What once was a quiet hall now pulses with energy, a gathering of voices united by shared purpose.
+
+They take the bell from your hands and set it reverently on a nearby pedestal.
+
+> Let this bell serve as a symbol of what you've built—a place where conversations flourish and connections deepen. And remember, engagement is not just about speaking but about creating space for all to be heard.
+
+With the hall alive with dialogue, you step back, confident that its light and sound will continue to grow.
+
+<LoreSeparator />
+
+<h3>The Herald's Message</h3>
+
+> Every thriving community is built upon the strength of its connection. By opening and refining your paths, you create spaces where ideas flourish, problems are solved, and relationships are forged. Remember, the more voices that join, the stronger your project becomes.
+
+Open the lines, traveller, and let the voices guide your project to new heights.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Foster Community Collaboration
+
+<hr />
+
+<Lore type="ice">
+The _Herald of Dialogue_ leads you to the heart of the _Pavilion of Echoes_, where an ornate table stands, its surface carved with intricate patterns that seem to shift and shimmer as you approach. Around the table, chairs of various shapes and sizes wait expectantly, as if calling for those who will sit and contribute.
+
+> Collaboration begins when hands reach across the divide,
+
+the _Herald_ says, placing their hands on the table's edge.
+
+> This table is a space of shared purpose, where ideas converge, and harmony is born.
+
+They step back, revealing a small, multifaceted gem resting at the center of the table. It glows faintly, its light reflecting the patterns on the surface.
+
+> Bring others to this table. Help them see how their unique perspectives can blend into something greater. Collaboration is not just about working together—it is about building something none could create alone.
+
+The _Herald_'s gaze is steady as they place the gem in your hand.
+
+> Place this gem where it will shine brightest. It will guide those who gather here toward unity and shared purpose.
+
+</Lore>
+
+<hr />
+
+**Building a vibrant and collaborative community around your Open Source project is vital for its growth and sustainability.** When contributors feel included and empowered, they're more likely to share ideas, contribute code, and engage in meaningful discussions. Fostering collaboration also ensures that the project benefits from diverse perspectives, which often leads to innovative solutions and improved outcomes. With proper tools and practices, you can create an environment where collaboration thrives naturally.
+
+**Today's challenge is about strengthening the sense of community within your Open Source ecosystem.** You will implement practical strategies to encourage collaboration, set up automated systems to streamline engagement, and explore ways to connect contributors across multiple repositories. By fostering community collaboration, you'll create a more dynamic and welcoming space for contributors, maintainers, and users alike.
+
+<Steps>
+
+1. **Organize and centralize communication.**
+
+    Effective collaboration begins with clear and centralized discussions. By creating a dedicated space for conversations, you encourage contributors to share ideas, ask questions, and engage with one another.
+
+    <Steps>
+
+    1. **Set up centralized discussions.**
+
+        - If your project spans multiple repositories, enable GitHub Discussions directly in your organization or create a dedicated repository for cross-repository discussions.
+
+        - Link discussions from other repositories to this central hub to unify communication.
+
+        - Add a pinned post explaining how contributors can use this central space for general queries, feature requests, and announcements.
+
+        <Aside type="tip">
+        You can refer to [today's intermediate challenge](#intermediate-build-engagement-in-discussions) for tips on organizing categories and seeding discussions. The same principles apply to a centralized discussion space.
+        </Aside>
+
+    1. **Host engaging events.**
+
+        - Schedule regular community events like virtual meetups, coding sessions, <abbr title="Ask Me Anything">AMA</abbr> or Q&A sessions to foster collaboration and build relationships. Use platforms like [Discord](https://discord.com/), [Mattermost](https://mattermost.com/), or [Slack](https://slack.com) to host these events and encourage participation.
+
+        - Start polls in your discussions to gather community input on features, priorities, or upcoming changes. For example, ask:
+        
+          > Which feature should we prioritize next?
+
+    1. **Create guidelines for collaboration.**
+
+        - Write clear and accessible guidelines for effective communication within your community. Include expectations for behavior, how to raise issues, and how to participate in discussions. These must align with your project's Code of Conduct, and should be referenced in your welcome posts in all communication platforms.
+
+        - Document best practices for using discussions across repositories. Share tips for keeping threads organized, tagging discussions, and resolving them efficiently.
+
+    </Steps>
+
+1. **Strengthen cross-platform communication.**
+
+    Collaboration often extends beyond GitHub, so it's essential to integrate tools across platforms to ensure that contributors can connect seamlessly, especially if your community starts to grow a lot.
+
+    GitHub Discussions are more like a forum, so you may want to integrate them with your chat platform or other communication tools.
+
+    <Steps>
+
+    1. **Set up a dedicated communication platform.**
+
+        - Create a community space on a platform like [Discord](https://discord.com/), [Mattermost](https://mattermost.com/), or [Slack](https://slack.com) to facilitate real-time discussions, announcements, and collaboration.
+
+        - Organize channels or categories based on topics, projects, or events to keep conversations focused.
+
+        - Set up clear roles and permissions to manage access.
+
+        - Use feedback from the community to refine the platform's structure and features.
+
+    1. **Integrate tools across platforms.**
+
+        - Use integrations like [Zapier](https://zapier.com/), or webhooks to sync activity from your source code platform (e.g., GitHub) to your communication platform.
+
+        - Set up notifications for new issues, pull requests, or discussions so that contributors can stay informed about project updates.
+
+    1. **Establish moderation practices.**
+
+        - Write moderation guidelines and ensure your moderators have the tools to keep the environment safe, inclusive, welcoming, and productive. These must reflect your project's Code of Conduct.
+
+        - Train them on how to handle conflicts, enforce community guidelines, and support contributors.
+
+        - Utilize bots to enforce rules or assist with moderation tasks.
+
+    </Steps>
+
+1. **Automate community management.**
+
+    Streamlining routine tasks can help maintain a healthy community without overwhelming maintainers. By automating responses and status updates, you can ensure that contributors receive timely feedback and stay informed about the project's progress.
+
+    <Steps>
+
+    1. **Implement welcome messages.**
+
+        - Use GitHub Actions or other automation tools to send welcome messages to new contributors when they open their first issue or pull request.
+
+        - Send congratulations messages when a contributor's pull request is merged by using webhooks so that the message is sent automatically to external platforms.
+
+        - Include links to important resources like your contribution guidelines, discussions space, or FAQs.
+
+    1. **Automate routine responses.**
+
+        - Implement notifications for new issues and PRs in relevant channels (e.g., a specific GitHub Discussions category or a Discord channel).
+
+        - Use chatbots or automated responses in your communication platforms to answer frequently asked questions or direct users to the right resources.
+
+    1. **Enable status updates.**
+
+        - Use an automation tool to post regular updates about project milestones or development progress. GitHub Actions and cron jobs can help push these updates to your Discussions or communication platform.
+
+    </Steps>
+
+</Steps>
+
+By fostering collaboration through better communication, automation, and integration, you are building a community that is inclusive, productive, and engaged. These steps help reduce bottlenecks, encourage contributors to share ideas, and make collaboration enjoyable for everyone involved. Remember, a well-managed community isn't just about the tools but also about creating an environment where everyone feels valued.
+
+**Congratulations on completing this challenge!** Your efforts will create lasting value for your Open Source project and help contributors feel more connected and motivated. Keep the momentum going by regularly revisiting and refining these practices.
+
+<h3>Success Criteria</h3>
+
+- ✓ Centralized discussions set up for cross-repository collaboration.
+- ✓ At least one community event scheduled or hosted.
+- ✓ Guidelines for collaboration documented and shared.
+- ✓ Communication platform integrated with GitHub Discussions.
+- ✓ Automation tools implemented for community management.
+
+<hr />
+
+<Lore>
+The table is no longer bare but alive with the signs of connection—sketches, notes, and tools left by those who have gathered here. The gem at its center now radiates a warm, steady glow, illuminating the space with a sense of collective purpose.
+
+The _Herald of Dialogue_ steps forward, their expression serene as they survey the scene.
+
+> This table now holds the spirit of collaboration,
+
+they say, running their hand along its surface.
+
+> What was once a solitary space has become a vibrant hub, where ideas intertwine and creativity thrives.
+
+They turn to you with a knowing smile.
+
+> This is the heart of any endeavor—a place where individuals come together to create something greater than themselves. Remember, true collaboration is not about one voice leading but about all voices finding harmony.
+
+As you leave the table, the hum of activity behind you assures you that this place will continue to inspire unity and shared creation.
+
+<LoreSeparator />
+
+<h3>The Herald's Message</h3>
+
+> Every thriving community is built upon the strength of its connection. By opening and refining your paths, you create spaces where ideas flourish, problems are solved, and relationships are forged. Remember, the more voices that join, the stronger your project becomes.
+
+Open the lines, traveller, and let the voices guide your project to new heights.
+</Lore>
