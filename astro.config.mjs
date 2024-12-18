@@ -177,6 +177,10 @@ export default defineConfig({
                   label: 'Day 17: The Voices of the Commons',
                   slug: 'advent/week-3/day-17'
                 },
+                {
+                  label: 'Day 18: The Hall of Honor',
+                  slug: 'advent/week-3/day-18'
+                },
               ]
             },
           ],

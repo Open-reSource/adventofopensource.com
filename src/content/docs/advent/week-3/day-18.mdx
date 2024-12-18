@@ -1,0 +1,497 @@
+---
+title: "Day 18: The Hall of Honor"
+description: "In the Hall of Honor, the Chronicler of Valor reveals a tapestry of glowing threads, each representing an artisan's contribution. Recognition strengthens these bonds, ensuring the stories shine and the community thrives."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day18Snowflake01 from '../../../../assets/days/day-18-snowflake-01.png';
+import day18Snowball01 from '../../../../assets/days/day-18-snowball-01.png';
+import day18Ice01 from '../../../../assets/days/day-18-ice-01.png';
+
+<Lore type="logo">
+<h2>The Tapestry of Tribute</h2>
+
+The _Keeper_ leads you into the _Hall of Honor_, a vast chamber where golden threads shimmer in an intricate tapestry stretching from floor to ceiling. Each thread glows faintly, resonating with a quiet, luminous energy. At the center of the hall stands the _Chronicler of Valor_, a figure draped in robes adorned with intricate patterns of light, holding a spindle that seems to weave the air itself into fabric.
+
+> Every thread tells a story,
+
+the _Chronicler_ explains, gesturing toward the tapestry.
+
+> A tale of effort, creativity, and dedication woven into the grand design. Each one strengthens the whole.
+
+The _Chronicler_'s expression darkens for a moment as they gesture toward a corner where a faint shadow lingers, threads dulled and faded.
+
+> But without care, recognition wanes, and the light of these stories dims. The threads unravel, and the hall loses its brilliance.
+
+They offer you a small, radiant spool of golden thread.
+
+> Strengthen this tapestry. Illuminate the stories that deserve to shine. In honoring them, you weave the bonds that hold this hall together.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-add-a-contributors-list)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-automate-contributor-recognition)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-scale-recognition-across-projects)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Add a Contributors List
+
+<hr />
+
+<Lore type="snowflake">
+In a quiet corner of the _Hall of Honor_, the _Chronicler of Valor_ kneels before a blank section of the grand tapestry. They place a needle and spool of glowing thread into your hands, their gaze thoughtful yet hopeful.
+
+> This space awaits the stories yet untold,
+
+they say softly, running a hand along the smooth, empty fabric.
+
+> Each thread you add will carry with it the weight of dedication and effort, ensuring no story is forgotten.
+
+They guide your hand to the tapestry, encouraging you to make the first stitch.
+
+> Begin here. Let this space become a tribute to those who have left their mark, a place where their contributions can forever shine.
+
+The _Chronicler_ steps back, their presence calm but reassuring, as if the act of beginning holds all the promise the hall requires.
+</Lore>
+
+<hr />
+
+**Creating a contributors list is a simple yet powerful practice in the Open Source culture.** By publicly recognizing contributors—whether they've contributed code, documentation, design, or community support—you foster a sense of belonging and appreciation. Acknowledging their work helps sustain engagement and can motivate others to participate in your project. It's a powerful tool to create a vibrant and collaborative community.
+
+**Today's challenge is to set up a contributors list in your repository.** You'll explore built-in features provided by GitHub and learn how to create custom contributors lists that can include a diverse range of contributions. Highlighting all contributions—both technical and non-technical—makes your project more welcoming and inclusive.
+
+<Steps>
+
+1. **Check GitHub's built-in contributors feature.**
+
+    For displaying contributors, add `/graphs/contributors` to your repository URL.
+
+    For example, if your repository URL is `https://github.com/yourname/yourproject`, visit `https://github.com/yourname/yourproject/graphs/contributors`.
+
+    - This will display a list of contributors ranked by the number of commits.
+    - You can also access this feature via the _Insights_ tab of your repository.
+
+    While this is a useful starting point, GitHub's built-in feature may not recognize all types of contributions, such as co-authored commits or non-code contributions (e.g., documentation, design, or issue triage).
+
+    <ContentImage src={day18Snowflake01} alt="" />
+
+    <Aside type="tip" title="Not only contributions">
+    In the _Insights_ tab, you'll also find traffic stats, issue activity, and pull request data—valuable tools for tracking the health of your project.
+    </Aside>
+
+1. **Add a custom contributors list.**
+
+    If GitHub's built-in feature isn't enough to cover all contributions you want to recognize, there are two other simple manual ways to add a contributors list:
+
+    <Steps>
+
+    1. **Add a section in your README.**
+    
+        Create a simple _Contributors_ section in your README file. You can list contributors' usernames alongside their roles or contributions. Here's an example:
+
+        ```md title="README.md"
+        ## Contributors
+
+        This project exists thanks to all the amazing people who contribute. 💖
+        Below is a list of contributors, along with their contributions.
+
+        - [@username](https://github.com/username): Code, Documentation
+        - [@anotheruser](https://github.com/anotheruser): Design, Testing
+        ```
+
+    1. **Create a `CONTRIBUTORS.md` file.**
+
+        If you prefer to keep your README clean, you can create a separate `CONTRIBUTORS.md` file to list all contributors and their contributions. This file can be more detailed than what you'd put in the README. You can include names, roles, links to profiles, and even emojis or custom formatting to make it engaging. For example:
+
+        ```md title="CONTRIBUTORS.md"
+        # Contributors
+
+        This project exists thanks to all the amazing people who contribute. 💖
+        Below is a list of contributors, along with their contributions.
+
+        - [@username](https://github.com/username)
+          - Contributions: 🛠️ Code, 📝 Documentation
+          - Role: Maintainer
+          - Location: Earth
+          - Bio: A short bio about the contributor
+          - Social: [Twitter](https://twitter.com/username), [LinkedIn](https://linkedin.com/in/username)
+        - [@anotheruser](https://github.com/anotheruser)
+          - Contributions: 🎨 Design, 🐞 Bug Reports
+          - Role: Designer
+          - Location: Mars
+          - Bio: A short bio about the contributor
+        ```
+
+        Once you create this file, make sure to link to it in your README to direct visitors to the full list of contributors.
+
+        ```md title="README.md"
+        ## Contributors
+
+        Learn more about our contributors [here](CONTRIBUTORS.md).
+        ```
+
+    1. **Check tools and plugins.**
+
+        If you're looking for more automated ways to manage contributors, there are tools like [All Contributors](https://allcontributors.org/) that can help you recognize all types of contributions and automate the process.
+
+    </Steps>
+
+</Steps>
+
+<Aside type="tip" title="Contributions go beyond code">
+We tend to think of contributors as only those who write code, but there are many ways to contribute to a project.
+
+**Documentation, design, testing, and even just helping others in the community are all valuable contributions.**
+
+Make sure to recognize all types of contributions in your list.
+</Aside>
+
+<h3>Success Criteria</h3>
+
+- ✓ Checked GitHub's built-in contributors feature.
+- ✓ (Optional) Added a _Contributors_ section in your README.
+- ✓ (Optional) Created and linke a `CONTRIBUTORS.md` file.
+- ✓ (Optional) Explored tools like All Contributors for more automated recognition.
+
+<hr />
+
+<Lore>
+The once-empty section of the tapestry now glimmers with vibrant threads, each one unique yet interconnected. The _Chronicler of Valor_ steps forward, their expression warm as they take in the new addition.
+
+> Look at what you've brought to life,
+
+they say, their voice carrying a quiet reverence.
+
+> These threads now glow with pride, woven into the fabric of this hall's story.
+
+The _Chronicler_ places a hand over their heart, bowing slightly in gratitude.
+
+> With each name, each thread, this tapestry grows stronger, its light reaching ever further. Remember, to honor is to preserve, and through preservation, the hall will forever shine.
+
+As you step back, the tapestry radiates brighter than ever, filling the chamber with a sense of unity and shared purpose.
+
+<LoreSeparator />
+
+<h3>The Chronicler's Wisdom</h3>
+
+> A thriving artifact is built on the shoulders of its artisans. By recognizing and rewarding their efforts, you cultivate a spirit of collaboration and gratitude that strengthens the entire community. Remember, the more threads in the tapestry, the more vibrant the artifact becomes.
+
+Celebrate the efforts of the artisans, traveller, and watch your community flourish.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Automate Contributor Recognition
+
+<hr />
+
+<Lore type="snowball">
+In the _Hall of Honor_, the _Chronicler of Valor_ approaches a set of intricate gears and levers embedded into the base of the tapestry. The mechanisms hum faintly, their purpose unclear until the _Chronicler_ speaks.
+
+> The tapestry grows ever larger,
+
+they muse, their fingers grazing the levers.
+
+> Yet, for every thread you weave, another awaits acknowledgment. The work of honoring must be unending, but it need not be exhausting.
+
+They turn to you, their gaze sharp with purpose, and gesture toward the gears.
+
+> These tools hold the answer. With them, the threads can weave themselves, each one finding its rightful place in the fabric. But only if you calibrate them with care.
+
+The _Chronicler_'s hand rests lightly on yours, urging you to set the first gear in motion.
+
+> Make this hall a place where no story is overlooked, where every effort is remembered without delay. Let the tapestry flourish on its own.
+
+</Lore>
+
+<hr />
+
+**Recognizing contributors is a powerful way to show appreciation for their efforts and foster a sense of belonging in your Open Source community.** Whether it's code contributions, documentation, design, or translations, acknowledging all types of contributions creates an inclusive environment that encourages further participation. Automating the recognition process ensures that every contributor is acknowledged accurately and consistently, saving time while enhancing community morale.
+
+**Today's challenge is to implement an automated contributor recognition system for your Open Source project.** By setting up tools like the [All Contributors](https://allcontributors.org/) bot or creating workflows to acknowledge contributors, you'll ensure that their efforts are celebrated visibly and meaningfully. This challenge will also explore how to automate thank-you messages for new contributors, making their experience positive and welcoming right from the start.
+
+<Steps>
+
+1. **Add an automated contributor recognition system.**
+
+    Let's explore how you can automate the process of recognizing contributors in your project.
+
+    <Steps>
+
+    1. **Explore and set up an automated tool.**
+
+        Several tools can help you automate the recognition of all types of contributions. One popular tool is [All Contributors](https://allcontributors.org/), which provides a bot that can add contributors to your README and generate a list of contributors based on their contributions.
+
+        This challenge will focus on setting up All Contributors, but feel free to explore other tools that suit your project's needs.
+
+    1. **Set up All Contributors.**
+
+        Install the All Contributors bot in your repository by following the [All Contributors installation instructions](https://allcontributors.org/docs/bot/installation):
+          1. Install the AllContributors GitHub App
+          2. Configure your repositories
+          3. Update your `README.md`
+          4. Update your contributing guidelines
+    
+    1. **Test the automated recognition.**
+
+        Read the [All Contributors documentation](https://allcontributors.org/docs/bot/usage) to understand how the bot recognizes different types of contributions. Make a test contribution to your project to see if the automated recognition system works as expected. This could be a code change, documentation update, or any other contribution type you want to recognize.
+
+        Comment on an issue, make a pull request, or contribute in any way you see fit to trigger the recognition process.
+
+    </Steps>
+
+1. **Automate thank-you messages.**
+
+    Acknowledging contributors with a thank-you message when a pull request is merged is a simple yet powerful way to make them feel welcome and appreciated.
+
+    One solution is to use GitHub Actions with a custom workflow like the following:
+
+    ```yaml title=".github/workflows/thank-you.yml"
+    name: 'Thank Contributor'
+    on:
+      pull_request:
+        types: [closed]
+
+    jobs:
+      thank-you:
+        if: ${{ github.event.pull_request.merged == true }}
+        runs-on: ubuntu-latest
+        steps:
+          - name: Send Thank You Comment
+            uses: actions/github-script@v7
+            with:
+              script: |
+                github.rest.issues.createComment({
+                  issue_number: context.payload.pull_request.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: "Thank you for your contribution, @${{ github.actor }}! 🎉"
+                })
+    ```
+
+    This action will post a thank-you message in the pull request when it's merged.
+
+    <ContentImage src={day18Snowball01} alt="" />
+
+    Feel free to customize the message to suit your project's tone and style, or set up different actions for different types of contributions, reduce it the new contributors, etc.
+
+    You could go further by calling a webhook to send a message in your community chat or by sending a personalized email to the contributor.
+
+1. **Create a recognition workflow.**
+
+    To ensure that all contributions are recognized consistently, create a workflow that automates the process of adding contributors to your project's list. This could involve setting up a regular review of new contributions, updating the contributors list, and sending thank-you messages to contributors.
+
+    <Steps>
+
+    1. **Highlight key contributors regularly.**
+
+        - Set up a workflow that generates a periodic summary (e.g., weekly or monthly) of top contributors. GitHub Insights or custom scripts can help analyze contribution data and create these summaries.
+        - Share these summaries in your repository's Discussions, on your website, or in your community platform.
+
+    1. **Add contribution badges.**
+
+        - Use a tool like [Shields.io](https://shields.io/) to create contribution badges for your project (e.g., "20 contributors").
+        - Add these badges to your README or your project website to showcase the community's growth and engagement.
+
+    </Steps>
+
+</Steps>
+
+**By automating contributor recognition, you are not only saving time but also creating a culture of appreciation and inclusivity.** Recognized contributors are more likely to stay engaged and advocate for your project. Beyond code, your system highlights the diverse efforts of your community, from documentation to translations and beyond.
+
+**Congratulations on completing this challenge!** You've taken a significant step toward fostering a welcoming and collaborative Open Source environment. Keep building on this momentum to deepen your community's engagement and celebrate every effort that drives your project forward.
+
+<h3>Success Criteria</h3>
+
+- ✓ Installed and configured the All Contributors bot (or similar tool).
+- ✓ Set up a thank-you message workflow for new contributors.
+- ✓ (Optional) Created a recognition workflow to highlight key contributors regularly.
+
+<hr />
+
+<Lore>
+As the gears begin to turn, the tapestry comes alive with shimmering movement. Threads weave themselves seamlessly, new sections forming as if guided by an unseen hand. The _Chronicler of Valor_ watches with satisfaction, their expression softening as they turn to you.
+
+> Look at how it grows,
+
+they say, their voice carrying a note of wonder.
+
+> Now, the tapestry will never falter, never lose the stories it was meant to hold. You have given it a life of its own, a way to honor without end.
+
+They place a hand on your shoulder, their gratitude palpable.
+
+> In building this, you have ensured that the brilliance of every thread, every story, will never fade.
+
+The hall glows brighter, its harmony undisturbed, its purpose fulfilled.
+
+<LoreSeparator />
+
+<h3>The Chronicler's Wisdom</h3>
+
+> A thriving artifact is built on the shoulders of its artisans. By recognizing and rewarding their efforts, you cultivate a spirit of collaboration and gratitude that strengthens the entire community. Remember, the more threads in the tapestry, the more vibrant the artifact becomes.
+
+Celebrate the efforts of the artisans, traveller, and watch your community flourish.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Scale Recognition Across Projects
+
+<Lore type="ice">
+The _Chronicler of Valor_ leads you to an arched doorway at the edge of the _Hall of Honor_. Beyond, countless smaller chambers branch out, each filled with its own tapestry, some vibrant and others dim. The _Chronicler_'s voice carries a solemn tone as they gesture to the vast expanse.
+
+> Each hall, each chamber, tells a story of its own. Yet, how many tales remain untold, waiting to be interwoven?
+
+They place a small, radiant compass in your hand, its needle spinning wildly.
+
+> This compass holds the key to connecting them all. With it, you can ensure no thread, no hall, no story is left isolated. Together, they will form a symphony of recognition. But the path is not yet clear—it is for you to chart.
+
+The _Chronicler_ steps back, their gaze steady.
+
+> Begin here. Let this compass guide you as you build the bridges that bind these stories together.
+
+</Lore>
+
+<hr />
+
+**Managing multiple repositories within an organization or a personal portfolio can be rewarding but also challenging when it comes to recognizing contributors consistently.** Contributors might work across several projects, and their efforts may go unnoticed if there's no centralized or standardized recognition system.
+
+Scaling contributor recognition across repositories ensures that every contribution, whether in code, design, documentation, or testing, is celebrated and acknowledged. By creating a unified system, you can foster a sense of community and motivate contributors to stay engaged.
+
+**Today's challenge is to establish a scalable recognition system for contributors across multiple repositories.** You'll implement tools and practices to centralize contributor recognition, introduce metrics for tracking contributions, and explore advanced ways to reward and acknowledge efforts, such as creating a hall-of-fame page or including contributors in release notes.
+
+This challenge will help you build a cohesive recognition system that works seamlessly across all your repositories, whether they belong to an organization or are part of your personal projects.
+
+<Steps>
+
+1. **Standardize contributor recognition.**
+
+    The first step in scaling recognition is to define a consistent set of categories for contributions and establish a shared system for recognizing them across all repositories. This ensures that contributors are acknowledged for all types of contributions, not just code.
+
+    <Steps>
+
+    1. **Define contribution categories.**
+
+        Identify and standardize the types of contributions to recognize across all repositories. These could include code, documentation, translations, design, testing, or even community support.
+
+        Use the [All Contributors specification](https://allcontributors.org/docs/specification) as a starting point for defining categories and emojis for various types of contributions.
+
+    1. **Create a centralized recognition page.**
+
+        Build a shared page or dashboard (e.g., a [GitHub Pages](https://pages.github.com/) site, a [Notion](https://www.notion.so) page, or a dedicated section on your website) to list and celebrate contributors from all repositories.
+
+        Use tools like [Astro](https://astro.build/), [Docusaurus](https://docusaurus.io/), or [Jekyll](https://jekyllrb.com/) to automate the generation of this page, pulling data from individual repositories.
+
+    1. **Automate updates across repositories.**
+
+        Use GitHub Actions to collect and update contributor data. For example, write a script to aggregate contributors from multiple `README.md` or `CONTRIBUTORS.md` files into one central repository.
+
+        You can use tools like [Octokit](https://github.com/octokit/rest.js/) to interact with GitHub's API and retrieve contributor information programmatically.
+
+    </Steps>
+
+1. **Add advanced recognition features.**
+
+    Then, enhance your recognition system with advanced features that go beyond the basics. These features can help you highlight top contributors, introduce reward systems, and track contributions more effectively.
+
+    <Steps>
+
+    1. **Build a hall-of-fame page.**
+
+        Create a "Hall of Fame" page to spotlight contributors who have made significant or long-term contributions across multiple repositories.
+
+        Highlight their contributions with badges or titles (e.g., "Top contributor", "Documentation champion"). You can use [Shields.io](https://shields.io/) to create custom badges. These badges can also be synchronized with badges in tools like Discord where the community gathers.
+
+        <Aside type="tip" title="Astro Badges">
+        Check out the [Astro Badges](https://astro.badg.es/) service that creates custom Astro contribution badges.
+
+        <ContentImage src={day18Ice01} alt="" />
+        </Aside>
+
+    1. **Feature contributors in release notes.**
+
+        Automate the inclusion of contributors in release notes. Use GitHub Actions or a custom script to parse merged pull requests, identify contributors, and include them in your changelog or release notes.
+
+        Tools like [Release Drafter](https://github.com/release-drafter/release-drafter) can help automate this process.
+
+    1. **Introduce reward systems.**
+
+        Create a reward program with achievement badges, contributor levels, or even perks like special roles in your community. For example, offer access to a private Slack or Discord channel for frequent contributors or recognition on your website.
+
+        Ensure the rewards are meaningful and accessible, and clearly define the criteria for earning them.
+
+    </Steps>
+
+1. **Create contribution metrics.**
+
+    Finally, establish key metrics to track contributions across repositories and aggregate them into a single dashboard. These metrics can help you understand the health of your community, identify top contributors, and recognize emerging talent.
+
+    <Steps>
+
+    1. **Define key metrics for contributions.**
+
+        Decide how you'll measure contributions across repositories. Metrics could include the number of pull requests merged, issues closed, documentation pages updated, or other non-code contributions.
+
+        Use GitHub Insights to track activity manually in each repository.
+
+    1. **Aggregate metrics across projects.**
+
+        Use tools like [GraphQL GitHub API](https://docs.github.com/graphql) to aggregate metrics from all repositories into a single dashboard.
+        
+        Then, present these metrics visually using a tool like [Grafana](https://grafana.com/) or embed them on your central recognition page.
+
+    1. **Set up automated notifications.**
+
+        Use GitHub Actions or tools like [Zapier](https://zapier.com/) to notify contributors when they reach milestones, such as "10 PRs merged" or "First documentation update".
+
+    </Steps>
+
+</Steps>
+
+**By scaling contributor recognition across projects, you create an ecosystem where contributors feel valued and inspired to participate further.** A centralized recognition system not only highlights individual efforts but also showcases the vibrancy of your community to potential collaborators. Through metrics, automation, and meaningful rewards, you've built a scalable solution to acknowledge and celebrate contributions consistently across repositories.
+
+**Congratulations on completing this advanced challenge!** You've taken an important step in making your multi-repo setup more welcoming and inclusive. Keep building on this foundation to expand your contributor base and strengthen the connections within your community.**
+
+<h3>Success Criteria</h3>
+
+- ✓ Standardized contribution categories across repositories.
+- ✓ Created a centralized recognition page or dashboard.
+- ✓ Automated updates of contributor data across repositories.
+- ✓ Built advanced recognition features like a hall-of-fame page or contributor rewards.
+- ✓ Defined key metrics for contributions and aggregated them across projects.
+- ✓ Set up automated notifications for contributors reaching milestones.
+
+<hr />
+
+<Lore>
+As the compass glows softly in your hand, the once-separate chambers light up, their tapestries now interconnected by shimmering threads of gold. The _Chronicler of Valor_ looks on, their expression one of deep fulfillment.
+
+> You have done it,
+
+they say, their voice filled with quiet awe.
+
+> These halls no longer stand apart; they sing together as one. Every thread now strengthens the whole, every story now shines brighter in unity.
+
+They place a hand over their heart, bowing slightly.
+
+> You have brought a timeless harmony to this place, one that will echo far beyond its walls. May its light guide others as it has guided you.
+
+The interconnected halls radiate with an enduring brilliance, a testament to the power of unity and recognition.
+
+<LoreSeparator />
+
+<h3>The Chronicler's Wisdom</h3>
+
+> A thriving artifact is built on the shoulders of its artisans. By recognizing and rewarding their efforts, you cultivate a spirit of collaboration and gratitude that strengthens the entire community. Remember, the more threads in the tapestry, the more vibrant the artifact becomes.
+
+Celebrate the efforts of the artisans, traveller, and watch your community flourish.
+</Lore>
