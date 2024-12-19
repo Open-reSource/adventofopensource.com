@@ -181,6 +181,10 @@ export default defineConfig({
                   label: 'Day 18: The Hall of Honor',
                   slug: 'advent/week-3/day-18'
                 },
+                {
+                  label: 'Day 19: The Beacon of Knowledge',
+                  slug: 'advent/week-3/day-19'
+                },
               ]
             },
           ],

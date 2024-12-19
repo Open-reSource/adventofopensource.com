@@ -1,0 +1,500 @@
+---
+title: "Day 19: The Beacon of Knowledge"
+description: "Explore the Evergrowing Grove, where stories thrive and the Architect of Outreach ensures their light shines far, banishing the Fog of Obscurity."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day19Snowflake01 from '../../../../assets/days/day-19-snowflake-01.png';
+import day19Snowflake02 from '../../../../assets/days/day-19-snowflake-02.png';
+import day19Snowflake03 from '../../../../assets/days/day-19-snowflake-03.png';
+
+<Lore type="logo">
+<h2>The Lantern of Discovery</h2>
+
+As the _Keeper_ unveils the next chapter of your journey, you step into the _Evergrowing Grove_, a mystical forest alive with whispers of enduring legacies. Each tree here tells a tale of resilience, its branches reaching skyward as roots deepen into the soil. This sacred place is where growth and continuity merge, breathing life into endeavors destined to flourish.
+
+The _Keeper_ leads you to the _Beacon of Knowledge_, a radiant lighthouse standing tall amidst the trees. At its summit stands the _Architect of Outreach_, a steadfast guide who ensures that the brilliance of each story shines far and wide, unclouded by the mists that might hide it from view.
+
+The _Architect_ speaks of the _Fog of Obscurity_, a shadow that creeps in when the essence of a story is left untold, its light dimmed by neglect. To banish this fog, one must kindle a flame bright enough to pierce the darkness, casting its glow for all to see.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-enable-github-pages)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-create-and-deploy-custom-documentation)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-scale-documentation-for-multi-repo-setups)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Enable GitHub Pages
+
+<hr />
+
+<Lore type="snowflake">
+The _Architect of Outreach_ beckons you closer to the base of the _Beacon of Knowledge_. A small lantern rests there, unlit but full of potential.
+
+> Every great light begins with a spark,
+
+the _Architect_ says, handing you a flint and steel.
+
+> This lantern may seem small, but it holds the power to guide others through the shadows. Strike the first spark, and watch it grow. With this flame, you can ignite a beacon that will illuminate paths yet undiscovered.
+
+Their voice carries a steady assurance, urging you onward.
+
+> Remember, it is not the size of the light that matters, but its ability to reach those who seek it. Begin here, and let the glow spread.
+
+</Lore>
+
+<hr />
+
+**In Open Source, documentation is often as important as the code itself.** A well-maintained and easily accessible website can help users understand your project, contribute effectively, and get started quickly. Hosting your documentation on a website makes it more professional and accessible, creating a better experience for your community.
+
+**Today's challenge is to create a simple documentation website using [GitHub Pages](https://pages.github.com/).** By the end of this challenge, even if you're not a web developer, you'll have a live site hosted directly from your repository. We'll guide you through creating a basic site structure using Markdown and explore how you can expand it later with HTML or additional themes.
+
+Other Git hosting services like GitLab and Bitbucket also offer similar features to host static websites. If you're using one of these services, you can follow similar steps to set up your project's website.
+
+<Steps>
+
+1. **Create a `docs` directory.**
+
+    In your project's repository, start by creating a new directory named `docs`. This directory will contain all the files for your website. Use the following commands:
+
+    ```sh
+    mkdir docs
+    touch docs/.gitkeep
+    ```
+
+    Commit and push the new directory to your repository.
+
+    ```sh
+    git add docs
+    git commit -m "chore: create docs directory for GitHub Pages"
+    git push origin main
+    ```
+
+1. **Enable GitHub Pages**.
+
+    <Steps>
+
+    1. Go to your repository on GitHub, and click the _Settings_ tab.
+
+    1. In the left sidebar, select _Pages_.
+
+    1. Under _Source_, let the _Deploy from a branch_ option, and select the _main_ branch to use for your website.
+
+    1. In the directory field, select `/docs`, and click _Save_.
+
+    1. GitHub Pages will now build your website from the `docs` directory on the `main` branch.
+
+        It may take a few minutes for the site to become available.
+    
+        <ContentImage src={day19Snowflake01} alt="" />
+
+        Then, you can access your website at `https://<username>.github.io/<repository>`.
+
+    </Steps>
+
+    Congratulations! Your project's website is now live on GitHub Pages. But it's still empty and shows a 404 error.
+
+    <ContentImage src={day19Snowflake02} alt="" />
+
+1. **Add your website in the _About_ section.**
+
+    Update your repository's _About_ section by adding the URL of your site in the _Website_ field. This will make it easier for visitors to find your project's website.
+
+    Enter the URL of your project's website: `https://<username>.github.io/<repository>`.
+
+1. **Create basic homepage**.
+
+    <Steps>
+
+    1. Create a new `docs/index.md` file with the following content:
+
+        ```md title="docs/index.md"
+        # Welcome to My Project
+
+        This project helps you [brief description of what it does].
+
+        ## Documentation
+
+        - [Installation Guide](installation.md)
+        - [Quick Start Guide](quickstart.md)
+        ```
+
+        Commit and push the changes to your repository.
+
+        ```sh
+        git add docs/index.md
+        git commit -m "docs: add homepage content"
+        git push origin main 
+        ```
+
+    1. Visit your site again at `https://<username>.github.io/<repository>`. The content from `index.md` should now appear as your homepage.
+
+        <ContentImage src={day19Snowflake03} alt="" />
+
+    1. Don't forget to remove the `docs/.gitkeep` file. You won't need it anymore.
+
+    </Steps>
+
+1. **Add the additional pages.**
+
+    To expand your site, create `docs/installation.md` and `docs/quickstart.md` files.
+
+1. You got how it works! Now, you can add more content to your website, like a landing page, usage examples, or a contribution guide.
+
+</Steps>
+
+<Aside title="I create Markdown files and I got a website?">
+GitHub Pages uses [Jekyll](https://jekyllrb.com/), a static site generator, to convert Markdown files to HTML. This allows your `index.md` and other `.md` files to be displayed as fully styled web pages with minimal effort.
+
+You don't need to configure Jekyll manually—GitHub handles everything.
+</Aside>
+
+<Aside type="tip" title="Add a theme">
+It won't be covered in this challenge, but you can [add a theme to your GitHub Pages site](https://docs.github.com/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll).
+</Aside>
+
+You can have more control over your website by using HTML files. If you're comfortable with HTML, you can create `.html` files in the `docs` directory and link them together instead of having an `index.md` file.
+
+<Steps>
+
+1. For that, you'll need to create an `index.html` file in the `docs` directory. This file will be the entry point of your website:
+
+    ```html title="docs/index.html"
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1>Welcome to My Project</h1>
+        <p>[Project description]</p>
+        <nav>
+            <ul>
+                <li><a href="installation.html">Installation Guide</a></li>
+                <li><a href="quickstart.html">Quick Start</a></li>
+            </ul>
+        </nav>
+    </body>
+    </html>
+    ```
+
+2. Repeat the same steps as before to create the `installation.html` and `quickstart.html` files.
+
+</Steps>
+
+**Creating a documentation site is an essential step toward improving your project's accessibility and usability.** Whether you're building a community around your work or simply organizing your documentation better, having a live site adds professionalism and visibility. This setup can be extended later with themes, additional pages, or even custom designs as your project grows.
+
+Take some time to explore the features GitHub Pages offers and think about what additional content might benefit your users. For example, consider adding a "Contributing" page to guide potential contributors.
+
+<h3>Success Criteria</h3>
+
+- ✓ The project's website is accessible at `https://<username>.github.io/<repository>`.
+- ✓ The website includes a landing page, installation guide, and quick start guide.
+- ✓ The website is mentioned in the project's _About_ section on GitHub.
+
+<hr />
+
+<Lore>
+The lantern springs to life, its flame steady and warm. As its glow rises, it climbs the heights of the _Beacon of Knowledge_, illuminating the grove with a soft, golden light. The _Architect of Outreach_ nods with approval, their eyes reflecting the brightness.
+
+> See how the light reaches beyond the trees?
+
+they say, their voice filled with quiet pride.
+
+> It may begin as a simple glow, but it holds the promise of something far greater. This flame is yours to nurture, its reach limited only by the care you give it.
+
+They turn toward the grove, where the light begins to reflect in every corner.
+
+> You've taken the first step to ensure your story shines clearly, unhindered by the fog. Let this be the beginning of something lasting.
+
+The lantern glows ever brighter, a testament to the power of a single spark to light the way.
+
+<LoreSeparator />
+
+<h3>The Architect's Vision</h3>
+
+> An artifact's presence is its beacon to the world, guiding villagers and artisans alike through its many facets. By creating an inviting and engaging space, you ensure your artifact remains accessible and impactful. Remember, a well-lit path invites more travellers.
+
+Light the way for your artifact, traveller, and let the _Beacon of Knowledge_ shine brightly.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Create and Deploy Custom Documentation
+
+<hr />
+
+<Lore type="snowball">
+The _Architect of Outreach_ leads you deeper into the _Evergrowing Grove_, where a small alcove nestled between ancient trees holds a collection of intricate scrolls. Each scroll is carefully inscribed with symbols and sketches, yet they lie scattered, their meaning unclear.
+
+> These are the stories that long to be told,
+
+the _Architect_ says, gesturing toward the pile.
+
+> They hold the wisdom of your craft, waiting to be shared with clarity and purpose.
+
+They hand you a blank scroll and a quill that glimmers with a faint, silver light.
+
+> It is not enough for the knowledge to exist; it must be shaped and presented with intention. Create a map for others to follow, one that tells your story in a way no other can.
+
+The _Architect_'s tone is firm but encouraging.
+
+> The effort you put here will become the foundation of something lasting—your voice, your vision, a guide for those who seek to learn.
+
+</Lore>
+
+<hr />
+
+**Documentation is one of the most crucial aspects of any Open Source project, serving as a guide for contributors, users, and maintainers.** Well-organized and engaging documentation not only helps others understand how to use or contribute to your project but also signals that you take your project seriously.
+
+Creating a dedicated documentation site allows you to go beyond basic README files, providing a structured, professional presentation with additional features like search, tutorials, and API references.
+
+**Today's challenge is to create and deploy a custom documentation site for your project.** You'll use a static site generator to transform your documentation into an interactive website and learn how to host it for free on platforms like [GitHub Pages](https://pages.github.com/).
+
+Along the way, you'll explore advanced features such as adding search functionality, enhancing user experience with structured navigation, and configuring automated deployments to ensure your documentation stays up to date.
+
+<Steps>
+
+1. **Choose and set up a documentation framework.**
+
+    Creating a documentation site from scratch is possible, but heavily time-consuming. Instead, you can use a static site generator to streamline the process.
+
+    <Steps>
+
+    1. **Pick a static site generator**.
+
+        Select a static site generator based on your project's needs and your team's familiarity. Popular options include:
+
+        - [Astro](https://astro.build/): A modern static site generator that allows you to build faster websites with less JavaScript. Ideal for performance-focused projects.
+        - [Docusaurus](https://docusaurus.io/): A modern documentation framework that's easy to set up and maintain ideal built in React.
+        - [MkDocs](https://www.mkdocs.org/): A simple, Markdown-based documentation generator that's easy to configure and extend. Great for lightweight setups, especially with Python.
+        - [Jekyll](https://jekyllrb.com/): A powerful static site generator that's highly customizable and supports a wide range of themes and plugins. Especially if you're familiar with Ruby or want a built-in GitHub Pages support.
+        
+    1. **Set up a basic project.**
+
+        Follow the installation guide of your chosen framework. Most tools will require installing Node.js or Python.
+
+        Initialize your documentation project, and configure the project to match your branding. This includes:
+        - Adding a custom logo and favicon.
+        - Adding a custom theme or styling.
+        
+    1. **Create the content structure.**
+
+        Plan your documentation structure. Common sections include:
+
+        - **Introduction**: Overview of the project and its goals.
+        - **Getting started**: Installation instructions, quick start guides, and usage examples.
+        - **Contributing**: Guidelines for contributing to the project.
+        - **API reference**: Detailed documentation of the project's API.
+
+        Add example Markdown files to populate each section. You can use placeholder content for now.
+
+    </Steps>
+
+1. **Add advanced features.**
+
+    Enhance your documentation site with interactive features to improve user experience and engagement. Some ideas include:
+
+    - **Search functionality**: Add a search feature to improve usability. Most static site generators support this out of the box or via plugins.
+    - **Interactive code snippets**: Include live code examples that users can run directly on the site:
+      - For web projects, consider using tools like [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [CodeSandbox](https://codesandbox.io/).
+      - For API documentation, tools like [Swagger UI](https://swagger.io/tools/swagger-ui/).
+    - **Versioning**: Implement versioning for your documentation to support multiple releases.
+    - **SEO and analytics**: Optimize your site for search engines and track user behavior using tools like [Plausible](https://plausible.io/) or [Mattomo](https://matomo.org/).
+
+1. **Deploy the documentation site.**
+
+    Once your documentation site is ready, deploy it to a hosting platform.
+    
+    GitHub Pages is a popular choice for hosting static sites. You'll need to build your documentation site and then push the generated files to a `gh-pages` branch or the `docs` directory on the `main` branch. You could then access your site at `https://<username>.github.io/<repository>`.
+
+    Remember that you can automate the deployment process using GitHub Actions or other CI/CD tools.
+    
+    It is also possible to use services like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com).
+
+    Depending on the chosen static site generator, the deployment process may vary. Refer to the documentation of your chosen tool for specific instructions.
+
+</Steps>
+
+**By creating and deploying a custom documentation site, you've significantly improved the accessibility and professionalism of your project.** A well-structured documentation site benefits contributors and users alike, making it easier for them to understand, use, and contribute to your project. Including advanced features such as search, interactive examples, and automated deployments further enhances the usability and maintainability of your documentation.
+
+**Congratulations on completing this challenge!** This effort will make your project more appealing to new contributors and provide a better experience for your existing community. Great work!
+
+<h3>Success Criteria</h3>
+
+- ✓ The project's documentation is generated using a static site generator.
+- ✓ The site includes a well-structured documentation with multiple sections.
+- ✓ (Optional) Advanced features like search, interactive code snippets, versioning, and analytics are implemented.
+- ✓ The project's documentation site is accessible online.
+
+<hr />
+
+<Lore>
+The scattered scrolls now rest in harmony, carefully arranged and interwoven to form a tapestry of understanding. The _Architect of Outreach_ steps back, admiring the transformation.
+
+> Look at what you've built,
+
+they say, their voice filled with pride.
+
+> Every thread of this tapestry shines with the essence of your story, drawing others to its light. You've not only created a guide; you've invited others to walk alongside you, to share in your journey.
+
+They hand you a small seal, its design an elegant representation of the grove's interconnected roots and branches.
+
+> Use this seal to mark what you've created as uniquely yours, a signpost for others to follow.
+
+With the tapestry complete, its glow reaches beyond the grove, a beacon of wisdom and invitation.
+
+<LoreSeparator />
+
+<h3>The Architect's Vision</h3>
+
+> An artifact's presence is its beacon to the world, guiding villagers and artisans alike through its many facets. By creating an inviting and engaging space, you ensure your artifact remains accessible and impactful. Remember, a well-lit path invites more travellers.
+
+Light the way for your artifact, traveller, and let the _Beacon of Knowledge_ shine brightly.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Scale Documentation for Multi-Repo Setups
+
+<hr />
+
+<Lore type="ice">
+The _Architect of Outreach_ takes you to the highest vantage point in the _Evergrowing Grove_, where several streams converge into a single, powerful river.
+
+> Each of these streams flows from its own source,
+
+the _Architect_ explains, gesturing to the shimmering waters.
+
+> On their own, they nourish the land, but together, they create a force that shapes the very landscape.
+
+They hand you a small compass etched with delicate runes that shimmer faintly in the light.
+
+> This is the _Compass of Continuity_. It will help you align these streams, weaving their individual flows into a unified current. To guide others across vast landscapes, you must ensure that the many paths converge seamlessly, creating a journey that feels whole.
+
+The _Architect_'s gaze steadies on the horizon.
+
+> The task is great, but the reward is greater still: a legacy that binds many into one, a network of strength and clarity.
+
+</Lore>
+
+<hr />
+
+**As Open Source projects grow, managing documentation across multiple repositories can become challenging.** Users and contributors might struggle to find the right information, especially if resources are scattered or redundant. Centralizing documentation into a single, well-structured hub can streamline this process, providing a consistent experience while saving time for maintainers.
+
+**Today's challenge focuses on improving your documentation by consolidating resources from multiple repositories into a centralized documentation hub.** This approach will help you create a central point of reference for your project ecosystem. If you've already centralized your documentation, this challenge will guide you toward refining its structure and content to make it even more user-friendly and impactful.
+
+<Steps>
+
+1. **Audit your existing documentation.**
+
+    Whether you have a large repository or several repositories, auditing your current documentation is essential. Review the existing content, structure, and organization to identify areas for improvement.
+    
+    - **Review current documentation across repositories**:
+      - Identify where documentation resides in each of your repositories.
+      - Look for duplicate, outdated, or scattered content.
+    - **Define the scope of centralization**:
+      - Decide which repositories will contribute to the central documentation hub. Examples include common topics like installation guides, contribution guidelines, or API documentation.
+      - Determine the structure and hierarchy of the new documentation repository.
+    - **Document gaps and priorities**:
+      - Note missing sections or areas that could benefit from consolidation, such as FAQs or tutorials.
+      - Identify which repositories need links back to the centralized hub to maintain context.
+    - **Missing advanced features?**:
+      - Consider adding search functionality, interactive examples, or versioning to enhance the user experience.
+
+    At this point, you should have a clear understanding of what content you have, what content you need, and how you'll structure the new documentation repository.
+
+    <Aside>
+    **If you're having only one repository, focus on improving the structure and content of your existing documentation today.**
+
+    If you have several repositories, and that a centralization effort is needed, proceed to the next steps.
+    </Aside>
+
+1. **Choose a centralization method.**
+
+    Several approaches can help you centralize documentation across multiple repositories. Choose the one that best fits your project's needs:
+    - **Single repository**: Create a new repository (e.g. "docs") dedicated to documentation. This repository will serve as the central hub for all your project's documentation.
+    - **Use your main repository**: If you have a main repository that acts as the core of your project, consider adding a `docs` directory to this repository to host the documentation.
+    - **Submodules or symlinks**: If you prefer to keep documentation in separate repositories, you can use Git submodules or symbolic links to include them in the central documentation repository.
+    - **External tools**: Use documentation platforms like [Read the Docs](https://readthedocs.org/) or [GitBook](https://www.gitbook.com/) to centralize documentation from multiple repositories.
+
+1. **Centralize documentation.**
+
+    Once you've chosen a centralization method, start moving documentation from individual repositories to the central hub. This process may involve:
+    - **Creating a new documentation repository or directory.**
+      
+      <Aside type="tip" title="Use a static site generator">
+      If you don't use one already, consider using a static site generator to build your documentation site. This will help maintain consistency and make it easier to update and manage content.
+
+      Refer to [today's intermediate challenge](#intermediate-create-and-deploy-custom-documentation) for guidance on setting up a documentation site using a static site generator.
+      </Aside>
+
+    - **Structuring the documentation** based on the audit findings.
+      - Create sections for general guides, repository-specific instructions, and advanced topics.
+Use sidebar navigation or interlinked pages to provide a clear path for users.
+    - **Migrating existing content** from existing repositories to the central documentation repository.
+      - Move shared documentation (e.g., contributor guidelines or API overviews) to the new repository.
+      - Retain project-specific content in individual repositories but link back to the centralized hub for overarching guides.
+    - **Updating links and references** to point to the new central hub.
+    - **Ensuring a consistent style and structure** across all documentation files.
+    - **Removing duplicate or outdated content.**
+
+    If you're using submodules or symlinks, ensure that changes in the individual repositories are reflected in the central documentation hub.
+
+1. **Link repositories to the centralized hub.**
+
+    To maintain context and ensure users can navigate between repositories and the central hub, update the README files or documentation in each repository to link back to the central documentation.
+
+    - **Add links in individual repositories**: Update the READMEs of each repository to include a prominent link to the centralized documentation.
+    - **Maintain context in local documentation**: Keep repository-specific content like configuration examples or advanced use cases in place but ensure they reference related centralized resources.
+    - **Encourage contributions to the centralized documentation**: Add instructions for contributors on how to update the centralized documentation when relevant changes occur in project-specific repos.
+
+</Steps>
+
+**By completing this challenge, you've streamlined your documentation approach for multi-repo setups.** A centralized documentation hub improves accessibility and consistency, helping users and contributors navigate your ecosystem with ease. This effort not only enhances the user experience but also reduces duplication and maintenance overhead for you and your team.
+
+**Congratulations on completing this challenge!** Your work ensures that your project remains well-organized, scalable, and welcoming to contributors of all levels.
+
+<h3>Success Criteria</h3>
+
+- ✓ Audit of existing documentation across multiple repositories is completed.
+- ✓ Documentation from multiple repositories is centralized into a single centralized documentation hub, if applicable.
+- ✓ The central documentation hub is well-structured, organized, and accessible.
+- ✓ Links from individual repositories to the central documentation are updated.
+
+<hr />
+
+<Lore>
+The streams now flow as one, their waters merging to form a river that glimmers in the sunlight. The _Architect of Outreach_ places a hand on your shoulder, their expression calm and proud.
+
+> You've brought harmony to what was once scattered,
+
+they say, their voice steady and warm.
+
+> See how the waters now flow together, each one contributing to a greater whole? This river will carry your story far and wide, offering others a way to explore not just one piece, but the entirety of what you've built.
+
+The compass in your hand glows brighter, its runes pulsing softly as if in approval.
+
+> Keep this compass close. It will guide you as your efforts grow, ensuring that every path connects to something greater.
+
+With the streams united, the river carves its way through the grove, a testament to the strength of alignment and purpose.
+
+<LoreSeparator />
+
+<h3>The Architect's Vision</h3>
+
+> An artifact's presence is its beacon to the world, guiding villagers and artisans alike through its many facets. By creating an inviting and engaging space, you ensure your artifact remains accessible and impactful. Remember, a well-lit path invites more travellers.
+
+Light the way for your artifact, traveller, and let the _Beacon of Knowledge_ shine brightly.
+</Lore>
