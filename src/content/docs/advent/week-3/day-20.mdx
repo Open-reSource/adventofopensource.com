@@ -1,0 +1,522 @@
+---
+title: "Day 20: The Watcher's Lens"
+description: "At the Observatory of Insight, the Watcher of Trends offers clarity and wisdom, helping you understand the shifting currents of the world and guiding your journey with knowledge."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day20Snowflake01 from '../../../../assets/days/day-20-snowflake-01.png';
+
+<Lore type="logo">
+<h2>The Observatory of Insight</h2>
+
+Deep within the _Evergrowing Grove_, you reach the towering _Observatory of Insight_, its intricate architecture glinting in the sunlight. From its heights, every corner of the grove can be seen, its movements and patterns laid bare. Here resides the _Watcher of Trends_, a keeper of wisdom who observes the flow of life and the subtle shifts that shape the world.
+
+The _Watcher_ gazes out from the observatory's highest point, their eyes reflecting the vast expanse of trees below.
+
+> To see is to understand, and to understand is to prepare,
+
+they say, their voice steady and calm.
+
+> The currents of this world are always shifting. Without awareness, one may stumble, lost in uncertainty.
+
+The _Watcher_ turns toward you, their expression both serene and resolute.
+
+> From this place, you will begin to see the threads that connect all things. Clarity is the first step toward progress, and knowledge is the beacon that will light your way.
+
+With a graceful motion, the _Watcher_ offers you a polished glass, its surface shimmering faintly.
+
+> Take this, and let it guide you. Through it, you will find clarity where once there was only mystery.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-understand-basic-repository-metrics)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-external-tools-for-deeper-insights)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-monitor-metrics-across-repositories)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Understand Basic Repository Metrics
+
+<hr />
+
+<Lore type="snowflake">
+The _Watcher of Trends_ leads you to a platform within the observatory, where an intricate map of the grove sprawls across a great table.
+
+> Here is where it begins,
+
+the _Watcher_ says, gesturing toward the map.
+
+> The foundation of knowledge is built on observation. Before you can move forward, you must first understand what lies around you.
+
+They point to various markers scattered across the map, each glowing faintly.
+
+> These are the patterns of the grove, the signs of its vitality. Look closely, and you will see the rhythms of life—the pulse of activity, the ebb and flow of growth.
+
+Placing a tool in your hand, the _Watcher_ smiles gently.
+
+> This will help you uncover what is hidden. With it, you will begin to see the connections and pathways that have always been there, waiting for discovery.
+
+</Lore>
+
+<hr />
+
+**Your Open Source project, much like a living organism, will evolve over time.** It may gain more contributors, see increased usage, or even shift its focus. Understanding the key metrics of your repository allows you to monitor this growth, assess engagement, and make data-driven decisions to improve your project. Metrics provide insights into your project's health, its community's activity, and its impact across the ecosystem.
+
+**Today's challenge is to explore the _Insights_ tab of your repository** and familiarize yourself with the most relevant metrics available. 
+
+Let's learn how to access and understand key metrics for your repository, and use them to monitor activity, engagement, and project health. By learning how to interpret this data, you'll gain a better understanding of your repository's dynamics and how to maintain its momentum over time.
+
+<Steps>
+
+1. **Explore the Insights tab.**
+
+    Navigate to the _Insights_ tab in your repository to access a wealth of metrics that GitHub provides.
+
+    Here are some key sections you can explore:
+    - **Pulse**: Offers a summary of recent activity, including issues, pull requests, and releases over a defined time period.
+    - **Contributors**: Displays a list of contributors along with their commit count and additions/deletions over time.
+    - **Community Standards**: Dynamically tracks the repository's community standards files.
+    - **Commits**: Visualizes the number of commits per day, helping you track coding activity.
+    - **Code frequency**: Highlights trends in additions and deletions to your codebase.
+    - **Dependency graph**: Reveals the dependencies your project relies on and the projects that depend on yours.
+    - **Network**: Offers a timeline of commits and forks, showing activity across the repository's network.
+    - **Forks**: Provides a list of forks and shows who is working with your repository.
+    - **Action Usage Metrics**: A summary of the repository's action usage metrics, including the number of actions, minutes, and runs.
+    - **Action Performance Metrics**: (if using GitHub Actions): Displays the number of workflow runs, total action usage time, and performance details.
+
+    <Aside type="tip" title="Tip of the iceberg">
+    To gain a better understanding, **explore metrics in active repositories with large communities**, such as [Astro's Insights](https://github.com/withastro/astro/pulse). These repositories offer an excellent example of how dynamic metrics can become as your project grows.
+    </Aside>
+
+    These metrics can help you understand the health of your project, the level of engagement from the community, and the impact of your project.
+
+    Take your time, explore the different metrics, and familiarize yourself with the data available.
+
+2. **Zoom in: community standards.**
+
+    The _Community Standards_ section evaluates your repository's adherence to some Open Source best practices. It lists essential files such as:
+
+    - **Contributing Guidelines**: Outlines how others can contribute to your project (`CONTRIBUTING.md` file).
+    - **Security Policy**: Describes how to report vulnerabilities (`SECURITY.md` file).
+    - **Accept content reports**: Ensures the repository allows reporting of content issues (enabled in settings).
+
+    While we've covered most of these files in earlier challenges, today is about recognizing this checklist as a guide to improving your repository over time.
+
+    <ContentImage src={day20Snowflake01} alt="" />
+
+    Let's not tackle the missing files today (if any), but it's important to know about this section to refer to it later. It's a good checklist to ensure your repository meets the standards of the Open Source community.
+
+3. **Understand the _Used by_ Section.**
+
+    For repositories with a published package (e.g., npm, PyPI), GitHub may display a _Used by_ section on the repository's sidebar. This section showcases the number of public repositories that depend on your project. While this may not apply to your project right now, it's valuable to understand what it signifies:
+    - It's a strong indicator of how widely your project is adopted.
+    - It appears only if the dependency graph is enabled and more than 100 repositories depend on your project.
+
+    If you're working on a library, plugin, or other reusable code, the _Used by_ section becomes a motivating metric as your project gains traction in the community.
+
+</Steps>
+
+**By understanding repository metrics, you gain a clearer picture of how your project is progressing.** Insights like traffic, contributions, and dependencies provide actionable data that can guide your next steps. As your project grows, these metrics will become even more valuable for identifying areas to improve and celebrating successes.
+
+Metrics aren't just numbers—they're a reflection of the energy, effort, and enthusiasm that you and your contributors bring to your project. Use this information to foster growth and collaboration within your community.
+
+<h3>Success Criteria</h3>
+
+- ✓ Explored GitHub's repository metrics in the _Insights_ tab.
+- ✓ Be familiar with traffic, contributor activity, and dependency metrics.
+- ✓ Understand the significance of the _Community Standards_ checklist and how it impacts your repository.
+
+<hr />
+
+<Lore>
+As the glowing markers on the map grow brighter, their patterns become clearer, weaving into a tapestry of understanding. The _Watcher of Trends_ nods approvingly.
+
+> You have seen what many overlook,
+
+they say, their tone filled with quiet pride.
+
+> The grove's patterns are no longer a mystery to you. You now hold the knowledge needed to navigate its paths with confidence.
+
+The _Watcher_ steps back, their gaze sweeping over the illuminated map.
+
+> Remember, this is just the beginning. The deeper you look, the more you will uncover. Let this insight guide you, and the grove will reveal even greater truths.
+
+With those words, the _Watcher_ leaves you to reflect, the faint glow of the map still shimmering before you, a reminder of the clarity you have gained.
+
+<LoreSeparator />
+
+<h3>The Watcher's Counsel</h3>
+
+> Growth without insight is a path fraught with uncertainty. By measuring and understanding your artifact's performance, you gain the wisdom to steer it toward greater heights. Remember, the clearer the lens, the sharper the vision.
+
+Embrace the power of observation, traveller, and let the Watcher's Lens guide your artifact's evolution.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: External Tools for Deeper Insights
+
+<hr />
+
+<Lore type="snowball">
+Within the observatory's grand hall, the _Watcher of Trends_ gestures toward a series of elegant, interconnected devices arranged on pedestals. Each device hums faintly, its surface etched with intricate symbols.
+
+> These tools are the creations of distant artisans,
+
+the _Watcher_ explains, their voice reverberating through the space.
+
+> They are crafted to reach beyond the grove, gathering insights from far and wide. With their aid, you can see patterns that lie beyond your immediate surroundings, patterns that intertwine with the grove's future.
+
+The _Watcher_ steps aside, allowing you to approach the devices.
+
+> But remember, these tools are guides, not answers. It is your wisdom that will give meaning to what they reveal. Handle them with care, and they will unveil secrets that elude even the keenest of observers.
+
+</Lore>
+
+<hr />
+
+**When managing an Open Source project, understanding its health and the usage of its dependencies is crucial for long-term success.** Dependency vulnerabilities, outdated libraries, and low visibility into project usage can lead to security issues, scalability problems, and missed opportunities for improvement. Leveraging external tools for deeper insights allows you to monitor your dependencies and track how your project is being used, helping you make data-driven decisions to improve its quality and user experience.
+
+**Today's challenge focuses on integrating external tools to gain actionable insights into your project's health and usage.** This includes using tools to monitor dependencies, analyze how your project is used, and create dashboards for better visibility. The goal is to ensure your project remains secure, efficient, and aligned with the needs of its users while respecting their privacy.
+
+<Steps>
+
+1. **Assess and monitor dependency health.**
+
+    You probably already have a tool like [Dependabot](https://github.com/dependabot) or [Renovate](https://docs.renovatebot.com/) integrated in your repository to keep your dependencies up to date. If not, consider setting up one of these tools to monitor your dependencies for vulnerabilities and outdated packages. This helps you stay on top of security issues and ensures your project remains stable.
+
+    However, you can go further by using external tools.
+
+    <Steps>
+
+    1. **Use dependency monitoring tools.**
+
+        Explore tools like [Open Source Insights](https://deps.dev/) that can provide detailed analysis of your project's dependencies. They highlight outdated or vulnerable packages, helping you maintain a secure and stable project.
+
+        If your project uses Node.js, you can use `npm audit` to identify vulnerabilities, or [Snyk](https://snyk.io/) for proactive monitoring and remediation across environments.
+
+    1. **Automate dependency monitoring.**
+
+        Set up automated alerts for new vulnerabilities or outdated packages. This ensures you're notified immediately when a security issue arises, allowing you to take action promptly.
+
+        Integrate these alerts with your private communication channels (e.g., Discord, email) to ensure the right team members are informed.
+
+        <Aside type="caution">
+        The reports generated by these tools may contain sensitive information about your project's dependencies. Ensure that only the right team members have access to these reports to maintain the security of your project.
+        </Aside>
+
+    1. **Integrate with CI pipelines.**
+
+        Include dependency checks in your Continuous Integration (CI) pipeline to ensure that new code doesn't introduce vulnerabilities or outdated packages. This helps maintain the health of your project over time.
+
+        Explore tools like [Trivy](https://trivy.dev/) or [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/) that can be added to your CI pipeline to catch security issues early.
+
+        <Aside type="caution">
+        The reports generated by these tools may contain sensitive information about your project's dependencies. Ensure that only the right team members have access to these reports to maintain the security of your project.
+        </Aside>
+
+    </Steps>
+
+1. **Track project usage.**
+
+    Understanding how your project is used can help you make informed decisions about its future development. By tracking metrics like downloads, page views, and user interactions, you can identify areas for improvement and prioritize features that resonate with your community.
+
+    <Aside type="caution">
+    Ensure your solution respects user privacy by anonymizing data and following applicable regulations like GDPR.
+    </Aside>
+
+    <Steps>
+
+    1. **Use analytics tools.**
+
+        Explore tools like [Plausible](https://plausible.io/) or [Mattomo](https://matomo.org/) that can help you track website traffic and user behavior. This data can provide insights into how users interact with your project's website or documentation. This data can help you optimize your content and improve user experience.
+
+        Explore tools like [OctoPerf](https://octoperf.com/) or [LoadNinja](https://loadninja.com/) that can help you monitor performance metrics and identify bottlenecks in your project. This data can help you optimize your project's performance and ensure a smooth user experience.
+
+    1. **Installation tracking.**
+
+        For libraries or frameworks, consider tracking installation counts. For Node.js projects, you can use the npm download stats API. For Python projects, leverage [PyPI stats](https://pypistats.org/).
+
+    1. **Track feature usage and errors.**
+
+        Set up logs or analytics to measure the usage of specific features in your project. Use tools like [LogRocket](https://logrocket.com/) or [Sentry](https://sentry.io) for error tracking and monitoring.
+
+    1. **Create user paths.**
+
+        For web-based projects, analyze user flows to identify common paths and bottlenecks. Tools like [Hotjar](https://www.hotjar.com/) provide heatmaps and session recordings for this purpose.
+    
+    1. **Automate insights and alerts.**
+
+        Set up automated alerts for anomalies in your project's usage metrics. This can help you identify issues early and take corrective action before they impact your project's success.
+
+        Explore tools like [Zapier](https://zapier.com/) or [IFTTT](https://ifttt.com/) to create custom workflows that trigger alerts based on specific conditions.
+
+    </Steps>
+
+1. **Build an insights dashboard.**
+
+    Consolidate key metrics from different sources into a centralized dashboard to gain a holistic view of your project's health and usage. This dashboard can help you track trends, identify patterns, and make data-driven decisions to improve your project.
+
+    <Steps>
+
+    1. **Aggregate data sources.**
+
+        Explore tools like [Grafana](https://grafana.com/) or [Metabase](https://www.metabase.com/) to create a centralized dashboard. Connect your data sources, such as dependency analysis results or usage stats, for real-time insights.
+
+    1. **Customize the dashboard.**
+
+        Include key metrics such as installation trends, feature usage, and resolved dependency issues.
+
+        Then, group metrics into meaningful categories (e.g., "Dependency health", "Usage trends", "Error logs") for better readability.
+
+    1. **Automate reporting.**
+
+        Use GitHub Actions, cron jobs, or a similar automation tool to generate and share periodic reports with your team. This ensures everyone stays informed about the project's health and usage.
+
+        You can also share a public version of the dashboard, or report, with your community to foster transparency and collaboration.
+
+    </Steps>
+
+</Steps>
+
+**By integrating external tools and building a robust insights system, you've taken a significant step toward maintaining your project's health and understanding its impact.** Monitoring dependencies ensures security and stability, while usage tracking helps you align your project with user needs. Dashboards provide visibility into your project's key metrics, helping you make data-driven improvements.
+
+**Congratulations on completing this challenge!** Your proactive efforts not only improve the experience for your users and contributors but also strengthen your project's foundation for growth.
+
+<h3>Success Criteria</h3>
+
+- ✓ Explored external tools to assess and monitor dependency health.
+- ✓ Explored external tools to track project usage and user behavior.
+- ✓ Explored external tools to build an insights dashboard to consolidate key metrics.
+
+<hr />
+
+<Lore>
+The devices hum louder as you activate them, their symbols glowing softly. Lines of light form on a nearby projection, illustrating connections and patterns you hadn't imagined. The _Watcher of Trends_ nods approvingly.
+
+> You have opened a window to a broader world,
+
+they say, their tone tinged with admiration.
+
+> What you see now are the forces that ripple beyond the grove's boundaries, influences that shape its present and future.
+
+Placing a hand on your shoulder, the _Watcher_ adds:
+
+> Let these insights enhance your understanding, but never forget the grove itself. Balance is the key to navigating the path ahead.
+
+With that, the projection dims slightly, but its traces linger, a reminder of the new perspective you have gained.
+
+<LoreSeparator />
+
+<h3>The Watcher's Counsel</h3>
+
+> Growth without insight is a path fraught with uncertainty. By measuring and understanding your artifact's performance, you gain the wisdom to steer it toward greater heights. Remember, the clearer the lens, the sharper the vision.
+
+Embrace the power of observation, traveller, and let the Watcher's Lens guide your artifact's evolution.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Monitor Metrics Across Repositories
+
+<hr />
+
+<Lore type="ice">
+The _Watcher of Trends_ leads you to a circular balcony atop the observatory, where a panoramic view of interconnected groves stretches out before you.
+
+> Look beyond,
+
+the _Watcher_ says, gesturing to the distant trees whose canopies blend together.
+
+> Each grove thrives independently, yet together they form a greater whole. Their cycles and rhythms are intertwined, and to guide one, you must consider them all.
+
+They hand you a set of polished lenses, their surfaces shimmering with shifting colors.
+
+> These lenses allow you to see the broader picture,
+
+the _Watcher_ explains.
+
+> Through them, you can perceive the pulse of each grove, as well as the harmony—or discord—between them. It is a delicate art, observing the unity of many without losing sight of the individual.
+
+</Lore>
+
+<hr />
+
+**Managing multiple repositories in an Open Source ecosystem can be challenging, especially when trying to understand the overall health and contributions across projects.** Metrics such as stars, forks, open issues, pull request trends, and contributor activity are valuable indicators of a project's growth, engagement, and sustainability. Monitoring these metrics across repositories can help identify areas that need attention, recognize contributors, and plan future development effectively.
+
+**Today's challenge focuses on building a consolidated system to monitor metrics across repositories.** You will aim to create a dashboard that aggregates data from your repositories, providing you with a clear overview of their activity and health. You'll also learn how to set up alerts for anomalies, such as declining activity or dependency vulnerabilities, empowering you to address issues proactively.
+
+<Steps>
+
+1. **Plan your metrics and data sources.**
+
+    Decide which metrics are important for your repositories.
+
+    <Steps>
+
+    1. **Identify key metrics.**
+
+        Decide which metrics are important for your repositories. Common repository-oriented examples include:
+        - Stars and forks to measure popularity and community interest.
+        - Open issues and pull requests to track activity and health.
+        - Number of active contributors over time.
+        - Dependency vulnerabilities to ensure security.
+
+        For example, you might want to monitor the average time to close an issue or merge a pull request to gauge responsiveness.
+
+        But you can also get other metrics around performance, responsiveness, or community engagement based on external tools.
+
+    1. **Understand your data sources.**
+
+        Most of the repository-oriented metrics can be retrieved using the [GitHub REST API](https://docs.github.com/rest) or [GitHub GraphQL API](https://docs.github.com/graphql). Explore endpoints like `/repos/{owner}/{repo}/stats/contributors` for contributor stats or `/repos/{owner}/{repo}/issues` for issue tracking.
+
+        Some other can be retrieved from external tools, having their own APIs or integrations.
+
+    </Steps>
+
+1. **Build your dashboard.**
+
+    Create a centralized dashboard to visualize metrics across your repositories. This dashboard should provide a comprehensive view of your projects' activity, health, and engagement.
+
+    <Steps>
+
+    1. **Set up a data retrieval script.**
+
+        Use a programming language like JavaScript, Python, or any preferred stack to fetch metrics from the different APIs available. For instance, in Node.js, you can use libraries like [Octokit](https://github.com/octokit) to interact with the GitHub API:
+
+        ```javascript
+        const octokit = new Octokit();
+
+        // Compare: https://docs.github.com/en/rest/reference/repos/#list-organization-repositories
+        octokit.rest.repos
+          .listForOrg({
+            org: "octokit",
+            type: "public",
+          })
+          .then(({ data }) => {
+            // handle data
+          });
+
+    1. **Aggregate metrics.**
+
+        Combine the data from different sources or repositories into a single dataset (e.g., SQLite, PostgreSQL) or a simple JSON file if the data size is small enough.
+
+        Use a scheduler like `cron` or GitHub Actions to periodically update metrics for all repositories in your organization or personal account.
+
+    1. **Visualize data.**
+
+        Create a dashboard using tools like [Grafana](https://grafana.com/), [Metabase](https://www.metabase.com/), or build a custom front-end using charting libraries like [Chart.js](https://www.chartjs.org/) or [Apache ECharts](https://echarts.apache.org).
+
+        Display metrics in charts, tables, and graphs. For example, plot a trendline of new contributors over time or a pie chart showing the ratio of resolved to unresolved issues.
+
+    </Steps>
+
+1. **Automate alerts for anomalies.**
+
+    Set up automated alerts to notify you of anomalies or critical issues across your repositories. This proactive approach helps you address problems promptly and maintain the health of your projects.
+
+    <Steps>
+
+    1. **Define anomalies.**
+
+        Determine what constitutes an anomaly for each metric. For instance, the following examples could be considered anomalies:
+        - A sudden drop in stars
+        - A sharp decline in contributor activity
+        - A sudden spike in unresolved issues
+        - Newly introduced dependency vulnerabilities
+
+    1. **Set up automated alerts.**
+
+        Use GitHub Actions to monitor metrics and send alerts to Slack, email, or other channels.
+
+        For example, use a script to compare weekly contributor counts, and trigger an alert if the number drops below a threshold.
+    
+    1. **Add security alerts.**
+
+        Integrate tools like [Snyk](https://snyk.io/) or [Dependabot](https://github.com/dependabot) to monitor dependency vulnerabilities automatically.
+
+    </Steps>
+
+1. **Create and share reports.**
+
+    Generate periodic reports summarizing the health and activity of your repositories. Share these reports with your team to keep them informed and engaged.
+
+    <Steps>
+
+    1. **Generate periodic reports.**
+
+        Use GitHub Actions or a similar automation tool to generate weekly or monthly reports summarizing the health and activity of your repositories.
+
+        Include key metrics, trends, and insights in these reports to provide a comprehensive overview.
+
+    1. **Share reports with your team.**
+
+        Share reports with your team members or contributors to keep them informed about the project's progress and areas that need attention.
+
+        Consider creating a public version of the report to share with your community, fostering transparency and collaboration.
+
+    </Steps>
+
+1. **Add predictive insights and testing.**
+
+    Enhance your decision-making process by adding predictive insights and testing to your monitoring system. This can help you anticipate trends, identify potential issues, and continuously improve your projects.
+
+    <Steps>
+
+    1. **Predictive models.**
+
+        Use historical data to predict future trends. For example, use Python with libraries like [scikit-learn](https://scikit-learn.org/) to predict activity levels based on past contributions.
+
+    1. **A/B testing for features.**
+
+        If your repositories include projects with end-user applications, test different features or updates by analyzing user adoption rates.
+    
+    </Steps>
+
+</Steps>
+
+**By completing this challenge, you've built a powerful system to monitor and visualize metrics across your repositories.** This consolidated view helps you track trends, recognize contributors, and identify potential issues before they escalate. Automating alerts ensures you stay on top of critical developments, while predictive insights and testing pave the way for continuous improvement.
+
+**Congratulations!** Your proactive approach enhances not only your repositories' health but also the transparency and trust within your community. You're now better equipped to manage your open-source ecosystem effectively.
+
+<h3>Success Criteria</h3>
+
+- ✓ Identified key metrics for your repositories and data sources.
+- ✓ Built a dashboard to visualize metrics across repositories.
+- ✓ Automated alerts for anomalies and security issues.
+- ✓ Created and shared reports summarizing repository health and activity.
+- ✓ (Optional) Added predictive insights and testing to enhance decision-making.
+
+<hr />
+
+<Lore>
+Through the lenses, the groves come alive with patterns of movement and light, each pulse reflecting its vitality. The _Watcher of Trends_ observes quietly before speaking.
+
+> You have mastered a skill few possess,
+
+they say with quiet respect.
+
+> To see many as one and yet honor the uniqueness of each is the mark of a true steward.
+
+They place the lenses into a carved case, offering it to you.
+
+> Keep these with you, for they will guide you as your journey extends to new horizons. Let what you've learned here serve as a foundation for the challenges yet to come.
+
+With those words, the _Watcher_ steps back, allowing you to gaze once more at the interwoven groves, their rhythms now clear in your mind.
+
+<LoreSeparator />
+
+<h3>The Watcher's Counsel</h3>
+
+> Growth without insight is a path fraught with uncertainty. By measuring and understanding your artifact's performance, you gain the wisdom to steer it toward greater heights. Remember, the clearer the lens, the sharper the vision.
+
+Embrace the power of observation, traveller, and let the Watcher's Lens guide your artifact's evolution.
+</Lore>

@@ -185,6 +185,10 @@ export default defineConfig({
                   label: 'Day 19: The Beacon of Knowledge',
                   slug: 'advent/week-3/day-19'
                 },
+                {
+                  label: 'Day 20: The Watcher\'s Lens',
+                  slug: 'advent/week-3/day-20'
+                },
               ]
             },
           ],
