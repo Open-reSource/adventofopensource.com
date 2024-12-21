@@ -98,6 +98,7 @@ export default defineConfig({
             },
             {
               label: 'Week 1: The Snowglobe Foundations',
+              collapsed: true,
               items: [
                 {
                   label: 'Day 1: The Winter Open Source Village',
@@ -131,6 +132,7 @@ export default defineConfig({
             },
             {
               label: 'Week 2: The Gears of Perfection',
+              collapsed: true,
               items: [
                 {
                   label: 'Day 8: The Mirror of Perfection',
@@ -188,6 +190,10 @@ export default defineConfig({
                 {
                   label: 'Day 20: The Watcher\'s Lens',
                   slug: 'advent/week-3/day-20'
+                },
+                {
+                  label: 'Day 21: The Multilingual Grove',
+                  slug: 'advent/week-3/day-21'
                 },
               ]
             },

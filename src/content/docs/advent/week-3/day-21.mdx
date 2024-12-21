@@ -1,0 +1,537 @@
+---
+title: "Day 21: The Multilingual Grove"
+description: "The Song of Many Tongues guides you through the Multilingual Grove, where diverse voices harmonize to transcend boundaries and foster unity, overcoming division and ensuring every voice is heard."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>The Song of Many Tongues</h2>
+
+The _Keeper_ guides you to the _Multilingual Grove_, a radiant sanctuary within the _Evergrowing Grove_. Here, every tree whispers in its unique melody, creating a symphony that reaches across lands and cultures. At the heart of this grove stands the _Harmonizer of Voices_, a figure who tends to the balance of this vibrant diversity.
+
+> In this place, unity blooms from understanding,
+
+the _Harmonizer_ says, their voice resonating with warmth.
+
+> But beware the _Barrier of Babel_, a force that divides and silences, leaving paths untraveled and wisdom unshared.
+
+The _Harmonizer_ gestures to the grove, inviting you to listen to its melodies.
+
+> To preserve this harmony, each voice must find its way to be heard and understood, weaving a tapestry of connection that transcends boundaries.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-prepare-for-translations)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-organize-multilingual-project)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-scale-localization-efforts)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Prepare for Translations
+
+<hr />
+
+<Lore type="snowflake">
+As you stand among the trees of the _Multilingual Grove_, the _Harmonizer of Voices_ places a hand gently on the bark of a nearby tree. Its leaves shimmer, shifting hues with every passing moment.
+
+> Every whisper here carries a story,
+
+the _Harmonizer_ says, their tone thoughtful.
+
+> But stories need bridges to reach distant hearts. Before they can be shared across lands, they must be prepared for the journey—rooted in clarity, yet flexible enough to adapt.
+
+The _Harmonizer_ hands you a scroll, its surface inscribed with elegant symbols.
+
+> This is where it begins,
+
+they explain.
+
+> By setting the foundation, you allow these whispers to travel far and wide, carrying the essence of the grove to those who yearn to hear its song.
+
+</Lore>
+
+<hr />
+
+**As your project grows, you might discover contributors and users from diverse linguistic backgrounds.** Translating your project can make it more accessible to a global audience, fostering inclusivity and potentially boosting engagement. Offering translations for your documentation, website, or interface demonstrates a commitment to accessibility and ensures that non-English-speaking users can benefit from your work.
+
+**Today's challenge focuses on exploring how to set up a translation process for your project.** We'll help you weigh the pros and cons, introduce a basic structure for handling translations, and create the foundation for a multilingual project. While this is an entry-level setup, you'll also learn where to go next if your project scales to require more advanced multilingual solutions.
+
+<Steps>
+
+1. **Consider the benefits and challenges of translations.**
+
+    Before diving into translations, it's essential to evaluate whether they align with your project's goals and resources. Here's a breakdown of the pros and cons to help you decide:
+
+    | **Pros** | **Cons** |
+    |---|---|
+    | Reach a wider, global audience | Time-consuming to set up and maintain |
+    | Improve accessibility and user inclusivity | Requires translation expertise or tools |
+    | Enhance the user experience for non-English speakers | Ongoing maintenance as content evolves |
+    | Attract contributions from a broader community | Risk of inconsistent translations across pages |
+
+    <Aside>
+    **If you decide translations aren't necessary, feel free to skip this challenge** and use today's time to work on another aspect of your project, and take some time to code!
+    </Aside>
+
+    **If you decide to proceed**, the next steps will guide you through the process by starting with a simple setup for translations that aligns with your current repository structure, including a Markdown-based GitHub Pages website powered by Jekyll.
+
+    Several translations approaches exist, you'll choose the one that fits your project best if your project's webiste and content evolves, by using other tech stacks.
+
+1. **Choose Your Initial Languages.**
+
+    Start with just one additional language to keep things manageable. For the purpose of this challenge, we'll focus on adding French translations.
+
+    Once you're comfortable, you can expand to other languages.
+
+1. **Set up a translation-friendly directory structure.**
+
+    Organize your files into a `docs/` directory. This structure will separate translations and maintain consistency:
+
+    <FileTree>
+
+    - docs
+      - en
+        - index.md
+        - installation.md 
+      - fr
+        - index.md
+        - installation.md
+    - index.md
+
+    </FileTree>
+
+    Move all original English content under `docs/en/` folder, and copy it into `docs/fr/` for future French translations.
+
+1. **Add language switching links.**
+
+    Modify the root `index.md` file to include links for switching between available languages:
+
+    ```markdown title="index.md"
+    [English](en/index.md) | [Français](fr/index.md)
+    ```
+
+    Ensure every translated page also includes a language switcher to enhance navigation consistency.
+
+1. **Translate key pages.**
+
+    Start small by translating the most critical pages, such as `docs/fr/index.md` and `docs/fr/installation.md` files into French.
+
+1. **Document the translation workflow.**
+
+    Create a `TRANSLATIONS.md` file or a new section in your `CONTRIBUTING.md` file to outline how translations should be managed: the translation workflow, guidelines, and best practices.
+
+    ```markdown title="TRANSLATIONS.md"
+    # How to Contribute Translations
+
+    ## Folder Structure
+
+    - English (default): `docs/en/`
+    - Translations: `docs/<language_code>/` (e.g., `docs/fr/`)
+
+    ## Steps to Translate
+
+    1. Copy the file from `docs/en/` to the desired language folder (e.g., `docs/fr/`).
+    2. Translate the content while preserving the Markdown structure.
+    3. Submit a pull request with your updates.
+
+    ## Best Practices
+
+    - Use consistent terminology across translations.
+    - Review translations for accuracy and clarity.
+
+    For questions or help, reach out via [GitHub Discussions](link-to-discussions).
+    ```
+
+    Make it clear that contributors should prioritize clarity and accuracy in translations.
+
+</Steps>
+
+<Aside>
+To go further, please refer to the [GitHub documentation - Setting up a GitHub Pages site with Jekyll](https://docs.github.com/pages/setting-up-a-github-pages-site-with-jekyll/), and to the [Jekyll documentation](https://jekyllrb.com/docs/).
+
+This approach is a basic starting point for handling translations. Here are a few ideas to improve it:
+- Add automatic redirection to the user's preferred language based on browser settings (requires JavaScript or server configuration).
+- Use translation management tools like [Crowdin](https://crowdin.com/), [Lokalise](https://lokalise.com/), [Weblate](https://weblate.org), or [POEditor](https://poeditor.com/) for more advanced translation workflows.
+- Integrate advanced multilingual frameworks if your project scales. For example, [VuePress](https://vuepress.vuejs.org/) or [Docusaurus](https://docusaurus.io) support translations out of the box.
+- Make sure each translated page includes the `<html lang="...">` attribute for accessibility.
+</Aside>
+
+**Translations can transform your project by making it more inclusive and accessible.** Starting with a basic structure allows you to experiment with adding languages without overwhelming your workflow. As your project evolves, you can build on this foundation to implement more robust solutions.
+
+**Remember, even a single translated page can significantly improve accessibility for non-English speakers.** Engage your community to help maintain translations, ensuring your project remains welcoming to contributors worldwide.
+
+<h3>Success Criteria</h3>
+
+- ✓ A `docs/` directory structure ready for translations.
+- ✓ A basic language switcher implemented with at least one additional language.
+- ✓ A documented workflow for contributing translations.
+
+<hr />
+
+<Lore>
+As you complete your work, the grove hums with new potential. The _Harmonizer of Voices_ watches with approval, their expression serene.
+
+> You have prepared the way,
+
+they say, their voice soft but certain.
+
+> Now, the whispers can flow freely, reaching places untouched by the grove's light. What you have done today ensures that its wisdom will not be confined but will resonate across the farthest horizons.
+
+The _Harmonizer_ steps back, allowing you to take in the grove's shimmering beauty once more. Each tree seems to glow with renewed energy, their whispers carrying the promise of boundless connection.
+
+<LoreSeparator />
+
+<h3>The Harmonizer's Song</h3>
+
+> In a world of many voices, those who listen and adapt will thrive. By embracing the diversity of languages, you open your artifact to the world, building bridges where there were once barriers. Remember, an artifact that speaks many tongues is one that is truly heard. 
+
+Let your artifact echo through the _Multilingual Grove_, traveller, and unite your community in understanding.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Organize Multilingual Project
+
+<hr />
+
+<Lore type="snowball">
+Within the _Multilingual Grove_, the _Harmonizer of Voices_ guides you to a grove where clusters of trees are arranged in intricate patterns. Each cluster hums in harmony, its leaves whispering in distinct yet unified melodies.
+
+> Look closely,
+
+the _Harmonizer_ says, gesturing to the grove.
+
+> Though every voice here is unique, they thrive together because their roots are intertwined and their growth is guided by careful planning. Without this balance, even the most beautiful symphonies would collapse into chaos.
+
+They place a hand on your shoulder, their gaze steady.
+
+> To honor each voice while maintaining harmony, the foundation must be organized with care. Only then can this grove flourish, ensuring that each melody strengthens the others.
+
+</Lore>
+
+<hr />
+
+**As your Open Source project grows, so does its potential to reach a global audience.** Multilingual support helps users and contributors from different regions engage with your project more effectively. By setting up a robust translation workflow and creating clear guidelines, you ensure consistency and encourage contributions from volunteers worldwide.
+
+**Today's challenge focuses on organizing the translation workflow for your project.**
+
+If you don't already have a basic internationalization (i18n) system in place, check [today's beginner challenge](#beginner-prepare-for-translations) to learn how to implement one. For this challenge, we'll go beyond setup, diving into workflows, guidelines, and building a translation team to ensure the smooth management of multilingual content.
+
+<Aside>
+**If you decide translations aren't necessary, feel free to skip this challenge** and use today's time to work on another aspect of your project, and take some time to code!
+</Aside>
+
+<Steps>
+
+1. **Review your translation setup.**
+
+    Audit your current translation system.
+
+    Confirm that your project already has an internationalization (i18n) system in place with a basic structure for managing translations, such as separate directories for each language, or a translation management tool. If you don't have these basics yet and consider translations for your project, refer to the [beginner challenge](#beginner-prepare-for-translations) to set up a foundation.
+
+    If you're using an external tool with string extraction and translation features, ensure dynamic retrieval of strings and fallback language support are in place.
+
+1. **Establish a translation workflow.**
+
+    Define a clear process for managing translations in your project. This workflow should cover how translations are added, reviewed, and tested before being integrated into the project.
+
+    A workflow might include these definitions:
+    - **Translation management**: precise what tools or services you use to manage translations. For example, [Crowdin](https://crowdin.com/), [Lokalise](https://lokalise.com/), [Weblate](https://weblate.org), or [POEditor](https://poeditor.com/) can allow collaborative editing, tracking changes, and integrating with version control systems.
+    - **String extraction**: if applicable, ensure developers extract all translatable strings consistently. Tools like [gettext](https://www.gnu.org/software/gettext/) can help automating this process.
+    - **Assigning translators**: define how translators are assigned and how they submit translations. You can use a mix of community contributions and professional translators.
+    - **Review and approval**: create a review process for proposed translations, ideally involving native speakers for accuracy.
+    - **Integration testing**: test translations in the application to ensure correct rendering, spacing, and context.
+
+1. **Document the workflow.**
+
+    Create a `TRANSLATIONS.md` file or a new section in your `CONTRIBUTING.md` file to outline the translation process.
+
+    Write a step-by-step guide for contributors detailing how translations are added, reviewed, and tested.
+
+    Include examples of good and bad practices for string extraction and translation contributions.
+
+1. **Create translation guidelines.**
+
+    On top of the workflow, establish guidelines for translators to ensure consistency across languages. These guidelines should cover tone, terminology, and formatting to maintain a cohesive user experience.
+
+    - **Style and tone**: Set guidelines for the tone of your translations (e.g., formal or casual). Provide examples of common phrases to ensure consistency.
+    - **Create a glossary**: Include definitions of technical terms and project-specific language.
+    - **Address formatting rules**: Specify formatting for dates, times, and currencies based on language preferences.
+    - **Provide examples**: Share examples of well-translated strings alongside poorly translated ones to highlight best practices.
+
+1. **Build a translation team.**
+
+    Encourage community members to contribute translations by creating a dedicated team. This team can consist of volunteers, professional translators, or a mix of both. It's important to have a diverse group of translators to ensure accuracy and cultural relevance, but also to have the same people involved in the long term to ensure consistency.
+
+    - **Recruit volunteers**: Reach out to your community for contributors who are fluent in the target languages. Use GitHub Discussions, social media, or other platforms to invite participation.
+    - **Set up roles**: Define clear roles for translators, reviewers, and maintainers. This hierarchy ensures translations are consistently high quality.
+    - **Onboard translators**: Provide new contributors with access to your workflow and guidelines. Offer a quick-start guide to help them navigate your translation management tool and the repository.
+    - **Acknowledge contributions**: Recognize the efforts of your translation team by highlighting their contributions in your project's documentation or website.
+
+1. **Automate and optimize.**
+
+    Explore automation tools and services to streamline the translation process. Automating string extraction, translation updates, and quality checks can save time and reduce the risk of errors.
+
+    Use CI/CD pipelines to verify translations automatically. For example:
+    - Check for missing keys in translation files using tools
+    - Validate formatting for placeholders (e.g., `{0}`, `%s`) to prevent runtime errors.
+
+    If you plan to support many languages, consider using Translation Memory systems. These tools reuse existing translations to save time and maintain consistency.
+
+</Steps>
+
+**Great work on taking this step to organize your multilingual project!** By establishing a robust workflow, creating clear guidelines, and involving a dedicated team, you've set the foundation for sustainable and high-quality translations. This effort not only enhances accessibility for users around the world but also builds a stronger, more inclusive community around your project.
+
+**Remember, successful multilingual projects are collaborative and iterative**—so keep refining your processes as your project grows. Celebrate this milestone and the contributions of your translators—every step brings your project closer to global reach. Congratulations on completing this challenge!
+
+<h3>Success Criteria</h3>
+
+- ✓ A documented workflow for managing translations, from string extraction to integration testing.
+- ✓ Clear guidelines for translators, including style, tone, and formatting rules.
+- ✓ A dedicated translation team with defined roles and responsibilities.
+- ✓ Automation tools or services to optimize the translation process. 
+
+<hr />
+
+<Lore>
+As you step back, the clusters of trees now seem even more vibrant, their whispers clearer and more resonant. The _Harmonizer of Voices_ smiles, their expression warm and approving.
+
+> What you have done is no small feat,
+
+they say.
+
+> Each voice can now be heard distinctly, yet they all sing together in harmony. This balance ensures that the grove will continue to grow, spreading its light to distant lands.
+
+They turn toward the grove, their voice soft but resolute.
+
+> Remember this moment, for it reflects not just the beauty of organization, but the strength it brings to unity.
+
+<LoreSeparator />
+
+<h3>The Harmonizer's Song</h3>
+
+> In a world of many voices, those who listen and adapt will thrive. By embracing the diversity of languages, you open your artifact to the world, building bridges where there were once barriers. Remember, an artifact that speaks many tongues is one that is truly heard. 
+
+Let your artifact echo through the _Multilingual Grove_, traveller, and unite your community in understanding.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Scale Localization Efforts
+
+<hr />
+
+<Lore type="ice">
+At the farthest edge of the _Multilingual Grove_, the _Harmonizer of Voices_ stops before a massive tree whose branches extend far beyond the others, reaching toward the skies. Each branch is adorned with glowing leaves, their light pulsing in a rhythm that seems to connect them all.
+
+> Behold the _Great Canopy_,
+
+the _Harmonizer_ says, their voice filled with reverence.
+
+> Its branches stretch to lands unseen, carrying the grove's whispers to faraway horizons. But such growth requires constant care and the wisdom to balance its expansion.
+
+They hand you a small seed, its surface shimmering like the leaves of the canopy.
+
+> Scaling this grove's light is no simple task, but it begins with planting the seeds of resilience and adaptability. Only then can its reach grow without faltering.
+
+</Lore>
+
+<hr />
+
+**As your Open Source ecosystem grows, managing multilingual content across multiple repositories becomes increasingly complex.** Scaling your localization efforts is essential to ensure consistency, efficiency, and accuracy when handling translations for a suite of projects or repositories within an organization. This requires centralizing workflows, automating routine tasks, and ensuring high-quality translations through standardization and tools.
+
+**Today's challenge is all about taking your localization strategy to the next level.** You will learn how to centralize translation workflows, implement automation pipelines, and create tools or documentation to streamline and scale your efforts. This is particularly useful for participants managing multiple repositories or projects with existing contributors and translation systems.
+
+<Aside>
+**If you don't have translations in your ecosystem, feel free to skip this challenge** and use today's time to work on another aspect of your Open Source repositories, and take some time to code!
+</Aside>
+
+<Steps>
+
+1. **Centralize your translation workflows.**
+
+    Review your existing translation workflows across repositories and projects. Identify commonalities and differences in how translations are managed, reviewed, and integrated.
+
+    Consider consolidating translation management tools or services to streamline the process. Centralizing workflows can help maintain consistency, reduce duplication of effort, and simplify the onboarding of new contributors.
+
+    <Steps>
+
+    1. **Create a central hub.**
+
+        Explore the possibility of creating a central hub (repository, website, or document) to host shared resources like translation guidelines, glossaries, style guides, and reusable translation assets.
+
+        Use this hub to document workflows, roles, and expectations for all contributors.
+
+        <Aside type="tip" title="Tip of the iceberg">
+        Consider checking out [today's intermediate challenge](#intermediate-organize-multilingual-project) for inspiration on creating documentation and guidelines for your translation team.
+        </Aside>
+
+    1. **Standardize translation tools across projects.**
+
+        Identify and standardize the tools and formats used across repositories. For instance, use consistent file types (e.g., `.json`, `.po`, `.xliff`) and tools.
+
+        Ensure all repositories integrate with the same translation platform, such as [Crowdin](https://crowdin.com/), [Lokalise](https://lokalise.com/), [Weblate](https://weblate.org), or [POEditor](https://poeditor.com/), to simplify the translation process.
+
+    1. **Align version control practices.**
+
+        Create a branching strategy for translations to handle updates and avoid conflicts. For example, maintain a dedicated `i18n` branch for translation updates.
+
+        Set up a schedule or triggers for syncing translations across repositories.
+
+    </Steps>
+
+1. **Implement translation automation.**
+
+    Automate routine translation tasks to save time and reduce errors. Use continuous integration (CI) pipelines to validate translations, check for missing keys, and ensure formatting consistency.
+
+    <Steps>
+
+    1. **Set up string extraction.**
+
+        Automate the extraction of translatable strings from code using tools.
+
+        Ensure extracted strings are uploaded automatically to your chosen translation platform.
+
+    1. **Integrate Machine Translation (MT) for initial drafts.**
+
+        It's possible to use Machine Translation services with external platforms to generate draft translations. This can help speed up the initial translation process, but always ensure human review for accuracy and quality.
+
+        If you're using this mechanism, flag machine-translated strings for human review in your workflow.
+
+    1. **Add quality checks for translations.**
+
+        Automate quality checks for placeholders, missing strings, or untranslated content using linting tools or custom scripts.
+
+        Set up alerts or pipeline failures for issues found in translation files during the CI process.
+
+    1. **Deploy translations automatically.**
+
+        Use CI/CD pipelines to deploy translations automatically to staging or production environments.
+
+        Ensure that translations are integrated seamlessly with the rest of the project's content.
+
+    </Steps>
+
+1. **Create a translation dashboard.**
+
+    Develop a dashboard or reporting system to track translation progress, review status, and quality metrics across repositories.
+
+    Include visualizations, metrics, and alerts to monitor translation activity and identify bottlenecks or issues.
+
+    Use this dashboard to communicate progress to contributors, maintainers, and stakeholders.
+
+    <Steps>
+
+    1. **Design a dashboard for monitoring progress.**
+
+        Build a dashboard manually or use existing tools to visualize translation status, completion rates, and quality metrics.
+
+        Include metrics such as percentage completion, flagged issues, and the status of specific languages.
+
+    1. **Integrate with translation platforms.**
+
+        Use APIs from your translation platform (e.g., [Crowdin's API](https://support.crowdin.com/developer/api/v2/)) to fetch data about translations and reviews.
+
+    1. **Make the dashboard accessible.**
+
+        Ensure the dashboard is accessible to all contributors and maintainers involved in the translation process. Host the dashboard on an internal or public URL, depending on your project's scope. Use it as a centralized view for contributors to stay updated on localization efforts.
+
+        Provide documentation on how to interpret the data and take action based on the insights.
+
+    </Steps>
+
+1. **Optimize Translation Memory (TM) and glossaries.**
+
+    Leverage Translation Memory systems and glossaries to improve consistency and speed up the translation process.
+
+    <Steps>
+
+    1. **Maintain a Translation Memory.**
+
+        Use Translation Memory systems to store and reuse previously translated content across repositories and projects. This can help maintain consistency and reduce translation costs.
+
+        Ensure that your translation platform supports Translation Memory features.
+
+    1. **Create and update glossaries.**
+
+        Develop project-specific glossaries to standardize terminology and ensure consistency across translations.
+
+        Update glossaries regularly based on feedback from translators and reviewers.
+
+    1. **Integrate glossaries with translation tools.**
+
+        Ensure that glossaries are integrated with your translation platform to provide suggestions and enforce terminology consistency.
+
+    </Steps>
+
+1. **Enable continuous localization.**
+
+    Implement continuous localization practices to ensure translations are updated in real-time as the project evolves.
+
+    <Steps>
+
+    1. **Set up CI for localization.**
+
+        Configure your CI/CD system to detect and automatically update translation files when code changes are merged.
+
+        Use tools like GitHub Actions to schedule regular translation synchronizations.
+
+    1. **Monitor translation accuracy and context.**
+
+        Conduct regular reviews of machine-translated or reused strings to ensure they fit the context.
+
+        Use automated reports to identify frequently flagged or problematic strings.
+
+    1. **Encourage contributor feedback.**
+
+        Set up feedback channels for translators and contributors to suggest improvements or highlight issues with the workflow.
+
+    </Steps>
+
+</Steps>
+
+**Congratulations! You've now taken your localization efforts to a scalable level**, centralizing workflows, automating processes, and ensuring consistency across multiple repositories. By implementing translation dashboards, using Translation Memory (TM), and enabling continuous localization, you've built a system that can grow alongside your project ecosystem.
+
+**This effort will significantly reduce the manual overhead involved in managing translations while maintaining high-quality multilingual support.** Scaling localization ensures your projects are accessible to diverse audiences, fostering greater community engagement and inclusivity. Fantastic work—your contributors (and users) will thank you!
+
+<h3>Success Criteria</h3>
+
+- ✓ A centralized hub for translation resources, guidelines, and workflows.
+- ✓ Standardized translation tools and formats across repositories.
+- ✓ Automated translation processes for string extraction, quality checks, and deployment.
+- ✓ A translation dashboard for monitoring progress and quality metrics.
+- ✓ Optimized Translation Memory (TM) and glossaries for consistency.
+- ✓ Continuous localization practices for real-time translation updates.
+
+<hr />
+
+<Lore>
+The _Great Canopy_ now gleams brighter, its branches stronger and more interconnected. The _Harmonizer of Voices_ watches as its light reaches beyond the horizon, their expression serene.
+
+> You have nurtured its growth,
+
+they say, their voice carrying a note of pride.
+
+> With your care, the grove will continue to expand, spreading its wisdom to places even we cannot yet imagine.
+
+They pause, their gaze fixed on the glowing canopy.
+
+> This work ensures that no voice, no melody, no story will be left unheard. And for that, the grove will forever be grateful.
+
+<LoreSeparator />
+
+<h3>The Harmonizer's Song</h3>
+
+> In a world of many voices, those who listen and adapt will thrive. By embracing the diversity of languages, you open your artifact to the world, building bridges where there were once barriers. Remember, an artifact that speaks many tongues is one that is truly heard. 
+
+Let your artifact echo through the _Multilingual Grove_, traveller, and unite your community in understanding.
+</Lore>
