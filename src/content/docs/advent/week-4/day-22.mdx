@@ -1,0 +1,490 @@
+---
+title: "Day 22: The Well of Enduring Prosperity"
+description: "The Fountain of Sustenance nurtures growth, with the Steward ensuring the flow of life's abundance to keep the grove thriving."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day22Snowflake01 from '../../../../assets/days/day-22-snowflake-01.png';
+
+<Lore type="logo">
+<h2>The Fountain of Sustenance</h2>
+
+Deep within the _Evergrowing Grove_, you find the _Well of Enduring Prosperity_, its waters shimmering with a golden light that seems to pulse with vitality. The _Steward of Abundance_ stands beside the well, their presence calm yet commanding.
+
+> This well holds the essence that nurtures all within the grove,
+
+they explain, their voice resonant.
+
+> Without its flow, even the strongest roots falter, and the grove risks falling under the _Shadow of Scarcity_. But when its waters are drawn and shared wisely, life flourishes, and the grove grows ever stronger.
+
+They gesture toward the well, its depths reflecting the light of the surrounding trees.
+
+> The time has come to draw upon its strength, ensuring that its abundance continues to sustain and uplift all who depend on it.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-add-a-sponsorship-system)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-promote-sponsorships)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-scale-sponsorship-opportunities)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Add a Sponsorship System
+
+<hr />
+
+<Lore type="snowflake">
+Standing beside the _Well of Enduring Prosperity_, the _Steward of Abundance_ extends their hands, offering a simple golden chalice etched with delicate patterns.
+
+> This chalice represents more than its form,
+
+they say, their tone steady yet warm.
+
+> It is a vessel for connection, a way to channel the well's gifts to those who will care for it. Through these connections, the grove's strength grows, ensuring its light touches even the farthest corners.
+
+They nod toward the chalice.
+
+> Take this, and begin crafting a way for the well's bounty to flow. Its gifts, when shared, will enrich not only the grove but all who nurture its roots.
+
+</Lore>
+
+<hr />
+
+**Funding Open Source projects can be challenging, especially when you are investing significant time and effort without immediate financial support.** By creating a sponsorship system, you allow your community to support your project financially, ensuring sustainability and growth. Whether you're an individual developer, a small team, or a larger collective, having sponsorship options available can open opportunities for dedicated contributions, faster development, and long-term maintenance.
+
+**Today's challenge focuses on exploring, setting up, and implementing a sponsorship system for your Open Source project.** By the end of this task, you'll have a clear understanding of how to leverage popular sponsorship platforms, communicate your needs effectively, and encourage your community to contribute. Whether your project is in its early stages or well-established, setting up this system ensures you're ready to receive support whenever someone is interested.
+
+A sponsorship system allows your community to support your project financially. Even if your project is still in its early development, **it's never too soon to set up a sponsorship system**. You never know who might be willing to contribute, and having the system ready makes it easier for them to act. Setting this up now will save you time later, especially when you're focused on coding, debugging, or growing your project.
+
+Contributors and users can fund your work, helping to sustain the project, reward your efforts, and enable future improvements. Their support can help cover costs, reward your time, and even expand the team.
+
+**There are several platforms for Open Source sponsorship**, including [GitHub Sponsors](https://github.com/sponsors) (built-in GitHub feature), [OpenCollective](https://opencollective.com/), [Patreon](https://www.patreon.com), [Ko-fi](https://ko-fi.com), [Buy Me a Coffee](https://buymeacoffee.com), and more. Each has unique features suited to different project needs.
+
+<Steps>
+
+1. **Research platforms.**
+
+    Explore different sponsorship platforms to determine the best fit for your project. Consider the following aspects:
+    - **Fees**: Some platforms charge processing or service fees, while others allow full contributions to go to you.
+    - **Features**: Look for features like recurring donations, one-time payments, funding tiers, or transparency tools.
+    - **Community**: Where is your audience most active? GitHub users may prefer GitHub Sponsors, while creators might find Patreon effective.
+    - **Integration**: Some platforms integrate seamlessly with tools you already use, like GitHub or websites.
+
+    Each sponsorship platform has unique features. For instance:
+    - [GitHub Sponsors](https://github.com/sponsors) is integrated with GitHub, making it easy for developers to sponsor projects they use.
+    - [OpenCollective](https://opencollective.com/) is focused on collective funding, offering transparency and budget management tools.
+    - [Patreon](https://www.patreon.com) is popular for creators, offering tiers and exclusive content for sponsors.
+    - [Ko-fi](https://ko-fi.com) and [Buy Me a Coffee](https://buymeacoffee.com) are simple platforms for one-time donations or ongoing support.
+
+1. **Check eligibility requirements.**
+
+    Before choosing a platform, confirm that you meet its eligibility criteria. Some common requirements include:
+    - **Age restrictions**: Some platforms require users to be over 18.
+    - **Geographical limitations**: Platforms may be restricted to certain countries.
+    - **GitHub account or verification**: GitHub Sponsors requires a GitHub account, while others may need verification.
+
+    Each platform provides clear documentation about its eligibility process, so review those details carefully.
+
+1. **Prepare your profile.**
+
+    Regardless of the platform you choose, you'll need to provide some information to make your sponsorship profile appealing and effective.
+
+    <Steps>
+
+    1. **Create a clear bio** by describing your project's purpose, goals, and impact. Explain why sponsorship is important for your project, and how it will make a difference.
+
+    1. **Set up funding tiers** (if applicable) to offer different levels of support. Consider what benefits you can provide to sponsors at each tier, such as recognition, early access, or exclusive content.
+
+        <Aside type="tip" title="Tip of the iceberg">
+        - **Make sure the benefits you offer are sustainable and scalable.** You don't want to promise more than you can deliver.
+        - **You're out of ideas?** Check out what other projects are offering, and adapt it to your project.
+        </Aside>
+
+    1. **Add supporting links and visuals** to your profile, such as links to your project's website, social media accounts, or other funding platforms you use.
+
+    </Steps>
+
+1. **Implement sponsorship in your repository.**
+
+    Depending on the platform you choose, you won't be accepted immediately. So, whenever you're ready, you can follow this step.
+
+    For GitHub projects, simply add a `.github/FUNDING.yml` file to your repository.
+
+    For other sponsorship platforms, they have an entry in the `.github/FUNDING.yml` file. See the [About FUNDING files GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository#about-funding-files) for more details.
+
+    ```yaml title=".github/FUNDING.yml"
+    buy_me_a_coffee: USERNAME
+    github: USERNAME
+    ko_fi: USERNAME
+    open_collective: USERNAME
+    patreon: USERNAME
+    ```
+
+    When the platform is not supported directly, you can use custom URLs too:
+
+    ```yaml title=".github/FUNDING.yml"
+    custom: 'https://example.com/sponsor'
+    ```
+
+    Once pushed, a _Sponsor_ button will appear on your repository's page.
+    
+    <ContentImage src={day22Snowflake01} alt="" />
+
+1. **Inform your community.**
+
+    Make your community aware of your new sponsorship system. Update key files and share the news.
+
+    Update your `README.md` and/or your documentation to include information about the sponsorship system:
+
+    ```md title="README.md"
+    ## Support This Project
+
+    If you find this project valuable, consider supporting it through sponsorship!
+
+    - [GitHub Sponsors](https://github.com/sponsors/your-github-username)
+    - [Open Collective](https://opencollective.com/your-collective-name)
+    ```
+
+    You can also share your sponsorship goals, benefits, and tiers in your `README.md` to encourage support, but also share the news on your social media or GitHub Discussions to encourage engagement.
+
+</Steps>
+
+**A sponsorship system bridges the gap between your community's enthusiasm for your project and their ability to support it directly.** By providing clear opportunities for sponsorship, you empower contributors to invest in the project's growth while also showing gratitude for their support. Remember to keep your messaging authentic, communicate your goals, and acknowledge your sponsors regularly.
+
+**Financial support doesn't just sustain projects**—it builds stronger, more engaged communities. Whether you gain one sponsor or one hundred, this challenge helps you take a significant step toward a sustainable Open Source future
+
+<h3>Success Criteria</h3>
+
+- ✓ Chosen a sponsorship platform (if eligible).
+- ✓ (Optional) Set up the sponsorship platform (if accepted).
+- ✓ (Optional) Configured your `.github/FUNDING.yml` file (if accepted).
+- ✓ Updated your `README.md` or documentation to share sponsorship details.
+- ✓ Communicated the new sponsorship system to your community.
+
+<Aside type="tip" title="Tips for Success">
+- **Promote wisely**: Be consistent in promoting your sponsorship opportunities, but don't overdo it. Find a balance that works for your project and community.
+- **Show gratitude**: Regularly thank sponsors publicly and keep them updated on how their support is used.
+- **Adapt benefits**: Adapt your tiers and benefits based on community feedback and sponsor engagement.
+</Aside>
+
+<hr />
+
+<Lore>
+The golden chalice now glows faintly, a sign of the connections it has begun to forge. The _Steward of Abundance_ observes with quiet satisfaction, their eyes reflecting the well's golden light.
+
+> You have taken the first steps in ensuring the well's bounty is shared wisely,
+
+they say, their voice filled with gratitude.
+
+> These connections will sustain the grove, strengthening its roots and allowing its light to grow brighter with each passing day.
+
+They place a hand on the well's edge, gazing into its shimmering depths.
+
+> Remember, the gifts of the well are not merely for survival but for growth and shared prosperity. Let this act serve as a reminder of the harmony that can be achieved when abundance is embraced with care.
+
+<LoreSeparator />
+
+<h3>The Steward's Wisdom</h3>
+
+> An artifact's strength is not only measured by its creation but by the foundation of support beneath it. By building a sustainable ecosystem, you ensure your efforts endure beyond fleeting seasons. Remember, the well that is nourished will never run dry.
+
+Drink deeply from the _Well of Enduring Prosperity_, traveller, and secure your endeavor's future.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Promote Sponsorships
+
+<hr />
+
+<Lore type="snowball">
+The _Steward of Abundance_ stands near the _Well of Enduring Prosperity_, holding a mirror that catches and reflects its golden light, sending shimmering beams through the _Evergrowing Grove_.
+
+> The well's abundance flows freely, yet it must be known far and wide,
+
+the _Steward_ begins, tilting the mirror to illuminate the surrounding trees.
+
+> This light has the power to reach those who would cherish and nurture the grove. By sharing its brilliance, you invite others to stand with you in ensuring its growth and vitality.
+
+They hand you the mirror with a knowing smile.
+
+> Use this tool wisely to cast the light further, so its gifts may be seen and embraced by those willing to offer their care.
+
+</Lore>
+
+<hr />
+
+**Open Source projects thrive on contributions of all kinds**—code, design, documentation, and financial support.
+
+While contributions from the community are invaluable, financial support can unlock new opportunities to grow your project, fund maintenance, and reward contributors. Sponsorships enable you to allocate resources more effectively, improve project quality, and ensure long-term sustainability, which ultimately benefits everyone involved—maintainers, contributors, and users alike.
+
+**Today's challenge focuses on setting up and promoting sponsorship opportunities for your project.** You'll craft a compelling message that explains why financial support matters, create transparent and meaningful tiers for sponsors, and make it easy for individuals and organizations to contribute. By scaling your sponsorship efforts, you empower your project and its community to thrive sustainably.
+
+<Steps>
+
+1. **Audit your project's sponsorship needs.**
+
+    Before you promote sponsorships, take time to reflect on your project's needs and the impact sponsorships could have.
+
+    - **Define clear goals**: What would financial support allow you to achieve? Examples include:
+      - Covering hosting and infrastructure costs
+      - Funding tools, events, or new features
+      - Offering rewards to top contributors or maintainers
+    - **List your current expenses and future aspirations**: Document areas where funding is needed and quantify the costs where possible. For instance, "$50/month for domain hosting" or "$200 for a better CI/CD pipeline."
+    - **Align with your contributors**: If your project has contributors, engage them in this discussion. Understanding their perspective can help shape realistic sponsorship goals.
+
+    A well-defined purpose reassures potential sponsors that their support will directly benefit the project and community.
+
+1. **Choose your sponsorship platforms.**
+
+    There are several platforms where you can receive financial contributions—[GitHub Sponsors](https://github.com/sponsors) (built-in GitHub feature), [OpenCollective](https://opencollective.com/), [Patreon](https://www.patreon.com), [Ko-fi](https://ko-fi.com), [Buy Me a Coffee](https://buymeacoffee.com), or others. If you haven't explored these options yet, you can refer to [today's beginner challenge](#beginner-add-a-sponsorship-system) for more details.
+
+    For this challenge, focus on:
+    - Consolidating or improving your sponsorship presence on platforms you've already set up.
+    - Highlighting the specific benefits sponsors receive (e.g., public acknowledgment, early access, or priority support).
+
+    If you haven't set up any platform yet, start with one that aligns with your goals and audience. Open Collective is a strong choice for transparency, while GitHub Sponsors integrates seamlessly with repositories.
+
+1. **Craft a sponsorship message.**
+
+    A strong, clear sponsorship message is critical for attracting support. It helps potential sponsors understand **why their contributions matter** and how they will make a difference.
+
+    - **Write a compelling post**: Use your project README, a GitHub Discussion, the GitHub Sponsors description, or a blog post on your project's website. Include:
+      - A short explanation of how sponsorship helps sustain or grow your project.
+      - Clear, specific goals. For example:
+        > With $150/month, we can cover hosting costs and spend more time improving documentation for new contributors.
+      - A call-to-action linking directly to your sponsorship platform.
+
+    - **Explain benefits for sponsors**: Make the value of sponsorship tangible. Examples of benefits:
+      - A shoutout in release notes or on social media
+      - Priority support for questions or issues
+      - A special mention in your project documentation or README
+      - Logo placement on your project website for higher-tier sponsors
+
+    <Aside>
+    Funding platforms often provide tools for setting up tiers and benefits. Make sure to use these features to clearly communicate the value of sponsorship.
+    </Aside>
+
+    <Aside type="tip" title="Tip of the iceberg">
+    Check out other projects' sponsorship messages and tiers for inspiration. What resonates with you as a potential sponsor? Adapt those ideas to fit your project's unique needs.
+    </Aside>
+
+    - **Be transparent**: Let sponsors know where their money will go. Transparency builds trust and encourages long-term support.
+
+1. **Make sponsorship opportunities visible.**
+
+    Ensure that anyone visiting your project or its related content knows how to support you.
+
+    - **Use the GitHub Sponsor button**: If you're using GitHub Sponsors, add the Sponsor button to your repository. You can do this by creating a `.github/FUNDING.yml` file in your repository with the appropriate configuration.
+    - **Add a _Support Us_ section** to your README, project website, or documentation. Example:
+
+      ```md title="README.md"
+      ## Support Our Work 🚀
+
+      Sponsorship helps us keep [Project Name] alive and thriving. Your contributions go toward improving features, infrastructure, and community support.
+
+      - ❤️ [GitHub Sponsors](https://github.com/sponsors/your-name)
+      - 💼 [Open Collective](https://opencollective.com/project-name)
+
+      Thank you to our sponsors for believing in this project!
+      ```
+
+    - **Pin a discussion post on GitHub** that introduces your sponsorship tiers and links to your funding pages.
+    - **Share on social media**: Announce sponsorship opportunities to your broader community. Use engaging language like:
+
+      > We're now accepting sponsors! Your support will help us ship new features faster and improve project documentation. Check it out here: [link].
+
+1. **Recognize and thank sponsors.**
+
+    Recognizing sponsors builds trust and motivates others to contribute.
+
+    - Publicly thank your sponsors in a section on your project README, website, or release notes.
+    - For long-term or high-tier sponsors, consider offering special recognition like logo placement or dedicated social media shoutouts.
+    - Regularly update sponsors and the community on how funds are used. A short monthly or quarterly update, even as a tweet or discussion post, reinforces transparency.
+
+    Example update:
+
+    > Thanks to our sponsors, we've been able to fund new contributor onboarding documentation and improve our CI/CD pipeline this month! 🎉 If you want to support this work, visit [link].
+
+    <Aside type="tip" title="Tip of the iceberg">
+    Check out our [Display Your Sponsors in Your GitHub READMEs article](https://openresource.dev/articles/display-your-sponsors-in-your-github-readmes) for more tips on showcasing sponsors in your README.
+    </Aside>
+
+</Steps>
+
+**Promoting sponsorships is a key step toward the sustainability of your Open Source project.** By clearly defining your needs, setting up platforms, and communicating the value of sponsorship, you make it easier for individuals and organizations to support your work. Financial contributions not only help you cover essential costs but also enable you to focus on growing and improving the project.
+
+**Congratulations on taking the initiative to make your project more sustainable!** By sharing your sponsorship opportunities with your community, you're building trust, transparency, and a stronger foundation for the future.
+
+<h3>Success Criteria</h3>
+
+- ✓ Defined clear sponsorship goals and needs.
+- ✓ Chosen sponsorship platforms that align with your project.
+- ✓ Crafted a compelling sponsorship message with specific goals and benefits.
+- ✓ Made sponsorship opportunities visible on your project's README, website, or documentation.
+- ✓ Recognized and thanked sponsors publicly.
+
+<hr />
+
+<Lore>
+The golden light now dances across the grove, reaching its edges and shimmering even in the darkest corners. The _Steward of Abundance_ observes with pride, their expression calm yet satisfied.
+
+> You have shared the well's light, and it has found others who will support its flow,
+
+they say, their voice filled with warmth.
+
+> The grove grows stronger when its gifts are seen and valued. Remember, spreading this light ensures that abundance will always find its way back to nourish and sustain.
+
+They gaze at the illuminated grove, the light now a vibrant reminder of shared prosperity.
+
+> You have done well. Let this act serve as a guide for others to join in fostering the grove's future.
+
+<LoreSeparator />
+
+<h3>The Steward's Wisdom</h3>
+
+> An artifact's strength is not only measured by its creation but by the foundation of support beneath it. By building a sustainable ecosystem, you ensure your efforts endure beyond fleeting seasons. Remember, the well that is nourished will never run dry.
+
+Drink deeply from the _Well of Enduring Prosperity_, traveller, and secure your endeavor's future.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Scale Sponsorship Opportunities
+
+<hr />
+
+<Lore type="ice">
+In the heart of the _Evergrowing Grove_, the _Steward of Abundance_ unveils a second chalice, larger and intricately engraved with branching patterns that seem to grow as they speak.
+
+> The well's flow has been guided, but the grove is vast, with many roots awaiting nourishment,
+
+they explain, holding the chalice aloft.
+
+> To sustain its flourishing, you must craft new paths for the well's bounty to reach even the most distant branches. Expand the flow, ensuring every root and leaf can draw strength from its gifts.
+
+They place the chalice before you, its golden glow beckoning.
+
+> Take this as a symbol of your next endeavor. The well's strength lies not just in its depths but in the care taken to channel its abundance far and wide.
+
+</Lore>
+
+<hr />
+
+**Sponsorship opportunities can unlock significant value for Open Source projects**, supporting both day-to-day operations and long-term sustainability. As your project expands across multiple repositories or grows in contributor size, managing sponsorships effectively becomes even more important. By consolidating your funding strategies, introducing multiple revenue streams, and demonstrating transparency, you can scale your project's financial stability while building trust with sponsors and the community.
+
+**Today's challenge is about taking sponsorship effort to the next level.** You'll create a central strategy for managing sponsorships across repositories, explore advanced revenue streams like grants and partnerships, and implement transparency measures. This approach will help establish a sustainable foundation for funding, ensuring the growth and success of your project while serving your community.
+
+<Aside>
+If you're new to setting up sponsorships, consider starting with the [intermediate challenge](#intermediate-promote-sponsorships) to establish a foundation before scaling your efforts.
+</Aside>
+
+<Steps>
+
+1. **Audit your current funding efforts.**
+
+    Start by assessing your existing sponsorship opportunities, platforms, and processes across repositories.
+
+    - **Identify where you currently accept sponsorships**: Look for existing funding links across all repositories, documentation, or websites. Common platforms include [GitHub Sponsors](https://github.com/sponsors) (built-in GitHub feature), [OpenCollective](https://opencollective.com/), [Patreon](https://www.patreon.com), [Ko-fi](https://ko-fi.com), and [Buy Me a Coffee](https://buymeacoffee.com).
+    - **Evaluate your outreach**: Have you shared sponsorship opportunities clearly with your community? Do the benefits for sponsors feel meaningful and visible?
+    - **Document your gaps**: Note any repositories without sponsorship links, outdated information, or inconsistencies. The goal is to consolidate efforts into a unified, consistent strategy.
+
+    A clear understanding of where your current funding efforts stand and areas for improvement.
+
+1. **Consolidate sponsorship links and benefits.**
+
+    For projects with multiple repositories, centralizing your sponsorship messaging makes it easier for the community and sponsors to engage.
+
+    - **Create a single funding entry point**: Choose a primary location (e.g., project website, main README file, or GitHub Discussions) to consolidate all sponsorship links and details. Provide:
+      - A brief explanation of the importance of sponsorships for your project's growth and sustainability.
+      - Links to all active funding platforms.
+      - Transparent benefits for different tiers (e.g., public recognition, priority support).
+    - **Cross-link repositories**:
+      - Update READMEs, websites, documentations in all repositories to point to this central funding hub.
+      - Define a `.github/FUNDING.yml` file directly in your organization's `.github` repository to ensure consistency across all projects.
+
+    A single, unified place where sponsors can support your entire project ecosystem.
+
+1. **Explore and integrate advanced funding streams.**
+
+    Beyond direct sponsorships, consider other revenue sources that can provide long-term stability.
+
+    - **Grants applications**: Many organizations fund Open Source projects through grants such as [Open Source Collective](https://oscollective.org/), or [NLnet Foundation Grants](https://nlnet.nl/propose/). Research grant opportunities that align with your project's goals and apply for funding.
+      - Identify grants relevant to your project's goals. Draft a proposal highlighting your project's impact, roadmap, and funding needs.
+    - **Commercial partnerships**: Partner with companies that use your project or benefit from its success. Companies may fund your work in exchange for:
+      - Special recognition or logo placement
+      - Tailored features or priority issue resolution
+      - Sponsorship of specific project areas (e.g., new features, community initiatives)
+    - **Service offerings**: If applicable, explore consulting, training, or custom development services. Examples include offering workshops on how to integrate or use your project effectively.
+
+    Multiple funding streams identified and, where possible, integrated into your sustainability plan.
+
+1. **Create a funding transparency report.**
+
+    Building trust with sponsors and the community requires transparency around how funds are allocated and spent.
+
+    - **Set up a basic funding report**: Create a page or document that outlines:
+      - Total sponsorship funds received (by platform or source).
+      - How funds are used: Examples include hosting costs, contributor rewards, or funding specific features.
+      - Future funding goals.
+    - **Use tools to automate reporting**:
+      - Platforms like Open Collective provide built-in transparency and budgeting tools.
+      - For GitHub Sponsors, a simple markdown update in your README or a GitHub Discussion can provide monthly or quarterly summaries.
+    - **Share updates regularly**: ransparency fosters trust and can encourage long-term sponsorships. Consider creating a recurring post (e.g., quarterly financial updates) to show progress and thank sponsors.
+
+    A transparent funding report that demonstrates accountability and builds sponsor confidence.
+
+1. **Plan for long-term governance.**
+
+    To sustain your funding strategy long-term, formalizing governance structures can help balance growth with community needs.
+
+    - **Define decision-making processes**: Create clear policies for how funding is allocated (e.g., prioritizing features, rewarding contributors, covering operational costs).
+    - **Include your contributors**: Transparency about governance ensures that contributors feel engaged and valued in funding decisions. Consider creating a Sponsorship Committee to manage funds collaboratively.
+
+    A governance structure that ensures sustainable, community-aligned funding decisions.
+
+</Steps>
+
+**Scaling sponsorship opportunities takes your project to the next level, ensuring long-term sustainability, trust, and growth.** By consolidating your funding strategy, exploring advanced revenue streams, and prioritizing transparency, you empower your project to thrive. These efforts not only provide financial stability but also reinforce your commitment to the community that relies on and contributes to your work.
+
+**Congratulations on completing this advanced challenge!** By building a clear, scalable funding strategy, you're strengthening the foundation of your Open Source project for years to come.
+
+<h3>Success Criteria</h3>
+
+- ✓ All repositories have consistent sponsorship links and benefits.
+- ✓ Explored and integrated advanced funding streams like grants, partnerships, or services.
+- ✓ Created a funding transparency report outlining funds received and allocation.
+- ✓ Established a governance structure for long-term funding decisions.
+
+<hr />
+
+<Lore>
+The larger chalice glows steadily now, its golden light branching outward in streams that touch every corner of the grove. The _Steward of Abundance_ smiles, their expression calm yet filled with quiet pride.
+
+> You have expanded the well's reach, allowing its bounty to nurture even the furthest branches,
+
+they say, their voice resonating like a gentle melody.
+
+> Through these new paths, the grove will continue to grow in harmony, its strength shared among all who care for it.
+
+They gesture toward the glowing chalice, its radiance a testament to your efforts.
+
+> Let this act remind you of the power in collaboration and the endless possibilities that arise when abundance flows freely. The grove stands stronger because of your work.
+
+<LoreSeparator />
+
+<h3>The Steward's Wisdom</h3>
+
+> An artifact's strength is not only measured by its creation but by the foundation of support beneath it. By building a sustainable ecosystem, you ensure your efforts endure beyond fleeting seasons. Remember, the well that is nourished will never run dry.
+
+Drink deeply from the _Well of Enduring Prosperity_, traveller, and secure your endeavor's future.
+</Lore>

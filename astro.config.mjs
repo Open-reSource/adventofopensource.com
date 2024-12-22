@@ -166,6 +166,7 @@ export default defineConfig({
             },
             {
               label: 'Week 3: The Chorus of Contribution',
+              collapsed: true,
               items: [
                 {
                   label: 'Day 15: The Pulse of the Community',
@@ -194,6 +195,15 @@ export default defineConfig({
                 {
                   label: 'Day 21: The Multilingual Grove',
                   slug: 'advent/week-3/day-21'
+                },
+              ]
+            },
+            {
+              label: 'Week 4: The Evergrowing Grove',
+              items: [
+                {
+                  label: 'Day 22: The Well of Enduring Prosperity',
+                  slug: 'advent/week-4/day-22'
                 },
               ]
             },
