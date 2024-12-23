@@ -1,0 +1,419 @@
+---
+title: "Day 23: The Bell of Resonance"
+description: "The Echo of the Grove speaks to the importance of sharing stories beyond borders, as the Bell of Resonance ensures that the grove's messages are heard, even when shadowed by silence."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+import day23Snowflake01 from '../../../../assets/days/day-23-snowflake-01.png';
+import day23Snowflake02 from '../../../../assets/days/day-23-snowflake-02.png';
+
+<Lore type="logo">
+<h2>The Echo of the Grove</h2>
+
+Near the edge of the _Evergrowing Grove_, the solemn toll of the _Bell of Resonance_ echoes through the air, its sound carrying far and wide. You follow the sound to find the _Herald of Echoes_, who watches over this ancient artifact.
+
+> The _Bell_'s call ensures that the stories of the grove reach beyond its borders, for without its resonance, even the brightest lights may remain hidden under the _Fog of Silence_,
+
+the _Herald_ begins, gesturing to the horizon.
+
+The _Herald_ shares the tale of the mythical _Blue Bird_, once a beloved messenger that carried the voices of many. But the _Musky Wizard_ cast a dark spell upon it, leaving a black cross upon its forehead and turning it into the _Black Bird_. Lost and confused, the _Black Bird_ became a symbol of the _Shadow of Scarcity_, weakening the connections it once nurtured.
+
+Yet, hope rose with the arrival of the _Mastodon of the Blue Sky_, a guardian who offered new paths for messages to travel and helped guide the _Black Bird_ back toward its true purpose.
+
+> The grove thrives when its stories are told. Take up the _Bell_'s call, ensuring its sound carries far, and that those who listen find strength and connection in its echo.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-create-social-preview)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-standardize-branding)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-automate-and-centralize-branding)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Create Social Preview
+
+<hr />
+
+<Lore type="snowflake">
+The _Herald of Echoes_ presents a small, shimmering crystal, etched with images that shift and change as you gaze upon it.
+
+> This crystal holds the essence of the grove, a glimpse into its heart,
+
+the _Herald_ explains, placing it in your hands.
+
+> It is a token to share with others, a way to spark curiosity and invite them to discover the grove's wonders for themselves. A picture speaks louder than words, offering an instant connection to the essence of a story.
+
+They nod toward the _Bell of Resonance_.
+
+> Use this image to amplify the Bell's call, ensuring those who hear its chime are drawn closer by the vision you share.
+
+</Lore>
+
+<hr />
+
+**At this stage of your project, creating a strong social presence is essential to attract contributors, users, and supporters.** A well-designed visual identity can make your project more recognizable and appealing, helping it stand out among thousands of other Open Source initiatives. Elements like a logo, banner, and social preview image not only improve your project's branding but also make it shareable and professional.
+
+**Today's challenge will focus on establishing your project's visual identity and sharing it effectively on social platforms.** You'll design a logo, create social media-ready images, optimize your repository's social previews, and share your work with a broader audience. By the end of the challenge, you'll have a visually appealing and shareable project that makes a strong first impression.
+
+<Steps>
+
+1. **Create a logo.**
+
+    A logo serves as a visual representation of your project and helps others recognize it instantly. It can be as simple as an icon, a wordmark (text-based), or a combination of both.
+
+    You can use accessible design tools such as [Penpot](https://penpot.app/) (Open Source), [Figma](https://www.figma.com), or [Canva](https://www.canva.com) to create a logo for your project.
+
+1. **Create a banner.**
+
+    A banner is a large, visually appealing image that represents your project. It can combine the logo, project name, and a short tagline or description. This is especially useful for showcasing your project on social platforms, blogs, or README headers.
+
+    You can use the same design tools to create a banner for your project.
+
+1. **Upload the logo and banner to your repository.**
+
+    Place the logo and banner images in a dedicated folder like `assets/` in your repository.
+
+    Update your README and documentation to include the logo and banner image in the appropriate sections.
+
+    <Aside>
+    You can add a `NOTICE.txt` file in the same folder to specify the license of the images you're using. For example, if you're using a Creative Commons image, you can mention it in the `NOTICE.txt` file, and reference it in your README, and license file.
+    </Aside>
+
+1. **Choose a social media approach.**
+
+    You have two options when promoting your project:
+    - **Create dedicated social media accounts** for your project. Recommended for long-term, active projects.
+    - **Use your personal accounts** to share updates and promote the repository. If you use your personal account, add a note to your bio mentioning the project.
+
+    <Aside type="tip" title="Tip of the iceberg">
+    If you're unsure about maintaining new social media accounts, start small. Promote your project using your personal accounts first, and create separate accounts later if needed.
+    </Aside>
+
+1. **Optimize your project's social preview.**
+
+    At this point, you'd probably want to share your repository link on social media platforms.
+
+    You can check how it would like when shared on social media platforms by using an Open Graph preview tool like [OpenGraph](https://www.opengraph.xyz).
+
+    By default, on GitHub, it is an image that includes:
+    - The organization or user name
+    - The repository name
+    - The organization or user avatar
+    - The description
+    - The number of contributors, issues, stars, and forks
+
+    <ContentImage src={day23Snowflake01} alt="" />
+
+    You might want to **create a more appealing social preview image** to attract more attention.
+
+    <Steps>
+
+    1. Go to your repository settings on GitHub.
+
+    1. Then, go to the "General" tab, in the "Social preview" section.
+
+    1. Create a new social preview image by uploading a new image (1280x640 pixels).
+
+        For that, you can create your own image from scratch, or use the template link provided by GitHub.
+
+        <Aside type="tip" title="Tip of the iceberg">
+        It was not specifically designed for repository social preview, but we created the [GitHub Marketplace: Social Preview for Your GitHub Actions](https://openresource.dev/articles/github-marketplace-social-preview-for-your-github-actions) article where you can find a Figma template to create your own social preview image.
+        </Aside>
+
+    1. Upload the image that will be automatically saved.
+
+    1. Go to an Open Graph preview tool like [OpenGraph](https://www.opengraph.xyz), and enter the URL of your repository to see the new social preview image.
+
+        <ContentImage src={day23Snowflake02} alt="" />
+
+    </Steps>
+
+1. **Share your repository on social media platforms.**
+
+    Post your repository link on platforms like Bluesky, Mastodon, or Reddit. Use hashtags to boost visibility, including `#AdventOfOpenSource` and `#OpenSource` hashtags.
+
+    You can also add a short description or image to make your post more engaging.
+
+</Steps>
+
+**By completing this challenge, you've taken a major step toward making your project discoverable, recognizable, and shareable.**
+
+A well-designed logo, banner, and optimized social preview contribute to building trust and interest among potential users and contributors. Sharing your work publicly is the first step to growing your project's community, so don't be shy—let the world know what you've built!
+
+<h3>Success Criteria</h3>
+
+- ✓ Created a logo for your project and used it in your repository and documentation.
+- ✓ (Optional) Created a banner image for your project, and used it in your repository and documentation.
+- ✓ (Optional) Created a new social preview image for your repository.
+- ✓ Shared your repository link on social media platforms with the `#AdventOfOpenSource` and `#OpenSource` hashtags.
+
+<hr />
+
+<Lore>
+The crystal now glows with the brilliance of the grove, its images vivid and inviting. The _Herald of Echoes_ watches as its light begins to ripple outward, reaching the farthest edges of the grove.
+
+> You have created a beacon that can speak to others before words are even spoken,
+
+the _Herald_ says with a proud smile.
+
+> This image will guide those who see it toward the grove, stirring their curiosity and connection.
+
+As the glow of the crystal merges with the toll of the _Bell of Resonance_, the _Herald_'s voice resonates with assurance.
+
+> The grove grows stronger when its light shines brightly for all to see. Let this act remind you of the power in sharing its essence with the world.
+
+<LoreSeparator />
+
+<h3>The Herald's Call</h3>
+
+> A voice unheard is a story untold. To thrive, your artifact must not only exist but resonate, inspiring those who hear its call. Remember, the louder and clearer your echo, the farther it will travel. 
+
+Sound the Bell of Resonance, traveller, and let your artifact's voice ring out across the lands.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Standardize Branding
+
+<hr />
+
+<Lore type="snowball">
+The _Herald of Echoes_ gestures toward the _Bell of Resonance_ and the symbols carved into its surface—elegant patterns and motifs that represent the grove's identity.
+
+> These marks are more than decoration. They are the signature of the grove, ensuring that wherever its sound is heard, all will know its source,
+
+the _Herald_ explains.
+
+A unified identity is essential to ensure that the grove's messages are instantly recognized, no matter where they travel. Without consistency, the symbols might lose their meaning, leaving the story fragmented and harder to follow.
+</Lore>
+
+<hr />
+
+**Consistent branding plays a significant role in making your Open Source project recognizable, professional, and memorable.** As your project grows and gains contributors, ensuring that your visual identity—logos, social media banners, documentation visuals, and repository appearance—remains cohesive across platforms helps build trust and engagement. A well-branded project not only conveys reliability but also creates a stronger connection with your community and potential adopters.
+
+**Today's challenge focuses on standardizing the branding of your project.** You will consolidate and refine visual assets, ensure branding consistency across your repository and all platforms, and set up guidelines for future contributors to maintain this effort. By the end of this challenge, your project will look polished, unified, and ready to shine across any platform.
+
+<Steps>
+
+1. **Audit your current branding assets.**
+
+    Start by identifying what branding assets you currently have and where inconsistencies exist.
+
+    - **Visual audit**: Review the following elements:
+        - Project logo (including dark/light variants and various resolutions).
+        - Social media banners for platforms like Bluesky, LinkedIn, or Mastodon.
+        - Favicons, README visuals, and documentation headers.
+        - Any other promotional images, such as blog or announcement graphics.
+    - **Centralize your findings**: Create a checklist or table to document (not necessarily publicly) assets you already have, where they are located (e.g., repository, websites), and where inconsistencies or gaps appear.
+
+    At this point, you should have a clear list of existing assets and areas that need standardization.
+
+1. **Design or refine key branding assets.**
+
+    If you're missing assets or they need improvements, now is the time to refine your branding.
+
+    **Focus on creating the design core assets**:
+      - A clean, scalable logo (SVG format preferred)
+      - Social media banners optimized for popular platforms
+      - Favicons
+
+    For that, you can use tools like [Penpot](https://penpot.app/) (Open Source), [Figma](https://www.figma.com), or [Canva](https://www.canva.com).
+
+    [Inkscape](https://inkscape.org/) or [GIMP](https://www.gimp.org/) are also great Open Source alternatives for creating vector graphics.
+
+    **Then, test across platforms** by uploading and previewing your assets on the platforms where your project is active to ensure they render correctly.
+
+1. **Update branding across your repository and platforms.**
+
+    Standardize your branding by rolling out the updated assets across your repository and community touchpoints.
+
+    <Steps>
+
+    1. **Repository updates.**
+  
+        - Replace outdated logos in README files and documentation.
+        - Update repository social media previews using the correct images. Add meta tags to project websites for Open Graph.
+
+          <Aside>
+          Use [OpenGraph](https://www.opengraph.xyz/) to preview how Open Graph images will look when shared on social media platforms.
+          </Aside>
+
+        - Add a consistent favicon to all your web-based platforms.
+
+    1. **Community and social media.**
+
+        - Update banners, avatars, and thumbnails on all social media platforms.
+        - Verify that project announcements, blogs, or newsletters use the updated branding.
+
+    </Steps>
+
+1. **Create a branding guide for contributors.**
+
+    To maintain consistency as your project grows, document the branding guidelines so contributors know how to use your assets.
+
+    - **What to include in a branding guide**:
+        - Approved logo variations and usage guidelines.
+        - Specifications for dimensions and file formats for different use cases (social media, favicons, blog posts, etc.).
+        - Color palette with hex codes.
+        - Typography guidelines (font family, sizes, and styles).
+        - Example use cases (e.g., README headers, blog previews, or slide decks).
+
+    - **Where to host the guide**:
+        - Add the guide as a dedicated Markdown file in your repository, or create a section in your project's contributing guidelines.
+        - If the guidelines are extensive, consider publishing them on your project's website or a dedicated branding page.
+
+</Steps>
+
+**Standardizing your branding ensures your project presents a polished, professional image that fosters trust and recognition.** By auditing, refining, and rolling out consistent branding assets across repositories and platforms, you strengthen your project's identity. The branding guide you've created will empower contributors to maintain these efforts as your project grows.
+
+**Congratulations!** You've taken a critical step toward making your Open Source project visually cohesive and ready for broader adoption.
+
+<h3>Success Criteria</h3>
+
+- ✓ Audited your current branding assets and identified areas for improvement.
+- ✓ Designed or refined key branding assets (logo, social media banners, favicons).
+- ✓ Updated branding across your repository and platforms.
+- ✓ Created a branding guide for contributors to maintain consistency.
+
+<hr />
+
+<Lore>
+The _Herald of Echoes_ examines the refined symbols and motifs you've crafted, their details now sharp and harmonious.
+
+> With these marks, the grove speaks in one voice, its identity clear and unmistakable to all who encounter it,
+
+the _Herald_ says, their pride evident.
+
+> As the _Bell_ tolls once more, its resonance carries not only sound but a unified story—a beacon of clarity and recognition.
+
+<LoreSeparator />
+
+<h3>The Herald's Call</h3>
+
+> A voice unheard is a story untold. To thrive, your artifact must not only exist but resonate, inspiring those who hear its call. Remember, the louder and clearer your echo, the farther it will travel. 
+
+Sound the Bell of Resonance, traveller, and let your artifact's voice ring out across the lands.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Automate and Centralize Branding
+
+<hr />
+
+<Lore type="ice">
+In a small alcove near the _Bell of Resonance_, the _Herald of Echoes_ reveals a luminous artifact: the _Codex of Harmony_.
+
+> This codex ensures that the grove's identity is preserved and can be shared effortlessly. It gathers and distributes the essence of the grove's symbols, allowing them to be applied with ease wherever they are needed,
+
+the _Herald_ explains.
+
+> Maintaining consistency across every corner of the grove requires tools to simplify and centralize the process. Without them, the effort to sustain the grove's identity may falter, its symbols scattered and incomplete.
+
+</Lore>
+
+<hr />
+
+**As Open Source projects scale across multiple repositories, ensuring a consistent and professional brand presence becomes increasingly important.** A unified brand helps your project stand out, builds trust with contributors and sponsors, and improves visibility across platforms. However, manually managing branding assets—like social previews, logos, and announcement templates—across repositories can quickly become tedious and error-prone. Automating and centralizing these efforts ensures efficiency while maintaining high quality.
+
+**Today's challenge is about automating and centralizing your branding workflows for multi-repository projects.** You'll create reusable templates, streamline updates, and set up systems to monitor the impact of branding elements like social previews and announcements. By establishing a scalable approach, you'll simplify maintenance and better position your project for growth and engagement.
+
+<Steps>
+
+1. **Audit and define your branding assets.**
+
+    Start by identifying the key branding assets you use for your project and repositories. This includes visual, textual, and organizational elements.
+
+    - **Make a list**:
+      - Logos (including variations like icons and full-width versions).
+      - Social preview images (e.g., Open Graph images, banners, and thumbnails).
+      - Repository descriptions, READMEs, and taglines.
+      - Blog announcement or release note templates.
+    - **Centralize your assets**: Store all branding assets in a single location, such as:
+      - A dedicated private or public repository.
+      - A cloud-based solution.
+    - **Create documentation**: Add clear instructions on how to use these assets. For example, include guidelines for logo placement, fonts, and color palettes. Tools like [Figma](https://www.figma.com) or [Penpot](https://penpot.app/) can help create design systems for your project.
+
+1. **Create social preview and announcement templates.**
+
+    Templates simplify the creation of consistent visuals and messaging. We're suggesting two types of templates to start with:
+
+    - **Social preview templates**:
+      - Use tools like [Penpot](https://penpot.app/) or [Figma](https://www.figma.com) to design social preview templates for platforms like Bluesky, LinkedIn, or Mastodon.
+      - Include placeholders for repository names, versions, and call-to-actions.
+      - Ensure the designs are visually engaging, with consistent fonts, logos, and color schemes.
+    - **Announcement templates**:
+      - Standardize release note formats in your repository README or project blog.
+      - Include sections for version numbers, release dates, key features, and contributor acknowledgments.
+      - Use consistent images and styling to maintain brand identity.
+
+    Everytime it's possible, create templates for recurrent tasks and store them in your centralized hub. This will save you time and ensure consistency across your project.
+
+1. **Automate branding workflows across repositories.**
+
+    Ensure your templates and branding assets are consistently applied to all repositories without manual effort.
+
+    - **Create a script or GitHub Action**:
+      - Automate updating README files, social preview links, and logo placements across repositories.
+      - Use GitHub Actions workflows to push updates to multiple repositories simultaneously.
+      - Write a script to monitor and flag inconsistencies in branding assets.
+    - **Centralize repository branding configuration**:
+      - Use tools like [Probot](https://probot.github.io/) to enforce branding guidelines in pull requests.
+      - Add a `.github/config.yml` file in your repositories to standardize descriptions and messages.
+
+1. **Monitor and measure branding impact.**
+
+    Improving branding consistency is only effective if it translates into increased engagement and visibility.
+
+    - **Set up tracking tools**:
+      - Use analytics tools like [Plausible](https://plausible.io/) or [Mattomo](https://matomo.org/) to monitor traffic and engagement.
+      - Track social media shares and mentions with external tools.
+    - **Monitor engagement**:
+      - Track how consistent branding impacts repository star growth, social media shares, or downloads.
+      - Use GitHub API to analyze repository activity after updates.
+    - **Experiment and iterate**:
+      - Test different social previews or announcement styles (e.g., A/B testing visuals or copy).
+      - Monitor which formats lead to higher click-throughs or engagement, and update templates accordingly.
+
+</Steps>
+
+**Automating and centralizing branding across multiple repositories ensures your project maintains a professional and consistent identity while saving time on manual updates.** Consistent branding improves recognition, builds trust with contributors and stakeholders, and creates a more polished presence across platforms. By monitoring the impact of these updates, you can continuously refine your approach for even better results.
+
+This is a vast topic. We just recommended some tools and strategies to start with. Feel free to explore more advanced techniques and tools to further streamline your branding workflows.
+
+**Congratulations on completing this challenge!** You've taken a significant step toward scaling your branding strategy and positioning your project for sustainable growth.
+
+<h3>Success Criteria</h3>
+
+- ✓ Branding assets are centralized and documented.
+- ✓ Social preview and announcement templates are created and stored in a centralized location.
+- ✓ Branding workflows are automated across repositories using scripts or GitHub Actions.
+- ✓ Monitoring tools are set up to track the impact of branding updates on engagement and visibility.
+
+<hr />
+
+<Lore>
+The _Codex of Harmony_ glows as the grove's identity flows through it, ready to be applied wherever it is needed. The _Herald of Echoes_ smiles, watching the process unfold with seamless precision.
+
+> The grove's symbols now live beyond the _Bell_, spreading effortlessly without losing their meaning,
+
+the _Herald_ says.
+
+> With the Codex, the grove's story will endure, resonating with clarity and strength across all who encounter it.
+
+<LoreSeparator />
+
+<h3>The Herald's Call</h3>
+
+> A voice unheard is a story untold. To thrive, your artifact must not only exist but resonate, inspiring those who hear its call. Remember, the louder and clearer your echo, the farther it will travel. 
+
+Sound the Bell of Resonance, traveller, and let your artifact's voice ring out across the lands.
+</Lore>

@@ -205,6 +205,10 @@ export default defineConfig({
                   label: 'Day 22: The Well of Enduring Prosperity',
                   slug: 'advent/week-4/day-22'
                 },
+                {
+                  label: 'Day 23: The Bell of Resonance',
+                  slug: 'advent/week-4/day-23'
+                },
               ]
             },
           ],
