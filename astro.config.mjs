@@ -209,6 +209,10 @@ export default defineConfig({
                   label: 'Day 23: The Bell of Resonance',
                   slug: 'advent/week-4/day-23'
                 },
+                {
+                  label: 'Day 24: The Celestial Compass',
+                  slug: 'advent/week-4/day-24'
+                },
               ]
             },
           ],

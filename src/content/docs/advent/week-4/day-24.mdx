@@ -1,0 +1,429 @@
+---
+title: "Day 24: The Celestial Compass"
+description: "Guiding Stars of the Future highlights the importance of clear direction for growth, as the Celestial Compass and the Navigator of Horizons guide the grove's journey toward a purposeful and flourishing future."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Badge } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
+import Lore from '../../../../components/Lore.astro';
+import LoreSeparator from '../../../../components/LoreSeparator.astro';
+
+<Lore type="logo">
+<h2>Guiding Stars of the Future</h2>
+
+At the summit of the _Evergrowing Grove_, you arrive at the _Celestial Compass_, a timeless artifact carved from starlight and stone. The air hums with quiet wisdom as the _Navigator of Horizons_ greets you.
+
+> The grove's journey is not bound by what has been but by what lies ahead. The _Compass_ aligns with the stars, showing paths yet untraveled,
+
+the _Navigator_ explains.
+
+> Without a clear course, even the most vibrant endeavors risk wandering aimlessly, shrouded by the _Cloud of Uncertainty_. The grove flourishes when its steps forward are guided by purpose, ensuring its light continues to shine across all horizons.
+
+Choose the rune that best suits your skills and experience:
+
+- **Snowflake Rune**: Beginner, you're starting a new artifact. [Go to the beginner challenge.](#beginner-create-first-milestone)
+- **Snowball Rune**: Intermediate, you already have an artifact and want to enhance it. [Go to the intermediate challenge.](#intermediate-use-milestones-to-plan-releases)
+- **Ice Rune**: Advanced, you already have a large or several artifacts and want to go further. [Go to the advanced challenge.](#advanced-coordinate-milestones-across-repositories)
+
+If you're joining the village today, you can always [catch up on the instructions from Day 1](/advent) to get up to speed.
+</Lore>
+
+<ChallengesSeparator />
+
+## Beginner: Create First Milestone
+
+<hr />
+
+<Lore type="snowflake">
+As you approach the _Celestial Compass_, its intricate mechanisms shift and glow, revealing constellations that seem to guide the grove's future. The _Navigator of Horizons_ points toward one of the smaller stars.
+
+> Every grand journey begins with the smallest of steps, carefully chosen and full of purpose. Marking your first destination will set your path and inspire others to follow,
+
+the _Navigator_ says.
+
+> The grove's future, like the stars above, needs an anchor point to guide its ascent.
+
+</Lore>
+
+<hr />
+
+**Managing an Open Source project becomes more complex as your first issues and contributions start to appear.** Defining a clear project direction and organizing tasks effectively are key steps to ensuring the project remains focused, efficient, and contributor-friendly.
+
+The goal here isn't to become a professional project manager but to establish simple workflows that can scale as your project grows. Tools like milestones, project boards, and issue prioritization will help you keep everything on track.
+
+**Today's challenge focuses on creating a foundation for project organization.** By defining clear goals, creating structured milestones, and visualizing progress through project boards, you'll not only manage tasks effectively but also set expectations for your contributors. A well-organized project attracts more contributions because it reduces confusion, highlights priorities, and shows a roadmap for the future.
+
+<Steps>
+
+1. **Define your short-term and medium-term goals.**
+
+    Start by identifying where your project is headed in the next few weeks or months. Goals give direction and purpose to your work.
+
+    - **What needs to be done?**: List specific tasks such as completing a feature, improving documentation, or adding translations.
+    - **What does "success" look like?**: Define concrete success criteria such as "All installation steps are documented", or "Translation support is added for French".
+    - **What's the timeline?**: Be realistic. Set deadlines that account for your availability, the complexity of each task, and your motivation or energy.
+
+1. **Create issues to represent tasks.**
+
+    Issues are the backbone of your project, acting as individual units of work. Each issue should represent a task or a feature to implement.
+
+    - Use clear titles and detailed descriptions to explain what needs to be done.
+    - Add relevant labels to categorize issues such as <Badge text="bug" />, <Badge text="enhancement" />, <Badge text="documentation" />, or <Badge text="feature" />.
+    - Use checklists within issue descriptions to break down complex tasks into smaller steps.
+
+    Everything gathered will form your backlog.
+
+    To create an issue: Go to the _Issues_ tab, then click on _New Issue_. Add the details and relevant labels.
+
+1. **Prioritize your issues.**
+
+    Focus on what matters most. Not all tasks are equally urgent or important. Prioritizing your issues will help you stay focused and avoid getting overwhelmed.
+
+    Go to the _Issues_ tab in your repository, and click on the _Labels_ section.
+    
+    Then, you can create labels by clicking on _New label_ such as <Badge text="priority: high" />, <Badge text="priority: medium" />, <Badge text="priority: low" />, and apply them to your issues. For each label, you'll need to define a name, a description, and a color.
+
+1. **Create a project board.**
+
+    A project board will help you to visualize task progress. A project board organizes issues into workflow stages, such as "To Do", "In Progress", and "Done".
+
+    - Go to the _Projects_ tab in your repository, and click on _New project_. There are several ways to create a project board, but you can start with a simple board visualization.
+
+    - Choose _Board_, set up the project name, and click on _Create project_.
+
+    - By default, you'll have three columns: "To Do", "In Progress", and "Done". You can add more columns by clicking on _Add column_.
+
+    From this board, you can drag and drop issues to move them between columns, assign them to contributors, and track their progress. Or you can do it directly from the issues or pull requests by adding the project board to them.
+
+1. **Set up a milestone.**
+
+    Group issues with common goals that you want to achieve by a specific date. A milestone is a significant step towards your project's vision, tied to a deadline.
+
+    - Go to the _Issues_ tab in your repository, and click on _Milestones_. Then, click on _New milestone_ and define:
+      - A clear title (e.g., "Version 1.0 Release")
+      - A description explaining the milestone's purpose
+      - A target due date for completion
+    - Assign issues to the milestone by editing the issue and selecting the milestone from the dropdown.
+
+1. **Document your roadmap and goals.**
+
+    Contributors will access the project board, the milestones, and the issues publicly. 
+
+    In the `README.md` or in a dedicated file, publicly share your goals and roadmap can help current and future contributors understand what's being worked on and how they can help.
+
+    A simple summary can be enough such as:
+
+    ```
+    ## Roadmap
+
+    ### Current Milestone: v1.0
+
+    - Complete core features (Deadline: Feb 28)
+    - Improve documentation (Deadline: Feb 15)
+
+    ### Project Board
+
+    Track progress on our [Project Board](https://github.com/your-repo-name/projects/1).
+    ```
+
+    More details can be added in the `CONTRIBUTING.md` file, or a dedicated file.
+
+</Steps>
+
+From there, you'll need to keep your milestones and projects up to date:
+- Reassign issues as needed to reflect shifting priorities
+- Update the `README.md` to showcase new milestones or completed goals
+- Use GitHub's Insights tab to monitor overall project progress
+
+<Aside type="tip" title="Tip of the iceberg">
+- **Start small**: Set one or two milestones and a handful of issues to get started. You can always add more as you go.
+- **Engage the community**: Use GitHub Discussions to get feedback or ideas for future milestones.
+- **Be transparent**: Keep goals realistic and communicate progress regularly.
+</Aside>
+
+**At this stage, your project will have a well-defined structure for managing goals, tracking progress, and staying organized.** Clear milestones and project boards improve transparency and motivate contributors by showing tangible progress. As you grow, these tools can scale to support more complex workflows and larger teams.
+
+**Keeping your project organized isn't a one-time effort—it's a habit.** Regularly update your milestones, reassign tasks based on priority, and celebrate completed goals by sharing updates in your README or social media.
+
+<h3>Success Criteria</h3>
+
+- ✓ Short-term and medium-term goals defined.
+- ✓ Backlog of issues created and prioritized.
+- ✓ Project board set up.
+- ✓ At least one milestone created with issues assigned.
+- ✓ Goals documented in README or a dedicated file.
+
+<hr />
+
+<Lore>
+The _Navigator of Horizons_ surveys the completed map you have crafted, a single star now shining brighter among the constellations.
+
+> This is the first light on a boundless journey,
+
+the _Navigator_ says, their voice steady with conviction.
+
+As the _Compass_ aligns itself once more, the grove feels steadier, its future no longer a question but a promise. Each step ahead carries the promise of growth, rooted in the clarity of this milestone.
+
+<LoreSeparator />
+
+<h3>The Navigator's Wisdom</h3>
+
+> A ship without a compass is at the mercy of the winds. To chart a course for greatness, you must not only sail but steer. Remember, those who plan for the stars will find their way, even in the darkest night. 
+
+Gaze into the Celestial Compass, traveller, and let its guiding stars lead your artifact to a brilliant future.
+</Lore>
+
+<ChallengesSeparator />
+
+## Intermediate: Use Milestones to Plan Releases
+
+<hr />
+
+<Lore type="snowball">
+The _Celestial Compass_ begins to glow, casting shifting patterns of light on the ground beneath it. The _Navigator of Horizons_ kneels to trace the intersecting paths with a steady hand.
+
+> The grove grows not in haste but with rhythm and intention. By aligning steps with the natural cycles of the stars, the grove flourishes without losing its way,
+
+the _Navigator_ explains.
+
+They point to a constellation taking shape above, its patterns mirroring the grove's evolving path. Each light is part of a greater harmony, a guide for what is to come.
+</Lore>
+
+<hr />
+
+**As Open Source projects grow, so do the expectations of contributors and users.** Having a clear and organized roadmap helps align everyone on the project's direction and priorities. Milestones are an effective way to plan and communicate releases, ensuring transparency and structure while breaking large goals into manageable steps. By linking milestones to specific issues or pull requests (PRs), you can keep contributors focused, improve collaboration, and encourage participation.
+
+**Today's challenge is to use milestones to plan your project's releases and improve progress visibility.** You'll define clear milestones, tie them to actionable tasks, and set up systems to track progress and communicate it with your community. By the end of this challenge, you'll have an organized workflow that supports better planning, execution, and engagement.
+
+<Steps>
+
+1. **Define a project roadmap.**
+
+    Start by outlining your project's goals and vision over different timeframes. A well-structured roadmap provides a clear overview of what's ahead.
+    - **Short-term goals**: Immediate tasks or bug fixes (e.g., the next version release).
+    - **Medium-term goals**: Features or improvements that take weeks or months (e.g., a big feature update).
+    - **Long-term vision**: Strategic goals for the next year or further (e.g., project scalability or integrations).
+
+    Then, create a public roadmap:
+    - Use tools like GitHub Projects or GitHub Discussions to document and share your roadmap.
+    - If you're on GitHub, you can use the [GitHub Issues Roadmap](https://docs.github.com/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-the-roadmap-layout) to organize plans visually.
+    - Alternatively, tools like [Trello](https://trello.com/), [Linear](https://linear.app/), or even a Markdown file in your repository (e.g., `ROADMAP.md`) can work.
+
+1. **Create milestones for releases.**
+
+    Milestones act as key targets in your roadmap, grouping issues or PRs for specific releases.
+
+    <Steps>
+
+    1. **Define release milestones.**
+      
+        Go to your project's issue tracker and create milestones such as:
+          - **v1.0.0**: A stable release with core features.
+          - **v1.1.0**: Next minor update with new features.
+          - **v2.0.0**: A major update or breaking changes.
+
+        Then, include deadlines to keep the project on track.
+
+    1. **Link issues and PRs to milestones.**
+
+        Assign existing or planned issues and PRs to each milestone. On GitHub, you can do this via the _Milestone_ dropdown in the issue or PR creation form.
+
+    </Steps>
+
+1. **Track milestone progress.**
+
+    Tracking progress ensures you stay on schedule and contributors are aware of what's left to accomplish.
+
+    - **Monitor progress**: Regularly check the milestone page to see how many issues are open, closed, or in progress.
+      - On GitHub, navigate to the _Issues_ tab, then click on _Milestones_ to see an overview of each milestone with progress percentages based on completed issues.
+      - Tools like [ZenHub](https://www.zenhub.com/) or [GitHub Projects](https://docs.github.com/issues/planning-and-tracking-with-projects) can provide more detailed insights.
+
+    - **Automate updates**: Use GitHub Actions or other CI tools to notify your team when milestones hit certain thresholds (e.g., 80% complete).
+
+1. **Communicate progress with your community.**
+
+    Keeping contributors and users informed helps maintain excitement and accountability.
+
+    - **Regular updates**: Post milestone progress updates in GitHub Discussions, newsletters, or social media.
+      > We're 70% through our v1.2.0 milestone! Stay tuned for the final release next month 🚀.
+    - **Share release notes**: Summarize what's been achieved and communicate remaining priorities. Use a template like:
+      - **Features**: Newly added features or enhancements.
+      - **Fixes**: Resolved bugs or issues.
+      - **Next steps**: What's coming up in future milestones.
+    - **Gather feedback**: Invite input on priorities or roadmap adjustments via GitHub Issues or Discussions. Surveys external tools can help centralize and process feedback.
+
+1. **Iterate and improve.**
+
+    Once a milestone is complete, reflect on its success and identify improvements for the next release.
+
+    - **Conduct post-mortems**: Review what went well, what didn't, and what could be improved.
+    - **Incorporate feedback**: Use community input to refine future milestones and project direction.
+    - **Automate where possible**: Streamline repetitive tasks like milestone creation or progress tracking with automation tools.
+
+</Steps>
+
+**Using milestones to plan releases brings clarity, structure, and alignment to your project.** It improves transparency for contributors, encourages collaboration, and allows users to see the tangible progress being made. By regularly tracking milestones and communicating updates, you create a more engaging and professional experience for everyone involved.
+
+**Congratulations on completing this challenge!** You've laid the groundwork for a systematic and sustainable release process that will help your project grow efficiently.
+
+<h3>Success Criteria</h3>
+
+- ✓ Project roadmap defined with short-term, medium-term, and long-term goals.
+- ✓ Milestones created for upcoming releases.
+- ✓ Issues and PRs linked to milestones.
+- ✓ (Optional) Progress tracked and communicated with the community.
+- ✓ (Optional) Feedback gathered and incorporated for future milestones.
+
+<hr />
+
+<Lore>
+With the paths illuminated, the _Navigator of Horizons_ nods in quiet approval.
+
+> You've brought order to the journey, aligning the grove's growth with the rhythm of the stars. Each step forward now feels like part of something greater,
+
+the _Navigator_ says, their voice warm with encouragement.
+
+As the _Compass_ shifts again, the stars above seem steadier, reflecting the clarity you've brought to the grove's rhythm of progress.
+
+<LoreSeparator />
+
+<h3>The Navigator's Wisdom</h3>
+
+> A ship without a compass is at the mercy of the winds. To chart a course for greatness, you must not only sail but steer. Remember, those who plan for the stars will find their way, even in the darkest night. 
+
+Gaze into the Celestial Compass, traveller, and let its guiding stars lead your artifact to a brilliant future.
+</Lore>
+
+<ChallengesSeparator />
+
+## Advanced: Coordinate Milestones Across Repositories
+
+<hr />
+
+<Lore type="ice">
+The _Celestial Compass_ hums deeply as its many parts begin to move in unison, linking constellations that stretch across the entire night sky. The _Navigator of Horizons_ gestures to the grand display.
+
+> The grove is not one path but many, woven together like the threads of the stars above. To navigate wisely, these paths must find harmony,
+
+the _Navigator_ explains, their hand tracing the sky's intricate connections.
+
+The stars shimmer brighter when aligned, revealing the strength found in unity.
+</Lore>
+
+<hr />
+
+**As Open Source projects grow, you may find yourself managing multiple repositories within a single project or organization.** Coordinating milestones across these repositories becomes essential to maintain consistency, track progress efficiently, and ensure contributors and users understand the big picture. By organizing milestones across repos, you enable streamlined collaboration, avoid redundant work, and deliver more impactful releases.
+
+**Today's challenge is to coordinate milestones across multiple repositories to align goals, track progress, and maintain project sustainability.** You'll use tools to unify tracking, set up workflows for progress evaluation, and incorporate community feedback. This approach helps you manage complex projects more effectively while keeping all stakeholders informed.
+
+<Steps>
+
+1. **Unify goals and define shared milestones.**
+
+    Start by establishing high-level goals that span across your repositories. These goals will serve as the foundation for shared milestones.
+
+    <Steps>
+
+    1. **Identify goals that span multiple repositories.**
+
+        - **Short-term goals**: Immediate tasks or bug fixes (e.g., the next version release).
+        - **Medium-term goals**: Features or improvements that take weeks or months (e.g., a big feature update).
+        - **Long-term vision**: Strategic goals for the next year or further (e.g., project scalability or integrations).
+
+    1. **Create shared milestones.**
+
+        - Use descriptive milestones like "v1.0.0 Release" or "Feature X Integration" to represent these shared goals. Assign deadlines to each milestone to maintain focus and accountability.
+        - Ensure consistency by defining the milestone scope across repositories, so everyone understands its purpose.
+
+    1. **Document goals publicly.**
+
+        - Use a shared document, a dedicated repository, or a project management tool to document and communicate these shared goals.
+        - Share the roadmap with contributors and users to align everyone on the project's direction.
+
+    </Steps>
+
+    <Aside>
+    This was a light description, you can refer to [today's intermediate challenge](#intermediate-use-milestones-to-plan-releases) for more detailed steps.
+    </Aside>
+
+1. **Use tools to coordinate milestones.**
+
+    Leverage tools that allow you to track and manage milestones across multiple repositories effectively.
+
+    - **GitHub Projects**
+      - Create a project at the organization level to track and unify milestones across repositories.
+      - Add issues or pull requests (PRs) from different repositories to a central project board.
+      - Track milestone progress using the _Milestones_ tab in GitHub Issues.
+      - Take advantage of the advanced features of GitHub Projects of filtering, automation, and custom views.
+    - **Explore alternative tools** such as [ZenHub](https://www.zenhub.com/), [Linear](https://linear.app/), or [Trello](https://trello.com/) for different project management capabilities.
+
+1. **Track and evaluate milestone progress.**
+
+    Regularly monitor milestone progress to ensure alignment and identify potential issues early.
+
+    - **Review progress**: Check the milestone page to see how many issues are open, closed, or in progress.
+    - **Automate updates**: Use GitHub Actions or other CI tools to notify your team when milestones hit certain thresholds (e.g., 80% complete).
+    - **Conduct regular check-ins**: Schedule milestone review meetings to discuss progress, blockers, and adjustments. Monitoring milestone progress ensures your goals stay on track and priorities are aligned across all repositories.
+
+1. **Synchronize releases.**
+
+    Coordinate release schedules across repositories to ensure consistency and avoid conflicts.
+
+    - **Define release dates**: Align release dates for shared milestones to maintain a consistent project cadence.
+    - **Communicate changes**: Notify contributors and users of any changes to release schedules or milestone priorities.
+    - **Automate release workflows**: Use CI/CD pipelines to automate release processes and ensure consistency across repositories.
+
+1. **Adjust priorities based on community feedback.**
+
+    Milestones must evolve based on user needs and contributor input. Keeping communication open helps refine your roadmap and stay aligned with community priorities.
+
+    - **Collect feedback**: Use GitHub Discussions, surveys, or community forums to gather input on milestone priorities.
+    - **Update and communicate adjustments**: Regularly update your roadmap and milestones based on feedback. Communicate changes to contributors and users to maintain transparency and alignment.
+    - **Focus on impact**: Prioritize milestones that deliver the most value to your community and align with your project's vision.
+
+1. **Plan for sustainability and future milestones.**
+
+    Sustainable project management ensures milestones are consistent and scalable over time.
+
+    - **Set milestone templates**: Create milestone templates to maintain consistency across repositories (e.g., naming conventions and scopes).
+    - **Plan for maintainer transitions**:
+      - Document milestones, goals, and progress clearly so others can step in if maintainers change.
+      - Use governance models (e.g., a rotating review process) to keep milestones moving forward.
+    - **Automate reporting**: Use tools like GitHub Insights or custom dashboards to automate milestone reporting and progress tracking.
+
+</Steps>
+
+**Coordinating milestones across multiple repositories brings order and alignment to complex projects**. By using shared goals, tracking tools, and regular evaluations, you ensure that all contributors are working towards a unified vision. This not only improves collaboration but also boosts confidence in the project's sustainability and direction.
+
+**Congratulations on completing this advanced challenge!** By coordinating milestones effectively, you've built a solid foundation for managing large-scale Open Source projects while fostering community engagement and project longevity.
+
+<h3>Success Criteria</h3>
+
+- ✓ Shared goals and milestones defined across repositories.
+- ✓ Tools used to coordinate milestones effectively.
+- ✓ Milestone progress tracked and evaluated regularly.
+- ✓ Release schedules synchronized across repositories.
+- ✓ (Optional) Community feedback incorporated into milestone planning.
+- ✓ Sustainability plans in place for future milestones.
+
+<hr />
+
+<Lore>
+As the final patterns lock into place, the _Navigator of Horizons_ gazes at the vast, interconnected constellations now shining above.
+
+> The grove has grown beyond a single path; it is a network of journeys,
+
+the _Navigator_ says, a note of pride in their tone.
+
+The stars seem closer now, their light uniting the grove's many endeavors. By aligning these paths, the grove's future shines with a newfound brilliance, unmarred by disarray.
+
+<LoreSeparator />
+
+<h3>The Navigator's Wisdom</h3>
+
+> A ship without a compass is at the mercy of the winds. To chart a course for greatness, you must not only sail but steer. Remember, those who plan for the stars will find their way, even in the darkest night. 
+
+Gaze into the Celestial Compass, traveller, and let its guiding stars lead your artifact to a brilliant future.
+</Lore>
