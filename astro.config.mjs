@@ -213,6 +213,10 @@ export default defineConfig({
                   label: 'Day 24: The Celestial Compass',
                   slug: 'advent/week-4/day-24'
                 },
+                {
+                  label: 'Day 25: The Gift of the Grove',
+                  slug: 'advent/week-4/day-25'
+                }
               ]
             },
           ],
