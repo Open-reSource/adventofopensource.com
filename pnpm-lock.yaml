@@ -33,8 +33,8 @@ importers:
         specifier: ^0.32.5
         version: 0.32.6
       starlight-links-validator:
-        specifier: ^0.14.1
-        version: 0.14.1(@astrojs/starlight@0.29.3(astro@4.16.18(rollup@4.28.0)(typescript@5.7.3)))
+        specifier: ^0.14.2
+        version: 0.14.2(@astrojs/starlight@0.29.3(astro@4.16.18(rollup@4.28.0)(typescript@5.7.3)))
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -696,8 +696,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/picomatch@3.0.1':
-    resolution: {integrity: sha512-1MRgzpzY0hOp9pW/kLRxeQhUWwil6gnrUYd3oEpeYBqp/FexhaCPv3F8LsYr47gtUU45fO2cm1dbwkSrHEo8Uw==}
+  '@types/picomatch@3.0.2':
+    resolution: {integrity: sha512-n0i8TD3UDB7paoMMxA3Y65vUncFJXjcUf7lQY7YyKGl6031FNjfsLs6pdLFCy2GNFxItPJG8GvvpbZc2skH7WA==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -1958,8 +1958,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  starlight-links-validator@0.14.1:
-    resolution: {integrity: sha512-qd5zMBezFhE3R/RBW2am58jVMK3ydcHs8TqOOBLimjn+iXqWV/ZkLlpcavoIOd//w72cX3L//lN4TA+a7vdaZg==}
+  starlight-links-validator@0.14.2:
+    resolution: {integrity: sha512-OsPngajtW4kB/oxiW3Kt1Fd+rY3opdIWbD/n5pGQMzil03QujT6rAeHEBR4tXRdjQW4HnFZYIy/ANhBu4kUNfQ==}
     engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.15.0'
@@ -3041,7 +3041,7 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/picomatch@3.0.1': {}
+  '@types/picomatch@3.0.2': {}
 
   '@types/sax@1.2.7':
     dependencies:
@@ -4902,10 +4902,10 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-links-validator@0.14.1(@astrojs/starlight@0.29.3(astro@4.16.18(rollup@4.28.0)(typescript@5.7.3))):
+  starlight-links-validator@0.14.2(@astrojs/starlight@0.29.3(astro@4.16.18(rollup@4.28.0)(typescript@5.7.3))):
     dependencies:
       '@astrojs/starlight': 0.29.3(astro@4.16.18(rollup@4.28.0)(typescript@5.7.3))
-      '@types/picomatch': 3.0.1
+      '@types/picomatch': 3.0.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
       hast-util-has-property: 3.0.0
