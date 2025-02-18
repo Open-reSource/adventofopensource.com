@@ -1,14 +1,18 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { Icon } from '@astrojs/starlight/components';
 import FooterLink from './FooterLink.astro';
 import Button from './Button.astro';
 
+// This should not be necessary as it's not the case for openresource.dev
+// Remove "index.mdx" and "/index.mdx" from the slug
+Astro.locals.starlightRoute.id = Astro.locals.starlightRoute.id.replace('/index.mdx', '').replace('index.mdx', '');
+
 const display =
-	Astro.props.slug == '' ||
-	Astro.props.slug == 'cookie-policy'
-const currentSlug = Astro.props.slug;
+  Astro.locals.starlightRoute.id == '' ||
+  Astro.locals.starlightRoute.id == 'cookie-policy'
+
+const currentSlug = Astro.locals.starlightRoute.id;
 ---
 
 <Default {...Astro.props}><slot /></Default>

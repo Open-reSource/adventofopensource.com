@@ -1,9 +1,8 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Header.astro';
 import ProgressScroll from './ProgressScroll.astro';
 
-const displayProgressScroll = Astro.props.slug.startsWith('advent')
+const displayProgressScroll = Astro.locals.starlightRoute.id.startsWith('advent')
 ---
 
 <Default {...Astro.props}>

@@ -12,8 +12,8 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.7.3)
       '@astrojs/starlight':
-        specifier: ^0.31.1
-        version: 0.31.1(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
+        specifier: ^0.32.0
+        version: 0.32.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
       '@types/konami-code-js':
         specifier: ^0.8.3
         version: 0.8.3
@@ -21,8 +21,8 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
       astro-og-canvas:
-        specifier: ^0.5.6
-        version: 0.5.6(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
+        specifier: ^0.7.0
+        version: 0.7.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
       canvaskit-wasm:
         specifier: ^0.39.1
         version: 0.39.1
@@ -34,7 +34,7 @@ importers:
         version: 0.33.5
       starlight-links-validator:
         specifier: ^0.14.3
-        version: 0.14.3(@astrojs/starlight@0.31.1(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)))
+        version: 0.14.3(@astrojs/starlight@0.32.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)))
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -84,8 +84,8 @@ packages:
   '@astrojs/sitemap@3.2.1':
     resolution: {integrity: sha512-uxMfO8f7pALq0ADL6Lk68UV6dNYjJ2xGUzyjjVj60JLBs5a6smtlkBYv3tQ0DzoqwS7c9n4FUx5lgv0yPo/fgA==}
 
-  '@astrojs/starlight@0.31.1':
-    resolution: {integrity: sha512-VIVkHugwgtEqJPiRH8+ouP0UqUfdmpBO9C64R+6QaQ2qmADNkI/BA3/YAJHTBZYlMQQGEEuLJwD9qpaUovi52Q==}
+  '@astrojs/starlight@0.32.0':
+    resolution: {integrity: sha512-RJ+zPeTBlfgZJA3cWl3Nml9RLQhYUupnE0obL3iVxvVKhoCwUJnxmKicPp9EBxSML0TK8X4CUpnEwiC7OtfYwg==}
     peerDependencies:
       astro: ^5.1.5
 
@@ -730,8 +730,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro-og-canvas@0.5.6:
-    resolution: {integrity: sha512-w75UErZdRxYyoVnTz4IXn6T869PBrwYQEjPecWVaev9faYCHC3Uk7R47KCO3u+MSDkc8tCENz4ghVDrLImx9SA==}
+  astro-og-canvas@0.7.0:
+    resolution: {integrity: sha512-aamARDNDORPxXlPt+VJakzj4WpNUDjQqUZ06eE82pGMad4aTR/KMm8Ho12qvprgJcM8K7fgSOMg5OHa7KcX0pw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -1217,6 +1217,10 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
+  klona@2.0.6:
+    resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
+    engines: {node: '>= 8'}
+
   konami-code-js@0.8.3:
     resolution: {integrity: sha512-TDiZMsSWTPCZVClclyU7HTZC/3Ql972HhvT/D33evd3+8FgR1DZcCVe84kKsSSvDqzJII0R4m74WASZDlcpIoQ==}
 
@@ -1265,9 +1269,6 @@ packages:
   mdast-util-gfm-autolink-literal@2.0.1:
     resolution: {integrity: sha512-5HVP2MKaP6L+G6YaxPNjuL0BPrq9orG3TsrZ9YXbA3vDw/ACI4MEsnoDpn6ZNm7GnZgtAcONJyPhOP8tNJQavQ==}
 
-  mdast-util-gfm-footnote@2.0.0:
-    resolution: {integrity: sha512-5jOT2boTSVkMnQ7LTrd6n/18kqwjmuYqo7JUPe+tRCY6O7dAuTFMtTPauYYrMPpox9hlN0uOx/FL8XvEfG9/mQ==}
-
   mdast-util-gfm-footnote@2.1.0:
     resolution: {integrity: sha512-sqpDWlsHn7Ac9GNZQMeUzPQSMzR6Wv0WKRNvQRg0KqHh02fpTz69Qc1QSseNX29bhz1ROIyNyxExfawVKTm1GQ==}
 
@@ -1279,9 +1280,6 @@ packages:
 
   mdast-util-gfm-task-list-item@2.0.0:
     resolution: {integrity: sha512-IrtvNvjxC1o06taBAVJznEnkiHxLFTzgonUdy8hzFVeDun0uTjxxrRGVaNFqkU1wJR3RBPEfsxmU6jDWPofrTQ==}
-
-  mdast-util-gfm@3.0.0:
-    resolution: {integrity: sha512-dgQEX5Amaq+DuUqf26jJqSK9qgixgd6rYDHAv4aTBuA92cTknZlKpPfa86Z/s8Dj8xsAQpFfBmPUHWJBWqS4Bw==}
 
   mdast-util-gfm@3.1.0:
     resolution: {integrity: sha512-0ulfdQOM3ysHhCJ1p06l0b0VKlhU0wuQs3thxZQagjcjPrlFRqY215uZGHHJan9GEAXd9MbfPjFJz+qMkVR6zQ==}
@@ -1498,9 +1496,6 @@ packages:
     resolution: {integrity: sha512-8KPLGT5g9s+olKMRTU9LFekLizkVIu9tes90O1/aigJ0T5LmyPqTzGJrETnSw3meSYg58YH7JTzhTTW/3z6VAw==}
     hasBin: true
 
-  parse-entities@4.0.1:
-    resolution: {integrity: sha512-SWzvYcSJh4d/SGLIOQfZ/CoNv6BTlI6YEQ7Nj82oDVnRpwe/Z/F1EMx42x3JAOwGBlCjeCH0BRJQbQ/opHL17w==}
-
   parse-entities@4.0.2:
     resolution: {integrity: sha512-GG2AQYWoLgL877gQIKeRPGO1xF9+eG1ujIb5soS5gPvLQ1y2o8FL90w2QWNdf9I361Mpp7726c+lj3U0qK1uGw==}
 
@@ -1631,9 +1626,6 @@ packages:
 
   remark-directive@3.0.0:
     resolution: {integrity: sha512-l1UyWJ6Eg1VPU7Hm/9tt0zKtReJQNOA4+iDMAxTyZNWnJnFlbS/7zhiel/rogTLQ2vMYwDzSJa4BiVNqGlqIMA==}
-
-  remark-gfm@4.0.0:
-    resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
 
   remark-gfm@4.0.1:
     resolution: {integrity: sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==}
@@ -2240,7 +2232,7 @@ snapshots:
       hast-util-to-html: 9.0.4
       kleur: 4.1.5
       rehype-raw: 7.0.0
-      remark-gfm: 4.0.0
+      remark-gfm: 4.0.1
       remark-smartypants: 3.0.2
       source-map: 0.7.4
       unist-util-visit: 5.0.0
@@ -2258,7 +2250,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/starlight@0.31.1(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))':
+  '@astrojs/starlight@0.32.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))':
     dependencies:
       '@astrojs/mdx': 4.0.8(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
       '@astrojs/sitemap': 3.2.1
@@ -2275,6 +2267,7 @@ snapshots:
       hastscript: 9.0.0
       i18next: 23.16.8
       js-yaml: 4.1.0
+      klona: 2.0.6
       mdast-util-directive: 3.0.0
       mdast-util-to-markdown: 2.1.2
       mdast-util-to-string: 4.0.0
@@ -2842,7 +2835,7 @@ snapshots:
       astro: 5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
       rehype-expressive-code: 0.40.1
 
-  astro-og-canvas@0.5.6(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)):
+  astro-og-canvas@0.7.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)):
     dependencies:
       astro: 5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1)
       canvaskit-wasm: 0.39.1
@@ -3533,6 +3526,8 @@ snapshots:
 
   kleur@4.1.5: {}
 
+  klona@2.0.6: {}
+
   konami-code-js@0.8.3: {}
 
   load-yaml-file@0.2.0:
@@ -3579,7 +3574,7 @@ snapshots:
       devlop: 1.1.0
       mdast-util-from-markdown: 2.0.2
       mdast-util-to-markdown: 2.1.2
-      parse-entities: 4.0.1
+      parse-entities: 4.0.2
       stringify-entities: 4.0.4
       unist-util-visit-parents: 6.0.1
     transitivePeerDependencies:
@@ -3617,16 +3612,6 @@ snapshots:
       mdast-util-find-and-replace: 3.0.2
       micromark-util-character: 2.1.1
 
-  mdast-util-gfm-footnote@2.0.0:
-    dependencies:
-      '@types/mdast': 4.0.4
-      devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.2
-      mdast-util-to-markdown: 2.1.2
-      micromark-util-normalize-identifier: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
-
   mdast-util-gfm-footnote@2.1.0:
     dependencies:
       '@types/mdast': 4.0.4
@@ -3660,18 +3645,6 @@ snapshots:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
       mdast-util-from-markdown: 2.0.2
-      mdast-util-to-markdown: 2.1.2
-    transitivePeerDependencies:
-      - supports-color
-
-  mdast-util-gfm@3.0.0:
-    dependencies:
-      mdast-util-from-markdown: 2.0.2
-      mdast-util-gfm-autolink-literal: 2.0.1
-      mdast-util-gfm-footnote: 2.0.0
-      mdast-util-gfm-strikethrough: 2.0.0
-      mdast-util-gfm-table: 2.0.0
-      mdast-util-gfm-task-list-item: 2.0.0
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
@@ -4120,17 +4093,6 @@ snapshots:
       '@pagefind/linux-x64': 1.3.0
       '@pagefind/windows-x64': 1.3.0
 
-  parse-entities@4.0.1:
-    dependencies:
-      '@types/unist': 2.0.11
-      character-entities: 2.0.2
-      character-entities-legacy: 3.0.0
-      character-reference-invalid: 2.0.1
-      decode-named-character-reference: 1.0.2
-      is-alphanumerical: 2.0.1
-      is-decimal: 2.0.1
-      is-hexadecimal: 2.0.1
-
   parse-entities@4.0.2:
     dependencies:
       '@types/unist': 2.0.11
@@ -4304,17 +4266,6 @@ snapshots:
       '@types/mdast': 4.0.4
       mdast-util-directive: 3.0.0
       micromark-extension-directive: 3.0.2
-      unified: 11.0.5
-    transitivePeerDependencies:
-      - supports-color
-
-  remark-gfm@4.0.0:
-    dependencies:
-      '@types/mdast': 4.0.4
-      mdast-util-gfm: 3.0.0
-      micromark-extension-gfm: 3.0.0
-      remark-parse: 11.0.0
-      remark-stringify: 11.0.0
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
@@ -4495,9 +4446,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-links-validator@0.14.3(@astrojs/starlight@0.31.1(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))):
+  starlight-links-validator@0.14.3(@astrojs/starlight@0.32.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))):
     dependencies:
-      '@astrojs/starlight': 0.31.1(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
+      '@astrojs/starlight': 0.32.0(astro@5.3.0(rollup@4.34.6)(typescript@5.7.3)(yaml@2.6.1))
       '@types/picomatch': 3.0.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
