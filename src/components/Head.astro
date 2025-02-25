@@ -1,10 +1,7 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
 
-// Remove the `/index` part of the ID to get the correct path to the image.
-// e.g. `dir/page/index.mdx` -> `dir/page.mdx`
-//    and the image path will be `og/dir/page.png`
-const filteredAstroPropsId = Astro.locals.starlightRoute.id.replace(/\/index./, '.');
+const filteredAstroPropsId = Astro.locals.starlightRoute.id ? Astro.locals.starlightRoute.id.replace(/\.mdx$/, '') + '.' : 'index.png';
 
 // Force the og:image to be the index image for the homepage for these kind of pages:
 // - 404
@@ -13,7 +10,7 @@ const isOgIndex = Astro.locals.starlightRoute.id.startsWith('404')
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
 const ogImageUrl = new URL(
-	isOgIndex ? '/og/index.png' : `/og/${filteredAstroPropsId.replace(/\.\w+$/, '.png')}`,
+  isOgIndex ? '/og/index.png' : `/og/${filteredAstroPropsId.replace(/\.+$/, '.png')}`,
 	Astro.site
 );
 
