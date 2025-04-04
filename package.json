@@ -18,7 +18,7 @@
     "astro-og-canvas": "^0.7.0",
     "canvaskit-wasm": "^0.40.0",
     "konami-code-js": "^0.8.3",
-    "sharp": "^0.33.5",
+    "sharp": "^0.34.0",
     "starlight-links-validator": "^0.14.3",
     "typescript": "^5.8.2"
   }
