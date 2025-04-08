@@ -74,15 +74,43 @@ export default defineConfig({
         dark: './src/assets/logo-dark.svg',
         replacesTitle: true,
       },
-      social: {
-        github: 'https://github.com/Open-reSource/adventofopensource.com',
-        discord: 'https://discord.gg/fpUDwEMGwE',
-        blueSky: 'https://bsky.app/profile/openresource.dev',
-        linkedin: 'https://linkedin.com/company/open-re-source/',
-        mastodon: 'https://fosstodon.org/@openresource',
-        threads: 'https://www.threads.net/@openresource',
-        'x.com': 'https://x.com/open_resource',
-      },
+      social: [
+        {
+					icon: 'github',
+					label: 'GitHub',
+					href: 'https://github.com/Open-reSource/adventofopensource.com',
+				},
+				{
+					icon: 'discord',
+					label: 'Discord',
+					href: 'https://discord.gg/fpUDwEMGwE',
+				},
+				{
+					icon: 'x.com',
+					label: 'X',
+					href: 'https://x.com/open_resource',
+				},
+				{
+					icon: 'linkedin',
+					label: 'LinkedIn',
+					href: 'https://linkedin.com/company/open-re-source/',
+				},
+				{
+					icon: 'mastodon',
+					label: 'Mastodon',
+					href: 'https://fosstodon.org/@openresource',
+				},
+				{
+					icon: 'blueSky',
+					label: 'Blue Sky',
+					href: 'https://bsky.app/profile/openresource.dev',
+				},
+				{
+					icon: 'threads',
+					label: 'Threads',
+					href: 'https://www.threads.net/@openresource',
+				},
+      ],
       components: {
         Footer: './src/components/Footer.astro',
         Head: './src/components/Head.astro',
