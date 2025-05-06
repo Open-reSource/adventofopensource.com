@@ -14,7 +14,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.34.2",
     "@types/konami-code-js": "^0.8.3",
-    "astro": "^5.7.10",
+    "astro": "^5.7.11",
     "astro-og-canvas": "^0.7.0",
     "canvaskit-wasm": "^0.40.0",
     "konami-code-js": "^0.8.3",
