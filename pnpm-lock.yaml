@@ -12,8 +12,8 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.8.3)
       '@astrojs/starlight':
-        specifier: ^0.34.7
-        version: 0.34.7(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))
+        specifier: ^0.35.0
+        version: 0.35.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))
       '@types/konami-code-js':
         specifier: ^0.8.3
         version: 0.8.3
@@ -34,7 +34,7 @@ importers:
         version: 0.34.3
       starlight-links-validator:
         specifier: ^0.17.0
-        version: 0.17.0(@astrojs/starlight@0.34.7(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0)))
+        version: 0.17.0(@astrojs/starlight@0.35.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0)))
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -81,8 +81,8 @@ packages:
   '@astrojs/sitemap@3.4.1':
     resolution: {integrity: sha512-VjZvr1e4FH6NHyyHXOiQgLiw94LnCVY4v06wN/D0gZKchTMkg71GrAHJz81/huafcmavtLkIv26HnpfDq6/h/Q==}
 
-  '@astrojs/starlight@0.34.7':
-    resolution: {integrity: sha512-hMJ/BHxCt0TYLJ1Tp+VdYB3xUuGm3o67JMnnh5f7mT1LcvtP22ndhZUSa6tNsyUzmT9Operqbl+kI8it3DVRYA==}
+  '@astrojs/starlight@0.35.0':
+    resolution: {integrity: sha512-YmHSj2KkzZ2B1ST/ZMqfvctPz1nbw78kBwHF4W2BFKnDFJhCTHFDW81IByT1Dwf52f81LPs8vlOTXtxSZq6yKQ==}
     peerDependencies:
       astro: ^5.5.0
 
@@ -2390,7 +2390,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/starlight@0.34.7(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))':
+  '@astrojs/starlight@0.35.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@astrojs/mdx': 4.3.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))
@@ -2968,7 +2968,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 24.0.14
 
   '@types/unist@2.0.11': {}
 
@@ -4698,9 +4698,9 @@ snapshots:
 
   space-separated-tokens@2.0.2: {}
 
-  starlight-links-validator@0.17.0(@astrojs/starlight@0.34.7(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))):
+  starlight-links-validator@0.17.0(@astrojs/starlight@0.35.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))):
     dependencies:
-      '@astrojs/starlight': 0.34.7(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))
+      '@astrojs/starlight': 0.35.0(astro@5.11.1(@types/node@24.0.14)(rollup@4.45.1)(typescript@5.8.3)(yaml@2.8.0))
       '@types/picomatch': 3.0.2
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
