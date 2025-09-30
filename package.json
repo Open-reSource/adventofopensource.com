@@ -20,6 +20,6 @@
     "konami-code-js": "^0.8.3",
     "sharp": "^0.34.4",
     "starlight-links-validator": "^0.18.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
