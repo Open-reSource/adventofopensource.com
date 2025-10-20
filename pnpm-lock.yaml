@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/check':
-        specifier: ^0.9.4
-        version: 0.9.4(typescript@5.9.3)
+        specifier: ^0.9.5
+        version: 0.9.5(typescript@5.9.3)
       '@astrojs/starlight':
         specifier: ^0.36.1
         version: 0.36.1(astro@5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1))
@@ -41,8 +41,8 @@ importers:
 
 packages:
 
-  '@astrojs/check@0.9.4':
-    resolution: {integrity: sha512-IOheHwCtpUfvogHHsvu0AbeRZEnjJg3MopdLddkJE70mULItS/Vh37BHcI00mcOJcH1vhD3odbpvWokpxam7xA==}
+  '@astrojs/check@0.9.5':
+    resolution: {integrity: sha512-88vc8n2eJ1Oua74yXSGo/8ABMeypfQPGEzuoAx2awL9Ju8cE6tZ2Rz9jVx5hIExHK5gKVhpxfZj4WXm7e32g1w==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -1728,6 +1728,7 @@ packages:
   sitemap@8.0.0:
     resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    deprecated: 'SECURITY: Multiple vulnerabilities fixed in 8.0.1 (XML injection, path traversal, command injection, protocol injection). Upgrade immediately: npm install sitemap@8.0.1'
     hasBin: true
 
   smol-toml@1.4.2:
@@ -2080,8 +2081,8 @@ packages:
   vscode-css-languageservice@6.3.8:
     resolution: {integrity: sha512-dBk/9ullEjIMbfSYAohGpDOisOVU1x2MQHOeU12ohGJQI7+r0PCimBwaa/pWpxl/vH4f7ibrBfxIZY3anGmHKQ==}
 
-  vscode-html-languageservice@5.5.2:
-    resolution: {integrity: sha512-QpaUhCjvb7U/qThOzo4V6grwsRE62Jk/vf8BRJZoABlMw3oplLB5uovrvcrLO9vYhkeMiSjyqLnCxbfHzzZqmw==}
+  vscode-html-languageservice@5.6.0:
+    resolution: {integrity: sha512-FIVz83oGw2tBkOr8gQPeiREInnineCKGCz3ZD1Pi6opOuX3nSRkc4y4zLLWsuop+6ttYX//XZCI6SLzGhRzLmA==}
 
   vscode-json-languageservice@4.1.8:
     resolution: {integrity: sha512-0vSpg6Xd9hfV+eZAaYN63xVVMOTmJ4GgHxXnkLCh+9RsQBkWKIghzLhW2B9ebfG+LQQg8uLtsQ2aUKjTgE+QOg==}
@@ -2202,7 +2203,7 @@ packages:
 
 snapshots:
 
-  '@astrojs/check@0.9.4(typescript@5.9.3)':
+  '@astrojs/check@0.9.5(typescript@5.9.3)':
     dependencies:
       '@astrojs/language-server': 2.15.5(typescript@5.9.3)
       chokidar: 4.0.3
@@ -2235,7 +2236,7 @@ snapshots:
       volar-service-typescript: 0.0.65(@volar/language-service@2.4.23)
       volar-service-typescript-twoslash-queries: 0.0.65(@volar/language-service@2.4.23)
       volar-service-yaml: 0.0.65(@volar/language-service@2.4.23)
-      vscode-html-languageservice: 5.5.2
+      vscode-html-languageservice: 5.6.0
       vscode-uri: 3.1.0
     transitivePeerDependencies:
       - typescript
@@ -4733,7 +4734,7 @@ snapshots:
 
   volar-service-html@0.0.65(@volar/language-service@2.4.23):
     dependencies:
-      vscode-html-languageservice: 5.5.2
+      vscode-html-languageservice: 5.6.0
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
@@ -4776,7 +4777,7 @@ snapshots:
       vscode-languageserver-types: 3.17.5
       vscode-uri: 3.1.0
 
-  vscode-html-languageservice@5.5.2:
+  vscode-html-languageservice@5.6.0:
     dependencies:
       '@vscode/l10n': 0.0.18
       vscode-languageserver-textdocument: 1.0.12
