@@ -19,7 +19,7 @@
     "canvaskit-wasm": "^0.40.0",
     "konami-code-js": "^0.8.3",
     "sharp": "^0.34.5",
-    "starlight-links-validator": "^0.19.1",
+    "starlight-links-validator": "^0.19.2",
     "typescript": "^5.9.3"
   }
 }
