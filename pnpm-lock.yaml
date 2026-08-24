@@ -24,8 +24,8 @@ importers:
         specifier: ^0.13.0
         version: 0.13.0(astro@7.1.6(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@25.0.3)(rollup@4.60.4)(yaml@2.9.0))
       canvaskit-wasm:
-        specifier: ^0.41.1
-        version: 0.41.1
+        specifier: ^0.42.0
+        version: 0.42.0
       konami-code-js:
         specifier: ^0.8.3
         version: 0.8.3
@@ -1143,6 +1143,9 @@ packages:
 
   canvaskit-wasm@0.41.1:
     resolution: {integrity: sha512-gO2rNMIE0lOQ8MaarM4qNeq2zZAEknAObKP2XAKidMSAY8P5sURGdFkrx1TSdHuBFqTf5w35JqjuUzjibqkD5g==}
+
+  canvaskit-wasm@0.42.0:
+    resolution: {integrity: sha512-N3ikotmzYwDVAcpQKDMptBT2P5pIEWS9ywdmrQA2awwaMF9cxKEFuxZZHv9ay1Em9kDjxDsPtwUzDm1uNj136g==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -3595,6 +3598,10 @@ snapshots:
   boolbase@1.0.0: {}
 
   canvaskit-wasm@0.41.1:
+    dependencies:
+      '@webgpu/types': 0.1.21
+
+  canvaskit-wasm@0.42.0:
     dependencies:
       '@webgpu/types': 0.1.21
 
