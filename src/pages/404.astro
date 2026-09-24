@@ -1,0 +1,22 @@
+---
+import { Button, Eyebrow, SiteLayout } from '@deramond.dev/astro';
+---
+
+<SiteLayout title="Page not found" description="It's freezing out there! Return to the Winter Open Source Village, traveller." noindex>
+	<section class="nf d-gutters">
+		<Eyebrow num="404">Not found</Eyebrow>
+		<h1>It's freezing out there!</h1>
+		<p class="d-lead">Return to the <em>Winter Open Source Village</em>, traveller…</p>
+		<div class="row">
+			<Button variant="gold" href="/advent/">Back to the village</Button>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.nf { padding: var(--space-18) var(--space-6); min-height: 60vh; }
+	@media (min-width: 980px) { .nf { padding: var(--space-18) var(--space-14); } }
+	h1 { margin-bottom: var(--space-5); }
+	em { color: var(--color-primary); }
+	.row { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
+</style>

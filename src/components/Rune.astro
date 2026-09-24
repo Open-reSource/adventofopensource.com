@@ -1,0 +1,20 @@
+---
+// One of the three runes, inline and in currentColor (the event blue by default), so it follows the palette.
+import snowflake from '../assets/beginner-rune.svg?raw';
+import snowball from '../assets/intermediate-rune.svg?raw';
+import ice from '../assets/advanced-rune.svg?raw';
+
+interface Props { type: 'snowflake' | 'snowball' | 'ice'; size?: number }
+const { type, size = 64 } = Astro.props;
+// Size the root <svg> only (the drawings have a 200 × 200 viewBox).
+const svg = { snowflake, snowball, ice }[type].replace(
+	/<svg\b[^>]*>/,
+	(tag) => tag.replace(/\s(width|height)="[^"]*"/g, '').replace('<svg', `<svg width="${size}" height="${size}" aria-hidden="true" focusable="false"`),
+);
+---
+
+<span class="rune" set:html={svg} />
+
+<style>
+	.rune { display: inline-flex; color: var(--color-primary); flex: none; }
+</style>

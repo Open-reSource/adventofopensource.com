@@ -1,21 +1,27 @@
 ---
-import ContentImage from './ContentImage.astro';
+/**
+ * A day's story, told apart from the challenges (S1, "Typewriter letter"): Courier Prime on the panel, a frost grain
+ * in the event blue, a perforated top edge. The rune of the track opens it; `type="logo"` opens it with the mark.
+ */
 import HeadingRune from './HeadingRune.astro';
+import mark from '../brand/mark.svg?raw';
 
-import logo from '../assets/logo.svg';
-
+interface Props { type?: 'logo' | 'snowflake' | 'snowball' | 'ice' }
 const { type } = Astro.props;
+
+// The grain: a fixed scatter of small dots (same on every page, so nothing moves between builds).
+let seed = 7;
+const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const dots = Array.from({ length: 160 }, () => [Math.round(rnd() * 400), Math.round(rnd() * 400), [0.8, 1, 1.4][Math.floor(rnd() * 3)]]);
 ---
+
 <div class="lore">
-  {
-    type && type !== 'logo' &&
-      <HeadingRune type={type} />
-  }
-  {
-    type === 'logo' && 
-      <div class="lore-logo">
-        <ContentImage src={logo} alt="" />
-      </div>
-  }
-  <slot />
+	<svg class="lore-grain" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+		{dots.map(([x, y, r]) => <circle cx={x} cy={y} r={r} />)}
+	</svg>
+	<div class="lore-body">
+		{type === 'logo' && <div class="lore-logo" set:html={mark.replace('<svg', '<svg width="64" height="64" aria-hidden="true"')} />}
+		{type && type !== 'logo' && <HeadingRune type={type} />}
+		<slot />
+	</div>
 </div>

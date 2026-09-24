@@ -1,17 +1,4 @@
-<p align="center">
-  <!--
-    Targeting https://openresource.dev/#gh-light-mode-only or https://openresource.dev/#gh-dark-mode-only is a hack to switch between the light and dark images.
-    It'll trigger the corresponding GitHub CSS rule found out when trying the pure Markdown approach:
-    - ![](src/assets/logo.svg#gh-dark-mode-only)
-    - ![](src/assets/logo-dark.svg#gh-light-mode-only)
-  -->
-  <a href="https://openresource.dev/#gh-light-mode-only">
-    <img src="src/assets/logo.svg" alt="" style="max-width: 100%;"></a>
-  </a>
-  <a href="https://openresource.dev/#gh-dark-mode-only">
-    <img src="src/assets/logo-dark.svg" alt="" style="max-width: 100%;"></a>
-  </a>
-</p>
+<p align="center"><a href="https://adventofopensource.com"><picture><source srcset=".github/header.svg" type="image/svg+xml"><img src=".github/header.png" width="830" alt="Advent of Open Source, an Open {re}Source event. Twenty-five days of open source: a challenge a day, in three tracks, to create or enhance your repositories."></picture></a></p>
 
 <h1 align="center">adventofopensource.com</h1>
 
@@ -91,3 +78,5 @@ Content (including images) released under [CC BY-NC-SA 4.0](https://creativecomm
     <img src='https://cdn.jsdelivr.net/gh/Open-reSource/sponsors/sponsors.svg'/>
   </a>
 </p>
+
+The Advent of Open Source mark, favicons and artwork (`src/brand` directory, `.github/header.*`) are not covered by these licenses: all rights reserved.

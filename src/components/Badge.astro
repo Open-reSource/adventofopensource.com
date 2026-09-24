@@ -1,0 +1,9 @@
+---
+// A GitHub label name in the days' text: a neutral badge (labels are names, not states).
+import { Badge } from '@deramond.dev/astro';
+
+interface Props { text: string }
+const { text } = Astro.props;
+---
+
+<Badge>{text}</Badge>

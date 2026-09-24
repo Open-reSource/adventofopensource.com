@@ -3,9 +3,8 @@ title: "Day 21: The Multilingual Grove"
 description: "The Song of Many Tongues guides you through the Multilingual Grove, where diverse voices harmonize to transcend boundaries and foster unity, overcoming division and ensuring every voice is heard."
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-import { FileTree } from '@astrojs/starlight/components';
-import { Steps } from '@astrojs/starlight/components';
+import Aside from '../../../../components/Aside.astro';
+import { Steps } from '@deramond.dev/astro';
 import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
 import Lore from '../../../../components/Lore.astro';
 import LoreSeparator from '../../../../components/LoreSeparator.astro';
@@ -96,18 +95,16 @@ they explain.
 
     Organize your files into a `docs/` directory. This structure will separate translations and maintain consistency:
 
-    <FileTree>
-
-    - docs
-      - en
-        - index.md
-        - installation.md 
-      - fr
-        - index.md
-        - installation.md
-    - index.md
-
-    </FileTree>
+    ```text
+    docs
+    ├── en
+    │   ├── index.md
+    │   └── installation.md
+    └── fr
+        ├── index.md
+        └── installation.md
+    index.md
+    ```
 
     Move all original English content under `docs/en/` folder, and copy it into `docs/fr/` for future French translations.
 

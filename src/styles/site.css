@@ -1,0 +1,112 @@
+/*
+ * Advent of Open Source on @deramond.dev/astro (loaded after it on every page). The event's palette, "Winter night",
+ * is the integration's `palette` (astro.config.mjs); this file holds the stories' own style.
+ */
+@import '@fontsource/courier-prime/400.css';
+@import '@fontsource/courier-prime/400-italic.css';
+@import '@fontsource/courier-prime/700.css';
+
+:root {
+	--font-family-story: 'Courier Prime', 'Courier New', monospace;
+}
+
+/* The opening paragraph of a page. */
+.lead {
+	font: var(--type-lead);
+	color: var(--color-fg);
+}
+
+/* ------------------------------------------------------------------ the stories (Lore) */
+.lore {
+	position: relative;
+	overflow: hidden;
+	margin-block: var(--space-6);
+	background: var(--color-panel);
+	color: var(--color-fg);
+	font-family: var(--font-family-story);
+	font-size: 1.125rem;
+	line-height: 1.7;
+	letter-spacing: -0.01em;
+}
+
+/* The perforated top edge: half circles of the page's field cut into the panel. */
+.lore::before {
+	content: '';
+	position: absolute;
+	inset: 0 0 auto;
+	height: 8px;
+	background: radial-gradient(circle at 6px -2px, var(--color-bg) 5px, transparent 5.5px) 0 0 / 12px 8px repeat-x;
+	z-index: 1;
+}
+
+.lore-grain {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	fill: var(--color-primary);
+	opacity: 0.16;
+	pointer-events: none;
+}
+
+.lore-body {
+	position: relative;
+	padding: var(--space-10) var(--space-8);
+}
+
+.lore-logo {
+	display: flex;
+	justify-content: center;
+	color: var(--color-primary);
+	margin-bottom: var(--space-6);
+}
+
+.lore :is(h2, h3) {
+	font-family: inherit;
+	font-size: 1.35em;
+	font-weight: 700;
+	text-transform: none;
+	letter-spacing: 0;
+	line-height: 1.3;
+	margin: var(--space-6) 0 var(--space-3);
+}
+
+.lore :is(h2, h3):first-child,
+.lore .lore-logo + :is(h2, h3),
+.lore .heading-rune + :is(h2, h3) {
+	margin-top: 0;
+}
+
+.lore p {
+	margin: 0 0 var(--space-4);
+}
+
+.lore em {
+	color: var(--color-primary);
+}
+
+.lore blockquote {
+	margin: var(--space-4) 0;
+	padding: 0 0 0 var(--space-4);
+	border-left: var(--stroke-bracket) solid var(--color-primary);
+	background: none;
+	font-style: italic;
+	color: var(--color-fg);
+}
+
+.lore ul > li {
+	list-style-type: '❄ ';
+}
+
+.lore a {
+	color: var(--color-primary);
+}
+
+@media (max-width: 40rem) {
+	.lore {
+		font-size: 1rem;
+	}
+	.lore-body {
+		padding: var(--space-8) var(--space-4);
+	}
+}

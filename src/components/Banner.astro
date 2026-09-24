@@ -241,6 +241,12 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .snowflake {
+      animation: none;
+    }
+  }
+
   .hidden {
     display: none;
   }
