@@ -1,10 +1,13 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { z } from 'astro/zod';
+import { docsLoader, docsSchema } from '@deramond.dev/astro/docs';
 
 export const collections = {
-  docs: defineCollection({
-    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/docs' }),
-    schema: docsSchema(),
-  }),
+	docs: defineCollection({
+		loader: docsLoader(),
+		schema: docsSchema({
+			// Days open with their story: the description stays for meta tags and cards.
+			extend: z.object({ hideDescription: z.boolean().default(true) }),
+		}),
+	}),
 };

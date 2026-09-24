@@ -3,9 +3,8 @@ title: "Day 5: Building the Foundations of Excellence"
 description: "Navigate the Labyrinth of Lost Artifacts in the Winter Open Source Village, transforming chaos into a clear, lasting framework for collaboration."
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-import { Steps } from '@astrojs/starlight/components';
-import { FileTree } from '@astrojs/starlight/components';
+import Aside from '../../../../components/Aside.astro';
+import { Steps } from '@deramond.dev/astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import ChallengesSeparator from '../../../../components/ChallengesSeparator.astro';
 import Lore from '../../../../components/Lore.astro';
@@ -90,25 +89,23 @@ Today's challenge is to set up a basic folder structure for your project, defini
 
     Let's define and create the following structure in your project:
     
-    <FileTree>
-
-    - assets
-      - .gitkeep
-    - config
-      - .gitkeep
-    - dist
-      - .gitkeep
-    - docs
-      - .gitkeep
-    - src
-      - .gitkeep
-    - tests
-      - .gitkeep
-    - CODE_OF_CONDUCT.md
-    - LICENSE
-    - README.md
-
-    </FileTree>
+    ```text
+    assets
+    └── .gitkeep
+    config
+    └── .gitkeep
+    dist
+    └── .gitkeep
+    docs
+    └── .gitkeep
+    src
+    └── .gitkeep
+    tests
+    └── .gitkeep
+    CODE_OF_CONDUCT.md
+    LICENSE
+    README.md
+    ```
 
     If your project needs specialized directories, adapt this structure to include additional folders, or remove those that are not relevant.
 
@@ -227,17 +224,15 @@ Refactoring might seem like a small step, but it can have a huge impact on your 
     
       Here's an example of how you might structure a code repository:
 
-      <FileTree>
-
-      - project
-        - config/
-        - dist/
-        - docs/
-        - src/
-        - scripts/
-        - tests/
-
-      </FileTree>
+      ```text
+      project
+      ├── config/
+      ├── dist/
+      ├── docs/
+      ├── src/
+      ├── scripts/
+      └── tests/
+      ```
 
 1. **Group files per function or domain.**
 
@@ -245,28 +240,24 @@ Refactoring might seem like a small step, but it can have a huge impact on your 
 
     For code repositories:
 
-    <FileTree>
-
-    - src
-      - components/
-      - utils/
-      - services/
-      - styles/
-
-    </FileTree>
+    ```text
+    src
+    ├── components/
+    ├── utils/
+    ├── services/
+    └── styles/
+    ```
 
     For non-code projects such as documentation:
 
-    <FileTree>
-
-    - docs
-      - about/
-      - getting-started/
-      - examples/
-      - reference/
-      - tutorials/
-
-    </FileTree>
+    ```text
+    docs
+    ├── about/
+    ├── getting-started/
+    ├── examples/
+    ├── reference/
+    └── tutorials/
+    ```
       
 1. **Simplify deeply nested structures.**
 

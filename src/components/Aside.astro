@@ -1,0 +1,14 @@
+---
+/**
+ * The days' asides, on the brand's callouts. Starlight's `tip` would be the gold callout, and gold is one per decision:
+ * the days carry up to four tips each, so tips are notes with their own title; caution is a warning.
+ */
+import { Callout } from '@deramond.dev/astro';
+
+interface Props { type?: 'note' | 'tip' | 'caution' | 'danger'; title?: string }
+const { type = 'note', title } = Astro.props;
+const kind = ({ note: 'note', tip: 'note', caution: 'warning', danger: 'danger' } as const)[type];
+const word = title ?? { note: 'Note', tip: 'Tip', caution: 'Caution', danger: 'Danger' }[type];
+---
+
+<Callout kind={kind} title={word}><slot /></Callout>

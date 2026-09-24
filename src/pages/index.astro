@@ -1,0 +1,53 @@
+---
+import { Button, Hero, Section, SectionHeader, SiteLayout } from '@deramond.dev/astro';
+import Banner from '../components/Banner.astro';
+import Runes from '../components/Runes.astro';
+import hero from '../brand/hero.svg';
+---
+
+<SiteLayout
+	title="Advent of Open Source"
+	description="Traveller, join the Winter Open Source Village to celebrate the season of sharing. Choose amongst the three runes to embark on your journey."
+>
+	<Hero
+		eyebrow={{ label: 'An Open {re}Source event · 2024 edition' }}
+		title="Advent of Open Source"
+		lead="A community-driven event that introduces newcomers to open source software development, and helps every participant create or enhance their repositories. A challenge a day, in three tracks."
+		image={hero}
+	>
+		<Fragment slot="actions">
+			<Button variant="gold" href="/advent/week-4/day-25/">Today's challenge</Button>
+			<Button href="/advent/">Participate</Button>
+			<Button variant="quiet" href="https://github.com/Open-reSource/adventofopensource.com">GitHub</Button>
+		</Fragment>
+	</Hero>
+
+	<Section>
+		<SectionHeader
+			num="01"
+			label="Tracks"
+			title="3 runes for 3 tracks"
+			lead="Each day, you'll be able to choose between three levels of tracks, identified by runes. Everyone can participate, from beginner to advanced."
+		/>
+		<Runes />
+	</Section>
+
+	<Section>
+		<SectionHeader
+			num="02"
+			label="Support"
+			title="Support us"
+			lead="Help us continue to build and maintain this project by becoming a sponsor or dropping a star on our GitHub repository."
+		/>
+		<div class="actions">
+			<Button href="https://github.com/sponsors/Open-reSource">Become a sponsor</Button>
+			<Button variant="quiet" href="https://github.com/Open-reSource/adventofopensource.com">Star on GitHub</Button>
+		</div>
+	</Section>
+
+	<Banner />
+</SiteLayout>
+
+<style>
+	.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+</style>
