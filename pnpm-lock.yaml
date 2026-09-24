@@ -18,8 +18,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       '@deramond.dev/astro':
-        specifier: ^0.5.0
-        version: 0.5.0(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))
+        specifier: ^0.5.1
+        version: 0.5.1(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))
       '@fontsource/courier-prime':
         specifier: ^5.3.0
         version: 5.3.0
@@ -238,8 +238,8 @@ packages:
     resolution: {integrity: sha512-PXzLZ8N34rxmuo4dJg3xtOXhcBse94qGjDqsteoEYrFrrZ5FSjIGwMAuOcv64ln8rHVBBD06XeVGr+/JX+plcA==}
     engines: {node: '>= 20.12.0'}
 
-  '@deramond.dev/astro@0.5.0':
-    resolution: {integrity: sha512-XDbRTQiSqRKp7iuIHCWKFu9rZCgJMC3P/yyB0RL82SQ/P1XSh1LDJQMZfFDHUIzBOWyz7MgsW7XU1QdJZIeSmQ==}
+  '@deramond.dev/astro@0.5.1':
+    resolution: {integrity: sha512-ngm6NTFxLb6hlrc61UPVTY91RLVtaSKhtXJIPtAN87D2E8RpsT60ro8YJyLH3YgB6beoARCgI49OgFFZSjiDSA==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       astro: ^7.3.0
@@ -2158,7 +2158,7 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@deramond.dev/astro@0.5.0(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))':
+  '@deramond.dev/astro@0.5.1(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))':
     dependencies:
       '@deramond.dev/tokens': 0.1.1
       '@fontsource/chakra-petch': 5.3.0
