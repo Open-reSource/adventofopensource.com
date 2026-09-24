@@ -9,3 +9,9 @@ updates:
       npm-dependencies:
         patterns:
           - '*'
+    ignore:
+      # TypeScript 7's native compiler doesn't yet expose the programmatic API
+      # that `astro check` needs; it refuses to run and asks for TypeScript 6.
+      # See https://github.com/withastro/roadmap/discussions/1321
+      - dependency-name: 'typescript'
+        versions: ['>=7.0.0']
