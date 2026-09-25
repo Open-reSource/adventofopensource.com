@@ -18,8 +18,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       '@deramond.dev/astro':
-        specifier: ^0.5.1
-        version: 0.5.1(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))
+        specifier: ^0.6.0
+        version: 0.6.0(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))
       '@fontsource/courier-prime':
         specifier: ^5.3.0
         version: 5.3.0
@@ -238,14 +238,14 @@ packages:
     resolution: {integrity: sha512-PXzLZ8N34rxmuo4dJg3xtOXhcBse94qGjDqsteoEYrFrrZ5FSjIGwMAuOcv64ln8rHVBBD06XeVGr+/JX+plcA==}
     engines: {node: '>= 20.12.0'}
 
-  '@deramond.dev/astro@0.5.1':
-    resolution: {integrity: sha512-ngm6NTFxLb6hlrc61UPVTY91RLVtaSKhtXJIPtAN87D2E8RpsT60ro8YJyLH3YgB6beoARCgI49OgFFZSjiDSA==}
+  '@deramond.dev/astro@0.6.0':
+    resolution: {integrity: sha512-apdvJeSCuxzt1gaSz5H7CabFYhsMs80QD59mdZrJba//vaDhBNpQsb1OopT/W9QqM7JbuZ0vpM5W/+OJquvpFA==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       astro: ^7.3.0
 
-  '@deramond.dev/tokens@0.1.1':
-    resolution: {integrity: sha512-QkGn2H7+5xWzkcBO2WG/rUeHBAojgmUdwMK3DGrP4f6JxrBQk2WOd+fJx7WA684PKenLXgIUDHH+dTfkk735Hw==}
+  '@deramond.dev/tokens@0.2.0':
+    resolution: {integrity: sha512-t3ODLh2Jh4abUupntifcOLGHXoBa5CbnyrGlcK9Xxoe+pR5Us9UJmvrAcA8vjh+E1lR2Z+bJpbQls4xmv84bbg==}
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -2158,9 +2158,9 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@deramond.dev/astro@0.5.1(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))':
+  '@deramond.dev/astro@0.6.0(astro@7.3.5(@types/node@26.4.1)(yaml@2.9.0))':
     dependencies:
-      '@deramond.dev/tokens': 0.1.1
+      '@deramond.dev/tokens': 0.2.0
       '@fontsource/chakra-petch': 5.3.0
       '@fontsource/instrument-sans': 5.3.0
       '@fontsource/roboto-mono': 5.3.0
@@ -2169,7 +2169,7 @@ snapshots:
       pagefind: 1.5.2
       satori: 0.33.5
 
-  '@deramond.dev/tokens@0.1.1': {}
+  '@deramond.dev/tokens@0.2.0': {}
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
