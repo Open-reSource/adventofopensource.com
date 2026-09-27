@@ -24,5 +24,10 @@
   },
   "optionalDependencies": {
     "@bruits/satteri-linux-x64-gnu": "*"
+  },
+  "pnpm": {
+    "overrides": {
+      "satori>fflate": "0.7.5"
+    }
   }
 }
