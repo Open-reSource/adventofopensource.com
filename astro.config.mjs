@@ -28,6 +28,8 @@ export default defineConfig({
 					{ label: 'X', href: 'https://x.com/open_resource' },
 					{ label: 'Threads', href: 'https://www.threads.net/@openresource' },
 				],
+				// The home page's JSON-LD names the organisation behind the event; the accounts above are its own.
+				identity: { type: 'Organization', name: 'Open {re}Source', url: 'https://openresource.dev/' },
 				twitter: '@JulienDeramond',
 			},
 			nav: [
