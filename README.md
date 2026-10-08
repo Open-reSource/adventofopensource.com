@@ -1,6 +1,4 @@
-<p align="center"><a href="https://adventofopensource.com"><picture><source srcset=".github/header.svg" type="image/svg+xml"><img src=".github/header.png" width="830" alt="Advent of Open Source, an Open {re}Source event. Twenty-five days of open source: a challenge a day, in three tracks, to create or enhance your repositories."></picture></a></p>
-
-<h1 align="center">adventofopensource.com</h1>
+<h1 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/logo-title-dark.svg"><source media="(prefers-color-scheme: light)" srcset=".github/logo-title-light.svg"><img src=".github/logo-title-light.png" width="642" alt="Advent of Open Source"></picture></h1>
 
 <p align="center">
   <b>Advent of Open Source</b> is a month-long event that aims to introduce newcomers to the world of Open Source.
