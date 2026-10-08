@@ -3,7 +3,7 @@
 <h1 align="center">adventofopensource.com</h1>
 
 <p align="center">
-  <b>Advent of Open Source</b> is a month-long event that aims to introduce newcomers to the world of Open Source.</b>
+  <b>Advent of Open Source</b> is a month-long event that aims to introduce newcomers to the world of Open Source.
   <br>
   Join us in December to learn about Open Source, meet the community, and put in place or enhance your repositories.
 </p>
@@ -68,8 +68,6 @@ Content (including images) released under [CC BY-NC-SA 4.0](https://creativecomm
 ## Thanks
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
-
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/small.svg)](https://starlight.astro.build)
 
 ## Sponsors
 
