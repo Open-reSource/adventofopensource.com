@@ -21,8 +21,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4
       '@deramond.dev/astro':
-        specifier: ^0.15.0
-        version: 0.15.0(astro@7.3.8(@types/node@26.4.1)(esbuild@0.28.2)(yaml@2.9.1))
+        specifier: ^0.16.0
+        version: 0.16.0(astro@7.3.8(@types/node@26.4.1)(esbuild@0.28.2)(yaml@2.9.1))
       '@fontsource/courier-prime':
         specifier: ^5.3.0
         version: 5.3.0
@@ -241,14 +241,14 @@ packages:
     resolution: {integrity: sha512-dlT1m5e/0yUL0kRNcQn7yGLVThkgbB0Ga/1AmfDDC/8ik6AIiSf2QLQO2zPYvefsHP0aFgxO93cVLCCfDp7kzQ==}
     engines: {node: '>= 20.12.0'}
 
-  '@deramond.dev/astro@0.15.0':
-    resolution: {integrity: sha512-6MVzHjQqhhWnao/AIPYoqiy8YIw5dQd8wxMeM5HWsTe6Lj3UNqkqfozpiQc48RPfKzub//rjrPYdKmB3zZeTag==}
+  '@deramond.dev/astro@0.16.0':
+    resolution: {integrity: sha512-FBwlNS9tbwr8tmUZZnedSw26Ut8kmPeGziWBdRf0iENxNge+pdEEMGqKACa3a9p+ttFJ5nEGo9b43MtR1MAciQ==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       astro: ^7.3.0
 
-  '@deramond.dev/tokens@0.3.0':
-    resolution: {integrity: sha512-2zb1aMCLyJ4pjlptDa0sWFwbQ2MHGme3NvZfmKd/HQ5LpL4xELYQnYiTOnkXrSiPVyu2wNk1Uq8A3gAMC4M6Fg==}
+  '@deramond.dev/tokens@0.4.0':
+    resolution: {integrity: sha512-vQyl535mB+/Cn7Bh8k2Lw+Pd81lS7dUxyolzIx3VIwWgpcvBG1al8q4+M0GaV5FvL1TAUDkHAXKA6UoRhBVzuw==}
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -2159,9 +2159,9 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@deramond.dev/astro@0.15.0(astro@7.3.8(@types/node@26.4.1)(esbuild@0.28.2)(yaml@2.9.1))':
+  '@deramond.dev/astro@0.16.0(astro@7.3.8(@types/node@26.4.1)(esbuild@0.28.2)(yaml@2.9.1))':
     dependencies:
-      '@deramond.dev/tokens': 0.3.0
+      '@deramond.dev/tokens': 0.4.0
       '@fontsource/chakra-petch': 5.3.0
       '@fontsource/instrument-sans': 5.3.0
       '@fontsource/roboto-mono': 5.3.0
@@ -2171,7 +2171,7 @@ snapshots:
       pagefind: 1.5.2
       satori: 0.33.5
 
-  '@deramond.dev/tokens@0.3.0': {}
+  '@deramond.dev/tokens@0.4.0': {}
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
