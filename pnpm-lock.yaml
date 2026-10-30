@@ -44,7 +44,7 @@ importers:
     optionalDependencies:
       '@bruits/satteri-linux-x64-gnu':
         specifier: '*'
-        version: 0.11.2
+        version: 0.11.5
 
 packages:
 
@@ -210,8 +210,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@bruits/satteri-linux-x64-gnu@0.11.2':
-    resolution: {integrity: sha512-rMqfACx5wmc4MJDtr1v0dhf8kWOqHljPOY0gh3tnua5O/vnnylTSbvlDnZnZWkMPyPSUiVsrFb1vc4v8/QWjiA==}
+  '@bruits/satteri-linux-x64-gnu@0.11.5':
+    resolution: {integrity: sha512-noaF5e7yoDNHgF07uD4MbzaRJpegfO8gWxiILiyzjwdIeVS4WGNY9my4szMUpWnSy160bYcL3whIIJXxNU2lFQ==}
     cpu: [x64]
     os: [linux]
 
@@ -2145,7 +2145,7 @@ snapshots:
   '@bruits/satteri-linux-x64-gnu@0.10.5':
     optional: true
 
-  '@bruits/satteri-linux-x64-gnu@0.11.2':
+  '@bruits/satteri-linux-x64-gnu@0.11.5':
     optional: true
 
   '@bruits/satteri-linux-x64-musl@0.10.5':
