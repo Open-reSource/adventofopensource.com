@@ -18,7 +18,7 @@
     "@deramond.dev/astro": "^0.17.1",
     "@fontsource/courier-prime": "^5.3.0",
     "@types/konami-code-js": "^0.8.3",
-    "astro": "^7.4.7",
+    "astro": "^7.4.8",
     "konami-code-js": "^0.8.3",
     "sharp": "^0.35.5",
     "typescript": "^6.0.3"
