@@ -1,12 +1,15 @@
 ---
 layout: ../layouts/Page.astro
 title: Cookie Policy
-description: This website uses neither cookies nor local storage. Our cookie-free policy prioritizes your privacy.
+description: This website uses no cookies. Your browser keeps the theme you pick, if you pick one, and a marker for the current tab.
 ---
 
 {/* prettier-ignore */}
-<p class="lead">This website does not use cookies, and it does not use local storage either.</p>
+<p class="lead">This website does not use cookies. Your browser keeps two small notes for it, and neither ever leaves your device.</p>
 
-Nothing is stored on your device when you browse this website: no preferences, no login information, no tracking identifier.
+- **The theme you pick.** When you choose Light or Dark in the theme menu at the top of the page, your browser keeps that choice in its local storage, under the name `paper-theme`, so the next page opens in the same theme. Choosing Auto deletes it, and the site follows your system's setting again.
+- **A visit marker.** On your first page, the site writes `d-mark-seen` in your browser's session storage, so the logo's arrival animation plays once per visit and not on every page. Your browser deletes it when you close the tab.
+
+Nothing else is stored: no login information, no tracking identifier. Neither note is sent to us or to anyone else.
 
 If you have any questions, please contact us at any of our social media accounts listed in the footer of this page.
