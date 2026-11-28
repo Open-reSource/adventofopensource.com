@@ -2,8 +2,8 @@
  * Advent of Open Source on @deramond.dev/astro (look: 'paper', loaded after the package's styles on every page).
  *
  * 1. The winter colours. The paper look's custom properties, overridden for the event in both themes: a snow stock on
- *    light and a night-blue stock on dark, with their grain; the inks and lines cooled to them; and the event blue
- *    #92D1FE in the yellow's place. The blue keeps the yellow's two jobs only: the highlighter behind a phrase (one per
+ *    light and a slate stock on dark (a low-saturation blue-grey), with their grain; the inks and lines cooled to
+ *    them; and the event blue #92D1FE in the yellow's place. The blue keeps the yellow's two jobs only: the highlighter behind a phrase (one per
  *    page) and text selection. Runes, the mark, links and structure stay ink.
  * 2. The stories (<Lore>): a plate pressed into the page with a row of punched holes along its top edge, headings typed
  *    in Courier 700, the village's names in italic, the Keeper's words set in from an ink rule.
@@ -41,72 +41,72 @@ html[data-look='paper'] {
 }
 
 html[data-look='paper'][data-theme='dark'] {
-	--paper-stock-field: #131a28;
-	--paper-stock-mean: #131a28;
+	--paper-stock-field: #171b21;
+	--paper-stock-mean: #171b21;
 	--paper-stock-grain-coarse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .33 .33 .33 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='1.08' intercept='-0.486'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E") 0 0/256px, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.975 0 0 0 0 1 -.33 -.33 -.33 0 1'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.1296' intercept='-0.0583'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E");
 	--paper-stock-grain-fine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.975 0 0 0 0 1 -.33 -.33 -.33 0 1'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.18' intercept='-0.081'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E") 0 0/256px, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .33 .33 .33 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='1.584' intercept='-0.7128'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E");
-	--paper-color-ink: #eaf2fa;
-	--paper-color-reading: #e0e9f2;
-	--paper-color-muted: #9eafc3;
-	--paper-color-line-control: #7d8ca2;
-	--paper-color-line-strong: #66748a;
-	--paper-color-hairline: #243049;
+	--paper-color-ink: #e8eef4;
+	--paper-color-reading: #dee5ec;
+	--paper-color-muted: #9da9b6;
+	--paper-color-line-control: #7b8796;
+	--paper-color-line-strong: #657080;
+	--paper-color-hairline: #262c36;
 	--paper-color-on-yellow: #0a1120;
-	--paper-relief-mark-floor: rgba(29, 37, 53, 0.92);
-	--paper-relief-mark-hi: rgba(248, 251, 255, 0.42);
-	--paper-relief-mark-lip: rgba(248, 251, 255, 0.5);
+	--paper-relief-mark-floor: rgba(30, 35, 43, 0.92);
+	--paper-relief-mark-hi: rgba(246, 249, 252, 0.42);
+	--paper-relief-mark-lip: rgba(246, 249, 252, 0.5);
 	--paper-relief-mark-lo: rgba(0, 0, 0, 0.7);
 	--paper-relief-mark-edge: rgba(0, 0, 0, 0.85);
-	--paper-relief-mark-deep-floor: rgba(33, 41, 58, 0.94);
-	--paper-relief-mark-deep-hi: rgba(248, 251, 255, 0.42);
-	--paper-relief-mark-deep-lip: rgba(248, 251, 255, 0.5);
+	--paper-relief-mark-deep-floor: rgba(34, 39, 47, 0.94);
+	--paper-relief-mark-deep-hi: rgba(246, 249, 252, 0.42);
+	--paper-relief-mark-deep-lip: rgba(246, 249, 252, 0.5);
 	--paper-relief-mark-deep-lo: rgba(0, 0, 0, 0.8);
 	--paper-relief-mark-deep-edge: rgba(0, 0, 0, 0.9);
-	--paper-relief-cut-wash: rgba(12, 17, 27, 0.6);
-	--paper-relief-plate-wash: rgba(12, 17, 27, 0.36);
+	--paper-relief-cut-wash: rgba(13, 16, 20, 0.6);
+	--paper-relief-plate-wash: rgba(13, 16, 20, 0.36);
 	--paper-relief-cut-shade: rgba(0, 0, 0, 0.8);
 	--paper-relief-cut-edge: rgba(0, 0, 0, 0.95);
-	--paper-relief-cut-hi: rgba(248, 251, 255, 0.32);
-	--paper-relief-cut-lip: rgba(248, 251, 255, 0.36);
+	--paper-relief-cut-hi: rgba(246, 249, 252, 0.32);
+	--paper-relief-cut-lip: rgba(246, 249, 252, 0.36);
 	--paper-relief-score-lo: rgba(0, 0, 0, 0.85);
 	--paper-relief-groove-lo: rgba(0, 0, 0, 0.95);
-	--paper-relief-island-lip: rgba(248, 251, 255, 0.34);
+	--paper-relief-island-lip: rgba(246, 249, 252, 0.34);
 	--paper-relief-island-shade: rgba(0, 0, 0, 0.9);
 }
 
 /* Before the theme script has run (or where a policy blocks it), the page follows the system. */
 @media (prefers-color-scheme: dark) {
 	html[data-look='paper']:not([data-theme]) {
-		--paper-stock-field: #131a28;
-		--paper-stock-mean: #131a28;
+		--paper-stock-field: #171b21;
+		--paper-stock-mean: #171b21;
 		--paper-stock-grain-coarse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .33 .33 .33 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='1.08' intercept='-0.486'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E") 0 0/256px, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.975 0 0 0 0 1 -.33 -.33 -.33 0 1'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.1296' intercept='-0.0583'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E");
 		--paper-stock-grain-fine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.975 0 0 0 0 1 -.33 -.33 -.33 0 1'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.18' intercept='-0.081'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E") 0 0/256px, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .33 .33 .33 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='1.584' intercept='-0.7128'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)'/%3E%3C/svg%3E");
-		--paper-color-ink: #eaf2fa;
-		--paper-color-reading: #e0e9f2;
-		--paper-color-muted: #9eafc3;
-		--paper-color-line-control: #7d8ca2;
-		--paper-color-line-strong: #66748a;
-		--paper-color-hairline: #243049;
+		--paper-color-ink: #e8eef4;
+		--paper-color-reading: #dee5ec;
+		--paper-color-muted: #9da9b6;
+		--paper-color-line-control: #7b8796;
+		--paper-color-line-strong: #657080;
+		--paper-color-hairline: #262c36;
 		--paper-color-on-yellow: #0a1120;
-		--paper-relief-mark-floor: rgba(29, 37, 53, 0.92);
-		--paper-relief-mark-hi: rgba(248, 251, 255, 0.42);
-		--paper-relief-mark-lip: rgba(248, 251, 255, 0.5);
+		--paper-relief-mark-floor: rgba(30, 35, 43, 0.92);
+		--paper-relief-mark-hi: rgba(246, 249, 252, 0.42);
+		--paper-relief-mark-lip: rgba(246, 249, 252, 0.5);
 		--paper-relief-mark-lo: rgba(0, 0, 0, 0.7);
 		--paper-relief-mark-edge: rgba(0, 0, 0, 0.85);
-		--paper-relief-mark-deep-floor: rgba(33, 41, 58, 0.94);
-		--paper-relief-mark-deep-hi: rgba(248, 251, 255, 0.42);
-		--paper-relief-mark-deep-lip: rgba(248, 251, 255, 0.5);
+		--paper-relief-mark-deep-floor: rgba(34, 39, 47, 0.94);
+		--paper-relief-mark-deep-hi: rgba(246, 249, 252, 0.42);
+		--paper-relief-mark-deep-lip: rgba(246, 249, 252, 0.5);
 		--paper-relief-mark-deep-lo: rgba(0, 0, 0, 0.8);
 		--paper-relief-mark-deep-edge: rgba(0, 0, 0, 0.9);
-		--paper-relief-cut-wash: rgba(12, 17, 27, 0.6);
-		--paper-relief-plate-wash: rgba(12, 17, 27, 0.36);
+		--paper-relief-cut-wash: rgba(13, 16, 20, 0.6);
+		--paper-relief-plate-wash: rgba(13, 16, 20, 0.36);
 		--paper-relief-cut-shade: rgba(0, 0, 0, 0.8);
 		--paper-relief-cut-edge: rgba(0, 0, 0, 0.95);
-		--paper-relief-cut-hi: rgba(248, 251, 255, 0.32);
-		--paper-relief-cut-lip: rgba(248, 251, 255, 0.36);
+		--paper-relief-cut-hi: rgba(246, 249, 252, 0.32);
+		--paper-relief-cut-lip: rgba(246, 249, 252, 0.36);
 		--paper-relief-score-lo: rgba(0, 0, 0, 0.85);
 		--paper-relief-groove-lo: rgba(0, 0, 0, 0.95);
-		--paper-relief-island-lip: rgba(248, 251, 255, 0.34);
+		--paper-relief-island-lip: rgba(246, 249, 252, 0.34);
 		--paper-relief-island-shade: rgba(0, 0, 0, 0.9);
 	}
 }
