@@ -4,6 +4,13 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import deramond from '@deramond.dev/astro/integration';
 
+// The top bar's numbered links, on the site's own pages and, as the docs tabs, on the days' pages.
+const nav = [
+	{ label: 'Advent', href: '/advent/' },
+	{ label: 'Day 1', href: '/advent/week-1/day-1/' },
+	{ label: 'Open {re}Source', href: 'https://openresource.dev' },
+];
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://adventofopensource.com',
@@ -32,11 +39,7 @@ export default defineConfig({
 				identity: { type: 'Organization', name: 'Open {re}Source', url: 'https://openresource.dev/' },
 				twitter: '@JulienDeramond',
 			},
-			nav: [
-				{ label: 'Advent', href: '/advent/' },
-				{ label: 'Day 1', href: '/advent/week-1/day-1/' },
-				{ label: 'Open {re}Source', href: 'https://openresource.dev' },
-			],
+			nav,
 			footer: {
 				columns: [
 					{
@@ -62,6 +65,7 @@ export default defineConfig({
 			docs: {
 				route: '',
 				status: false,
+				tabs: nav,
 				edit: { repo: 'Open-reSource/adventofopensource.com' },
 				sidebar: [
 					{ label: 'Advent', items: ['advent'] },

@@ -264,3 +264,9 @@ html[data-look='paper'][data-theme='dark'] {
 	height: auto;
 	border-radius: 0;
 }
+
+/* The docs layout writes an empty links box into the top bar of the days' pages; hidden, it no longer adds a gap
+   between the search and the theme menu, so the bar lines up with the site's other pages. */
+.d-pdocs__links:empty {
+	display: none;
+}
