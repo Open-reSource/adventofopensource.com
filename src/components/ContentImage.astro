@@ -1,18 +1,8 @@
 ---
+// A screenshot in a day's steps, printed on a plate (src/styles/site.css, section 3).
 import { Image } from 'astro:assets';
 ---
 
-<div>
+<div class="content-image plate">
 	<Image src={Astro.props.src} alt={Astro.props.alt} width={Astro.props.width} height={Astro.props.height} />
 </div>
-
-<style>
-	div {
-		width: 100%;
-		height: auto;
-	}
-
-	img {
-		border-radius: var(--radius-sm);
-	}
-</style>

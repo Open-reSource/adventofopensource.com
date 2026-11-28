@@ -4,6 +4,13 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import deramond from '@deramond.dev/astro/integration';
 
+// The top bar's numbered links, on the site's own pages and, as the docs tabs, on the days' pages.
+const nav = [
+	{ label: 'Advent', href: '/advent/' },
+	{ label: 'Day 1', href: '/advent/week-1/day-1/' },
+	{ label: 'Open {re}Source', href: 'https://openresource.dev' },
+];
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://adventofopensource.com',
@@ -32,11 +39,7 @@ export default defineConfig({
 				identity: { type: 'Organization', name: 'Open {re}Source', url: 'https://openresource.dev/' },
 				twitter: '@JulienDeramond',
 			},
-			nav: [
-				{ label: 'Advent', href: '/advent/' },
-				{ label: 'Day 1', href: '/advent/week-1/day-1/' },
-				{ label: 'Open {re}Source', href: 'https://openresource.dev' },
-			],
+			nav,
 			footer: {
 				columns: [
 					{
@@ -62,6 +65,7 @@ export default defineConfig({
 			docs: {
 				route: '',
 				status: false,
+				tabs: nav,
 				edit: { repo: 'Open-reSource/adventofopensource.com' },
 				sidebar: [
 					{ label: 'Advent', items: ['advent'] },
@@ -72,30 +76,13 @@ export default defineConfig({
 				],
 			},
 			og: {
-				art: './src/brand/og-art.png',
 				name: 'Advent of Open Source',
 				title: 'Twenty-five days',
 				accent: 'of open source.',
 				subtitle: 'A challenge a day, in three tracks, to create or enhance your repositories.',
 			},
-			// The event's own palette, "Winter night" (every text pair passes AA; lowest: muted on panel, 6.8:1).
-			palette: {
-				bg: '#0A1120',
-				panel: '#121C31',
-				line: '#23324D',
-				fg: '#EAF2FA',
-				muted: '#93A5BD',
-				primary: '#92D1FE',
-				'primary-dim': '#2B5F85',
-				'primary-lift': '#C9E8FF',
-				'on-primary': '#0A1120',
-				'on-accent': '#0A1120',
-				grid: '#92D1FE14',
-				tint: '#92D1FE12',
-				'illustration-cyan': '#4FA3DC',
-				'illustration-dim': '#2B5F85',
-				'illustration-lift': '#92D1FE',
-			},
+			// Light, Dark and Auto. The event's winter colours override the paper look's custom properties in site.css.
+			look: 'paper',
 			css: ['./src/styles/site.css'],
 			head: [
 				{ tag: 'meta', attrs: { name: 'twitter:site', content: '@open_resource' } },
