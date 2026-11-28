@@ -6,7 +6,6 @@ import SectionHeader from '@deramond.dev/astro/components/SectionHeader.astro';
 import SiteLayout from '@deramond.dev/astro/layouts/SiteLayout.astro';
 import Banner from '../components/Banner.astro';
 import Runes from '../components/Runes.astro';
-import hero from '../brand/hero.svg';
 ---
 
 <SiteLayout
@@ -15,12 +14,11 @@ import hero from '../brand/hero.svg';
 >
 	<Hero
 		eyebrow={{ label: 'An Open {re}Source event · 2024 edition' }}
-		title="Advent of Open Source"
 		lead="A community-driven event that introduces newcomers to open source software development, and helps every participant create or enhance their repositories. A challenge a day, in three tracks."
-		image={hero}
 	>
+		<Fragment slot="title">Advent of <span class="accent-mark">Open Source</span></Fragment>
 		<Fragment slot="actions">
-			<Button variant="gold" href="/advent/week-4/day-25/">Today's challenge</Button>
+			<Button variant="primary" href="/advent/week-4/day-25/">Today's challenge</Button>
 			<Button href="/advent/">Participate</Button>
 			<Button variant="quiet" href="https://github.com/Open-reSource/adventofopensource.com">GitHub</Button>
 		</Fragment>
@@ -53,5 +51,5 @@ import hero from '../brand/hero.svg';
 </SiteLayout>
 
 <style>
-	.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+	.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 </style>

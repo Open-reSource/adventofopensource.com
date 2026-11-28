@@ -21,30 +21,30 @@ const runes = [
 </ul>
 
 <style>
+	/* Printed on the page, no relief: each rune in ink over a strong line, its name in Chakra, its level muted. */
 	.runes {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-		gap: var(--space-4);
+		grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+		gap: 32px;
 		padding: 0;
-		margin-block: var(--space-6);
+		margin-block: 32px 0;
 		list-style: none;
 	}
 	.runes li {
 		display: grid;
-		justify-items: center;
-		gap: var(--space-2);
-		padding: var(--space-6) var(--space-5);
-		text-align: center;
-		background: var(--color-panel);
-		border: var(--stroke-ui) solid var(--color-line);
+		justify-items: start;
+		align-content: start;
+		gap: 10px;
 		margin: 0;
+		padding-top: 22px;
+		border-top: 1px solid var(--paper-color-line-strong);
 	}
 	.runes b {
-		font-family: var(--font-family-display);
-		font-weight: 600;
+		margin-top: 6px;
+		font: 600 13px / 1.3 var(--paper-font-family-title);
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		letter-spacing: var(--font-letter-spacing-eyebrow);
-		color: var(--color-fg);
+		color: var(--paper-color-ink);
 	}
-	.runes span { color: var(--color-muted); font-size: var(--font-size-sm); }
+	.runes span { font-size: 15px; line-height: 1.5; color: var(--paper-color-muted); }
 </style>

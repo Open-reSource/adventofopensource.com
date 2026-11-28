@@ -1,5 +1,5 @@
 ---
-// One of the three runes, inline and in currentColor (the event blue by default), so it follows the palette.
+// One of the three runes, inline and in currentColor (the page's ink, src/styles/site.css).
 import snowflake from '../assets/beginner-rune.svg?raw';
 import snowball from '../assets/intermediate-rune.svg?raw';
 import ice from '../assets/advanced-rune.svg?raw';
@@ -14,7 +14,3 @@ const svg = { snowflake, snowball, ice }[type].replace(
 ---
 
 <span class="rune" set:html={svg} />
-
-<style>
-	.rune { display: inline-flex; color: var(--color-primary); flex: none; }
-</style>

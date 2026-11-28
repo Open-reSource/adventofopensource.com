@@ -18,19 +18,22 @@ const label = {
 <style>
 	.heading-rune {
 		display: flex;
-		gap: var(--space-4);
+		gap: 16px;
 		align-items: center;
-		margin-bottom: var(--space-6);
-		padding-bottom: var(--space-5);
-		border-bottom: var(--stroke-ui) solid var(--color-line);
+		padding-bottom: 20px;
+		border-bottom: 1px solid var(--paper-color-line-strong);
 	}
-	.heading-rune p { margin: 0; display: grid; gap: var(--space-1); }
+	.heading-rune + :global(*) { margin-top: 24px; }
+	.heading-rune p { margin: 0; display: grid; gap: 3px; }
 	.heading-rune b {
-		font-family: var(--font-family-display);
-		font-weight: 600;
+		font: 600 13px / 1.3 var(--paper-font-family-title);
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		letter-spacing: var(--font-letter-spacing-eyebrow);
-		font-size: 0.875rem;
+		color: var(--paper-color-ink);
 	}
-	.heading-rune span { color: var(--color-muted); font-size: 0.875rem; line-height: 1.5; }
+	.heading-rune span { font-size: 15px; line-height: 1.45; color: var(--paper-color-muted); }
+	@media (max-width: 640px) {
+		.heading-rune { gap: 12px; }
+		.heading-rune :global(svg) { width: 36px; height: 36px; }
+	}
 </style>
